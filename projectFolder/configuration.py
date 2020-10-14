@@ -1,12 +1,13 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+#-*- coding: utf-8 -*-
 """
 Created on Wed Oct 14 14:34:13 2020
-@authors: Group B
+@authors: Merlin & Aurélien
 """
 from ipmininet.ipnet import IPNet
 from ipmininet.cli import IPCLI
 from ipmininet.iptopo import IPTopo
-from ipmininet.router.config import BGP, OSPF6, RouterConfig, AF_INET6, set_rr, ebgp_session, SHARE
+from ipmininet.router.config import BGP, OSPF,OSPF6, RouterConfig, AF_INET6, set_rr, ebgp_session, SHARE
 
 class OVHTopology(IPTopo):
 
@@ -18,7 +19,7 @@ class OVHTopology(IPTopo):
         To change that, we have to modify the router configuration class.
         """ 
         
-        sin = self.addRouter("sin", {"config": RouterConfig, 'ip': ("2042:12::1/64", "10.12.0.1/24")});
+        sin = self.addRouter("sin", config= RouterConfig);
         syd = self.addRouter("syd", config=RouterConfig);
         
         pao = self.addRouter("pao", config=RouterConfig);
@@ -38,11 +39,28 @@ class OVHTopology(IPTopo):
         nwk5 = self.addRouter("nwk5", config=RouterConfig);
         nyc = self.addRouter("nyc", config=RouterConfig);
         
-        lon-thw = self.addRouter("lon-thw", config=RouterConfig);
-        lon-drch = self.addRouter("lon-drch", config=RouterConfig);
+        lon_thw = self.addRouter("lon-thw", config=RouterConfig);
+        lon_drch = self.addRouter("lon-drch", config=RouterConfig);
         
         # adding OSPF6 as IGP
 
+        sin.addDaemon(OSPF);
+        syd.addDaemon(OSPF);
+        pao.addDaemon(OSPF);
+        sjo.addDaemon(OSPF);
+        lax1.addDaemon(OSPF);
+        chi1.addDaemon(OSPF);
+        chi5.addDaemon(OSPF);
+        bhs1.addDaemon(OSPF);
+        bhs2.addDaemon(OSPF);
+        ash1.addDaemon(OSPF);
+        ash5.addDaemon(OSPF);
+        nwk1.addDaemon(OSPF);
+        nwk5.addDaemon(OSPF);
+        nyc.addDaemon(OSPF);
+        lon_thw.addDaemon(OSPF);
+        lon_drch.addDaemon(OSPF);
+        
         sin.addDaemon(OSPF6);
         syd.addDaemon(OSPF6);
         pao.addDaemon(OSPF6);
@@ -57,8 +75,8 @@ class OVHTopology(IPTopo):
         nwk1.addDaemon(OSPF6);
         nwk5.addDaemon(OSPF6);
         nyc.addDaemon(OSPF6);
-        lon-thw.addDaemon(OSPF6);
-        lon-drch.addDaemon(OSPF6);
+        lon_thw.addDaemon(OSPF6);
+        lon_drch.addDaemon(OSPF6);
         
         
         # --- Physical links between routers ---
@@ -90,19 +108,38 @@ class OVHTopology(IPTopo):
         self.addLink(nwk1,nyc,igp_metric=1);
         self.addLink(nwk5,nyc,igp_metric=1);
         
-        self.addLink(nwk1,lon-thw,igp_metric=1);
-        self.addLink(nwk5,lon-drch,igp_metric=1);
+        self.addLink(nwk1,lon_thw,igp_metric=1);
+        self.addLink(nwk5,lon_drch,igp_metric=1);
         
-
-        h1 = self.addHost("h1")
-        h2 = self.addHost("h2")
-
+        # --- Hosts ---
+        h1 = self.addHost("h1");
+        h2 = self.addHost("h2");
+        
+        
+        lan_h1 = '192.168.1.0/24'
+        lan_h2 = '192.168.2.0/24'
+        
+        lan_h1_v6 = 'cafe:babe:dead:beaf::/64'
+        lan_h2_v6 = 'c1a4:4ad:c0ff:ee::/64'
+        
+        self.addSubnet((lon_drch, h1), subnets=(lan_h1,))
+        self.addSubnet((sin, h2), subnets=(lan_h2,))
+        
+        self.addSubnet((lon_drch, h1), subnets=(lan_h1_v6,))
+        self.addSubnet((sin, h2), subnets=(lan_h2_v6,))
+        
+        
+        self.addLink(h1,lon_drch,igp_metric=1);
+        self.addLink(h2,sin,igp_metric=1);
+        
+        
+        
         super().build(*args, **kwargs)
         
         
 # Press the green button to run the script.
 if __name__ == '__main__':
-    net = IPNet(topo=SimpleBGPTopo())
+    net = IPNet(topo=OVHTopology())
     try:
         net.start()
         IPCLI(net)
