@@ -39,6 +39,23 @@ class OVHTopology(IPTopo):
 
         # adding OSPF6 as IGP
 
+        sin.addDaemon(OSPF);
+        syd.addDaemon(OSPF);
+        pao.addDaemon(OSPF);
+        sjo.addDaemon(OSPF);
+        lax1.addDaemon(OSPF);
+        chi1.addDaemon(OSPF);
+        chi5.addDaemon(OSPF);
+        bhs1.addDaemon(OSPF);
+        bhs2.addDaemon(OSPF);
+        ash1.addDaemon(OSPF);
+        ash5.addDaemon(OSPF);
+        nwk1.addDaemon(OSPF);
+        nwk5.addDaemon(OSPF);
+        nyc.addDaemon(OSPF);
+        lon_thw.addDaemon(OSPF);
+        lon_drch.addDaemon(OSPF);
+
         sin.addDaemon(OSPF6);
         syd.addDaemon(OSPF6);
         pao.addDaemon(OSPF6);
@@ -89,9 +106,28 @@ class OVHTopology(IPTopo):
         self.addLink(nwk1,lon_thw,igp_metric=1);
         self.addLink(nwk5,lon_drch,igp_metric=1);
 
+        # --- Hosts ---
+        h1 = self.addHost("h1");
+        h2 = self.addHost("h2");
 
-        # h1 = self.addHost("h1")
-        # h2 = self.addHost("h2")
+
+        lan_h1 = '192.168.1.0/24'
+        lan_h2 = '192.168.2.0/24'
+
+        lan_h1_v6 = 'cafe:babe:dead:beaf::/64'
+        lan_h2_v6 = 'c1a4:4ad:c0ff:ee::/64'
+
+        self.addSubnet((lon_drch, h1), subnets=(lan_h1,))
+        self.addSubnet((sin, h2), subnets=(lan_h2,))
+
+        self.addSubnet((lon_drch, h1), subnets=(lan_h1_v6,))
+        self.addSubnet((sin, h2), subnets=(lan_h2_v6,))
+
+
+        self.addLink(h1,lon_drch,igp_metric=1);
+        self.addLink(h2,sin,igp_metric=1);
+
+
 
         super().build(*args, **kwargs)
 
