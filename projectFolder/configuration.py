@@ -8,12 +8,14 @@ class OVHTopology(IPTopo):
 
     def build(self, *args, **kwargs):
 
-        # --- Routers ---
-        """
-        By default, OSPF and OSPF6 are launched on each router. This means that your network has basic routing working by default.
-        To change that, we have to modify the router configuration class.
-        """
+        # --- Hosts ---
+        lan_h1 = '192.168.1.0/24'
+        lan_h2 = '192.168.2.0/24'
 
+        lan_h1_v6 = 'cafe:babe:dead:beaf::/64'
+        lan_h2_v6 = 'c1a4:4ad:c0ff:ee::/64'
+
+        # --- Routers ---
         sin = self.addRouter("sin", config=RouterConfig);
         syd = self.addRouter("syd", config=RouterConfig);
 
@@ -37,7 +39,42 @@ class OVHTopology(IPTopo):
         lon_thw = self.addRouter("lon-thw", config=RouterConfig);
         lon_drch = self.addRouter("lon-drch", config=RouterConfig);
 
-        # adding OSPF6 as IGP
+        # --- Physical links between routers ---
+
+        """ TO DO: Adjust metric according to the distance between cables (short, middle, long) """
+        self.addLink(sin, sjo,igp_metric=1);
+        self.addLink(syd,lax1,igp_metric=1);
+
+        self.addLink(pao,sjo,igp_metric=1);
+        self.addLink(sjo,lax1,igp_metric=1);
+
+        self.addLink(pao,chi1,igp_metric=1);
+        self.addLink(pao,chi5,igp_metric=1);
+        self.addLink(chi1,chi5,igp_metric=1);
+
+        self.addLink(lax1,ash1,igp_metric=1);
+        self.addLink(lax1,ash5,igp_metric=1);
+        self.addLink(ash1,ash5,igp_metric=1);
+
+        self.addLink(chi1,bhs1,igp_metric=1);
+        self.addLink(chi5,bhs2,igp_metric=1);
+        self.addLink(bhs1,bhs2,igp_metric=1);
+
+        self.addLink(bhs1,nwk1,igp_metric=1);
+        self.addLink(bhs2,nwk5,igp_metric=1);
+
+        self.addLink(ash1,nwk1,igp_metric=1);
+        self.addLink(ash5,nwk5,igp_metric=1);
+
+        self.addLink(nwk1,nwk5,igp_metric=1);
+        self.addLink(nwk1,nyc,igp_metric=1);
+        self.addLink(nwk5,nyc,igp_metric=1);
+
+        self.addLink(nwk1,lon_thw,igp_metric=1);
+        self.addLink(nwk5,lon_drch,igp_metric=1);
+
+
+        # --- OSPF and OSPF6 configuration as IGP ---
 
         sin.addDaemon(OSPF);
         syd.addDaemon(OSPF);
@@ -73,59 +110,64 @@ class OVHTopology(IPTopo):
         lon_thw.addDaemon(OSPF6);
         lon_drch.addDaemon(OSPF6);
 
+        # --- BGP configuration ---
+        family = AF_INET6();
 
-        # --- Physical links between routers ---
-        self.addLink(sin, sjo,igp_metric=1);
-        self.addLink(syd,lax1,igp_metric=1);
+        sin.addDaemon(BGP, address_families=(family,));
+        syd.addDaemon(BGP, address_families=(family,));
+        pao.addDaemon(BGP, address_families=(family,));
+        sjo.addDaemon(BGP, address_families=(family,));
+        lax1.addDaemon(BGP, address_families=(family,));
+        chi1.addDaemon(BGP, address_families=(family,));
+        chi5.addDaemon(BGP, address_families=(family,));
+        bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,),),));
+        bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,),),));
+        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,),),));
+        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,),),));
+        nwk1.addDaemon(BGP, address_families=(family,));
+        nwk5.addDaemon(BGP, address_families=(family,));
+        nyc.addDaemon(BGP, address_families=(family,));
+        lon_thw.addDaemon(BGP, address_families=(family,));
+        lon_drch.addDaemon(BGP, address_families=(family,));
 
-        self.addLink(pao,sjo,igp_metric=1);
-        self.addLink(sjo,lax1,igp_metric=1);
+        # --- Configure the router reflectors ---
+        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5]);
+        set_rr(self, rr= bhs2, peers=[pao,chi5,sjo,nwk5,bhs1,ash1,ash5]);
+        set_rr(self, rr= ash1, peers=[chi1,sjo,lax1,nwk1,bhs1,bhs2,ash5]);
+        set_rr(self, rr= ash5, peers=[chi5,lax1,nwk5,nyc,bhs1,bhs2,ash1]);
 
-        self.addLink(pao,chi1,igp_metric=1);
-        self.addLink(pao,chi5,igp_metric=1);
-        self.addLink(chi1,chi5,igp_metric=1);
+        # --- Create Ases
+        self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
 
-        self.addLink(lax1,ash1,igp_metric=1);
-        self.addLink(lax1,ash5,igp_metric=1);
-        self.addLink(ash1,ash5,igp_metric=1);
+        # --- Configure
 
-        self.addLink(chi1,bhs1,igp_metric=1);
-        self.addLink(chi5,bhs2,igp_metric=1);
-        self.addLink(bhs1,bhs2,igp_metric=1);
-
-        self.addLink(bhs1,nwk1,igp_metric=1);
-        self.addLink(bhs2,nwk5,igp_metric=1);
-
-        self.addLink(ash1,nwk1,igp_metric=1);
-        self.addLink(ash5,nwk5,igp_metric=1);
-
-        self.addLink(nwk1,nwk5,igp_metric=1);
-        self.addLink(nwk1,nyc,igp_metric=1);
-        self.addLink(nwk5,nyc,igp_metric=1);
-
-        self.addLink(nwk1,lon_thw,igp_metric=1);
-        self.addLink(nwk5,lon_drch,igp_metric=1);
+        # --- Add a google router ---
+        ggl = self.addRouter("ggl", config=RouterConfig);
+        ggl2 = self.addRouter("ggl2", config=RouterConfig);
+        self.addLink(ggl,ash1,igp_metric=1);
+        self.addLink(ggl,ggl2,igp_metric=1);
+        ggl.addDaemon(OSPF);
+        ggl.addDaemon(OSPF6);
+        ggl2.addDaemon(OSPF);
+        ggl2.addDaemon(OSPF6);
+        ggl.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        ggl2.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        self.addAS(2,(ggl,ggl2));
+        ebgp_session(self, ggl, ash1, link_type=SHARE);
 
         # --- Hosts ---
         h1 = self.addHost("h1");
         h2 = self.addHost("h2");
 
+        self.addSubnet((lon_drch, h1), subnets=(lan_h1,));
+        self.addSubnet((ggl, h2), subnets=(lan_h2,));
 
-        lan_h1 = '192.168.1.0/24'
-        lan_h2 = '192.168.2.0/24'
-
-        lan_h1_v6 = 'cafe:babe:dead:beaf::/64'
-        lan_h2_v6 = 'c1a4:4ad:c0ff:ee::/64'
-
-        self.addSubnet((lon_drch, h1), subnets=(lan_h1,))
-        self.addSubnet((sin, h2), subnets=(lan_h2,))
-
-        self.addSubnet((lon_drch, h1), subnets=(lan_h1_v6,))
-        self.addSubnet((sin, h2), subnets=(lan_h2_v6,))
+        self.addSubnet((lon_drch, h1), subnets=(lan_h1_v6,));
+        self.addSubnet((ggl, h2), subnets=(lan_h2_v6,));
 
 
         self.addLink(h1,lon_drch,igp_metric=1);
-        self.addLink(h2,sin,igp_metric=1);
+        self.addLink(h2,ggl,igp_metric=1);
 
 
 
