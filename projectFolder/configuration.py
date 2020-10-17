@@ -124,10 +124,12 @@ class OVHTopology(IPTopo):
         lon_drch.addDaemon(BGP, address_families=(family,));
 
         # --- Configure the router reflectors ---
-        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc]);
-        set_rr(self, rr= bhs2, peers=[pao,chi5,sjo,nwk5]);
-        set_rr(self, rr= ash1, peers=[chi1,sjo,lax1, nwk1]);
-        set_rr(self, rr= ash5, peers=[chi5,lax1,nwk5,nyc]);
+        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5]);
+        set_rr(self, rr= bhs2, peers=[pao,chi5,sjo,nwk5,bhs1,ash1,ash5]);
+        set_rr(self, rr= ash1, peers=[chi1,sjo,lax1,nwk1,bhs1,bhs2,ash5]);
+        set_rr(self, rr= ash5, peers=[chi5,lax1,nwk5,nyc,bhs1,bhs2,ash1]);
+
+        # --- Configure 
 
         # --- Hosts ---
         h1 = self.addHost("h1");
