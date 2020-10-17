@@ -2,12 +2,12 @@
 from ipmininet.ipnet import IPNet
 from ipmininet.cli import IPCLI
 from ipmininet.iptopo import IPTopo
-from ipmininet.router.config import BGP, OSPF6, RouterConfig, AF_INET6, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER, OSPF
+from ipmininet.router.config import BGP,OSPF, OSPF6, RouterConfig, AF_INET6, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER
 
 class OVHTopology(IPTopo):
 
     def build(self, *args, **kwargs):
-        
+
         # --- Hosts ---
         lan_h1 = '192.168.1.0/24'
         lan_h2 = '192.168.2.0/24'
@@ -140,7 +140,7 @@ class OVHTopology(IPTopo):
         # --- Create Ases
         self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
 
-        # --- Configure 
+        # --- Configure
 
         # --- Add a google router ---
         ggl = self.addRouter("ggl", config=RouterConfig);
