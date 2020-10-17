@@ -7,6 +7,11 @@ from ipmininet.router.config import BGP,OSPF, OSPF6, RouterConfig, AF_INET6, set
 class OVHTopology(IPTopo):
 
     def build(self, *args, **kwargs):
+        # --- Metrics ---
+        small = 1
+        medium = 3
+        large = 8
+        extra_large = 13
 
         # --- Hosts ---
         lan_h1 = '192.168.1.0/24'
@@ -43,36 +48,45 @@ class OVHTopology(IPTopo):
         # --- Physical links between routers ---
 
         """ TO DO: Adjust metric according to the distance between cables (short, middle, long) """
-        self.addLink(sin, sjo,igp_metric=1);
-        self.addLink(syd,lax1,igp_metric=1);
+        self.addLink(sin, sjo,igp_metric=extra_large);
+        self.addLink(syd,lax1,igp_metric=extra_large);
+        self.addLink(syd,sin,igp_metric=large);
+        self.addLink(syd,lon_thw,igp_metric=extra_large);
+        self.addLink(syd,lon_drch,igp_metric=extra_large);
+        self.addLink(sin,lon_thw,igp_metric=extra_large);
+        self.addLink(sin,lon_drch,igp_metric=extra_large);
+        self.addLink(lon_thw,lon_drch,igp_metric=small);
 
-        self.addLink(pao,sjo,igp_metric=1);
-        self.addLink(sjo,lax1,igp_metric=1);
+        self.addLink(pao,sjo,igp_metric=medium);
+        self.addLink(sjo,lax1,igp_metric=medium);
 
-        self.addLink(pao,chi1,igp_metric=1);
-        self.addLink(pao,chi5,igp_metric=1);
-        self.addLink(chi1,chi5,igp_metric=1);
+        self.addLink(pao,chi1,igp_metric=medium);
+        self.addLink(pao,chi5,igp_metric=medium);
+        self.addLink(chi1,chi5,igp_metric=small);
 
-        self.addLink(lax1,ash1,igp_metric=1);
-        self.addLink(lax1,ash5,igp_metric=1);
-        self.addLink(ash1,ash5,igp_metric=1);
+        self.addLink(lax1,ash1,igp_metric=large);
+        self.addLink(lax1,ash5,igp_metric=large);
+        self.addLink(ash1,ash5,igp_metric=small);
 
-        self.addLink(chi1,bhs1,igp_metric=1);
-        self.addLink(chi5,bhs2,igp_metric=1);
-        self.addLink(bhs1,bhs2,igp_metric=1);
+        self.addLink(chi1,bhs1,igp_metric=medium);
+        self.addLink(chi5,bhs2,igp_metric=medium);
+        self.addLink(bhs1,bhs2,igp_metric=small);
 
-        self.addLink(bhs1,nwk1,igp_metric=1);
-        self.addLink(bhs2,nwk5,igp_metric=1);
+        self.addLink(bhs1,nwk1,igp_metric=medium);
+        self.addLink(bhs2,nwk5,igp_metric=medium);
 
-        self.addLink(ash1,nwk1,igp_metric=1);
-        self.addLink(ash5,nwk5,igp_metric=1);
+        self.addLink(ash1,nwk1,igp_metric=large);
+        self.addLink(ash5,nwk5,igp_metric=large);
 
-        self.addLink(nwk1,nwk5,igp_metric=1);
-        self.addLink(nwk1,nyc,igp_metric=1);
-        self.addLink(nwk5,nyc,igp_metric=1);
+        self.addLink(ash1,chi1,igp_metric=large);
+        self.addLink(ash5,chi5,igp_metric=large);
 
-        self.addLink(nwk1,lon_thw,igp_metric=1);
-        self.addLink(nwk5,lon_drch,igp_metric=1);
+        self.addLink(nwk1,nwk5,igp_metric=small);
+        self.addLink(nwk1,nyc,igp_metric=small);
+        self.addLink(nwk5,nyc,igp_metric=small);
+
+        self.addLink(nwk1,lon_thw,igp_metric=extra_large);
+        self.addLink(nwk5,lon_drch,igp_metric=extra_large);
 
 
         # --- OSPF and OSPF6 configuration as IGP ---
@@ -146,10 +160,12 @@ class OVHTopology(IPTopo):
         lon_drch.addDaemon(BGP, address_families=(family,));
 
         # --- Configure the router reflectors ---
-        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5]);
-        set_rr(self, rr= bhs2, peers=[pao,chi5,sjo,nwk5,bhs1,ash1,ash5]);
-        set_rr(self, rr= ash1, peers=[chi1,sjo,lax1,nwk1,bhs1,bhs2,ash5,ggl]);
-        set_rr(self, rr= ash5, peers=[chi5,lax1,nwk5,nyc,bhs1,bhs2,ash1]);
+        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5,lon_thw,sin]);
+        set_rr(self, rr= bhs2, peers=[pao,chi5,sjo,nwk5,bhs1,ash1,ash5,lon_thw,sin]);
+        set_rr(self, rr= ash1, peers=[chi1,sjo,lax1,nwk1,bhs1,bhs2,ash5,ggl,lon_thw,sin]);
+        set_rr(self, rr= ash5, peers=[chi5,lax1,nwk5,nyc,bhs1,bhs2,ash1,lon_thw,sin]);
+        set_rr(self, rr = lon_thw, peers=[lon_drch,bhs1,bhs2,ash1,ash5,sin,lon_thw,sin]);
+        set_rr(self, rr = sin, peers=[syd,bhs1,bhs2,ash1,ash5,lon_thw]);
 
         # --- Create Ases
         self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
