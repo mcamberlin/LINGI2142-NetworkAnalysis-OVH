@@ -2,7 +2,7 @@
 from ipmininet.ipnet import IPNet
 from ipmininet.cli import IPCLI
 from ipmininet.iptopo import IPTopo
-from ipmininet.router.config import BGP, OSPF6, RouterConfig, AF_INET6, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER
+from ipmininet.router.config import BGP, OSPF6, RouterConfig, AF_INET6, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER, OSPF
 
 class OVHTopology(IPTopo):
 
