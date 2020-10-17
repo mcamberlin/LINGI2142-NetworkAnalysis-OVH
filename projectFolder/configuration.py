@@ -110,6 +110,20 @@ class OVHTopology(IPTopo):
         lon_thw.addDaemon(OSPF6);
         lon_drch.addDaemon(OSPF6);
 
+        # --- Add a google router ---
+        ggl = self.addRouter("ggl", config=RouterConfig);
+        ggl2 = self.addRouter("ggl2", config=RouterConfig);
+        self.addLink(ggl,ash1,igp_metric=1);
+        self.addLink(ggl,ggl2,igp_metric=1);
+        ggl.addDaemon(OSPF);
+        ggl.addDaemon(OSPF6);
+        ggl2.addDaemon(OSPF);
+        ggl2.addDaemon(OSPF6);
+        ggl.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        ggl2.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        self.addAS(2,(ggl,ggl2));
+        ebgp_session(self, ggl, ash1, link_type=SHARE);
+
         # --- BGP configuration ---
         family = AF_INET6();
 
@@ -133,7 +147,7 @@ class OVHTopology(IPTopo):
         # --- Configure the router reflectors ---
         set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5]);
         set_rr(self, rr= bhs2, peers=[pao,chi5,sjo,nwk5,bhs1,ash1,ash5]);
-        set_rr(self, rr= ash1, peers=[chi1,sjo,lax1,nwk1,bhs1,bhs2,ash5]);
+        set_rr(self, rr= ash1, peers=[chi1,sjo,lax1,nwk1,bhs1,bhs2,ash5,ggl]);
         set_rr(self, rr= ash5, peers=[chi5,lax1,nwk5,nyc,bhs1,bhs2,ash1]);
 
         # --- Create Ases
@@ -141,32 +155,20 @@ class OVHTopology(IPTopo):
 
         # --- Configure
 
-        # --- Add a google router ---
-        ggl = self.addRouter("ggl", config=RouterConfig);
-        ggl2 = self.addRouter("ggl2", config=RouterConfig);
-        self.addLink(ggl,ash1,igp_metric=1);
-        self.addLink(ggl,ggl2,igp_metric=1);
-        ggl.addDaemon(OSPF);
-        ggl.addDaemon(OSPF6);
-        ggl2.addDaemon(OSPF);
-        ggl2.addDaemon(OSPF6);
-        ggl.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
-        ggl2.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
-        self.addAS(2,(ggl,ggl2));
-        ebgp_session(self, ggl, ash1, link_type=SHARE);
+
 
         # --- Hosts ---
         h1 = self.addHost("h1");
         h2 = self.addHost("h2");
 
-        self.addSubnet((lon_drch, h1), subnets=(lan_h1,));
+        self.addSubnet((nyc, h1), subnets=(lan_h1,));
         self.addSubnet((ggl, h2), subnets=(lan_h2,));
 
-        self.addSubnet((lon_drch, h1), subnets=(lan_h1_v6,));
+        self.addSubnet((nyc, h1), subnets=(lan_h1_v6,));
         self.addSubnet((ggl, h2), subnets=(lan_h2_v6,));
 
 
-        self.addLink(h1,lon_drch,igp_metric=1);
+        self.addLink(h1,nyc,igp_metric=1);
         self.addLink(h2,ggl,igp_metric=1);
 
 
