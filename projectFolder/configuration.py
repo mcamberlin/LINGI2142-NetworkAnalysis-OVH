@@ -14,6 +14,7 @@ class OVHTopology(IPTopo):
 
         lan_h1_v6 = 'cafe:babe:dead:beaf::/64'
         lan_h2_v6 = 'c1a4:4ad:c0ff:ee::/64'
+        lan_h3_v6 = 'cafe:d0d0:e5:dead::/64'
 
         # --- Routers ---
         sin = self.addRouter("sin", config=RouterConfig);
@@ -158,16 +159,20 @@ class OVHTopology(IPTopo):
         # --- Hosts ---
         h1 = self.addHost("h1");
         h2 = self.addHost("h2");
+        h3 = self.addHost("h3");
 
-        self.addSubnet((lon_drch, h1), subnets=(lan_h1,));
+        self.addSubnet((nyc, h1), subnets=(lan_h1,));
         self.addSubnet((ggl, h2), subnets=(lan_h2,));
 
-        self.addSubnet((lon_drch, h1), subnets=(lan_h1_v6,));
+        self.addSubnet((nyc, h1), subnets=(lan_h1_v6,));
         self.addSubnet((ggl, h2), subnets=(lan_h2_v6,));
+        self.addSubnet((lax1, h3), subnets=(lan_h3_v6,));
 
 
-        self.addLink(h1,lon_drch,igp_metric=1);
+        self.addLink(h1,nyc,igp_metric=1);
         self.addLink(h2,ggl,igp_metric=1);
+        self.addLink(h3,lax1,igp_metric=1);
+
 
 
 
