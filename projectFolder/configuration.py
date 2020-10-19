@@ -41,21 +41,22 @@ class OVHTopology(IPTopo):
         nwk1 = self.addRouter("nwk1", config=RouterConfig);
         nwk5 = self.addRouter("nwk5", config=RouterConfig);
         nyc = self.addRouter("nyc", config=RouterConfig);
-
-        lon_thw = self.addRouter("lon-thw", config=RouterConfig);
-        lon_drch = self.addRouter("lon-drch", config=RouterConfig);
+        #
+        lon_thw = self.addRouter("lon_thw", config=RouterConfig);
+        lon_drch = self.addRouter("lon_drch", config=RouterConfig);
 
         # --- Physical links between routers ---
 
         """ TO DO: Adjust metric according to the distance between cables (short, middle, long) """
         self.addLink(sin, sjo,igp_metric=extra_large);
         self.addLink(syd,lax1,igp_metric=extra_large);
-        self.addLink(syd,sin,igp_metric=large);
-        self.addLink(syd,lon_thw,igp_metric=extra_large);
-        self.addLink(syd,lon_drch,igp_metric=extra_large);
-        self.addLink(sin,lon_thw,igp_metric=extra_large);
-        self.addLink(sin,lon_drch,igp_metric=extra_large);
-        self.addLink(lon_thw,lon_drch,igp_metric=small);
+
+        # self.addLink(syd,sin,igp_metric=large);
+        # self.addLink(syd,lon_thw,igp_metric=extra_large);
+        # self.addLink(syd,lon_drch,igp_metric=extra_large);
+        # self.addLink(sin,lon_thw,igp_metric=extra_large);
+        # self.addLink(sin,lon_drch,igp_metric=extra_large);
+        # self.addLink(lon_thw,lon_drch,igp_metric=small);
 
         self.addLink(pao,sjo,igp_metric=medium);
         self.addLink(sjo,lax1,igp_metric=medium);
@@ -160,15 +161,15 @@ class OVHTopology(IPTopo):
         lon_drch.addDaemon(BGP, address_families=(family,));
 
         # --- Configure the router reflectors ---
-        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5,lon_thw,sin]);
-        set_rr(self, rr= bhs2, peers=[pao,chi5,sjo,nwk5,bhs1,ash1,ash5,lon_thw,sin]);
-        set_rr(self, rr= ash1, peers=[chi1,sjo,lax1,nwk1,bhs1,bhs2,ash5,ggl,lon_thw,sin]);
-        set_rr(self, rr= ash5, peers=[chi5,lax1,nwk5,nyc,bhs1,bhs2,ash1,lon_thw,sin]);
-        set_rr(self, rr = lon_thw, peers=[lon_drch,bhs1,bhs2,ash1,ash5,sin,lon_thw,sin]);
-        set_rr(self, rr = sin, peers=[syd,bhs1,bhs2,ash1,ash5,lon_thw]);
+        set_rr(self, rr= bhs1, peers=[nyc,nwk1,pao,chi1,nwk1,bhs2,ash1,ash5]);#set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5,lon_thw,sin]);
+        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,nwk5,bhs1,ash1,ash5]);
+        set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,chi1,nwk1,bhs1,bhs2,ash5]);
+        set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,chi5,nwk5,bhs1,bhs2,ash1]);
+        # set_rr(self, rr = lon_thw, peers=[lon_drch,bhs1,bhs2,ash1,ash5,sin,lon_thw,sin]);
+        # set_rr(self, rr = sin, peers=[syd,bhs1,bhs2,ash1,ash5,lon_thw]);
 
         # --- Create Ases
-        self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
+        self.addAS(1, (nyc,sjo,pao,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5)) #self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
 
         # --- Configure
 
@@ -179,17 +180,17 @@ class OVHTopology(IPTopo):
         h2 = self.addHost("h2");
         h3 = self.addHost("h3");
 
-        self.addSubnet((nyc, h1), subnets=(lan_h1,));
+        self.addSubnet((chi1, h1), subnets=(lan_h1,));
         self.addSubnet((ggl, h2), subnets=(lan_h2,));
 
-        self.addSubnet((nyc, h1), subnets=(lan_h1_v6,));
+        self.addSubnet((chi1, h1), subnets=(lan_h1_v6,));
         self.addSubnet((ggl, h2), subnets=(lan_h2_v6,));
-        self.addSubnet((lax1, h3), subnets=(lan_h3_v6,));
+        self.addSubnet((bhs1, h3), subnets=(lan_h3_v6,));
 
 
-        self.addLink(h1,nyc,igp_metric=1);
+        self.addLink(h1,chi1,igp_metric=1);
         self.addLink(h2,ggl,igp_metric=1);
-        self.addLink(h3,lax1,igp_metric=1);
+        self.addLink(h3,bhs1,igp_metric=1);
 
 
 
