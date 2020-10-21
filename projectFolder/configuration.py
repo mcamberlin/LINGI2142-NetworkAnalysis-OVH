@@ -267,7 +267,6 @@ class OVHTopology(IPTopo):
         tel3.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
         tel4.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
         tel5.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
-        tel6.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
         
         self.addAS(5,(tel,tel2,tel3,tel4,tel5));
         
@@ -347,8 +346,8 @@ class OVHTopology(IPTopo):
         
         
         h_tel = self.addHost("h_tel");
-        self.addSubnet((cgt, h_tel), subnets=(lan_tel,));
-        self.addSubnet((cgt, h_tel), subnets=(lan_tel_v6,));
+        self.addSubnet((tel, h_tel), subnets=(lan_tel,));
+        self.addSubnet((tel, h_tel), subnets=(lan_tel_v6,));
         self.addLink(h_tel,tel,igp_metric=1);
 
 
