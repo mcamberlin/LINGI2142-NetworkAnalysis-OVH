@@ -14,13 +14,21 @@ class OVHTopology(IPTopo):
         extra_large = 13
 
         # --- Hosts ---
-        lan_h1 = '192.168.1.0/24'
-        lan_h2 = '192.168.2.0/24'
+        lan_h1 = '192.168.0.0/24'
+        lan_h1_v6 = 'aaaa:aaaa:0000:0000::/64'
+        
+        lan_ggl = '192.168.1.0/24'
+        lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'
 
-        lan_h1_v6 = 'cafe:babe:dead:beaf::/64'
-        lan_h2_v6 = 'c1a4:4ad:c0ff:ee::/64'
-        lan_h3_v6 = 'cafe:d0d0:e5:dead::/64'
+        lan_cgt = '192.168.2.0/24'
+        lan_cgt_v6 = 'c1a4:4ad:c0ff:ee::/64'
 
+        lan_lvl = '192.168.3.0/24'
+        lan_lvl_v6 = 'cafe:d0d0:e5:dead::/64'
+
+        lan_tel = '192.168.4.0/24'
+        lan_tel_v6 = 'aaaa:aaaa:aaaa:aaaa::/64'
+        
         # --- Routers ---
         sin = self.addRouter("sin", config=RouterConfig);
         syd = self.addRouter("syd", config=RouterConfig);
@@ -46,8 +54,6 @@ class OVHTopology(IPTopo):
         lon_drch = self.addRouter("lon_drch", config=RouterConfig);
 
         # --- Physical links between routers ---
-
-        """ TO DO: Adjust metric according to the distance between cables (short, middle, long) """
         self.addLink(sin, sjo,igp_metric=extra_large);
         self.addLink(syd,lax1,igp_metric=extra_large);
 
@@ -126,73 +132,224 @@ class OVHTopology(IPTopo):
         lon_thw.addDaemon(OSPF6);
         lon_drch.addDaemon(OSPF6);
 
-        # --- Add a google router ---
+        # --- Stub provider : google (AS2)  ---
         ggl = self.addRouter("ggl", config=RouterConfig);
         ggl2 = self.addRouter("ggl2", config=RouterConfig);
+        
         self.addLink(ggl,ash1,igp_metric=1);
-        self.addLink(ggl,ggl2,igp_metric=1);
+        self.addLink(ggl2,ash5,igp_metric=1);
+        
         ggl.addDaemon(OSPF);
         ggl.addDaemon(OSPF6);
+        
         ggl2.addDaemon(OSPF);
         ggl2.addDaemon(OSPF6);
+        
         ggl.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
         ggl2.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        
         self.addAS(2,(ggl,ggl2));
+        
         ebgp_session(self, ggl, ash1, link_type=SHARE);
+        ebgp_session(self, ggl2, ash5, link_type=SHARE);
+
+        
+        # --- Transit providers: Cogent, Level3 and Telia ---
+        
+        # Cogent (AS=3) 
+        cgt = self.addRouter("cgt", config=RouterConfig);
+        cgt2 = self.addRouter("cgt2", config=RouterConfig);
+        cgt3 = self.addRouter("cgt3", config=RouterConfig);
+        cgt4 = self.addRouter("cgt4", config=RouterConfig);
+        cgt5 = self.addRouter("cgt5", config=RouterConfig);
+        cgt6 = self.addRouter("cgt6", config=RouterConfig);
+        
+        self.addLink(cgt,nwk1,igp_metric=1);
+        self.addLink(cgt2,nwk5,igp_metric=1);
+        self.addLink(cgt3,ash1,igp_metric=1);
+        self.addLink(cgt4,ash5,igp_metric=1);
+        self.addLink(cgt5,chi1,igp_metric=1);
+        self.addLink(cgt6,sjo,igp_metric=1);
+        
+        cgt.addDaemon(OSPF);
+        cgt.addDaemon(OSPF6);
+        cgt2.addDaemon(OSPF);
+        cgt2.addDaemon(OSPF6);
+        cgt3.addDaemon(OSPF);
+        cgt3.addDaemon(OSPF6);
+        cgt4.addDaemon(OSPF);
+        cgt4.addDaemon(OSPF6);
+        cgt5.addDaemon(OSPF);
+        cgt5.addDaemon(OSPF6);
+        cgt6.addDaemon(OSPF);
+        cgt6.addDaemon(OSPF6);
+        
+        cgt.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        cgt2.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        cgt3.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        cgt4.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        cgt5.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        cgt6.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        
+        self.addAS(3,(cgt,cgt2,cgt3,cgt4,cgt5,cgt6));
+        
+        ebgp_session(self, cgt, nwk1, link_type=SHARE);
+        ebgp_session(self, cgt2, nwk5, link_type=SHARE);
+        ebgp_session(self, cgt3, ash1, link_type=SHARE);
+        ebgp_session(self, cgt4, ash5, link_type=SHARE);
+        ebgp_session(self, cgt5, chi1, link_type=SHARE);
+        ebgp_session(self, cgt6, sjo, link_type=SHARE);
+        
+        #Level 3 (AS=4) 
+        lvl = self.addRouter("lvl", config=RouterConfig);
+        lvl2 = self.addRouter("lvl2", config=RouterConfig);
+        lvl3 = self.addRouter("lvl3", config=RouterConfig);
+        lvl4 = self.addRouter("lvl4", config=RouterConfig);
+        lvl5 = self.addRouter("lvl5", config=RouterConfig);
+        
+        self.addLink(lvl,nwk1,igp_metric=1);
+        self.addLink(lvl2,nwk5,igp_metric=1);
+        self.addLink(lvl3,chi1,igp_metric=1);
+        self.addLink(lvl4,chi5,igp_metric=1);
+        self.addLink(lvl5,sjo,igp_metric=1);
+        
+        lvl.addDaemon(OSPF);
+        lvl.addDaemon(OSPF6);
+        lvl2.addDaemon(OSPF);
+        lvl2.addDaemon(OSPF6);
+        lvl3.addDaemon(OSPF);
+        lvl3.addDaemon(OSPF6);
+        lvl4.addDaemon(OSPF);
+        lvl4.addDaemon(OSPF6);
+        lvl5.addDaemon(OSPF);
+        lvl5.addDaemon(OSPF6);
+        
+        lvl.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        lvl2.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        lvl3.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        lvl4.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        lvl5.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        
+        self.addAS(4,(lvl,lvl2,lvl3,lvl4,lvl5));
+        
+        ebgp_session(self, lvl, nwk1, link_type=SHARE);
+        ebgp_session(self, lvl2, nwk5, link_type=SHARE);
+        ebgp_session(self, lvl3, chi1, link_type=SHARE);
+        ebgp_session(self, lvl4, chi5, link_type=SHARE);
+        ebgp_session(self, lvl5, sjo, link_type=SHARE);
+        
+        # Telia (AS=5) 
+        tel = self.addRouter("tel", config=RouterConfig);
+        tel2 = self.addRouter("tel2", config=RouterConfig);
+        tel3 = self.addRouter("tel3", config=RouterConfig);
+        tel4 = self.addRouter("tel4", config=RouterConfig);
+        tel5 = self.addRouter("tel5", config=RouterConfig);
+        
+        self.addLink(tel,nwk1,igp_metric=1);
+        self.addLink(tel2,nwk5,igp_metric=1);
+        self.addLink(tel3,ash5,igp_metric=1);
+        self.addLink(tel4,chi5,igp_metric=1);
+        self.addLink(tel5,pao,igp_metric=1);
+        
+        tel.addDaemon(OSPF);
+        tel.addDaemon(OSPF6);
+        tel2.addDaemon(OSPF);
+        tel2.addDaemon(OSPF6);
+        tel3.addDaemon(OSPF);
+        tel3.addDaemon(OSPF6);
+        tel4.addDaemon(OSPF);
+        tel4.addDaemon(OSPF6);
+        tel5.addDaemon(OSPF);
+        tel5.addDaemon(OSPF6);
+        
+        tel.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        tel2.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        tel3.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        tel4.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        tel5.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        tel6.addDaemon(BGP, address_families=(AF_INET6(redistribute=['connected']),));
+        
+        self.addAS(5,(tel,tel2,tel3,tel4,tel5));
+        
+        ebgp_session(self, tel, nwk1, link_type=SHARE);
+        ebgp_session(self, tel2, nwk5, link_type=SHARE);
+        ebgp_session(self, tel3, ash5, link_type=SHARE);
+        ebgp_session(self, tel4, chi5, link_type=SHARE);
+        ebgp_session(self, tel5, pao, link_type=SHARE);
+        
 
         # --- BGP configuration ---
         family = AF_INET6();
 
         sin.addDaemon(BGP, address_families=(family,));
         syd.addDaemon(BGP, address_families=(family,));
+        
         pao.addDaemon(BGP, address_families=(family,));
         sjo.addDaemon(BGP, address_families=(family,));
+        
         lax1.addDaemon(BGP, address_families=(family,));
+        
         chi1.addDaemon(BGP, address_families=(family,));
         chi5.addDaemon(BGP, address_families=(family,));
+        
         bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,),),));
         bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,),),));
-        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,),),));
-        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,),),));
+        
+        ash1.addDaemon(BGP, address_families=(family,));
+        ash5.addDaemon(BGP, address_families=(family,));
+        
         nwk1.addDaemon(BGP, address_families=(family,));
         nwk5.addDaemon(BGP, address_families=(family,));
+        
         nyc.addDaemon(BGP, address_families=(family,));
+        
         lon_thw.addDaemon(BGP, address_families=(family,));
         lon_drch.addDaemon(BGP, address_families=(family,));
 
         # --- Configure the router reflectors ---
-        set_rr(self, rr= bhs1, peers=[nyc,nwk1,pao,chi1,nwk1,bhs2,ash1,ash5]);#set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5,lon_thw,sin]);
+        set_rr(self, rr= bhs1, peers=[nyc,nwk1,pao,chi1,nwk1,bhs2,ash1,ash5]);
+        #set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5,lon_thw,sin]);
         set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,nwk5,bhs1,ash1,ash5]);
         set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,chi1,nwk1,bhs1,bhs2,ash5]);
         set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,chi5,nwk5,bhs1,bhs2,ash1]);
         # set_rr(self, rr = lon_thw, peers=[lon_drch,bhs1,bhs2,ash1,ash5,sin,lon_thw,sin]);
         # set_rr(self, rr = sin, peers=[syd,bhs1,bhs2,ash1,ash5,lon_thw]);
 
-        # --- Create Ases
-        self.addAS(1, (nyc,sjo,pao,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5)) #self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
-
-        # --- Configure
-
+        # --- Create Ases : AS=1 for OVH
+        self.addAS(1, (nyc,sjo,pao,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5)) 
+        #self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
 
 
-        # --- Hosts ---
+
+        # --- Hosts --- (one host for each provider considered)
         h1 = self.addHost("h1");
-        h2 = self.addHost("h2");
-        h3 = self.addHost("h3");
-
         self.addSubnet((chi1, h1), subnets=(lan_h1,));
-        self.addSubnet((ggl, h2), subnets=(lan_h2,));
-
         self.addSubnet((chi1, h1), subnets=(lan_h1_v6,));
-        self.addSubnet((ggl, h2), subnets=(lan_h2_v6,));
-        self.addSubnet((bhs1, h3), subnets=(lan_h3_v6,));
-
-
         self.addLink(h1,chi1,igp_metric=1);
-        self.addLink(h2,ggl,igp_metric=1);
-        self.addLink(h3,bhs1,igp_metric=1);
+        
+        
+        h_ggl = self.addHost("h_ggl");
+        self.addSubnet((ggl, h_ggl), subnets=(lan_ggl,));
+        self.addSubnet((ggl, h_ggl), subnets=(lan_ggl_v6,));
+        self.addLink(h_ggl,ggl,igp_metric=1);
 
+        
+        h_cgt = self.addHost("h_cgt");
+        self.addSubnet((cgt, h_cgt), subnets=(lan_cgt,));
+        self.addSubnet((cgt, h_cgt), subnets=(lan_cgt_v6,));
+        self.addLink(h_cgt,cgt,igp_metric=1);
 
+        
+        h_lvl = self.addHost("h_lvl");
+        self.addSubnet((lvl, h_lvl), subnets=(lan_lvl,));
+        self.addSubnet((lvl, h_lvl), subnets=(lan_lvl_v6,));
+        self.addLink(h_lvl,lvl,igp_metric=1);
+        
+        
+        h_tel = self.addHost("h_tel");
+        self.addSubnet((cgt, h_tel), subnets=(lan_tel,));
+        self.addSubnet((cgt, h_tel), subnets=(lan_tel_v6,));
+        self.addLink(h_tel,tel,igp_metric=1);
 
 
         super().build(*args, **kwargs)
