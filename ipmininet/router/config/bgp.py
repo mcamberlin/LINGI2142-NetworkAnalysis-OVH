@@ -441,11 +441,14 @@ class BGP(QuaggaDaemon):
         """Compute the set of BGP peers for this BGP router
         :return: set of neighbors"""
         neighbors = []
+        print("node "  + str(self._node))
+        print("peers " + str(self._node.get('bgp_peers', [])))
         for x in self._node.get('bgp_peers', []):
             for v6 in [True, False]:
                 peer = Peer(self._node, x, v6=v6)
                 if peer.peer:
                     neighbors.append(peer)
+        print("done")
         return neighbors
 
     @staticmethod
@@ -516,22 +519,31 @@ class Peer:
         heapq.heapify(prio_queue)
         # Explore all interfaces in base ASN recursively, until we find one
         # connected to the peer
+        iterations = 0
         while to_visit:
             path_cost, i = heapq.heappop(prio_queue)
             if i in visited:
                 continue
+            if iterations > 100000:
+                print("timeout " + peer)
+                break
             i = to_visit.pop(i)
             visited.add(i)
             for n in i.broadcast_domain.routers:
                 if n.node.name == peer:
                     if not v6:
+                        print(iterations)
                         return n.ip, n.node
                     if n.ip6 and not ip_address(n.ip6).is_link_local:
+                        print(iterations)
                         return n.ip6, n.node
+                    print(iterations)
                     return None, None
                 if n.node.asn == base.asn or not n.node.asn:
                     for i in realIntfList(n.node):
                         to_visit[i.name] = i
                         heapq.heappush(prio_queue, (path_cost + i.igp_metric,
                                                     i.name))
+            iterations += 1
+        print(iterations)
         return None, None

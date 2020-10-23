@@ -9,7 +9,7 @@ class OSPF6(OSPF):
     It advertizes one network per interface (the primary one), and set
     interfaces not facing another L3Router to passive"""
     NAME = 'ospf6d'
-    DEAD_INT = 3
+    DEAD_INT = 40
     KILL_PATTERNS = (NAME,)
 
     def _build_interfaces(self, interfaces):
