@@ -283,7 +283,7 @@ class OVHTopology(IPTopo):
         self.addLink(h_cgt,cgt,igp_metric=1);
 
         
-        h_lvl3 = self.addHost("h_lvl");
+        h_lvl3 = self.addHost("h_lvl3");
         self.addSubnet((lvl3, h_lvl3), subnets=(lan_lvl3,));
         self.addSubnet((lvl3, h_lvl3), subnets=(lan_lvl3_v6,));
         self.addLink(h_lvl3,lvl3,igp_metric=1);
