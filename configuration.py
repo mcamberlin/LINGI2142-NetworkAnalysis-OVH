@@ -262,13 +262,13 @@ class OVHTopology(IPTopo):
         lon_drch.addDaemon(BGP);
 
         # --- Configure the router reflectors ---
-        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5,lon_thw,sin]);       # This one is a super RR
+        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5]);       
         set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,bhs1,ash1,ash5]);
-        set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,bhs1,bhs2,chi1,ash5]);
+        set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,bhs1,bhs2,chi1,ash5,lon_thw,sin]);      # This one is a super RR
         set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,bhs1,bhs2,ash1,chi5]);
 
-        set_rr(self, rr = lon_thw, peers=[lon_drch,sin,bhs1]);                              # This one is a super RR
-        set_rr(self, rr = sin, peers=[syd,bhs1,lon_thw]);                                   # This one is a super RR
+        set_rr(self, rr = lon_thw, peers=[lon_drch,sin,ash1]);                              # This one is a super RR
+        set_rr(self, rr = sin, peers=[syd,ash1,lon_thw]);                                   # This one is a super RR
 
         # --- Create Ases : AS=1 for OVH
         #self.addAS(1, (nyc,sjo,pao,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5)) 
