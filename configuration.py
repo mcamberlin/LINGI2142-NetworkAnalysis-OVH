@@ -140,31 +140,25 @@ class OVHTopology(IPTopo):
 
         # --- Stub provider : google (AS2)  ---
         ggl = self.addRouter("ggl", config=RouterConfig);
-        ggl2 = self.addRouter("ggl2", config=RouterConfig);
         
         self.addLink(ggl,ash1,igp_metric=1);
-        self.addLink(ggl2,ash5,igp_metric=1);
         
         ggl.addDaemon(OSPF);
         ggl.addDaemon(OSPF6);
         
-        ggl2.addDaemon(OSPF);
-        ggl2.addDaemon(OSPF6);
         
-        ggl.addDaemon(BGP);
-        ggl2.addDaemon(BGP);
+        ggl.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_ggl_v6,),),));
         
-        self.addAS(2,(ggl,ggl2));
+        self.addAS(2,(ggl , ));
         
         ebgp_session(self, ggl, ash1, link_type=SHARE);
-        ebgp_session(self, ggl2, ash5, link_type=SHARE);
+        ebgp_session(self, ggl, ash5, link_type=SHARE);
 
         
         # --- Transit providers: Cogent, Level3 and Telia ---
         
         # Cogent (AS=3) 
         cgt = self.addRouter("cgt", config=RouterConfig);
-        cgt2 = self.addRouter("cgt2", config=RouterConfig);
         
         self.addLink(cgt,nwk1,igp_metric=1);
         self.addLink(cgt,nwk5,igp_metric=1);
@@ -176,9 +170,9 @@ class OVHTopology(IPTopo):
         cgt.addDaemon(OSPF);
         cgt.addDaemon(OSPF6);
         
-        cgt.addDaemon(BGP);
+        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,),),));
         
-        self.addAS(3,(cgt,cgt2));
+        self.addAS(3,(cgt , ));
         
         ebgp_session(self, cgt, nwk1, link_type=SHARE);
         ebgp_session(self, cgt, nwk5, link_type=SHARE);
@@ -188,7 +182,6 @@ class OVHTopology(IPTopo):
         ebgp_session(self, cgt, sjo, link_type=SHARE);
         
         #Level 3 (AS=4) 
-        lvl = self.addRouter("lvl", config=RouterConfig);
         lvl3 = self.addRouter("lvl3", config=RouterConfig);
         
         self.addLink(lvl3,nwk1,igp_metric=1);
@@ -197,15 +190,12 @@ class OVHTopology(IPTopo):
         self.addLink(lvl3,chi5,igp_metric=1);
         self.addLink(lvl3,sjo,igp_metric=1);
         
-        lvl.addDaemon(OSPF);
-        lvl.addDaemon(OSPF6);
         lvl3.addDaemon(OSPF);
         lvl3.addDaemon(OSPF6);
         
-        lvl.addDaemon(BGP);
-        lvl3.addDaemon(BGP);
+        lvl3.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_lvl_v6,),),));
 
-        self.addAS(4,(lvl,lvl3));
+        self.addAS(4,(lvl3, ));
         
         ebgp_session(self, lvl3, nwk1, link_type=SHARE);
         ebgp_session(self, lvl3, nwk5, link_type=SHARE);
@@ -215,7 +205,6 @@ class OVHTopology(IPTopo):
         
         # Telia (AS=5) 
         tel = self.addRouter("tel", config=RouterConfig);
-        tel2 = self.addRouter("tel2", config=RouterConfig);
         
         self.addLink(tel,nwk1,igp_metric=1);
         self.addLink(tel,nwk5,igp_metric=1);
@@ -226,9 +215,9 @@ class OVHTopology(IPTopo):
         tel.addDaemon(OSPF);
         tel.addDaemon(OSPF6);
         
-        tel.addDaemon(BGP);
+        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,),),));
         
-        self.addAS(5,(tel,tel2));
+        self.addAS(5,(tel, ));
         
         ebgp_session(self, tel, nwk1, link_type=SHARE);
         ebgp_session(self, tel, nwk5, link_type=SHARE);
@@ -239,7 +228,7 @@ class OVHTopology(IPTopo):
 
         # --- BGP configuration ---
 
-        sin.addDaemon(BGP);
+        sin.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),));
         syd.addDaemon(BGP);
         
         pao.addDaemon(BGP);
@@ -250,25 +239,25 @@ class OVHTopology(IPTopo):
         chi1.addDaemon(BGP);
         chi5.addDaemon(BGP);
         
-        bhs1.addDaemon(BGP);
-        bhs2.addDaemon(BGP);
+        bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),))
+        bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),))
         
-        ash1.addDaemon(BGP);
-        ash5.addDaemon(BGP);
+        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),));
+        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),));
         
         nwk1.addDaemon(BGP);
         nwk5.addDaemon(BGP);
         
         nyc.addDaemon(BGP);
         
-        lon_thw.addDaemon(BGP);
-        lon_drch.addDaemon(BGP);
+        lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),))
+        lon_drch.addDaemon(BGP)
 
         # --- Configure the router reflectors ---
-        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash1,ash5]);       
-        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,bhs1,ash1,ash5]);
+        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash5]);       
+        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,bhs1,ash5]);
         set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,bhs1,bhs2,chi1,ash5,lon_thw,sin]);      # This one is a super RR
-        set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,bhs1,bhs2,ash1,chi5]);
+        set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,bhs1,bhs2,chi5]);
 
         set_rr(self, rr = lon_thw, peers=[lon_drch,sin,ash1]);                              # This one is a super RR
         set_rr(self, rr = sin, peers=[syd,ash1,lon_thw]);                                   # This one is a super RR
