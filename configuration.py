@@ -19,6 +19,9 @@ class OVHTopology(IPTopo):
 
         lan_h1 = '192.168.0.0/24'
         lan_h1_v6 = 'aaaa:aaaa:0000:0000::/64'
+
+        lan_h2 = '192.168.5.0/24'
+        lan_h2_v6 = 'aaaa:aaaa:aaaa:0000::/64'
         
         lan_ggl = '192.168.1.0/24'
         lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'
@@ -281,8 +284,12 @@ class OVHTopology(IPTopo):
         self.addSubnet((chi1, h1), subnets=(lan_h1,));
         self.addSubnet((chi1, h1), subnets=(lan_h1_v6,));
         self.addLink(h1,chi1,igp_metric=1);
-        
-        
+
+        h2 = self.addHost("h2");
+        self.addSubnet((nyc, h2), subnets=(lan_h2,));
+        self.addSubnet((nyc, h2), subnets=(lan_h2_v6,));
+        self.addLink(h2,nyc,igp_metric=1);
+            
         h_ggl = self.addHost("h_ggl");
         self.addSubnet((ggl, h_ggl), subnets=(lan_ggl,));
         self.addSubnet((ggl, h_ggl), subnets=(lan_ggl_v6,));
