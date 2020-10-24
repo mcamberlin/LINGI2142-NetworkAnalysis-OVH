@@ -1,0 +1,98 @@
+Country ;Announced Prefix;Description ;Valid ROA ;Parent Prefix ;RIR
+European Union (EU) Flag ;2001:2000::/20 ;Telia Company AB ;;2001:2000::/20 ;RIPE
+Sweden (SE) Flag ;2001:2030:c004::/47 ;TeliaSonera AB ;;2001:2000::/20 ;RIPE
+Hong Kong (HK) Flag ;2407:1600::/32 ;Telia AB Routernet/Internet ;;2407:1600::/32 ;APNIC
+United States (US) Flag ;2604:980:a000::/36 ;Zenlayer Inc ;;2604:980::/32 ;ARIN
+United States (US) Flag ;2604:980:b000::/36 ;Zenlayer Inc ;;2604:980::/32 ;ARIN
+United States (US) Flag ;2604:a880::/48 ;DigitalOcean, LLC ;;2604:a880::/32 ;ARIN
+United States (US) Flag ;2604:a880:1::/48 ;DigitalOcean, LLC ;;2604:a880::/32 ;ARIN
+United States (US) Flag ;2604:a880:2::/48 ;DigitalOcean, LLC ;;2604:a880::/32 ;ARIN
+United States (US) Flag ;2604:a880:3::/48 ;DigitalOcean, LLC ;;2604:a880::/32 ;ARIN
+United States (US) Flag ;2604:a880:4::/48 ;DigitalOcean, LLC ;;2604:a880::/32 ;ARIN
+United States (US) Flag ;2604:a880:400::/48 ;DigitalOcean, LLC ;;2604:a880::/32 ;ARIN
+United States (US) Flag ;2604:a880:800::/48 ;DigitalOcean, LLC ;;2604:a880::/32 ;ARIN
+United States (US) Flag ;2605:380:32::/48 ;Anexia ;;2605:380::/32 ;ARIN
+United States (US) Flag ;2605:380:40::/48 ;Anexia ;;2605:380::/32 ;ARIN
+United States (US) Flag ;2605:380:53::/48 ;Anexia ;;2605:380::/32 ;ARIN
+United States (US) Flag ;2605:380:55::/48 ;Anexia ;;2605:380::/32 ;ARIN
+United States (US) Flag ;2605:380:56::/48 ;Anexia ;;2605:380::/32 ;ARIN
+United States (US) Flag ;2605:380:57::/48 ;Anexia ;;2605:380::/32 ;ARIN
+United States (US) Flag ;2605:380:58::/48 ;Anexia ;;2605:380::/32 ;ARIN
+Panama (PA) Flag ;2803:ad80::/48 ;ANEXIA SOUTH AMERICA SOCIEDAD ANONIMA ;;2803:ad80::/32 ;Lacnic
+Austria (AT) Flag ;2a00:11c0:2::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:4::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:7::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:8::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:9::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:15::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:16::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:17::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:1b::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:1c::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:1e::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:1f::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:20::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:21::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:25::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:26::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:2a::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:2b::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:2c::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:2e::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:2f::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:30::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:32::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:33::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:34::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:39::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:44::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:46::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:68::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:76::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Austria (AT) Flag ;2a00:11c0:85::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Netherlands (NL) Flag ;2a03:90c0:10::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+United States (US) Flag ;2a03:90c0:30::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+Germany (DE) Flag ;2a03:90c0:40::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+Russian Federation (RU) Flag ;2a03:90c0:50::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:80::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+Poland (PL) Flag ;2a03:90c0:d0::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:e0::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:f0::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:140::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+United States (US) Flag ;2a03:90c0:170::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:190::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:1a0::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:1d0::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:210::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:220::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:230::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:240::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:250::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:270::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:290::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Hong Kong (HK) Flag ;2a03:90c0:2c0::/44 ;GCORE CUSTOMER ALLOCATION ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:2d0::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:2e0::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:2f0::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:370::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:390::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:3b0::/44 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Singapore (SG) Flag ;2a03:90c0:9995::/48 ;GCL ANYCAST IPv6 ASIA ;;2a03:90c0::/32 ;RIPE
+United States (US) Flag ;2a03:90c0:9996::/48 ;GCL ANYCAST IPv6 NA ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:9997::/48 ;GCL ANYCAST IPv6 EU ;;2a03:90c0::/32 ;RIPE
+Russian Federation (RU) Flag ;2a03:90c0:9999::/48 ;GCL ANYCAST IPv6 CIS ;;2a03:90c0::/32 ;RIPE
+Luxembourg (LU) Flag ;2a03:90c0:999a::/48 ;G-Core Labs S.A. ;;2a03:90c0::/32 ;RIPE
+Sweden (SE) Flag ;2a05:c740::/32 ;Netett Sverige AB ;;2a05:c740::/29 ;RIPE
+Sweden (SE) Flag ;2a05:c741::/32 ;Netett Sverige AB ;;2a05:c740::/29 ;RIPE
+Switzerland (CH) Flag ;2a0e:1c80:a::/48 ;Netbouncer CH1 ;;2a0e:1c80::/29 ;RIPE
+Spain (ES) Flag ;2a0e:1c80:e::/48 ;Netbouncer ES2 ;;2a0e:1c80::/29 ;RIPE
+France (FR) Flag ;2a0e:1c80:11::/48 ;Netbouncer FR1 ;;2a0e:1c80::/29 ;RIPE
+Italy (IT) Flag ;2a0e:1c80:12::/48 ;Netbouncer IT1 ;;2a0e:1c80::/29 ;RIPE
+United Kingdom (GB) Flag ;2a0f:9340::/48 ;GB Norisab ;;2a0f:9340::/29 ;RIPE
+France (FR) Flag ;2a0f:9340:10::/48 ;FR NORISAB ;;2a0f:9340::/29 ;RIPE
+Germany (DE) Flag ;2a0f:9340:11::/48 ;DE NORISAB ;;2a0f:9340::/29 ;RIPE
+Italy (IT) Flag ;2a0f:9340:1a::/48 ;IT NORISAB ;;2a0f:9340::/29 ;RIPE
+Spain (ES) Flag ;2a0f:9340:32::/48 ;ES NORISAB ;;2a0f:9340::/29 ;RIPE
+Sweden (SE) Flag ;2a0f:9340:33::/48 ;SE NORISAB ;;2a0f:9340::/29 ;RIPE
+Switzerland (CH) Flag ;2a0f:9340:34::/48 ;CH NORISAB ;;2a0f:9340::/29 ;RIPE
+Denmark (DK) Flag ;2a0f:9340:3d::/48 ;DK NORISAB ;;2a0f:9340::/29 ;RIPE

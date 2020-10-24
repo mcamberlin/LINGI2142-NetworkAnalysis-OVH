@@ -1,0 +1,661 @@
+Country ;Announced Prefix;Description ;Valid ROA ;Parent Prefix ;RIR
+European Union (EU) Flag ;2.22.36.0/22 ;Akamai Technologies ;;2.16.0.0/13 ;RIPE
+European Union (EU) Flag ;2.22.40.0/22 ;Akamai Technologies ;;2.16.0.0/13 ;RIPE
+European Union (EU) Flag ;2.22.238.0/23 ;Akamai Technologies ;;2.16.0.0/13 ;RIPE
+European Union (EU) Flag ;2.23.128.0/20 ;Akamai Technologies ;;2.16.0.0/13 ;RIPE
+European Union (EU) Flag ;2.255.248.0/21 ;TeliaCompany AB ;;2.248.0.0/13 ;RIPE
+Singapore (SG) Flag ;5.8.26.0/23 ;G-Core Labs Customer assignment ;;5.8.24.0/22 ;RIPE
+Luxembourg (LU) Flag ;5.8.40.0/24 ;G-Core Labs S.A. ;;5.8.40.0/22 ;RIPE
+United States (US) Flag ;5.8.41.0/24 ;G-Core Labs Customer assignment ;;5.8.40.0/22 ;RIPE
+Luxembourg (LU) Flag ;5.8.68.0/24 ;G-Core Labs S.A. ;;5.8.68.0/22 ;RIPE
+United States (US) Flag ;5.8.93.0/24 ;G-Core Labs S.A. ;;5.8.92.0/22 ;RIPE
+Russian Federation (RU) Flag ;5.62.18.0/24 ;PRCDN Consumer Pool ;;5.62.0.0/18 ;RIPE
+United Kingdom (GB) Flag ;5.101.216.0/24 ;G-Core Labs Customer assignment ;;5.101.216.0/21 ;RIPE
+Germany (DE) Flag ;5.154.160.0/21 ;Amisol GmbH ;;5.154.160.0/21 ;RIPE
+United States (US) Flag ;5.188.0.0/24 ;G-Core Labs Customer assignment ;;5.188.0.0/21 ;RIPE
+Turkey (TR) Flag ;5.188.5.0/24 ;G-Core Labs Customer assignment ;;5.188.0.0/21 ;RIPE
+Ukraine (UA) Flag ;5.188.6.0/24 ;G-Core Labs Customer assignment ;;5.188.0.0/21 ;RIPE
+Hong Kong (HK) Flag ;5.188.33.0/24 ;G-Core Labs Customer assignment ;;5.188.32.0/21 ;RIPE
+Singapore (SG) Flag ;5.188.34.0/24 ;G-Core Labs Customer assignment ;;5.188.32.0/21 ;RIPE
+France (FR) Flag ;5.188.70.0/24 ;G-Core Labs Customer assignment ;;5.188.70.0/23 ;RIPE
+France (FR) Flag ;5.188.93.0/24 ;G-Core Labs S.A. ;;5.188.92.0/22 ;RIPE
+Poland (PL) Flag ;5.188.108.0/24 ;G-Core Labs Customer assignment ;;5.188.108.0/22 ;RIPE
+Poland (PL) Flag ;5.188.109.0/24 ;G-Core Labs Customer assignment ;;5.188.108.0/22 ;RIPE
+Luxembourg (LU) Flag ;5.188.134.0/24 ;G-Core Labs S.A. ;;5.188.132.0/22 ;RIPE
+Russian Federation (RU) Flag ;5.188.171.0/24 ;G-Core Labs Customer assignment ;;5.188.168.0/22 ;RIPE
+Russian Federation (RU) Flag ;5.188.212.0/24 ;G-Core Labs Customer assignment ;;5.188.212.0/22 ;RIPE
+United Kingdom (GB) Flag ;5.188.213.0/24 ;G-Core Labs Customer assignment ;;5.188.212.0/22 ;RIPE
+United States (US) Flag ;5.188.214.0/24 ;G-Core Labs Customer assignment ;;5.188.212.0/22 ;RIPE
+Russian Federation (RU) Flag ;5.188.224.0/24 ;G-Core Labs Customer assignment ;;5.188.224.0/21 ;RIPE
+United States (US) Flag ;5.188.230.0/24 ;G-Core Labs S.A. ;;5.188.224.0/21 ;RIPE
+Hong Kong (HK) Flag ;5.189.200.0/24 ;G-Core Labs Customer assignment ;;5.189.200.0/21 ;RIPE
+Netherlands (NL) Flag ;5.189.204.0/24 ;G-Core Labs Customer assignment ;;5.189.200.0/21 ;RIPE
+United States (US) Flag ;5.189.206.0/24 ;G-Core Labs S.A. ;;5.189.200.0/21 ;RIPE
+United States (US) Flag ;5.189.220.0/24 ;G-Core Labs S.A. ;;5.189.220.0/22 ;RIPE
+Poland (PL) Flag ;5.189.221.0/24 ;G-Core Labs Customer assignment ;;5.189.220.0/22 ;RIPE
+United States (US) Flag ;5.189.223.0/24 ;G-Core Labs S.A. ;;5.189.220.0/22 ;RIPE
+Netherlands (NL) Flag ;23.40.124.0/22 ;Akamai International, BV ;;23.32.0.0/11 ;ARIN
+United States (US) Flag ;23.52.144.0/20 ;Akamai Technologies, Inc. ;;23.32.0.0/11 ;ARIN
+Netherlands (NL) Flag ;23.53.48.0/20 ;Akamai International, BV ;;23.32.0.0/11 ;ARIN
+Austria (AT) Flag ;37.252.225.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;37.252.224.0/19 ;RIPE
+France (FR) Flag ;37.252.226.0/24 ;powered by ANX ;;37.252.224.0/19 ;RIPE
+Austria (AT) Flag ;37.252.229.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;37.252.224.0/19 ;RIPE
+Austria (AT) Flag ;37.252.230.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;37.252.224.0/19 ;RIPE
+Austria (AT) Flag ;37.252.231.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;37.252.224.0/19 ;RIPE
+Austria (AT) Flag ;37.252.246.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;37.252.224.0/19 ;RIPE
+Austria (AT) Flag ;37.252.247.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;37.252.224.0/19 ;RIPE
+Austria (AT) Flag ;37.252.249.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;37.252.224.0/19 ;RIPE
+Austria (AT) Flag ;37.252.254.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;37.252.224.0/19 ;RIPE
+Austria (AT) Flag ;37.252.255.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;37.252.224.0/19 ;RIPE
+United States (US) Flag ;43.228.184.0/22 ;Sand Dune Mail Ltd ;;43.228.184.0/22 ;APNIC
+Sweden (SE) Flag ;45.15.18.0/24 ;Netbouncer AB ;;45.15.16.0/22 ;RIPE
+United States (US) Flag ;45.55.0.0/19 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.32.0/19 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.64.0/19 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.96.0/22 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.100.0/22 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.104.0/22 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.108.0/22 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.112.0/22 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.116.0/22 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.120.0/22 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.124.0/22 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.128.0/18 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+United States (US) Flag ;45.55.192.0/18 ;DigitalOcean, LLC ;;45.55.0.0/16 ;ARIN
+Austria (AT) Flag ;45.84.252.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;45.84.252.0/22 ;RIPE
+United Kingdom (GB) Flag ;45.130.84.0/24 ;Privat Kommunikation Sverige AB ;;45.130.84.0/22 ;RIPE
+United Kingdom (GB) Flag ;45.130.85.0/24 ;Privat Kommunikation Sverige AB ;;45.130.84.0/22 ;RIPE
+United States (US) Flag ;45.135.229.0/24 ;G-Core Labs Customer assignment ;;45.135.228.0/22 ;RIPE
+Germany (DE) Flag ;45.137.247.0/24 ;GPORTAL ;;45.137.244.0/22 ;RIPE
+Netherlands (NL) Flag ;45.147.160.0/24 ;G-Core Labs Customer assignment ;;45.147.160.0/22 ;RIPE
+Russian Federation (RU) Flag ;45.147.162.0/24 ;G-Core Labs Customer assignment ;;45.147.160.0/22 ;RIPE
+Switzerland (CH) Flag ;45.148.4.0/24 ;Privat Kommunikation Sverige AB ;;45.148.4.0/22 ;RIPE
+Sweden (SE) Flag ;46.230.176.0/20 ;Net1 Sverige AB ;;46.230.176.0/20 ;RIPE
+Sweden (SE) Flag ;46.230.192.0/20 ;Net1 Sverige AB ;;46.230.192.0/18 ;RIPE
+Sweden (SE) Flag ;46.230.208.0/21 ;Net1 Sverige AB ;;46.230.192.0/18 ;RIPE
+Sweden (SE) Flag ;46.230.208.0/20 ;Net1 Sverige AB ;;46.230.192.0/18 ;RIPE
+Sweden (SE) Flag ;46.230.216.0/21 ;Net1 Sverige AB ;;46.230.192.0/18 ;RIPE
+Sweden (SE) Flag ;46.230.224.0/20 ;Net1 Sverige AB ;;46.230.192.0/18 ;RIPE
+European Union (EU) Flag ;62.115.0.0/16 ;Telia Company AB ;;62.115.0.0/16 ;RIPE
+Canada (CA) Flag ;64.34.120.0/22 ;ISQ Solutions Inc. ;;64.34.0.0/16 ;ARIN
+United States (US) Flag ;64.225.0.0/20 ;DigitalOcean, LLC ;;64.225.0.0/17 ;ARIN
+United States (US) Flag ;64.225.16.0/20 ;DigitalOcean, LLC ;;64.225.0.0/17 ;ARIN
+United States (US) Flag ;64.225.32.0/20 ;DigitalOcean, LLC ;;64.225.0.0/17 ;ARIN
+United States (US) Flag ;64.225.48.0/20 ;DigitalOcean, LLC ;;64.225.0.0/17 ;ARIN
+United States (US) Flag ;64.225.88.0/22 ;DigitalOcean, LLC ;;64.225.0.0/17 ;ARIN
+United States (US) Flag ;64.225.112.0/20 ;DigitalOcean, LLC ;;64.225.0.0/17 ;ARIN
+United States (US) Flag ;64.227.0.0/20 ;DigitalOcean, LLC ;;64.227.0.0/17 ;ARIN
+United States (US) Flag ;64.227.16.0/20 ;DigitalOcean, LLC ;;64.227.0.0/17 ;ARIN
+United States (US) Flag ;64.227.48.0/20 ;DigitalOcean, LLC ;;64.227.0.0/17 ;ARIN
+United States (US) Flag ;64.227.80.0/20 ;DigitalOcean, LLC ;;64.227.0.0/17 ;ARIN
+United States (US) Flag ;64.227.96.0/20 ;DigitalOcean, LLC ;;64.227.0.0/17 ;ARIN
+United States (US) Flag ;67.205.128.0/20 ;DigitalOcean, LLC ;;67.205.128.0/18 ;ARIN
+United States (US) Flag ;67.205.144.0/20 ;DigitalOcean, LLC ;;67.205.128.0/18 ;ARIN
+United States (US) Flag ;67.205.160.0/20 ;DigitalOcean, LLC ;;67.205.128.0/18 ;ARIN
+United States (US) Flag ;67.205.176.0/20 ;DigitalOcean, LLC ;;67.205.128.0/18 ;ARIN
+United States (US) Flag ;67.207.64.0/24 ;DigitalOcean, LLC ;;67.207.64.0/19 ;ARIN
+United States (US) Flag ;67.207.65.0/24 ;DigitalOcean, LLC ;;67.207.64.0/19 ;ARIN
+United States (US) Flag ;67.207.66.0/24 ;DigitalOcean, LLC ;;67.207.64.0/19 ;ARIN
+United States (US) Flag ;67.207.80.0/20 ;DigitalOcean, LLC ;;67.207.64.0/19 ;ARIN
+United States (US) Flag ;68.183.16.0/20 ;DigitalOcean, LLC ;;68.183.0.0/16 ;ARIN
+United States (US) Flag ;68.183.48.0/20 ;DigitalOcean, LLC ;;68.183.0.0/16 ;ARIN
+United States (US) Flag ;68.183.96.0/20 ;DigitalOcean, LLC ;;68.183.0.0/16 ;ARIN
+United States (US) Flag ;68.183.112.0/20 ;DigitalOcean, LLC ;;68.183.0.0/16 ;ARIN
+United States (US) Flag ;68.183.128.0/20 ;DigitalOcean, LLC ;;68.183.0.0/16 ;ARIN
+United States (US) Flag ;68.183.144.0/20 ;DigitalOcean, LLC ;;68.183.0.0/16 ;ARIN
+United States (US) Flag ;68.183.160.0/20 ;DigitalOcean, LLC ;;68.183.0.0/16 ;ARIN
+United States (US) Flag ;68.183.192.0/20 ;DigitalOcean, LLC ;;68.183.0.0/16 ;ARIN
+United States (US) Flag ;68.183.248.0/22 ;DigitalOcean, LLC ;;68.183.0.0/16 ;ARIN
+United States (US) Flag ;69.55.49.0/24 ;ServerStack, Inc. ;;69.55.48.0/20 ;ARIN
+United States (US) Flag ;69.55.54.0/24 ;ServerStack, Inc. ;;69.55.48.0/20 ;ARIN
+United States (US) Flag ;69.55.55.0/24 ;ServerStack, Inc. ;;69.55.48.0/20 ;ARIN
+United States (US) Flag ;72.246.240.0/22 ;Akamai Technologies, Inc. ;;72.246.0.0/15 ;ARIN
+United States (US) Flag ;72.247.64.0/21 ;Akamai Technologies, Inc. ;;72.246.0.0/15 ;ARIN
+European Union (EU) Flag ;80.91.240.0/20 ;Telia Company AB ;;80.91.240.0/20 ;RIPE
+European Union (EU) Flag ;80.91.248.0/21 ;Telia International Carrier ;;80.91.240.0/20 ;RIPE
+European Union (EU) Flag ;80.239.128.0/19 ;Telia Company AB ;;80.239.128.0/20 ;RIPE
+European Union (EU) Flag ;80.239.160.0/19 ;Telia Company AB ;;80.239.160.0/20 ;RIPE
+European Union (EU) Flag ;80.239.192.0/19 ;Telia Company AB ;;80.239.192.0/20 ;RIPE
+European Union (EU) Flag ;80.239.224.0/19 ;Telia Company AB ;;80.239.224.0/20 ;RIPE
+Germany (DE) Flag ;84.254.68.0/22 ;C&S Breitband GmbH ;;84.254.68.0/22 ;RIPE
+Sweden (SE) Flag ;91.149.32.0/20 ;Netett Sverige AB ;;91.149.32.0/20 ;RIPE
+Russian Federation (RU) Flag ;91.202.245.0/24 ;nxa gamecloud 1 ;;91.202.244.0/22 ;RIPE
+Russian Federation (RU) Flag ;91.202.246.0/23 ;nxa gamecloud ;;91.202.244.0/22 ;RIPE
+United States (US) Flag ;91.243.81.0/24 ;G-Core Labs S.A. ;;91.243.80.0/21 ;RIPE
+Luxembourg (LU) Flag ;91.243.85.0/24 ;G-Core Labs Customer assignment ;;91.243.80.0/21 ;RIPE
+United States (US) Flag ;92.38.132.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+United States (US) Flag ;92.38.133.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+Russian Federation (RU) Flag ;92.38.138.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+Russian Federation (RU) Flag ;92.38.139.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+Netherlands (NL) Flag ;92.38.140.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+Singapore (SG) Flag ;92.38.141.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+Luxembourg (LU) Flag ;92.38.143.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+Luxembourg (LU) Flag ;92.38.145.0/24 ;G-Core Labs S.A. ;;92.38.128.0/19 ;RIPE
+Luxembourg (LU) Flag ;92.38.146.0/24 ;G-Core Labs S.A. ;;92.38.128.0/19 ;RIPE
+Luxembourg (LU) Flag ;92.38.147.0/24 ;G-Core Labs S.A. ;;92.38.128.0/19 ;RIPE
+Russian Federation (RU) Flag ;92.38.152.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+Russian Federation (RU) Flag ;92.38.153.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+Luxembourg (LU) Flag ;92.38.157.0/24 ;G-Core Labs S.A. ;;92.38.128.0/19 ;RIPE
+Luxembourg (LU) Flag ;92.38.162.0/24 ;G-Core Labs Customer assignment ;;92.38.160.0/19 ;RIPE
+Luxembourg (LU) Flag ;92.38.163.0/24 ;G-Core Labs Customer assignment ;;92.38.160.0/19 ;RIPE
+United States (US) Flag ;92.38.170.0/24 ;G-Core Labs Customer assignment ;;92.38.160.0/19 ;RIPE
+Luxembourg (LU) Flag ;92.38.172.0/24 ;G-Core Labs Customer assignment ;;92.38.160.0/19 ;RIPE
+Singapore (SG) Flag ;92.38.182.0/24 ;G-Core Labs Customer assignment ;;92.38.160.0/19 ;RIPE
+Netherlands (NL) Flag ;92.38.184.0/24 ;G-Core Labs Customer assignment ;;92.38.160.0/19 ;RIPE
+Germany (DE) Flag ;92.223.0.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Germany (DE) Flag ;92.223.1.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Germany (DE) Flag ;92.223.2.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Germany (DE) Flag ;92.223.3.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.4.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.5.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.6.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.7.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.8.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Singapore (SG) Flag ;92.223.16.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Singapore (SG) Flag ;92.223.17.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.18.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.19.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.20.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.21.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.22.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.23.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.24.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.26.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.27.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Singapore (SG) Flag ;92.223.28.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Singapore (SG) Flag ;92.223.29.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Germany (DE) Flag ;92.223.30.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Netherlands (NL) Flag ;92.223.31.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.32.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.33.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.34.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.39.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.40.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.41.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.42.0/24 ;G-Core Labs S.A. ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.44.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.45.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.50.0/24 ;G-Core Labs S.A. ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.51.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Hong Kong (HK) Flag ;92.223.52.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.54.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.56.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.57.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.59.0/24 ;G-Core Labs S.A. ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.66.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.68.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.69.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Hong Kong (HK) Flag ;92.223.76.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.82.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.83.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Singapore (SG) Flag ;92.223.85.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Singapore (SG) Flag ;92.223.86.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.88.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Cyprus (CY) Flag ;92.223.90.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Singapore (SG) Flag ;92.223.95.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.96.0/24 ;G-Core Labs S.A. ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.97.0/24 ;G-Core Labs S.A. ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.98.0/24 ;G-Core Labs S.A. ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.99.0/24 ;G-Core Labs S.A. ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.101.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.102.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.103.0/24 ;G-Core Labs S.A. ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.105.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Russian Federation (RU) Flag ;92.223.106.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Luxembourg (LU) Flag ;92.223.113.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.120.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;92.223.121.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Netherlands (NL) Flag ;92.223.127.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Denmark (DK) Flag ;92.241.192.0/20 ;Nordisk Mobiltelefon Denmark A/S ;;92.241.192.0/19 ;RIPE
+Denmark (DK) Flag ;92.241.216.0/22 ;NET NMT DK SUB1 ;;92.241.192.0/19 ;RIPE
+Sweden (SE) Flag ;92.241.220.0/22 ;NET NMT SE ;;92.241.192.0/19 ;RIPE
+Germany (DE) Flag ;94.16.8.0/24 ;SSP Europe IT GmbH ;;94.16.0.0/19 ;RIPE
+Germany (DE) Flag ;94.16.12.0/24 ;SSP Europe IT GmbH ;;94.16.0.0/19 ;RIPE
+Germany (DE) Flag ;94.16.14.0/24 ;SSP Europe IT GmbH ;;94.16.0.0/19 ;RIPE
+Germany (DE) Flag ;94.16.21.0/24 ;SSP Europe IT GmbH ;;94.16.0.0/19 ;RIPE
+Germany (DE) Flag ;94.16.22.0/24 ;SSP Europe IT GmbH ;;94.16.0.0/19 ;RIPE
+Germany (DE) Flag ;94.16.24.0/24 ;SSP Europe IT GmbH ;;94.16.0.0/19 ;RIPE
+Germany (DE) Flag ;94.16.99.0/24 ;SSP Europe IT GmbH ;;94.16.96.0/19 ;RIPE
+Germany (DE) Flag ;94.16.100.0/24 ;SSP Europe IT GmbH ;;94.16.96.0/19 ;RIPE
+Germany (DE) Flag ;94.16.101.0/24 ;SSP Europe IT GmbH ;;94.16.96.0/19 ;RIPE
+Germany (DE) Flag ;94.16.102.0/24 ;SSP Europe IT GmbH ;;94.16.96.0/19 ;RIPE
+European Union (EU) Flag ;95.101.133.0/24 ;Akamai Technologies ;;95.100.0.0/15 ;RIPE
+United States (US) Flag ;96.16.192.0/21 ;Akamai Technologies, Inc. ;;96.16.0.0/15 ;ARIN
+United States (US) Flag ;96.17.4.0/22 ;Akamai Technologies, Inc. ;;96.16.0.0/15 ;ARIN
+United States (US) Flag ;103.47.204.0/22 ;Sand Dune Mail Ltd ;;103.47.204.0/22 ;APNIC
+Netherlands (NL) Flag ;104.75.14.0/23 ;Akamai International, BV ;;104.64.0.0/10 ;ARIN
+Netherlands (NL) Flag ;104.75.48.0/20 ;Akamai International, BV ;;104.64.0.0/10 ;ARIN
+Netherlands (NL) Flag ;104.75.64.0/20 ;Akamai International, BV ;;104.64.0.0/10 ;ARIN
+Netherlands (NL) Flag ;104.75.80.0/22 ;Akamai International, BV ;;104.64.0.0/10 ;ARIN
+United States (US) Flag ;104.88.192.0/24 ;Akamai Technologies, Inc. ;;104.64.0.0/10 ;ARIN
+United States (US) Flag ;104.103.64.0/22 ;Akamai Technologies, Inc. ;;104.64.0.0/10 ;ARIN
+United States (US) Flag ;104.131.0.0/18 ;DigitalOcean, LLC ;;104.131.0.0/16 ;ARIN
+United States (US) Flag ;104.131.64.0/18 ;DigitalOcean, LLC ;;104.131.0.0/16 ;ARIN
+United States (US) Flag ;104.131.128.0/20 ;DigitalOcean, LLC ;;104.131.0.0/16 ;ARIN
+United States (US) Flag ;104.131.144.0/20 ;DigitalOcean, LLC ;;104.131.0.0/16 ;ARIN
+United States (US) Flag ;104.131.160.0/20 ;DigitalOcean, LLC ;;104.131.0.0/16 ;ARIN
+United States (US) Flag ;104.131.176.0/20 ;DigitalOcean, LLC ;;104.131.0.0/16 ;ARIN
+United States (US) Flag ;104.131.192.0/19 ;DigitalOcean, LLC ;;104.131.0.0/16 ;ARIN
+United States (US) Flag ;104.131.224.0/19 ;DigitalOcean, LLC ;;104.131.0.0/16 ;ARIN
+United States (US) Flag ;104.236.0.0/18 ;DigitalOcean, LLC ;;104.236.0.0/16 ;ARIN
+United States (US) Flag ;104.236.64.0/18 ;DigitalOcean, LLC ;;104.236.0.0/16 ;ARIN
+United States (US) Flag ;104.236.128.0/18 ;DigitalOcean, LLC ;;104.236.0.0/16 ;ARIN
+United States (US) Flag ;104.236.192.0/18 ;DigitalOcean, LLC ;;104.236.0.0/16 ;ARIN
+United States (US) Flag ;104.248.0.0/20 ;DigitalOcean, LLC ;;104.248.0.0/16 ;ARIN
+United States (US) Flag ;104.248.48.0/20 ;DigitalOcean, LLC ;;104.248.0.0/16 ;ARIN
+United States (US) Flag ;104.248.64.0/20 ;DigitalOcean, LLC ;;104.248.0.0/16 ;ARIN
+United States (US) Flag ;104.248.104.0/22 ;DigitalOcean, LLC ;;104.248.0.0/16 ;ARIN
+United States (US) Flag ;104.248.108.0/22 ;DigitalOcean, LLC ;;104.248.0.0/16 ;ARIN
+United States (US) Flag ;104.248.112.0/20 ;DigitalOcean, LLC ;;104.248.0.0/16 ;ARIN
+United States (US) Flag ;104.248.176.0/20 ;DigitalOcean, LLC ;;104.248.0.0/16 ;ARIN
+United States (US) Flag ;104.248.208.0/20 ;DigitalOcean, LLC ;;104.248.0.0/16 ;ARIN
+United States (US) Flag ;104.248.224.0/20 ;DigitalOcean, LLC ;;104.248.0.0/16 ;ARIN
+United States (US) Flag ;107.170.0.0/17 ;DigitalOcean, LLC ;;107.170.0.0/16 ;ARIN
+United States (US) Flag ;107.170.128.0/19 ;DigitalOcean, LLC ;;107.170.0.0/16 ;ARIN
+United States (US) Flag ;107.170.160.0/19 ;DigitalOcean, LLC ;;107.170.0.0/16 ;ARIN
+United States (US) Flag ;107.170.192.0/18 ;DigitalOcean, LLC ;;107.170.0.0/16 ;ARIN
+United States (US) Flag ;128.199.0.0/20 ;DigitalOcean, LLC ;;128.199.0.0/16 ;RIPE
+Mexico (MX) Flag ;131.100.0.0/24 ;ANEXIA SOUTH AMERICA SOCIEDAD ANONIMA ;;131.100.0.0/22 ;Lacnic
+Mexico (MX) Flag ;131.100.3.0/24 ;ANEXIA SOUTH AMERICA SOCIEDAD ANONIMA ;;131.100.0.0/22 ;Lacnic
+United States (US) Flag ;134.122.0.0/20 ;DigitalOcean, LLC ;;134.122.0.0/17 ;ARIN
+United States (US) Flag ;134.122.16.0/20 ;DigitalOcean, LLC ;;134.122.0.0/17 ;ARIN
+United States (US) Flag ;134.122.32.0/20 ;DigitalOcean, LLC ;;134.122.0.0/17 ;ARIN
+United States (US) Flag ;134.122.112.0/20 ;DigitalOcean, LLC ;;134.122.0.0/17 ;ARIN
+United States (US) Flag ;134.209.0.0/20 ;DigitalOcean, LLC ;;134.209.0.0/16 ;ARIN
+United States (US) Flag ;134.209.32.0/20 ;DigitalOcean, LLC ;;134.209.0.0/16 ;ARIN
+United States (US) Flag ;134.209.48.0/20 ;DigitalOcean, LLC ;;134.209.0.0/16 ;ARIN
+United States (US) Flag ;134.209.64.0/20 ;DigitalOcean, LLC ;;134.209.0.0/16 ;ARIN
+United States (US) Flag ;134.209.112.0/20 ;DigitalOcean, LLC ;;134.209.0.0/16 ;ARIN
+United States (US) Flag ;134.209.128.0/22 ;DigitalOcean, LLC ;;134.209.0.0/16 ;ARIN
+United States (US) Flag ;134.209.140.0/22 ;DigitalOcean, LLC ;;134.209.0.0/16 ;ARIN
+United States (US) Flag ;134.209.160.0/20 ;DigitalOcean, LLC ;;134.209.0.0/16 ;ARIN
+United States (US) Flag ;134.209.208.0/20 ;DigitalOcean, LLC ;;134.209.0.0/16 ;ARIN
+United States (US) Flag ;138.68.0.0/20 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.16.0/20 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.32.0/24 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.33.0/24 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.34.0/24 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.36.0/22 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.40.0/21 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.48.0/20 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.192.0/22 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.196.0/22 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.200.0/22 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.208.0/20 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.224.0/20 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.68.240.0/20 ;DigitalOcean, LLC ;;138.68.0.0/16 ;ARIN
+United States (US) Flag ;138.197.0.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.16.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.32.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.48.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.52.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.56.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.60.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.64.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.80.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.96.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.112.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.128.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.144.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.160.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.192.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.208.0/20 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.224.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.228.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.232.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.236.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.240.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+United States (US) Flag ;138.197.252.0/22 ;DigitalOcean, LLC ;;138.197.0.0/16 ;ARIN
+Finland (FI) Flag ;139.123.225.0/24 ;UPM-Kymmene Oyj ;;139.123.0.0/16 ;RIPE
+Finland (FI) Flag ;139.123.228.0/24 ;UPM-Kymmene Oyj ;;139.123.0.0/16 ;RIPE
+United States (US) Flag ;141.101.148.0/24 ;GZ Systems Limited - Colocation in Chicago ;;141.101.144.0/20 ;RIPE
+United States (US) Flag ;142.93.0.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;142.93.16.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;142.93.48.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;142.93.64.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;142.93.80.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;142.93.112.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;142.93.144.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;142.93.176.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;142.93.192.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;142.93.240.0/20 ;DigitalOcean, LLC ;;142.93.0.0/16 ;ARIN
+United States (US) Flag ;143.110.128.0/20 ;DigitalOcean, LLC ;;143.110.128.0/17 ;ARIN
+United States (US) Flag ;143.110.144.0/20 ;DigitalOcean, LLC ;;143.110.128.0/17 ;ARIN
+United States (US) Flag ;143.110.192.0/20 ;DigitalOcean, LLC ;;143.110.128.0/17 ;ARIN
+United States (US) Flag ;143.110.208.0/20 ;DigitalOcean, LLC ;;143.110.128.0/17 ;ARIN
+United States (US) Flag ;143.110.224.0/20 ;DigitalOcean, LLC ;;143.110.128.0/17 ;ARIN
+Austria (AT) Flag ;144.208.205.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;144.208.192.0/18 ;RIPE
+Luxembourg (LU) Flag ;146.185.218.0/24 ;G-Core Labs S.A. ;;146.185.216.0/22 ;RIPE
+Belgium (BE) Flag ;153.112.205.0/24 ;Volvo Gent ;;153.112.0.0/16 ;RIPE
+United States (US) Flag ;157.230.0.0/20 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.48.0/20 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.64.0/22 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.68.0/22 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.72.0/22 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.80.0/20 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.128.0/20 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.144.0/20 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.160.0/20 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.176.0/20 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.196.0/22 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.200.0/22 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.204.0/22 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.208.0/20 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.230.224.0/20 ;DigitalOcean, LLC ;;157.230.0.0/16 ;ARIN
+United States (US) Flag ;157.245.0.0/20 ;DigitalOcean, LLC ;;157.245.0.0/16 ;ARIN
+United States (US) Flag ;157.245.80.0/20 ;DigitalOcean, LLC ;;157.245.0.0/16 ;ARIN
+United States (US) Flag ;157.245.112.0/20 ;DigitalOcean, LLC ;;157.245.0.0/16 ;ARIN
+United States (US) Flag ;157.245.128.0/20 ;DigitalOcean, LLC ;;157.245.0.0/16 ;ARIN
+United States (US) Flag ;157.245.160.0/20 ;DigitalOcean, LLC ;;157.245.0.0/16 ;ARIN
+United States (US) Flag ;157.245.176.0/20 ;DigitalOcean, LLC ;;157.245.0.0/16 ;ARIN
+United States (US) Flag ;157.245.208.0/20 ;DigitalOcean, LLC ;;157.245.0.0/16 ;ARIN
+United States (US) Flag ;157.245.224.0/20 ;DigitalOcean, LLC ;;157.245.0.0/16 ;ARIN
+United States (US) Flag ;157.245.240.0/20 ;DigitalOcean, LLC ;;157.245.0.0/16 ;ARIN
+United States (US) Flag ;159.65.32.0/20 ;DigitalOcean, LLC ;;159.65.0.0/16 ;ARIN
+United States (US) Flag ;159.65.64.0/20 ;DigitalOcean, LLC ;;159.65.0.0/16 ;ARIN
+United States (US) Flag ;159.65.96.0/20 ;DigitalOcean, LLC ;;159.65.0.0/16 ;ARIN
+United States (US) Flag ;159.65.160.0/20 ;DigitalOcean, LLC ;;159.65.0.0/16 ;ARIN
+United States (US) Flag ;159.65.176.0/20 ;DigitalOcean, LLC ;;159.65.0.0/16 ;ARIN
+United States (US) Flag ;159.65.216.0/21 ;DigitalOcean, LLC ;;159.65.0.0/16 ;ARIN
+United States (US) Flag ;159.65.224.0/20 ;DigitalOcean, LLC ;;159.65.0.0/16 ;ARIN
+United States (US) Flag ;159.65.240.0/20 ;DigitalOcean, LLC ;;159.65.0.0/16 ;ARIN
+United States (US) Flag ;159.89.32.0/20 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.48.0/21 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.58.0/24 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.60.0/24 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.63.0/24 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.64.0/20 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.80.0/20 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.112.0/20 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.128.0/20 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.144.0/20 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.176.0/20 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.216.0/22 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.220.0/22 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.224.0/20 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.240.0/22 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.244.0/22 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.89.252.0/22 ;DigitalOcean, LLC ;;159.89.0.0/16 ;ARIN
+United States (US) Flag ;159.153.150.0/24 ;Electronic Arts, Inc. ;;159.153.0.0/16 ;ARIN
+United States (US) Flag ;159.203.0.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.16.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.32.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.48.0/22 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.52.0/22 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.56.0/21 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.64.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.80.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.96.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.112.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.128.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.144.0/22 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.148.0/22 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.152.0/22 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.156.0/22 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.160.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.176.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.192.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.208.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.224.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;159.203.240.0/20 ;DigitalOcean, LLC ;;159.203.0.0/16 ;ARIN
+United States (US) Flag ;161.35.0.0/20 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;161.35.48.0/20 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;161.35.96.0/20 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;161.35.112.0/20 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;161.35.128.0/20 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;161.35.176.0/20 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;161.35.224.0/20 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;161.35.240.0/22 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;161.35.248.0/22 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;161.35.252.0/22 ;DigitalOcean, LLC ;;161.35.0.0/16 ;ARIN
+United States (US) Flag ;162.213.60.0/24 ;Wargaming America Inc. ;;162.213.60.0/22 ;ARIN
+United States (US) Flag ;162.213.60.0/22 ;Wargaming America Inc. ;;162.213.60.0/22 ;ARIN
+United States (US) Flag ;162.213.61.0/24 ;Wargaming America Inc. ;;162.213.60.0/22 ;ARIN
+United States (US) Flag ;162.213.62.0/24 ;Wargaming America Inc. ;;162.213.60.0/22 ;ARIN
+United States (US) Flag ;162.213.63.0/24 ;Wargaming America Inc. ;;162.213.60.0/22 ;ARIN
+United States (US) Flag ;162.216.228.0/24 ;Wargaming America Inc. ;;162.216.228.0/22 ;ARIN
+United States (US) Flag ;162.216.228.0/22 ;Wargaming America Inc. ;;162.216.228.0/22 ;ARIN
+United States (US) Flag ;162.216.229.0/24 ;Wargaming America Inc. ;;162.216.228.0/22 ;ARIN
+United States (US) Flag ;162.216.230.0/24 ;Wargaming America Inc. ;;162.216.228.0/22 ;ARIN
+United States (US) Flag ;162.216.231.0/24 ;Wargaming America Inc. ;;162.216.228.0/22 ;ARIN
+United States (US) Flag ;162.220.220.0/24 ;Anexia ;;162.220.220.0/22 ;ARIN
+United States (US) Flag ;162.220.221.0/24 ;Anexia ;;162.220.220.0/22 ;ARIN
+United States (US) Flag ;162.220.222.0/24 ;Anexia ;;162.220.220.0/22 ;ARIN
+United States (US) Flag ;162.220.223.0/24 ;Anexia ;;162.220.220.0/22 ;ARIN
+United States (US) Flag ;162.243.0.0/17 ;DigitalOcean, LLC ;;162.243.0.0/16 ;ARIN
+United States (US) Flag ;162.243.128.0/19 ;DigitalOcean, LLC ;;162.243.0.0/16 ;ARIN
+United States (US) Flag ;162.243.160.0/20 ;DigitalOcean, LLC ;;162.243.0.0/16 ;ARIN
+United States (US) Flag ;162.243.176.0/21 ;DigitalOcean, LLC ;;162.243.0.0/16 ;ARIN
+United States (US) Flag ;162.243.184.0/22 ;DigitalOcean, LLC ;;162.243.0.0/16 ;ARIN
+United States (US) Flag ;162.243.188.0/23 ;DigitalOcean, LLC ;;162.243.0.0/16 ;ARIN
+United States (US) Flag ;162.243.190.0/24 ;DigitalOcean, LLC ;;162.243.0.0/16 ;ARIN
+United States (US) Flag ;162.243.191.0/24 ;DigitalOcean, LLC ;;162.243.0.0/16 ;ARIN
+United States (US) Flag ;162.243.192.0/18 ;DigitalOcean, LLC ;;162.243.0.0/16 ;ARIN
+United States (US) Flag ;162.250.0.0/23 ;Anexia ;;162.250.0.0/21 ;ARIN
+United States (US) Flag ;162.250.2.0/24 ;Anexia ;;162.250.0.0/21 ;ARIN
+United States (US) Flag ;162.250.4.0/24 ;Anexia ;;162.250.0.0/21 ;ARIN
+United States (US) Flag ;162.250.5.0/24 ;Anexia ;;162.250.0.0/21 ;ARIN
+United States (US) Flag ;162.250.6.0/24 ;Anexia ;;162.250.0.0/21 ;ARIN
+United States (US) Flag ;162.250.7.0/24 ;Anexia ;;162.250.0.0/21 ;ARIN
+United States (US) Flag ;164.90.128.0/20 ;DigitalOcean, LLC ;;164.90.128.0/17 ;ARIN
+United States (US) Flag ;164.90.144.0/20 ;DigitalOcean, LLC ;;164.90.128.0/17 ;ARIN
+United States (US) Flag ;164.90.244.0/22 ;DigitalOcean, LLC ;;164.90.128.0/17 ;ARIN
+United States (US) Flag ;164.90.248.0/24 ;DigitalOcean, LLC ;;164.90.128.0/17 ;ARIN
+United States (US) Flag ;164.90.252.0/22 ;DigitalOcean, LLC ;;164.90.128.0/17 ;ARIN
+United States (US) Flag ;165.22.0.0/20 ;DigitalOcean, LLC ;;165.22.0.0/16 ;ARIN
+United States (US) Flag ;165.22.32.0/20 ;DigitalOcean, LLC ;;165.22.0.0/16 ;ARIN
+United States (US) Flag ;165.22.128.0/20 ;DigitalOcean, LLC ;;165.22.0.0/16 ;ARIN
+United States (US) Flag ;165.22.144.0/20 ;DigitalOcean, LLC ;;165.22.0.0/16 ;ARIN
+United States (US) Flag ;165.22.160.0/20 ;DigitalOcean, LLC ;;165.22.0.0/16 ;ARIN
+United States (US) Flag ;165.22.176.0/20 ;DigitalOcean, LLC ;;165.22.0.0/16 ;ARIN
+United States (US) Flag ;165.22.224.0/20 ;DigitalOcean, LLC ;;165.22.0.0/16 ;ARIN
+United States (US) Flag ;165.227.0.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.16.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.32.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.48.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.64.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.80.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.96.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.112.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.176.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.192.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.208.0/20 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.240.0/22 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.248.0/22 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.227.252.0/22 ;DigitalOcean, LLC ;;165.227.0.0/16 ;ARIN
+United States (US) Flag ;165.232.48.0/20 ;DigitalOcean, LLC ;;165.232.32.0/19 ;ARIN
+United States (US) Flag ;166.67.160.0/19 ;Virginia Information Technologies Agency (VITA) ;;166.67.0.0/16 ;ARIN
+United States (US) Flag ;167.71.16.0/20 ;DigitalOcean, LLC ;;167.71.0.0/16 ;ARIN
+United States (US) Flag ;167.71.80.0/20 ;DigitalOcean, LLC ;;167.71.0.0/16 ;ARIN
+United States (US) Flag ;167.71.96.0/20 ;DigitalOcean, LLC ;;167.71.0.0/16 ;ARIN
+United States (US) Flag ;167.71.112.0/20 ;DigitalOcean, LLC ;;167.71.0.0/16 ;ARIN
+United States (US) Flag ;167.71.144.0/20 ;DigitalOcean, LLC ;;167.71.0.0/16 ;ARIN
+United States (US) Flag ;167.71.160.0/20 ;DigitalOcean, LLC ;;167.71.0.0/16 ;ARIN
+United States (US) Flag ;167.71.176.0/20 ;DigitalOcean, LLC ;;167.71.0.0/16 ;ARIN
+United States (US) Flag ;167.71.240.0/20 ;DigitalOcean, LLC ;;167.71.0.0/16 ;ARIN
+United States (US) Flag ;167.99.0.0/20 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.99.20.0/22 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.99.24.0/22 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.99.48.0/20 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.99.96.0/20 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.99.112.0/20 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.99.144.0/20 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.99.160.0/20 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.99.176.0/20 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.99.224.0/20 ;DigitalOcean, LLC ;;167.99.0.0/16 ;ARIN
+United States (US) Flag ;167.172.0.0/22 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.8.0/22 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.12.0/22 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.16.0/20 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.112.0/20 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.128.0/20 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.144.0/20 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.192.0/20 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.208.0/20 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.224.0/20 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+United States (US) Flag ;167.172.240.0/20 ;DigitalOcean, LLC ;;167.172.0.0/16 ;RIPE
+Luxembourg (LU) Flag ;172.94.57.0/24 ;INTERNET-SECURITY-G-Core ;;172.94.0.0/17 ;ARIN
+United States (US) Flag ;172.111.195.0/24 ;Secure Internet LLC ;;172.111.128.0/17 ;ARIN
+United States (US) Flag ;173.222.234.0/23 ;Akamai Technologies, Inc. ;;173.222.0.0/15 ;ARIN
+United States (US) Flag ;173.223.152.0/22 ;Akamai Technologies, Inc. ;;173.222.0.0/15 ;ARIN
+United States (US) Flag ;174.138.32.0/20 ;DigitalOcean, LLC ;;174.138.0.0/17 ;ARIN
+United States (US) Flag ;174.138.48.0/20 ;DigitalOcean, LLC ;;174.138.0.0/17 ;ARIN
+United States (US) Flag ;174.138.64.0/20 ;DigitalOcean, LLC ;;174.138.0.0/17 ;ARIN
+United States (US) Flag ;174.138.80.0/20 ;DigitalOcean, LLC ;;174.138.0.0/17 ;ARIN
+United States (US) Flag ;174.138.108.0/22 ;DigitalOcean, LLC ;;174.138.0.0/17 ;ARIN
+United States (US) Flag ;174.138.112.0/22 ;DigitalOcean, LLC ;;174.138.0.0/17 ;ARIN
+United States (US) Flag ;174.138.116.0/22 ;DigitalOcean, LLC ;;174.138.0.0/17 ;ARIN
+United States (US) Flag ;174.138.124.0/22 ;DigitalOcean, LLC ;;174.138.0.0/17 ;ARIN
+Sweden (SE) Flag ;178.72.0.0/22 ;Net1 Sverige AB ;;178.72.0.0/19 ;RIPE
+Denmark (DK) Flag ;178.72.16.0/22 ;NET NMT DK SUB8 ;;178.72.0.0/19 ;RIPE
+Sweden (SE) Flag ;178.72.16.0/20 ;Netett Sverige AB ;;178.72.0.0/19 ;RIPE
+United States (US) Flag ;178.128.0.0/20 ;DIGITALOCEAN ;;178.128.0.0/17 ;RIPE
+United States (US) Flag ;178.128.64.0/20 ;DIGITALOCEAN ;;178.128.0.0/17 ;RIPE
+United States (US) Flag ;178.128.128.0/22 ;DIGITALOCEAN ;;178.128.128.0/17 ;RIPE
+United States (US) Flag ;178.128.132.0/22 ;DIGITALOCEAN ;;178.128.128.0/17 ;RIPE
+United States (US) Flag ;178.128.144.0/20 ;DIGITALOCEAN ;;178.128.128.0/17 ;RIPE
+United States (US) Flag ;178.128.176.0/20 ;DIGITALOCEAN ;;178.128.128.0/17 ;RIPE
+Canada (CA) Flag ;178.128.224.0/20 ;DIGITALOCEAN ;;178.128.128.0/17 ;RIPE
+Austria (AT) Flag ;178.255.154.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;178.255.152.0/21 ;RIPE
+United States (US) Flag ;184.28.196.0/23 ;Akamai Technologies, Inc. ;;184.24.0.0/13 ;ARIN
+United States (US) Flag ;184.31.224.0/20 ;Akamai Technologies, Inc. ;;184.24.0.0/13 ;ARIN
+United States (US) Flag ;184.51.132.0/23 ;Akamai Technologies, Inc. ;;184.50.0.0/15 ;ARIN
+United States (US) Flag ;184.51.224.0/20 ;Akamai Technologies, Inc. ;;184.50.0.0/15 ;ARIN
+United States (US) Flag ;184.85.144.0/20 ;Akamai Technologies, Inc. ;;184.84.0.0/14 ;ARIN
+United States (US) Flag ;185.12.213.0/24 ;Wargaming IT SJ Datacenter ;;185.12.212.0/22 ;RIPE
+Luxembourg (LU) Flag ;185.12.214.0/24 ;G-Core Labs S.A. ;;185.12.212.0/22 ;RIPE
+Luxembourg (LU) Flag ;185.12.240.0/22 ;G-Core Labs S.A. ;;185.12.240.0/22 ;RIPE
+Luxembourg (LU) Flag ;185.12.240.0/24 ;G-Core Labs S.A. ;;185.12.240.0/22 ;RIPE
+Luxembourg (LU) Flag ;185.12.241.0/24 ;G-Core Labs S.A. ;;185.12.240.0/22 ;RIPE
+Netherlands (NL) Flag ;185.12.242.0/24 ;G-Core Labs Customer assignment ;;185.12.240.0/22 ;RIPE
+Netherlands (NL) Flag ;185.12.243.0/24 ;G-Core Labs Customer assignment ;;185.12.240.0/22 ;RIPE
+Germany (DE) Flag ;185.26.158.0/24 ;uvensys GmbH ;;185.26.156.0/22 ;RIPE
+Germany (DE) Flag ;185.74.216.0/22 ;Amisol GmbH ;;185.74.216.0/22 ;RIPE
+Austria (AT) Flag ;185.81.209.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;185.81.208.0/22 ;RIPE
+Netherlands (NL) Flag ;185.101.139.0/24 ;G-Core Labs Customer assignment ;;185.101.136.0/22 ;RIPE
+Luxembourg (LU) Flag ;185.105.3.0/24 ;G-Core Innovations S.a r.l. ;;185.105.0.0/22 ;RIPE
+Germany (DE) Flag ;185.146.204.0/22 ;Amisol GmbH ;;185.146.204.0/22 ;RIPE
+Germany (DE) Flag ;185.192.28.0/22 ;Amisol GmbH ;;185.192.28.0/22 ;RIPE
+Saudi Arabia (SA) Flag ;185.231.40.0/24 ;Arab Satellite Communications Organization ;;185.231.40.0/22 ;RIPE
+Austria (AT) Flag ;188.172.192.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.198.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Spain (ES) Flag ;188.172.199.0/24 ;powered by ANX ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.200.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.201.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.202.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.203.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.211.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.212.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.214.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.215.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.221.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.223.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+France (FR) Flag ;188.172.230.0/23 ;powered by ANX ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.245.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.247.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.249.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+Austria (AT) Flag ;188.172.251.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;188.172.192.0/18 ;RIPE
+United States (US) Flag ;188.172.253.0/24 ;powered by ANX ;;188.172.192.0/18 ;RIPE
+United States (US) Flag ;192.34.56.0/24 ;DigitalOcean, LLC ;;192.34.56.0/21 ;ARIN
+United States (US) Flag ;192.34.56.0/21 ;DigitalOcean, LLC ;;192.34.56.0/21 ;ARIN
+United States (US) Flag ;192.34.57.0/24 ;DigitalOcean, LLC ;;192.34.56.0/21 ;ARIN
+United States (US) Flag ;192.34.58.0/24 ;DigitalOcean, LLC ;;192.34.56.0/21 ;ARIN
+United States (US) Flag ;192.34.59.0/24 ;DigitalOcean, LLC ;;192.34.56.0/21 ;ARIN
+United States (US) Flag ;192.34.60.0/24 ;DigitalOcean, LLC ;;192.34.56.0/21 ;ARIN
+United States (US) Flag ;192.34.61.0/24 ;DigitalOcean, LLC ;;192.34.56.0/21 ;ARIN
+United States (US) Flag ;192.34.62.0/24 ;DigitalOcean, LLC ;;192.34.56.0/21 ;ARIN
+United States (US) Flag ;192.34.63.0/24 ;DigitalOcean, LLC ;;192.34.56.0/21 ;ARIN
+Italy (IT) Flag ;192.36.31.0/24 ;Nordic Internet Service AB ;;192.36.0.0/16 ;RIPE
+Italy (IT) Flag ;192.71.172.0/24 ;Privat Kommunikation Sverige AB ;;192.71.0.0/16 ;RIPE
+United States (US) Flag ;192.81.208.0/21 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+United States (US) Flag ;192.81.208.0/24 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+United States (US) Flag ;192.81.209.0/24 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+United States (US) Flag ;192.81.210.0/24 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+United States (US) Flag ;192.81.211.0/24 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+United States (US) Flag ;192.81.212.0/24 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+United States (US) Flag ;192.81.213.0/24 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+United States (US) Flag ;192.81.214.0/24 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+United States (US) Flag ;192.81.215.0/24 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+United States (US) Flag ;192.81.216.0/22 ;DigitalOcean, LLC ;;192.81.208.0/20 ;ARIN
+Netherlands (NL) Flag ;192.121.102.0/24 ;Nordic Internet Service AB ;;192.121.0.0/16 ;RIPE
+Sweden (SE) Flag ;192.150.59.0/24 ;Telia Company AB ;;192.150.58.0/23 ;RIPE
+United States (US) Flag ;192.241.128.0/19 ;DigitalOcean, LLC ;;192.241.128.0/17 ;ARIN
+United States (US) Flag ;192.241.160.0/19 ;DigitalOcean, LLC ;;192.241.128.0/17 ;ARIN
+United States (US) Flag ;192.241.192.0/19 ;DigitalOcean, LLC ;;192.241.128.0/17 ;ARIN
+United States (US) Flag ;192.241.224.0/20 ;DigitalOcean, LLC ;;192.241.128.0/17 ;ARIN
+United States (US) Flag ;192.241.240.0/20 ;DigitalOcean, LLC ;;192.241.128.0/17 ;ARIN
+Sweden (SE) Flag ;193.45.0.0/22 ;Telia Company AB ;;193.45.0.0/16 ;RIPE
+Sweden (SE) Flag ;193.45.6.0/24 ;Telia Company AB ;;193.45.0.0/16 ;RIPE
+Sweden (SE) Flag ;193.45.10.0/23 ;Telia Company AB ;;193.45.0.0/16 ;RIPE
+Sweden (SE) Flag ;193.45.14.0/23 ;Telia Company AB ;;193.45.0.0/16 ;RIPE
+Sweden (SE) Flag ;193.45.142.0/23 ;Telia Company AB ;;193.45.0.0/16 ;RIPE
+Germany (DE) Flag ;193.104.197.0/24 ;IP pool broadband ;;193.104.197.0/24 ;RIPE
+Germany (DE) Flag ;193.104.198.0/24 ;IP pool broadband ;;193.104.198.0/24 ;RIPE
+France (FR) Flag ;193.104.211.0/24 ;IP pool broadband ;;193.104.211.0/24 ;RIPE
+United Kingdom (GB) Flag ;193.104.222.0/24 ;IP pool broadband ;;193.104.222.0/24 ;RIPE
+Finland (FI) Flag ;193.143.61.0/24 ;Corporate Backbone Network ;;193.143.32.0/19 ;RIPE
+Philippines (PH) Flag ;193.148.95.0/24 ;Bitstop PH ;;193.148.92.0/22 ;RIPE
+Sweden (SE) Flag ;193.180.119.0/24 ;Nordic Internet Service AB ;;193.180.0.0/14 ;RIPE
+United Kingdom (GB) Flag ;193.180.174.0/24 ;Nordic Internet Service AB ;;193.180.0.0/14 ;RIPE
+Sweden (SE) Flag ;193.181.35.0/24 ;Nordic Internet Service AB ;;193.180.0.0/14 ;RIPE
+United Kingdom (GB) Flag ;193.181.41.0/24 ;Nordic Internet Service AB ;;193.180.0.0/14 ;RIPE
+United Kingdom (GB) Flag ;193.181.46.0/24 ;Nordic Internet Service AB ;;193.180.0.0/14 ;RIPE
+Sweden (SE) Flag ;193.183.105.0/24 ;Nordic Internet Service AB ;;193.180.0.0/14 ;RIPE
+Spain (ES) Flag ;193.183.217.0/24 ;Privat Kommunikation Sverige AB ;;193.180.0.0/14 ;RIPE
+Sweden (SE) Flag ;193.234.3.0/24 ;Nordic Internet Service AB ;;193.234.0.0/15 ;RIPE
+Sweden (SE) Flag ;193.235.106.0/24 ;Volvo Information Technology is located in Gothenburg, Sweden. ;;193.234.0.0/15 ;RIPE
+Germany (DE) Flag ;194.76.208.0/24 ;Hamburg ;;194.76.208.0/24 ;RIPE
+United Kingdom (GB) Flag ;194.132.59.0/24 ;Nordic Internet Service AB ;;194.132.0.0/16 ;RIPE
+United Kingdom (GB) Flag ;194.132.121.0/24 ;Nordic Internet Service AB ;;194.132.0.0/16 ;RIPE
+European Union (EU) Flag ;195.12.224.0/19 ;Telia Company AB ;;195.12.224.0/19 ;RIPE
+Germany (DE) Flag ;195.128.156.0/24 ;Freshfields Bruckhaus Deringer LLP ;;195.128.156.0/24 ;RIPE
+Sweden (SE) Flag ;195.191.212.0/24 ;Panterlo AB ;;195.191.212.0/23 ;RIPE
+United States (US) Flag ;198.199.64.0/20 ;DigitalOcean, LLC ;;198.199.64.0/18 ;ARIN
+United States (US) Flag ;198.199.80.0/21 ;DigitalOcean, LLC ;;198.199.64.0/18 ;ARIN
+United States (US) Flag ;198.199.88.0/22 ;DigitalOcean, LLC ;;198.199.64.0/18 ;ARIN
+United States (US) Flag ;198.199.92.0/22 ;DigitalOcean, LLC ;;198.199.64.0/18 ;ARIN
+United States (US) Flag ;198.199.96.0/20 ;DigitalOcean, LLC ;;198.199.64.0/18 ;ARIN
+United States (US) Flag ;198.199.112.0/21 ;DigitalOcean, LLC ;;198.199.64.0/18 ;ARIN
+United States (US) Flag ;198.199.120.0/22 ;DigitalOcean, LLC ;;198.199.64.0/18 ;ARIN
+United States (US) Flag ;198.211.96.0/20 ;DigitalOcean, LLC ;;198.211.96.0/19 ;ARIN
+United States (US) Flag ;198.211.112.0/22 ;DigitalOcean, LLC ;;198.211.96.0/19 ;ARIN
+United States (US) Flag ;198.211.116.0/23 ;DigitalOcean, LLC ;;198.211.96.0/19 ;ARIN
+Hong Kong (HK) Flag ;202.163.0.0/19 ;Telia Internet Services ;;202.163.0.0/19 ;APNIC
+United States (US) Flag ;204.48.16.0/20 ;DigitalOcean, LLC ;;204.48.16.0/20 ;ARIN
+United States (US) Flag ;206.81.0.0/20 ;DigitalOcean, LLC ;;206.81.0.0/19 ;ARIN
+United States (US) Flag ;206.189.64.0/20 ;DigitalOcean, LLC ;;206.189.0.0/16 ;ARIN
+United States (US) Flag ;206.189.160.0/20 ;DigitalOcean, LLC ;;206.189.0.0/16 ;ARIN
+United States (US) Flag ;206.189.176.0/20 ;DigitalOcean, LLC ;;206.189.0.0/16 ;ARIN
+United States (US) Flag ;206.189.192.0/20 ;DigitalOcean, LLC ;;206.189.0.0/16 ;ARIN
+United States (US) Flag ;206.189.208.0/20 ;DigitalOcean, LLC ;;206.189.0.0/16 ;ARIN
+United States (US) Flag ;206.189.224.0/20 ;DigitalOcean, LLC ;;206.189.0.0/16 ;ARIN
+United States (US) Flag ;206.189.252.0/22 ;DigitalOcean, LLC ;;206.189.0.0/16 ;ARIN
+United States (US) Flag ;208.68.36.0/22 ;DigitalOcean, LLC ;;208.68.36.0/22 ;ARIN
+United States (US) Flag ;208.68.36.0/24 ;DigitalOcean, LLC ;;208.68.36.0/22 ;ARIN
+United States (US) Flag ;208.68.37.0/24 ;DigitalOcean, LLC ;;208.68.36.0/22 ;ARIN
+United States (US) Flag ;208.68.38.0/24 ;DigitalOcean, LLC ;;208.68.36.0/22 ;ARIN
+United States (US) Flag ;208.68.39.0/24 ;DigitalOcean, LLC ;;208.68.36.0/22 ;ARIN
+United States (US) Flag ;209.95.128.0/19 ;Telia ;;209.95.128.0/19 ;ARIN
+United States (US) Flag ;209.97.144.0/20 ;DigitalOcean, LLC ;;209.97.128.0/18 ;ARIN
+United States (US) Flag ;209.170.64.0/18 ;Telia ;;209.170.64.0/18 ;ARIN
+European Union (EU) Flag ;213.155.128.0/19 ;Telia Company AB ;;213.155.128.0/19 ;RIPE
+Austria (AT) Flag ;213.227.162.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;213.227.160.0/19 ;RIPE
+Austria (AT) Flag ;213.227.163.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;213.227.160.0/19 ;RIPE
+Austria (AT) Flag ;213.227.173.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;213.227.160.0/19 ;RIPE
+Austria (AT) Flag ;213.227.177.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;213.227.160.0/19 ;RIPE
+Austria (AT) Flag ;213.227.185.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;213.227.160.0/19 ;RIPE
+Austria (AT) Flag ;213.227.186.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;213.227.160.0/19 ;RIPE
+Austria (AT) Flag ;213.227.188.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;213.227.160.0/19 ;RIPE
+European Union (EU) Flag ;213.248.64.0/18 ;Telia Company AB ;;213.248.64.0/18 ;RIPE
+Austria (AT) Flag ;217.146.1.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.2.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.4.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.8.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.9.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.13.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.15.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.19.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.21.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.29.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Austria (AT) Flag ;217.146.31.0/24 ;ANEXIA Internetdienstleistungs GmbH ;;217.146.0.0/19 ;RIPE
+Sweden (SE) Flag ;217.212.224.0/19 ;Telia Company AB ;;217.208.0.0/13 ;RIPE

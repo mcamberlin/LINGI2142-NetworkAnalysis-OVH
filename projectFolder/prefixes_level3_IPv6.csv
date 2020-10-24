@@ -1,0 +1,67 @@
+Country ;Announced Prefix;Description ;Valid ROA ;Parent Prefix ;RIR
+United States (US) Flag ;2001:450:2015::/48 ;Level 3 Parent, LLC ;;2001:450::/32 ;ARIN
+Argentina (AR) Flag ;2001:13b2::/31 ;IMPSAT FIBER NETWORKS INC ;;2001:13b0::/29 ;Lacnic
+Argentina (AR) Flag ;2001:13b4::/32 ;IMPSAT FIBER NETWORKS INC ;;2001:13b0::/29 ;Lacnic
+Argentina (AR) Flag ;2001:13b4:4001::/48 ;IMPSAT FIBER NETWORKS INC ;;2001:13b0::/29 ;Lacnic
+Argentina (AR) Flag ;2001:13b4:4002::/48 ;IMPSAT FIBER NETWORKS INC ;;2001:13b0::/29 ;Lacnic
+United States (US) Flag ;2001:1900::/32 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:201e::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:220e::/48 ;Beyond Hosting, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2210::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2219::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:222b::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:222e::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2230::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2235::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2245::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2259::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:225a::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2260::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2267::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2271::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2275::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2282::/48 ;WESTNET LINK LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2287::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:228a::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:228b::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:228c::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:2292::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:22a2::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:3006::/48 ;amtech communications ;;2001:1900::/32 ;ARIN
+United States (US) Flag ;2001:1900:3009::/48 ;Level 3 Parent, LLC ;;2001:1900::/32 ;ARIN
+United Kingdom (GB) Flag ;2001:1b40:3333::/48 ;IOMART HOSTING LIMITED ;;2001:1b40::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08::/32 ;Centurylink Communications UK Limited ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:2006::/48 ;Centurylink Communications UK Limited ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:2007::/48 ;Centurylink Communications UK Limited ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:2008::/48 ;Customer LAN Network ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:2012::/48 ;MCON Germany LAN ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:2018::/48 ;NORDEUS ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:2027::/48 ;CUSTOMER-LAN ;;2001:4c08::/32 ;RIPE
+Belgium (BE) Flag ;2001:4c08:202a::/47 ;CUSTOMER LAN ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:202c::/48 ;Centurylink Communications UK Limited ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:202e::/48 ;Centurylink Communications UK Limited ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:2030::/48 ;Centurylink Communications UK Limited ;;2001:4c08::/32 ;RIPE
+United Kingdom (GB) Flag ;2001:4c08:2031::/48 ;Centurylink Communications UK Limited ;;2001:4c08::/32 ;RIPE
+United States (US) Flag ;2606:f180:7::/48 ;Private Customer ;;2606:f180::/28 ;ARIN
+United States (US) Flag ;2620:34::/48 ;Genworth North America Corporation ;;2620:34::/48 ;ARIN
+United States (US) Flag ;2620:9f:12::/48 ;SonicWALL, Inc. ;;2620:9f::/40 ;ARIN
+United States (US) Flag ;2620:a9:4000::/48 ;Eagle Research Group, Inc. ;;2620:a9:4000::/48 ;ARIN
+United States (US) Flag ;2620:cc:4000::/48 ;Stripe, Inc. ;;2620:cc:4000::/48 ;ARIN
+United States (US) Flag ;2620:10c:c040::/48 ;Unisys Corporation ;;2620:10c:c000::/40 ;ARIN
+United States (US) Flag ;2620:11b:e000::/40 ;Level 3 Parent, LLC ;;2620:11b:e000::/40 ;ARIN
+United States (US) Flag ;2620:123:d001::/48 ;ECLINICALWORKS, LLC ;;2620:123:d000::/40 ;ARIN
+United States (US) Flag ;2620:12c:3000::/44 ;THE SCIENTIFIC CONSULTING GROUP, INC ;;2620:12c:3000::/44 ;ARIN
+United States (US) Flag ;2620:12d:e019::/48 ;Synopsys Inc. ;;2620:12d:e000::/40 ;ARIN
+United States (US) Flag ;2620:130:800a::/48 ;PALO ALTO NETWORKS ;;2620:130:8000::/44 ;ARIN
+United States (US) Flag ;2620:130:800b::/48 ;PALO ALTO NETWORKS ;;2620:130:8000::/44 ;ARIN
+United States (US) Flag ;2620:135:7002::/48 ;Tait Towers Manufacturing LLC ;;2620:135:7000::/40 ;ARIN
+United States (US) Flag ;2620:13d:d01c::/48 ;Calix, Inc. ;;2620:13d:d000::/40 ;ARIN
+Austria (AT) Flag ;2a00:11c0:a::/48 ;ANEXIA Internetdienstleistungs GmbH ;;2a00:11c0::/32 ;RIPE
+Russian Federation (RU) Flag ;2a03:2480:8000::/44 ;Kaspersky Lab AO ;;2a03:2480::/32 ;RIPE
+United Kingdom (GB) Flag ;2a05:8943::/32 ;CityFibre ;;2a05:8940::/29 ;RIPE
+United Kingdom (GB) Flag ;2a05:8944::/32 ;CityFibre ;;2a05:8940::/29 ;RIPE
+Switzerland (CH) Flag ;2a06:6540:2002::/48 ;STRAUMANN INT LAN ;;2a06:6540::/29 ;RIPE
+Switzerland (CH) Flag ;2a06:6541:2002::/48 ;STRAUMANN EXT DMZ ;;2a06:6540::/29 ;RIPE
+South Africa (ZA) Flag ;2c0f:f7f8::/33 ;Level 3 Communications South Africa ;;2c0f:f7f8::/32 ;AfriNIC
+South Africa (ZA) Flag ;2c0f:f7f8::/32 ;Level 3 Communications South Africa ;;2c0f:f7f8::/32 ;AfriNIC
+South Africa (ZA) Flag ;2c0f:f7f8:8000::/33 ;Level 3 Communications South Africa ;;2c0f:f7f8::/32 ;AfriNIC
