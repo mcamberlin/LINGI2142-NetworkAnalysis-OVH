@@ -1,0 +1,1478 @@
+Country ;Announced Prefix;Description ;Valid ROA ;Parent Prefix ;RIR
+United States (US) Flag ;2.59.174.0/24 ;GBTCloud.COM ;;2.59.172.0/22 ;RIPE
+United States (US) Flag ;2.59.175.0/24 ;GBTCloud.COM ;;2.59.172.0/22 ;RIPE
+United States (US) Flag ;4.0.0.0/8 ;American Registry for Internet Numbers ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;4.0.0.0/9 ;Level 3 Parent, LLC ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;4.4.63.0/24 ;Level 3 Communications, Inc. ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;4.22.42.0/24 ;CHEETAHMAIL ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;4.26.170.0/24 ;Level 3 Communications, Inc. ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;4.26.185.0/24 ;Level 3 Communications, Inc. ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;4.30.111.0/24 ;Level 3 Communications, Inc. ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;4.37.102.0/24 ;Cap Gemini Ernst& Young U.S., LLC ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;4.55.0.0/16 ;Level 3 Parent, LLC ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;4.78.167.0/24 ;Co-Location.com Inc. ;;4.0.0.0/9 ;ARIN
+United States (US) Flag ;5.183.204.0/24 ;GBTCloud.COM ;;5.183.204.0/22 ;RIPE
+United States (US) Flag ;5.183.205.0/24 ;GBTCloud.COM ;;5.183.204.0/22 ;RIPE
+United States (US) Flag ;5.183.206.0/24 ;GBTCloud.COM ;;5.183.204.0/22 ;RIPE
+United States (US) Flag ;5.183.207.0/24 ;GBTCloud.COM ;;5.183.204.0/22 ;RIPE
+Brazil (BR) Flag ;5.188.238.0/24 ;G-Core Labs S.A. ;;5.188.238.0/23 ;RIPE
+Germany (DE) Flag ;5.252.100.0/22 ;Mo's Operations GmbH ;;5.252.100.0/22 ;RIPE
+United States (US) Flag ;8.0.0.0/12 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.0.0.0/9 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.3.131.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.3.132.0/22 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.3.220.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.3.243.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.4.5.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.4.162.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.5.160.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.7.155.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.8.194.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.9.71.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.9.228.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.10.249.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.11.4.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.12.53.0/24 ;Puresend ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.14.136.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.14.205.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.15.229.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.16.0.0/12 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.17.110.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.17.182.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.18.66.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.18.111.0/24 ;Gap, Inc. Direct ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.18.212.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.18.225.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.19.44.0/22 ;Crosslink Networks ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.19.129.0/24 ;CHEETAHMAIL ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.19.137.0/24 ;The Solo Networks ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.19.154.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.19.180.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.21.15.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.21.67.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.21.216.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.21.222.0/23 ;Hotwire Communications ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.22.209.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.22.210.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.23.247.0/24 ;CHEETAHMAIL ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.23.250.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.23.254.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.24.70.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.24.148.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.24.159.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.25.145.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.25.219.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.25.221.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.26.18.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.26.72.0/22 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.26.84.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.27.107.0/24 ;CELERITY TELECOM, INC. ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.28.73.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.28.160.0/22 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.28.182.0/24 ;A.T. KEARNEY ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.29.149.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.29.160.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.30.173.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.30.253.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.31.66.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.31.112.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.31.123.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.31.131.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.31.198.0/24 ;Global Data Vault, L.L.C ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.32.0.0/12 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.33.180.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.33.206.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.33.209.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.34.49.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.34.93.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.35.7.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.36.48.0/20 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.36.70.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.36.90.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.36.121.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.37.69.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.37.85.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.37.86.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.37.145.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.37.163.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.37.177.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.37.183.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.37.191.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.37.200.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.38.6.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.38.94.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.38.95.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.38.114.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.38.116.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.38.118.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.38.120.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.38.122.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.39.24.0/23 ;RAINBOW COMMUNICATIONS ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.39.43.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.39.45.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.39.143.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.40.5.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.40.20.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.40.32.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.40.80.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.40.221.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.41.60.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.41.61.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.41.85.0/24 ;Blue Cross Blue Shield Association ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.41.249.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.42.170.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.44.165.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.44.201.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.44.204.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.44.205.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.45.18.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.45.20.0/23 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.45.23.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.45.136.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.45.137.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.45.141.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.45.156.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.46.43.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.47.31.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.47.46.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.47.64.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.48.0.0/12 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.48.8.0/24 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.64.0.0/12 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.80.0.0/12 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.96.0.0/12 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.112.0.0/12 ;Level 3 Parent, LLC ;;8.0.0.0/9 ;ARIN
+United States (US) Flag ;8.192.0.0/12 ;Level 3 Parent, LLC ;;8.192.0.0/12 ;ARIN
+United States (US) Flag ;8.224.0.0/11 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.224.0.0/12 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.225.160.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.225.221.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.240.0.0/12 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.241.8.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.241.28.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.241.32.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.241.97.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.241.108.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.241.116.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.241.120.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+Argentina (AR) Flag ;8.243.0.0/19 ;CTL Argentina ;;8.224.0.0/11 ;ARIN
+Brazil (BR) Flag ;8.243.32.0/19 ;CTL Brazil ;;8.224.0.0/11 ;ARIN
+Argentina (AR) Flag ;8.243.128.0/20 ;CTL Argentina ;;8.224.0.0/11 ;ARIN
+Brazil (BR) Flag ;8.243.144.0/20 ;CTL Brazil ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.247.64.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.247.72.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.247.88.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.247.92.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.247.204.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.247.208.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.247.224.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.247.252.0/22 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.8.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.12.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.16.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.20.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.22.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.40.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.42.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.44.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.46.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.64.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.66.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.68.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.70.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.112.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.114.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.116.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.118.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.122.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.124.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.126.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.128.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.130.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.132.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.134.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.136.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.138.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.140.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.142.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.144.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.146.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.148.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.196.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.248.198.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.10.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.12.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.14.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.16.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.18.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.20.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.22.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.26.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.30.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.34.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.36.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.64.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.66.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.68.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.70.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.72.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.74.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.76.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.82.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.84.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.88.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.90.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.92.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.96.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.98.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.100.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.102.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.110.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.152.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.154.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.156.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.158.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.160.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.162.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.164.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.170.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.172.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.178.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.180.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.182.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.184.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.186.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.188.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.190.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.194.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.196.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.198.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.200.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.249.202.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.88.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.90.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.92.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.96.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.98.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.100.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.102.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.104.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.106.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.160.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.162.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.166.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.168.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.170.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.174.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.176.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.178.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.184.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.186.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.190.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.192.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.196.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.200.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.202.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.214.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.216.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.234.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.244.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.246.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.250.248.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.251.52.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.251.54.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.251.66.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.251.72.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.251.76.0/23 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.253.95.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.253.180.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.253.181.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.253.182.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.253.204.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.253.218.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;8.253.224.0/24 ;Level 3 Parent, LLC ;;8.224.0.0/11 ;ARIN
+United States (US) Flag ;12.157.188.0/22 ;KINDRED HEALTHCARE INC ;;12.0.0.0/8 ;ARIN
+United States (US) Flag ;23.252.249.0/24 ;OOC ISP LLC ;;23.252.240.0/20 ;ARIN
+United States (US) Flag ;23.252.250.0/24 ;OOC ISP LLC ;;23.252.240.0/20 ;ARIN
+United States (US) Flag ;24.56.96.0/20 ;Level 3 Parent, LLC ;;24.56.96.0/20 ;ARIN
+United States (US) Flag ;24.75.0.0/18 ;Level 3 Parent, LLC ;;24.75.0.0/18 ;ARIN
+United States (US) Flag ;24.75.3.0/24 ;Vaspian LLC ;;24.75.0.0/18 ;ARIN
+United States (US) Flag ;24.75.13.0/24 ;Vaspian LLC ;;24.75.0.0/18 ;ARIN
+United States (US) Flag ;24.75.21.0/24 ;Lantrax Inc. ;;24.75.0.0/18 ;ARIN
+United States (US) Flag ;24.75.24.0/23 ;Matrix Telecommunications ;;24.75.0.0/18 ;ARIN
+United States (US) Flag ;24.75.40.0/24 ;Vaspian LLC ;;24.75.0.0/18 ;ARIN
+United States (US) Flag ;24.75.44.0/22 ;Matrix Telecommunications ;;24.75.0.0/18 ;ARIN
+United States (US) Flag ;24.75.52.0/23 ;FS Enablers ;;24.75.0.0/18 ;ARIN
+United States (US) Flag ;24.75.64.0/19 ;Level 3 Parent, LLC ;;24.75.64.0/19 ;ARIN
+United States (US) Flag ;24.75.128.0/20 ;Level 3 Parent, LLC ;;24.75.128.0/20 ;ARIN
+United States (US) Flag ;24.75.135.0/24 ;Virginia Baptist Resource Center ;;24.75.128.0/20 ;ARIN
+United States (US) Flag ;24.75.141.0/24 ;Hamilton Beach ;;24.75.128.0/20 ;ARIN
+United States (US) Flag ;24.244.111.0/24 ;Cablelynx ;;24.244.96.0/20 ;ARIN
+United Kingdom (GB) Flag ;37.123.254.0/24 ;UK EARTHPORT ISUMO 2020 02 21 ;;37.123.248.0/21 ;RIPE
+United States (US) Flag ;38.72.150.0/24 ;PSINet, Inc. ;;38.0.0.0/8 ;ARIN
+United States (US) Flag ;38.72.151.0/24 ;PSINet, Inc. ;;38.0.0.0/8 ;ARIN
+United States (US) Flag ;38.125.237.0/24 ;PSINet, Inc. ;;38.0.0.0/8 ;ARIN
+United States (US) Flag ;38.125.238.0/24 ;PSINet, Inc. ;;38.0.0.0/8 ;ARIN
+United States (US) Flag ;38.125.239.0/24 ;PSINet, Inc. ;;38.0.0.0/8 ;ARIN
+United States (US) Flag ;38.240.0.0/19 ;PSINet, Inc. ;;38.0.0.0/8 ;ARIN
+United States (US) Flag ;38.240.32.0/19 ;PSINet, Inc. ;;38.0.0.0/8 ;ARIN
+Italy (IT) Flag ;45.8.172.0/22 ;"MB ""Ricarta"" ";;45.8.172.0/22 ;RIPE
+United States (US) Flag ;45.8.216.0/22 ;"MB ""Ipumanija"" ";;45.8.216.0/22 ;RIPE
+United States (US) Flag ;45.12.80.0/22 ;"MB ""Teorita"" ";;45.12.80.0/22 ;RIPE
+United States (US) Flag ;45.14.46.0/24 ;GBTCloud.COM ;;45.14.44.0/22 ;RIPE
+United States (US) Flag ;45.15.38.0/24 ;GBTCloud.COM ;;45.15.36.0/22 ;RIPE
+United States (US) Flag ;45.15.39.0/24 ;GBTCloud.COM ;;45.15.36.0/22 ;RIPE
+United States (US) Flag ;45.67.16.0/24 ;GBTCloud.COM ;;45.67.16.0/22 ;RIPE
+United States (US) Flag ;45.67.17.0/24 ;GBTCloud.COM ;;45.67.16.0/22 ;RIPE
+United States (US) Flag ;45.67.139.0/24 ;Greybeard Technology ;;45.67.136.0/22 ;RIPE
+United States (US) Flag ;45.73.182.0/23 ;OOC ISP LLC ;;45.73.160.0/19 ;ARIN
+United States (US) Flag ;45.73.188.0/23 ;OOC ISP LLC ;;45.73.160.0/19 ;ARIN
+United States (US) Flag ;45.82.206.0/24 ;GBTCloud.COM ;;45.82.204.0/22 ;RIPE
+United States (US) Flag ;45.82.207.0/24 ;GBTCloud.COM ;;45.82.204.0/22 ;RIPE
+Germany (DE) Flag ;45.83.244.0/22 ;Mo's Operations GmbH ;;45.83.244.0/22 ;RIPE
+Germany (DE) Flag ;45.85.147.0/24 ;heficed 20200424 ;;45.85.144.0/22 ;RIPE
+United States (US) Flag ;45.95.212.0/22 ;"MB ""Ipumanija"" ";;45.95.212.0/22 ;RIPE
+United Kingdom (GB) Flag ;45.136.24.0/22 ;RESNET LEASE ;;45.136.24.0/22 ;RIPE
+United States (US) Flag ;45.140.236.0/22 ;"UAB ""Nuoroda"" ";;45.140.236.0/22 ;RIPE
+United States (US) Flag ;45.145.149.0/24 ;DediPath LLC ;;45.145.148.0/22 ;RIPE
+United States (US) Flag ;45.145.150.0/24 ;DediPath LLC ;;45.145.148.0/22 ;RIPE
+United States (US) Flag ;45.148.252.0/22 ;Panq B.V. ;;45.148.252.0/22 ;RIPE
+Netherlands (NL) Flag ;45.149.72.0/22 ;Panq B.V. ;;45.149.72.0/22 ;RIPE
+Germany (DE) Flag ;45.152.188.0/24 ;heficed ;;45.152.188.0/22 ;RIPE
+United States (US) Flag ;50.59.3.0/24 ;Caris Life Sciences ;;50.58.0.0/15 ;ARIN
+United States (US) Flag ;50.93.151.0/24 ;Gtek Computers LLC ;;50.93.144.0/20 ;ARIN
+United States (US) Flag ;50.114.8.0/22 ;Delta Centric LLC ;;50.114.0.0/16 ;ARIN
+United States (US) Flag ;50.114.14.0/23 ;Delta Centric LLC ;;50.114.0.0/16 ;ARIN
+Russian Federation (RU) Flag ;50.114.26.0/24 ;Baxet LLC ;;50.114.0.0/16 ;ARIN
+Russian Federation (RU) Flag ;50.114.30.0/24 ;Baxet LLC ;;50.114.0.0/16 ;ARIN
+United States (US) Flag ;50.114.68.0/22 ;GBTCloud Inc ;;50.114.0.0/16 ;ARIN
+United States (US) Flag ;50.114.82.0/24 ;Delta Centric LLC ;;50.114.0.0/16 ;ARIN
+United States (US) Flag ;50.114.120.0/24 ;Delta Centric LLC ;;50.114.0.0/16 ;ARIN
+United States (US) Flag ;52.128.0.0/20 ;Hostzors Inc. ;;52.128.0.0/20 ;ARIN
+United Kingdom (GB) Flag ;62.67.0.0/16 ;Centurylink Communications UK Limited ;;62.67.0.0/16 ;RIPE
+United Kingdom (GB) Flag ;62.140.0.0/19 ;Centurylink Communications UK Limited ;;62.140.0.0/19 ;RIPE
+United States (US) Flag ;63.36.0.0/16 ;MCI Communications Services, Inc. d/b/a Verizon Business ;;63.36.0.0/14 ;ARIN
+United States (US) Flag ;63.90.172.0/24 ;Digiwest Internet Services ;;63.64.0.0/10 ;ARIN
+United States (US) Flag ;63.103.98.0/24 ;DigiWest Internet Se ;;63.64.0.0/10 ;ARIN
+United States (US) Flag ;63.103.105.0/24 ;DigiWest Internet Se ;;63.64.0.0/10 ;ARIN
+United States (US) Flag ;63.103.106.0/24 ;DigiWest Internet Se ;;63.64.0.0/10 ;ARIN
+United States (US) Flag ;63.208.0.0/13 ;Level 3 Parent, LLC ;;63.208.0.0/13 ;ARIN
+United States (US) Flag ;63.210.148.0/24 ;Choopa, LLC ;;63.208.0.0/13 ;ARIN
+United States (US) Flag ;63.210.213.0/24 ;Level 3 Parent, LLC ;;63.208.0.0/13 ;ARIN
+United States (US) Flag ;63.212.129.0/24 ;Level 3 Parent, LLC ;;63.208.0.0/13 ;ARIN
+United States (US) Flag ;64.8.0.0/18 ;Level 3 Parent, LLC ;;64.8.0.0/18 ;ARIN
+United States (US) Flag ;64.8.1.0/24 ;VITAC Corporation ;;64.8.0.0/18 ;ARIN
+United States (US) Flag ;64.8.14.0/23 ;Dickinson College ;;64.8.0.0/18 ;ARIN
+United States (US) Flag ;64.8.44.0/23 ;On Site Solutions, Inc. ;;64.8.0.0/18 ;ARIN
+United States (US) Flag ;64.8.63.0/24 ;Libcom Internet Services ;;64.8.0.0/18 ;ARIN
+United States (US) Flag ;64.8.64.0/19 ;Level 3 Parent, LLC ;;64.8.64.0/19 ;ARIN
+United States (US) Flag ;64.8.72.0/24 ;Cathedral Corporation ;;64.8.64.0/19 ;ARIN
+United States (US) Flag ;64.8.73.0/24 ;Dairylea Cooperative, Inc. ;;64.8.64.0/19 ;ARIN
+United States (US) Flag ;64.9.0.0/17 ;Level 3 Parent, LLC ;;64.9.0.0/17 ;ARIN
+United States (US) Flag ;64.9.40.0/22 ;Borough of Kutztown ;;64.9.0.0/17 ;ARIN
+United States (US) Flag ;64.9.54.0/23 ;Dickinson College ;;64.9.0.0/17 ;ARIN
+United States (US) Flag ;64.9.56.0/21 ;Dickinson College ;;64.9.0.0/17 ;ARIN
+United States (US) Flag ;64.9.97.0/24 ;Level 3 Parent, LLC ;;64.9.0.0/17 ;ARIN
+United States (US) Flag ;64.9.104.0/24 ;Pc Helps Support, Inc. ;;64.9.0.0/17 ;ARIN
+United States (US) Flag ;64.16.111.0/24 ;Lewis Roca Rothgerber LLP ;;64.16.96.0/20 ;ARIN
+United States (US) Flag ;64.30.0.0/18 ;Level 3 Parent, LLC ;;64.30.0.0/18 ;ARIN
+United States (US) Flag ;64.30.17.0/24 ;The Rutland Hospital, Inc. D/B/A ;;64.30.0.0/18 ;ARIN
+United States (US) Flag ;64.30.37.0/24 ;South Burlington School District ;;64.30.0.0/18 ;ARIN
+United States (US) Flag ;64.31.128.0/18 ;Level 3 Parent, LLC ;;64.31.128.0/18 ;ARIN
+United States (US) Flag ;64.31.182.0/23 ;Domanet, Inc ;;64.31.128.0/18 ;ARIN
+United States (US) Flag ;64.64.113.0/24 ;Avast Software ;;64.64.96.0/19 ;ARIN
+United States (US) Flag ;64.64.116.0/24 ;Dedicated Server ;;64.64.96.0/19 ;ARIN
+United States (US) Flag ;64.64.119.0/24 ;Epik Holdings Inc ;;64.64.96.0/19 ;ARIN
+United States (US) Flag ;64.64.126.0/24 ;Dedicated Server ;;64.64.96.0/19 ;ARIN
+United States (US) Flag ;64.66.64.0/19 ;Level 3 Parent, LLC ;;64.66.64.0/19 ;ARIN
+United States (US) Flag ;64.66.96.0/20 ;Level 3 Parent, LLC ;;64.66.96.0/20 ;ARIN
+United States (US) Flag ;64.76.235.0/24 ;ImpSat USA, Inc. ;;64.76.0.0/16 ;ARIN
+United States (US) Flag ;64.76.243.0/24 ;ImpSat USA, Inc. ;;64.76.0.0/16 ;ARIN
+United States (US) Flag ;64.78.208.0/20 ;Mainstreethost ;;64.78.208.0/20 ;ARIN
+United States (US) Flag ;64.90.161.0/24 ;NYI ;;64.90.160.0/19 ;ARIN
+United States (US) Flag ;64.90.162.0/24 ;NYI ;;64.90.160.0/19 ;ARIN
+United States (US) Flag ;64.90.167.0/24 ;NYI ;;64.90.160.0/19 ;ARIN
+United States (US) Flag ;64.113.128.0/19 ;MITSUBISHI CATERPILLAR FORKLIFT AMERICA INC. ;;64.113.128.0/19 ;ARIN
+United States (US) Flag ;64.128.90.0/24 ;tw telecom holdings, inc. ;;64.128.0.0/15 ;ARIN
+United States (US) Flag ;64.132.97.0/24 ;PBM Graphics ;;64.132.0.0/16 ;ARIN
+United States (US) Flag ;64.136.96.0/24 ;Calix, Inc. ;;64.136.96.0/23 ;ARIN
+United States (US) Flag ;64.140.16.0/21 ;Level 3 Parent, LLC ;;64.140.0.0/18 ;ARIN
+United States (US) Flag ;64.140.40.0/21 ;Level 3 Parent, LLC ;;64.140.0.0/18 ;ARIN
+United States (US) Flag ;64.140.56.0/21 ;Level 3 Parent, LLC ;;64.140.0.0/18 ;ARIN
+United States (US) Flag ;64.147.104.0/24 ;NYI ;;64.147.96.0/19 ;ARIN
+United States (US) Flag ;64.152.0.0/13 ;Level 3 Parent, LLC ;;64.152.0.0/13 ;ARIN
+United States (US) Flag ;64.156.49.0/24 ;Level 3 Parent, LLC ;;64.152.0.0/13 ;ARIN
+United States (US) Flag ;64.178.229.0/24 ;GILES-CRAIG COMMUNICATIONS INC. ;;64.178.224.0/19 ;ARIN
+United States (US) Flag ;64.178.230.0/24 ;GILES-CRAIG COMMUNICATIONS INC. ;;64.178.224.0/19 ;ARIN
+United States (US) Flag ;64.189.112.0/21 ;JLB Tempe ;;64.189.0.0/16 ;ARIN
+United States (US) Flag ;64.192.0.0/14 ;Level 3 Parent, LLC ;;64.192.0.0/14 ;ARIN
+United States (US) Flag ;64.192.219.0/24 ;Saia Communications ;;64.192.0.0/14 ;ARIN
+United States (US) Flag ;64.193.84.0/22 ;Conxx, Inc. ;;64.192.0.0/14 ;ARIN
+United States (US) Flag ;64.193.88.0/24 ;Conxx, Inc. ;;64.192.0.0/14 ;ARIN
+United States (US) Flag ;64.194.140.0/24 ;Level 3 Parent, LLC ;;64.192.0.0/14 ;ARIN
+United States (US) Flag ;64.195.178.0/24 ;Level 3 Parent, LLC ;;64.192.0.0/14 ;ARIN
+United States (US) Flag ;64.195.224.0/24 ;BROWN HARRIS STEVENS ;;64.192.0.0/14 ;ARIN
+United States (US) Flag ;64.200.0.0/16 ;Level 3 Parent, LLC ;;64.200.0.0/16 ;ARIN
+United States (US) Flag ;64.200.84.0/23 ;Blue Moon Online System ;;64.200.0.0/16 ;ARIN
+United States (US) Flag ;64.208.127.0/24 ;Level 3 Parent, LLC ;;64.208.0.0/16 ;ARIN
+United States (US) Flag ;64.208.185.0/24 ;Level 3 Parent, LLC ;;64.208.0.0/16 ;ARIN
+United States (US) Flag ;64.208.204.0/24 ;Level 3 Parent, LLC ;;64.208.0.0/16 ;ARIN
+United States (US) Flag ;64.209.42.0/24 ;Level 3 Parent, LLC ;;64.209.0.0/17 ;ARIN
+United States (US) Flag ;64.209.50.0/23 ;Data Management ;;64.209.0.0/17 ;ARIN
+United States (US) Flag ;64.211.94.0/24 ;Level 3 Parent, LLC ;;64.211.0.0/17 ;ARIN
+United States (US) Flag ;64.211.108.0/24 ;Level 3 Parent, LLC ;;64.211.0.0/17 ;ARIN
+United States (US) Flag ;64.211.210.0/24 ;Level 3 Parent, LLC ;;64.211.192.0/19 ;ARIN
+United States (US) Flag ;64.212.90.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.213.204.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.214.71.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.214.88.0/22 ;KNACK NETWORKS ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.214.132.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.214.160.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.215.85.0/24 ;NETWORK INNOVATIONS, INC. ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.215.175.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.215.188.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.215.201.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.215.203.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.215.221.0/24 ;Level 3 Parent, LLC ;;64.212.0.0/14 ;ARIN
+United States (US) Flag ;64.241.120.0/24 ;Dollar Bank ;;64.240.0.0/14 ;ARIN
+United States (US) Flag ;64.246.192.0/19 ;Level 3 Parent, LLC ;;64.246.192.0/19 ;ARIN
+United States (US) Flag ;64.246.196.0/23 ;Milton Hershey School ;;64.246.192.0/19 ;ARIN
+United States (US) Flag ;64.246.198.0/24 ;Lexicon Inc. ;;64.246.192.0/19 ;ARIN
+United States (US) Flag ;64.246.217.0/24 ;Radio Training Network Inc. ;;64.246.192.0/19 ;ARIN
+United States (US) Flag ;65.56.0.0/14 ;Level 3 Parent, LLC ;;65.56.0.0/14 ;ARIN
+United States (US) Flag ;65.57.245.0/24 ;Level 3 Parent, LLC ;;65.56.0.0/14 ;ARIN
+United States (US) Flag ;65.77.0.0/16 ;Level 3 Parent, LLC ;;65.77.0.0/16 ;ARIN
+United States (US) Flag ;65.88.0.0/14 ;Level 3 Parent, LLC ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.88.43.0/24 ;General Cologne Re. ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.88.123.0/24 ;Level 3 Parent, LLC ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.89.176.0/23 ;Level 3 Parent, LLC ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.89.208.0/23 ;IIR ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.89.251.0/24 ;Global Tel Link ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.90.67.0/24 ;GENERAL ELECTRIC ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.91.0.0/24 ;Level 3 Parent, LLC ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.91.11.0/24 ;GE CORP ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.91.244.0/24 ;Seko ;;65.88.0.0/14 ;ARIN
+United States (US) Flag ;65.124.182.0/24 ;AMES CONSTRUCTION ;;65.112.0.0/12 ;ARIN
+United States (US) Flag ;65.197.222.0/24 ;FOCUSED INVESTORS LLC ;;65.192.0.0/11 ;ARIN
+United States (US) Flag ;66.51.48.0/20 ;Level 3 Parent, LLC ;;66.51.48.0/20 ;ARIN
+United States (US) Flag ;66.114.192.0/18 ;Level 3 Parent, LLC ;;66.114.192.0/18 ;ARIN
+United States (US) Flag ;66.114.205.0/24 ;Global Tel Link ;;66.114.192.0/18 ;ARIN
+United States (US) Flag ;66.114.248.0/24 ;Zenith Information Systems ;;66.114.192.0/18 ;ARIN
+United States (US) Flag ;66.114.249.0/24 ;Zenith Information Systems ;;66.114.192.0/18 ;ARIN
+United States (US) Flag ;66.147.128.0/18 ;Level 3 Parent, LLC ;;66.147.128.0/18 ;ARIN
+United States (US) Flag ;66.147.192.0/19 ;Level 3 Parent, LLC ;;66.147.192.0/19 ;ARIN
+United States (US) Flag ;66.147.219.0/24 ;McMahon Publishing Group ;;66.147.192.0/19 ;ARIN
+United States (US) Flag ;66.147.220.0/24 ;Global Tel Link ;;66.147.192.0/19 ;ARIN
+United States (US) Flag ;66.159.0.0/19 ;Level 3 Parent, LLC ;;66.159.0.0/19 ;ARIN
+United States (US) Flag ;66.170.128.0/20 ;Level 3 Parent, LLC ;;66.170.128.0/20 ;ARIN
+United States (US) Flag ;66.170.177.0/24 ;DataMaxx Applied Technologies, Inc. ;;66.170.176.0/22 ;ARIN
+United States (US) Flag ;66.171.196.0/24 ;Private Customer ;;66.171.192.0/20 ;ARIN
+United States (US) Flag ;66.193.36.0/24 ;Nintendo of America ;;66.192.0.0/14 ;ARIN
+United States (US) Flag ;66.194.187.0/24 ;tw telecom holdings, inc. ;;66.192.0.0/14 ;ARIN
+United States (US) Flag ;66.202.128.0/18 ;Regus Business Centre, LLC ;;66.202.128.0/18 ;ARIN
+United States (US) Flag ;66.202.160.0/24 ;Regus Business Centre, LLC ;;66.202.128.0/18 ;ARIN
+United States (US) Flag ;66.220.37.0/24 ;Digital Angel ;;66.220.32.0/21 ;ARIN
+United States (US) Flag ;66.220.38.0/24 ;Mighty Oak Technology ;;66.220.32.0/21 ;ARIN
+United States (US) Flag ;66.220.39.0/24 ;Mighty Oak Technology ;;66.220.32.0/21 ;ARIN
+United States (US) Flag ;66.220.46.0/24 ;Mighty Oak Technology ;;66.220.46.0/24 ;ARIN
+United States (US) Flag ;66.220.54.0/24 ;Mighty Oak Technology ;;66.220.54.0/23 ;ARIN
+United States (US) Flag ;66.220.55.0/24 ;Mighty Oak Technology ;;66.220.54.0/23 ;ARIN
+United States (US) Flag ;66.220.56.0/24 ;Mighty Oak Technology ;;66.220.56.0/23 ;ARIN
+United States (US) Flag ;66.220.57.0/24 ;Mighty Oak Technology ;;66.220.56.0/23 ;ARIN
+United States (US) Flag ;66.220.59.0/24 ;Mighty Oak Technology ;;66.220.59.0/24 ;ARIN
+United States (US) Flag ;66.220.60.0/24 ;Mighty Oak Technology ;;66.220.60.0/22 ;ARIN
+United States (US) Flag ;66.220.61.0/24 ;Mighty Oak Technology ;;66.220.60.0/22 ;ARIN
+United States (US) Flag ;66.233.161.0/24 ;CLEAR WIRELESS LLC ;;66.233.0.0/16 ;ARIN
+United States (US) Flag ;66.243.0.0/17 ;Level 3 Parent, LLC ;;66.243.0.0/17 ;ARIN
+United States (US) Flag ;66.243.41.0/24 ;Global Tel Link ;;66.243.0.0/17 ;ARIN
+United States (US) Flag ;66.243.128.0/18 ;Level 3 Parent, LLC ;;66.243.128.0/18 ;ARIN
+United States (US) Flag ;66.251.192.0/19 ;Level 3 Parent, LLC ;;66.251.192.0/19 ;ARIN
+United States (US) Flag ;66.251.198.0/24 ;City of Dublin ;;66.251.192.0/19 ;ARIN
+United States (US) Flag ;66.251.199.0/24 ;City of Dublin ;;66.251.192.0/19 ;ARIN
+United States (US) Flag ;66.251.200.0/24 ;City of Dublin ;;66.251.192.0/19 ;ARIN
+United States (US) Flag ;66.251.201.0/24 ;City of Dublin ;;66.251.192.0/19 ;ARIN
+United States (US) Flag ;66.251.202.0/24 ;City of Dublin ;;66.251.192.0/19 ;ARIN
+United States (US) Flag ;67.16.216.0/21 ;Level 3 Parent, LLC ;;67.16.0.0/15 ;ARIN
+United States (US) Flag ;67.17.207.0/24 ;Level 3 Parent, LLC ;;67.16.0.0/15 ;ARIN
+United States (US) Flag ;67.21.34.0/24 ;Silicon Desert International ;;67.21.32.0/22 ;ARIN
+United States (US) Flag ;67.24.0.0/13 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.8.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.24.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.32.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.72.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.80.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.120.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.128.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.136.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.144.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.168.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.24.176.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.26.0.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.26.8.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.26.48.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.26.56.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.32.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.40.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.48.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.96.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.112.0/21 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.120.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.128.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.132.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.148.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.152.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.156.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.212.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.224.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.228.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.232.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.240.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.27.248.0/22 ;Level 3 Parent, LLC ;;67.24.0.0/13 ;ARIN
+United States (US) Flag ;67.63.0.0/19 ;Level 3 Parent, LLC ;;67.63.0.0/19 ;ARIN
+United States (US) Flag ;67.72.0.0/14 ;Level 3 Parent, LLC ;;67.72.0.0/14 ;ARIN
+United States (US) Flag ;67.74.33.0/24 ;Level 3 Parent, LLC ;;67.72.0.0/14 ;ARIN
+United States (US) Flag ;67.96.0.0/14 ;Level 3 Parent, LLC ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.96.21.0/24 ;Baker Internet Connections ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.96.42.0/24 ;Pangea Tech ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.96.51.0/24 ;inContact Inc. ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.96.104.0/24 ;GE CORP ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.96.211.0/24 ;Cingular ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.97.8.0/24 ;Portable Internet ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.97.106.0/24 ;TKL Interactive, Inc. ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.98.107.0/24 ;Lord Bissell & Brook ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.98.242.0/23 ;LDM ENGINEERING/AV RADIONET ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.99.246.0/24 ;LDM ENGINEERING/AV RADIONET ;;67.96.0.0/14 ;ARIN
+United States (US) Flag ;67.135.132.0/24 ;CenturyLink Communications, LLC ;;67.128.0.0/13 ;ARIN
+United States (US) Flag ;67.201.64.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.65.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.67.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.68.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.69.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.72.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.74.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.75.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.77.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.79.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.80.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.81.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.83.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.89.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.92.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.93.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.99.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.105.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.107.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.108.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.116.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.125.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.201.126.0/24 ;Columbia Sussex Corporation ;;67.201.64.0/18 ;ARIN
+United States (US) Flag ;67.207.192.0/24 ;Hype Enterprises ;;67.207.192.0/20 ;ARIN
+United States (US) Flag ;67.207.193.0/24 ;OOC ISP LLC ;;67.207.192.0/20 ;ARIN
+United States (US) Flag ;67.207.200.0/24 ;OOC ISP LLC ;;67.207.192.0/20 ;ARIN
+United States (US) Flag ;67.227.22.0/24 ;OOC ISP LLC ;;67.227.0.0/17 ;ARIN
+United States (US) Flag ;67.227.74.0/24 ;OOC ISP LLC ;;67.227.0.0/17 ;ARIN
+United States (US) Flag ;68.65.0.0/22 ;Healthsense INC ;;68.65.0.0/20 ;ARIN
+United States (US) Flag ;68.65.4.0/22 ;Healthsense INC ;;68.65.0.0/20 ;ARIN
+United States (US) Flag ;68.170.22.0/24 ;SYNCHRONOSS TECHNOLOGIES ;;68.170.16.0/20 ;ARIN
+United States (US) Flag ;69.25.18.0/24 ;K12 Inc. ;;69.25.0.0/16 ;ARIN
+United States (US) Flag ;69.25.19.0/24 ;K12 Inc. ;;69.25.0.0/16 ;ARIN
+United States (US) Flag ;69.43.242.0/24 ;PacketExchange, Inc ;;69.43.240.0/20 ;ARIN
+United States (US) Flag ;69.43.244.0/24 ;PacketExchange, Inc ;;69.43.240.0/20 ;ARIN
+United States (US) Flag ;69.43.246.0/24 ;Namecast ;;69.43.240.0/20 ;ARIN
+United States (US) Flag ;69.43.247.0/24 ;East West Interlink, LLC ;;69.43.240.0/20 ;ARIN
+United States (US) Flag ;69.43.255.0/24 ;PacketExchange, Inc ;;69.43.240.0/20 ;ARIN
+United States (US) Flag ;69.44.0.0/15 ;Level 3 Parent, LLC ;;69.44.0.0/15 ;ARIN
+United States (US) Flag ;69.44.39.0/24 ;Biomet 3i, LLC ;;69.44.0.0/15 ;ARIN
+United States (US) Flag ;69.44.110.0/24 ;U.S. TelePacific Corp. ;;69.44.0.0/15 ;ARIN
+United States (US) Flag ;69.45.18.0/23 ;CCS Wireless, Inc. ;;69.44.0.0/15 ;ARIN
+United States (US) Flag ;69.45.31.0/24 ;Intergrated Comm Concepts ;;69.44.0.0/15 ;ARIN
+United States (US) Flag ;69.45.39.0/24 ;Level 3 Parent, LLC ;;69.44.0.0/15 ;ARIN
+United States (US) Flag ;69.50.224.0/22 ;OOC ISP LLC ;;69.50.224.0/19 ;ARIN
+United States (US) Flag ;69.50.230.0/23 ;OOC ISP LLC ;;69.50.224.0/19 ;ARIN
+United States (US) Flag ;69.50.232.0/23 ;OOC ISP LLC ;;69.50.224.0/19 ;ARIN
+United States (US) Flag ;69.50.250.0/24 ;Hype Enterprises ;;69.50.224.0/19 ;ARIN
+United States (US) Flag ;69.50.251.0/24 ;OOC ISP LLC ;;69.50.224.0/19 ;ARIN
+United States (US) Flag ;69.80.128.0/24 ;Apogee Talahassee ;;69.80.128.0/18 ;ARIN
+United States (US) Flag ;71.18.0.0/16 ;The Endurance International Group, Inc. ;;71.18.0.0/16 ;ARIN
+United States (US) Flag ;72.0.96.0/19 ;Level 3 Parent, LLC ;;72.0.96.0/19 ;ARIN
+United States (US) Flag ;72.29.61.0/24 ;GILES-CRAIG COMMUNICATIONS INC. ;;72.29.32.0/19 ;ARIN
+United States (US) Flag ;72.29.62.0/24 ;GILES-CRAIG COMMUNICATIONS INC. ;;72.29.32.0/19 ;ARIN
+United States (US) Flag ;72.29.63.0/24 ;GILES-CRAIG COMMUNICATIONS INC. ;;72.29.32.0/19 ;ARIN
+United States (US) Flag ;72.236.0.0/15 ;Level 3 Parent, LLC ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.236.26.0/24 ;Triad Guaranty Insurance ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.236.151.0/24 ;APPLIEDINFO PARTNERS, INC ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.236.254.0/24 ;Level 3 Parent, LLC ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.236.255.0/24 ;Level 3 Parent, LLC ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.237.27.0/24 ;Borough of Kutztown dba/Hometown Utilicom ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.237.102.0/24 ;Level 3 Parent, LLC ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.237.174.0/24 ;Williamson County Government ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.237.214.0/24 ;Level 3 Parent, LLC ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.237.216.0/24 ;Level 3 Parent, LLC ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.237.219.0/24 ;MATRIX TELECOMMUNICATIONS ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.237.223.0/24 ;Vaspian LLC ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;72.237.238.0/23 ;Industrial Services of America, Inc ;;72.236.0.0/15 ;ARIN
+United States (US) Flag ;74.112.87.0/24 ;Quick Chain Links ;;74.112.80.0/21 ;ARIN
+United States (US) Flag ;74.115.0.0/22 ;AnchorFree Inc. ;;74.115.0.0/21 ;ARIN
+United States (US) Flag ;74.127.64.0/22 ;NRTC ;;74.127.64.0/18 ;ARIN
+United States (US) Flag ;74.127.89.0/24 ;GILES-CRAIG COMMUNICATIONS INC. ;;74.127.64.0/18 ;ARIN
+United States (US) Flag ;74.127.90.0/24 ;GILES-CRAIG COMMUNICATIONS INC. ;;74.127.64.0/18 ;ARIN
+United States (US) Flag ;74.202.105.0/24 ;tw telecom holdings, inc. ;;74.202.0.0/15 ;ARIN
+United States (US) Flag ;75.78.124.0/22 ;West Corporation ;;75.78.0.0/16 ;ARIN
+United States (US) Flag ;75.78.176.0/24 ;West Corporation ;;75.78.0.0/16 ;ARIN
+United States (US) Flag ;75.78.177.0/24 ;West Corporation ;;75.78.0.0/16 ;ARIN
+United States (US) Flag ;75.78.178.0/24 ;West Corporation ;;75.78.0.0/16 ;ARIN
+United States (US) Flag ;75.78.179.0/24 ;West Corporation ;;75.78.0.0/16 ;ARIN
+United States (US) Flag ;75.78.212.0/22 ;West Corporation ;;75.78.0.0/16 ;ARIN
+United States (US) Flag ;75.78.218.0/24 ;West Corporation ;;75.78.0.0/16 ;ARIN
+United States (US) Flag ;75.78.220.0/24 ;West Corporation ;;75.78.0.0/16 ;ARIN
+United States (US) Flag ;75.103.0.0/24 ;Regus Business Centre, LLC ;;75.103.0.0/18 ;ARIN
+United States (US) Flag ;75.103.0.0/18 ;Regus Business Centre, LLC ;;75.103.0.0/18 ;ARIN
+United States (US) Flag ;75.103.16.0/24 ;Regus Business Centre, LLC ;;75.103.0.0/18 ;ARIN
+United States (US) Flag ;75.103.32.0/24 ;Regus Business Centre, LLC ;;75.103.0.0/18 ;ARIN
+Canada (CA) Flag ;75.156.243.0/24 ;TELUS Communications Inc. ;;75.152.0.0/13 ;ARIN
+United States (US) Flag ;76.78.11.0/24 ;Apogee Telecom Inc. ;;76.78.0.0/16 ;ARIN
+United States (US) Flag ;76.78.235.0/24 ;Apogee Telecom Inc. ;;76.78.0.0/16 ;ARIN
+United States (US) Flag ;76.78.236.0/24 ;Apogee Telecom Inc. ;;76.78.0.0/16 ;ARIN
+United Kingdom (GB) Flag ;80.253.96.0/19 ;GTT ;;80.253.96.0/20 ;RIPE
+United Kingdom (GB) Flag ;80.253.104.0/24 ;GTT ;;80.253.96.0/20 ;RIPE
+United Kingdom (GB) Flag ;80.253.107.0/24 ;GTT ;;80.253.96.0/20 ;RIPE
+United Kingdom (GB) Flag ;80.253.108.0/23 ;Serverstream Infrastructure ;;80.253.96.0/20 ;RIPE
+United Kingdom (GB) Flag ;80.253.116.0/23 ;Serverstream Infrastructure ;;80.253.112.0/20 ;RIPE
+United Kingdom (GB) Flag ;80.253.121.0/24 ;GTT ;;80.253.112.0/20 ;RIPE
+United Kingdom (GB) Flag ;80.253.124.0/24 ;PacketExchange Level3 Glue LAN (HEX) ;;80.253.112.0/20 ;RIPE
+United Kingdom (GB) Flag ;80.253.125.0/24 ;PacketExchange Level3 Glue LAN (THN) ;;80.253.112.0/20 ;RIPE
+Germany (DE) Flag ;81.88.16.0/24 ;dogado GmbH ;;81.88.16.0/20 ;RIPE
+United States (US) Flag ;82.115.8.0/22 ;Talented Vision LLC ;;82.115.8.0/22 ;RIPE
+United States (US) Flag ;82.115.12.0/23 ;Parsun Network Solutions PTY LTD ;;82.115.12.0/23 ;RIPE
+Germany (DE) Flag ;83.171.248.0/22 ;WeinandNet UG (haftungsbeschraenkt) ;;83.171.248.0/22 ;RIPE
+United Kingdom (GB) Flag ;83.245.0.0/17 ;GTT ;;83.245.0.0/17 ;RIPE
+United Kingdom (GB) Flag ;83.245.32.0/22 ;ServerStream ;;83.245.0.0/17 ;RIPE
+United Kingdom (GB) Flag ;83.245.69.0/24 ;GTT ;;83.245.0.0/17 ;RIPE
+United Kingdom (GB) Flag ;83.245.70.0/24 ;GTT ;;83.245.0.0/17 ;RIPE
+United Kingdom (GB) Flag ;83.245.80.0/20 ;GTT ;;83.245.0.0/17 ;RIPE
+United Kingdom (GB) Flag ;83.245.106.0/24 ;Blue Sky Hosting Limited ;;83.245.0.0/17 ;RIPE
+United States (US) Flag ;85.9.192.0/20 ;Midwest Cable and Telecom, LLC ;;85.9.192.0/18 ;RIPE
+Latvia (LV) Flag ;85.9.208.0/21 ;"SIA ""Datagrupa.lv"" ";;85.9.192.0/18 ;RIPE
+Latvia (LV) Flag ;85.9.217.0/24 ;DG ITSERVICES ;;85.9.192.0/18 ;RIPE
+United States (US) Flag ;85.9.218.0/23 ;Midwest Cable and Telecom, LLC ;;85.9.192.0/18 ;RIPE
+United States (US) Flag ;85.9.220.0/22 ;Midwest Cable and Telecom, LLC ;;85.9.192.0/18 ;RIPE
+United States (US) Flag ;85.9.224.0/19 ;Midwest Cable and Telecom, LLC ;;85.9.192.0/18 ;RIPE
+United Kingdom (GB) Flag ;88.150.248.0/24 ;Redstation Limited ;;88.150.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;88.150.249.0/24 ;Redstation Limited ;;88.150.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;88.150.250.0/24 ;Redstation Limited ;;88.150.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;88.150.251.0/24 ;Redstation Limited ;;88.150.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;88.150.254.0/23 ;Redstation Limited ;;88.150.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.128.0/17 ;GTT ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.144.0/24 ;GTT ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.146.0/24 ;PacketExchange Ltd ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.152.0/22 ;GTT ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.166.0/24 ;Signify Solutions Ltd ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.167.0/24 ;PacketExchange UK ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.175.0/24 ;Internet Telecommunications ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.219.0/24 ;MXSweep Ltd (IX DUB) ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.224.0/24 ;Openia ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.232.0/24 ;TBDATA ;;89.167.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;89.167.240.0/24 ;PacketExchange MRP ;;89.167.128.0/17 ;RIPE
+Ireland (IE) Flag ;89.167.241.0/24 ;Feedhenry Ltd ;;89.167.128.0/17 ;RIPE
+Poland (PL) Flag ;91.149.218.0/23 ;LogicWeb Inc ;;91.149.192.0/18 ;RIPE
+Poland (PL) Flag ;91.149.222.0/23 ;LogicWeb Inc ;;91.149.192.0/18 ;RIPE
+Poland (PL) Flag ;91.149.228.0/23 ;LogicWeb Inc ;;91.149.192.0/18 ;RIPE
+Poland (PL) Flag ;91.149.230.0/24 ;LogicWeb Inc ;;91.149.192.0/18 ;RIPE
+Poland (PL) Flag ;91.149.232.0/23 ;LogicWeb Inc ;;91.149.192.0/18 ;RIPE
+Poland (PL) Flag ;91.149.252.0/23 ;LogicWeb Inc ;;91.149.192.0/18 ;RIPE
+Poland (PL) Flag ;91.149.254.0/24 ;LogicWeb Inc ;;91.149.192.0/18 ;RIPE
+United Kingdom (GB) Flag ;91.207.152.0/24 ;Domestic and General Services Limited ;;91.207.152.0/23 ;RIPE
+United Kingdom (GB) Flag ;91.207.153.0/24 ;Domestic and General Services Limited ;;91.207.152.0/23 ;RIPE
+Germany (DE) Flag ;91.229.244.0/24 ;GBTCLOUD ;;91.229.244.0/23 ;RIPE
+Brazil (BR) Flag ;92.38.150.0/24 ;G-Core Labs Customer assignment ;;92.38.128.0/19 ;RIPE
+United States (US) Flag ;92.119.12.0/22 ;"MB ""Ricarta"" ";;92.119.12.0/22 ;RIPE
+United States (US) Flag ;92.119.149.0/24 ;GBTCloud.COM ;;92.119.148.0/22 ;RIPE
+Brazil (BR) Flag ;92.223.10.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Brazil (BR) Flag ;92.223.10.0/23 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Brazil (BR) Flag ;92.223.11.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+Brazil (BR) Flag ;92.223.13.0/24 ;G-Core Labs Customer assignment ;;92.223.0.0/17 ;RIPE
+United States (US) Flag ;98.159.32.0/24 ;LogicWeb Inc. ;;98.159.32.0/20 ;ARIN
+United States (US) Flag ;98.159.33.0/24 ;LogicWeb Inc. ;;98.159.32.0/20 ;ARIN
+United States (US) Flag ;98.159.38.0/24 ;Avast Software ;;98.159.32.0/20 ;ARIN
+United States (US) Flag ;98.159.39.0/24 ;Dedicated Servers ;;98.159.32.0/20 ;ARIN
+United States (US) Flag ;98.159.226.0/24 ;Oculus Proxies ;;98.159.224.0/20 ;ARIN
+Puerto Rico (PR) Flag ;98.159.234.0/24 ;InNet Connections ;;98.159.224.0/20 ;ARIN
+United States (US) Flag ;98.159.239.0/24 ;Epik Holdings Inc ;;98.159.224.0/20 ;ARIN
+United States (US) Flag ;99.193.251.0/24 ;DIRECTV, LLC ;;99.193.0.0/16 ;ARIN
+Nigeria (NG) Flag ;102.38.192.0/18 ;Technology Software Limited ;;102.38.192.0/18 ;AfriNIC
+South Africa (ZA) Flag ;102.129.140.0/23 ;DET Africa (Pty) LTD ;;102.129.128.0/17 ;AfriNIC
+Hong Kong (HK) Flag ;102.129.146.0/23 ;Rainbow Network Limited ;;102.129.128.0/17 ;AfriNIC
+South Africa (ZA) Flag ;102.129.152.0/23 ;DET Africa (Pty) LTD ;;102.129.128.0/17 ;AfriNIC
+Hong Kong (HK) Flag ;102.129.154.0/23 ;Rainbow Network Limited ;;102.129.128.0/17 ;AfriNIC
+United States (US) Flag ;102.129.156.0/22 ;GBTCloud Inc ;;102.129.128.0/17 ;AfriNIC
+South Africa (ZA) Flag ;102.129.234.0/23 ;DET Africa (Pty) LTD ;;102.129.128.0/17 ;AfriNIC
+Pakistan (PK) Flag ;102.165.11.0/24 ;Ebone Network (Pvt) Limited ;;102.165.0.0/18 ;AfriNIC
+South Africa (ZA) Flag ;102.165.13.0/24 ;Prime Telecom Ltd. ;;102.165.0.0/18 ;AfriNIC
+South Africa (ZA) Flag ;102.165.14.0/24 ;Prime Telecom Ltd. ;;102.165.0.0/18 ;AfriNIC
+United States (US) Flag ;102.165.32.0/22 ;GBTCloud Inc ;;102.165.0.0/18 ;AfriNIC
+United Kingdom (GB) Flag ;102.165.36.0/22 ;Digital-Energy-Technologies-LTD ;;102.165.0.0/18 ;AfriNIC
+United States (US) Flag ;102.165.40.0/23 ;Digital Energy Technologies LTD ;;102.165.0.0/18 ;AfriNIC
+Hong Kong (HK) Flag ;102.165.50.0/23 ;Rainbow Network Limited ;;102.165.0.0/18 ;AfriNIC
+South Africa (ZA) Flag ;102.165.56.0/22 ;DET Africa (Pty) LTD ;;102.165.0.0/18 ;AfriNIC
+Australia (AU) Flag ;103.70.51.0/24 ;Australia IP ;;103.70.48.0/22 ;APNIC
+Malaysia (MY) Flag ;103.75.231.0/24 ;13A-3, Prima Bizwalk ;;103.75.228.0/22 ;APNIC
+United States (US) Flag ;103.228.98.0/24 ;Airlinq Inc ;;103.228.96.0/22 ;ARIN
+Singapore (SG) Flag ;103.230.68.0/23 ;GPLHost VPS (Virtual Private Server) Hosting Services ;;103.230.68.0/22 ;APNIC
+United States (US) Flag ;104.152.48.0/24 ;InsideSales.com, Inc. ;;104.152.48.0/22 ;ARIN
+United States (US) Flag ;104.193.224.0/24 ;Catalyst Host LLC ;;104.193.224.0/22 ;ARIN
+United States (US) Flag ;104.218.236.0/23 ;HostCram LLC ;;104.218.236.0/23 ;ARIN
+United States (US) Flag ;104.232.42.0/24 ;Argus Business Solutions Group ;;104.232.42.0/24 ;ARIN
+United States (US) Flag ;104.238.4.0/24 ;Network Layer Technologies Inc ;;104.238.0.0/19 ;ARIN
+United States (US) Flag ;104.238.5.0/24 ;Network Layer Technologies Inc ;;104.238.0.0/19 ;ARIN
+United States (US) Flag ;104.238.7.0/24 ;Network Layer Technologies Inc ;;104.238.0.0/19 ;ARIN
+United States (US) Flag ;104.238.8.0/24 ;Karas Services ;;104.238.0.0/19 ;ARIN
+United States (US) Flag ;107.154.40.0/24 ;Incapsula Inc ;;107.154.0.0/16 ;ARIN
+United States (US) Flag ;107.154.41.0/24 ;Incapsula Inc ;;107.154.0.0/16 ;ARIN
+United States (US) Flag ;107.154.42.0/24 ;Incapsula Inc ;;107.154.0.0/16 ;ARIN
+United States (US) Flag ;107.154.71.0/24 ;Incapsula Inc ;;107.154.0.0/16 ;ARIN
+United States (US) Flag ;107.180.136.0/21 ;LAKSH CYBERSECURITY AND DEFENSE LLC ;;107.180.128.0/18 ;ARIN
+United States (US) Flag ;107.180.152.0/21 ;Camplink ;;107.180.128.0/18 ;ARIN
+United States (US) Flag ;107.180.208.0/20 ;Camplink ;;107.180.192.0/19 ;ARIN
+United States (US) Flag ;108.165.160.0/23 ;GBTCloud Inc ;;108.165.0.0/16 ;ARIN
+Turkey (TR) Flag ;108.165.165.0/24 ;STC GRUP MIMARLIK ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.166.0/23 ;GBTCloud Inc ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.170.0/23 ;GBTCloud Inc ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.174.0/23 ;GBTCloud Inc ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.176.0/22 ;GBTCloud Inc ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.182.0/23 ;GBTCloud Inc ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.193.0/24 ;Ace Data Centers, Inc. ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.194.0/23 ;Ace Data Centers, Inc. ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.196.0/23 ;Ace Data Centers, Inc. ;;108.165.0.0/16 ;ARIN
+Turkey (TR) Flag ;108.165.199.0/24 ;2K INTERNET TEKNOLOJILERI ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.204.0/23 ;Ace Data Centers, Inc. ;;108.165.0.0/16 ;ARIN
+Turkey (TR) Flag ;108.165.214.0/23 ;2K INTERNET TEKNOLOJILERI ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.216.0/21 ;Ace Data Centers, Inc. ;;108.165.0.0/16 ;ARIN
+Turkey (TR) Flag ;108.165.244.0/24 ;2K INTERNET TEKNOLOJILERI ;;108.165.0.0/16 ;ARIN
+United States (US) Flag ;108.165.250.0/23 ;GBTCloud Inc ;;108.165.0.0/16 ;ARIN
+United Kingdom (GB) Flag ;109.205.152.0/22 ;AVBLOCK1 ;;109.205.152.0/21 ;RIPE
+United Kingdom (GB) Flag ;109.205.156.0/24 ;AVBLOCK2 ;;109.205.152.0/21 ;RIPE
+France (FR) Flag ;109.236.193.0/24 ;Quant House SAS ;;109.236.192.0/20 ;RIPE
+France (FR) Flag ;109.236.194.0/24 ;Quant House SAS ;;109.236.192.0/20 ;RIPE
+Australia (AU) Flag ;113.29.17.0/24 ;Optus Ultimo Data Center ;;113.29.0.0/17 ;APNIC
+Australia (AU) Flag ;113.29.28.0/24 ;Optus Ultimo Data Center ;;113.29.0.0/17 ;APNIC
+Slovenia (SI) Flag ;113.29.78.0/24 ;19 TAI SENG DRIVE ;;113.29.0.0/17 ;APNIC
+Hong Kong (HK) Flag ;113.29.91.0/24 ;HK ;;113.29.0.0/17 ;APNIC
+United States (US) Flag ;128.191.174.0/23 ;NEC Technologies Inc. ;;128.191.0.0/16 ;ARIN
+United States (US) Flag ;128.191.238.0/24 ;NEC Technologies Inc. ;;128.191.0.0/16 ;ARIN
+United States (US) Flag ;129.10.7.0/24 ;Northeastern University ;;129.10.0.0/16 ;ARIN
+United States (US) Flag ;129.10.23.0/24 ;Northeastern University ;;129.10.0.0/16 ;ARIN
+United States (US) Flag ;129.35.184.0/22 ;IBM ;;129.35.0.0/16 ;ARIN
+United States (US) Flag ;129.192.169.0/24 ;Ericsson Network Systems, Inc. ;;129.192.0.0/16 ;ARIN
+United States (US) Flag ;129.192.183.0/24 ;Ericsson Network Systems, Inc. ;;129.192.0.0/16 ;ARIN
+United States (US) Flag ;131.119.0.0/16 ;Level 3 Parent, LLC ;;131.119.0.0/16 ;ARIN
+Germany (DE) Flag ;132.174.170.0/24 ;Level 3 Parent, LLC (LPL-141) ;;132.174.0.0/16 ;ARIN
+United Kingdom (GB) Flag ;132.174.174.0/24 ;Level 3 Parent, LLC (LPL-141) ;;132.174.0.0/16 ;ARIN
+United States (US) Flag ;132.174.175.0/24 ;Level 3 Parent, LLC (LPL-141) ;;132.174.0.0/16 ;ARIN
+United States (US) Flag ;132.174.179.0/24 ;Level 3 Parent, LLC (LPL-141) ;;132.174.0.0/16 ;ARIN
+Puerto Rico (PR) Flag ;134.202.0.0/20 ;Gauss Research Laboratory, Inc. ;;134.202.0.0/16 ;ARIN
+Puerto Rico (PR) Flag ;134.202.64.0/19 ;Gauss Research Laboratory, Inc. ;;134.202.0.0/16 ;ARIN
+Puerto Rico (PR) Flag ;134.202.96.0/20 ;Gauss Research Laboratory, Inc. ;;134.202.0.0/16 ;ARIN
+Puerto Rico (PR) Flag ;134.202.224.0/20 ;Gauss Research Laboratory, Inc. ;;134.202.0.0/16 ;ARIN
+United States (US) Flag ;136.223.128.0/20 ;State University of New York ;;136.223.0.0/16 ;ARIN
+United States (US) Flag ;136.223.144.0/20 ;State University of New York ;;136.223.0.0/16 ;ARIN
+Canada (CA) Flag ;137.236.48.0/24 ;Open Text Corporation ;;137.236.0.0/16 ;ARIN
+United States (US) Flag ;138.12.0.0/16 ;LexisNexis ;;138.12.0.0/16 ;ARIN
+United States (US) Flag ;138.108.52.0/24 ;A.C. Nielsen Company ;;138.108.0.0/16 ;ARIN
+United States (US) Flag ;139.64.248.0/24 ;Kimball Midwest ;;139.64.248.0/24 ;ARIN
+Pakistan (PK) Flag ;139.190.0.0/19 ;Orient Express LDI Limited ;;139.190.0.0/17 ;APNIC
+United States (US) Flag ;141.254.110.0/24 ;State University of New York, Central ;;141.254.0.0/16 ;ARIN
+United States (US) Flag ;142.202.22.0/24 ;Guaranteed Rate Inc ;;142.202.22.0/24 ;ARIN
+United States (US) Flag ;142.202.157.0/24 ;Fibercreek Networks, LLC ;;142.202.157.0/24 ;ARIN
+United States (US) Flag ;143.223.4.0/24 ;William Morris Agency, Inc. ;;143.223.0.0/16 ;ARIN
+United States (US) Flag ;143.223.177.0/24 ;William Morris Agency, Inc. ;;143.223.0.0/16 ;ARIN
+United States (US) Flag ;144.172.12.0/22 ;Qorvo US, Inc ;;144.172.0.0/18 ;ARIN
+Canada (CA) Flag ;144.208.112.0/22 ;Altima Telecom ;;144.208.112.0/22 ;ARIN
+United States (US) Flag ;146.88.226.0/24 ;Advisor Group, Inc. ;;146.88.226.0/23 ;ARIN
+China (CN) Flag ;146.196.56.0/22 ;Shanghai Giant Network Technology Co., Ltd. ;;146.196.56.0/22 ;APNIC
+United States (US) Flag ;147.90.1.0/24 ;Harris Controls and Composition ;;147.90.0.0/16 ;ARIN
+United States (US) Flag ;147.90.5.0/24 ;Harris Controls and Composition ;;147.90.0.0/16 ;ARIN
+United States (US) Flag ;147.90.180.0/24 ;Harris Controls and Composition ;;147.90.0.0/16 ;ARIN
+United States (US) Flag ;147.92.56.0/23 ;ATI Solutions ;;147.92.56.0/22 ;ARIN
+United States (US) Flag ;148.165.0.0/18 ;Bay Area Rapid Transit District (BART) ;;148.165.0.0/16 ;ARIN
+United States (US) Flag ;148.165.64.0/18 ;Bay Area Rapid Transit District (BART) ;;148.165.0.0/16 ;ARIN
+United States (US) Flag ;148.165.100.0/23 ;Bay Area Rapid Transit District (BART) ;;148.165.0.0/16 ;ARIN
+United States (US) Flag ;148.165.102.0/23 ;Bay Area Rapid Transit District (BART) ;;148.165.0.0/16 ;ARIN
+United States (US) Flag ;148.165.128.0/17 ;Bay Area Rapid Transit District (BART) ;;148.165.0.0/16 ;ARIN
+United States (US) Flag ;149.117.2.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.17.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.18.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.19.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.20.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.24.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.25.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.29.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.30.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.32.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.33.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.52.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.53.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.54.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.129.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.146.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.117.159.0/24 ;Synopsys Inc. ;;149.117.0.0/16 ;ARIN
+United States (US) Flag ;149.138.0.0/16 ;Sunquest Information Systems, Inc. ;;149.138.0.0/16 ;ARIN
+United Kingdom (GB) Flag ;149.254.251.0/24 ;T-Mobile(UK) TDC-1 ;;149.254.0.0/16 ;RIPE
+United States (US) Flag ;152.50.128.0/17 ;Lord Corporation ;;152.50.0.0/16 ;ARIN
+Germany (DE) Flag ;152.89.88.0/22 ;WeinandNet UG (haftungsbeschraenkt) ;;152.89.88.0/22 ;RIPE
+United States (US) Flag ;154.3.240.0/21 ;PSINet, Inc. ;;154.3.0.0/16 ;ARIN
+United States (US) Flag ;154.7.136.0/21 ;PSINet, Inc. ;;154.7.0.0/16 ;ARIN
+United States (US) Flag ;154.7.224.0/19 ;Hosted Backbone ;;154.7.0.0/16 ;ARIN
+South Africa (ZA) Flag ;154.16.3.0/24 ;NetStack Ltd ;;154.16.0.0/16 ;AfriNIC
+Nigeria (NG) Flag ;154.16.17.0/24 ;Microglo LLC ;;154.16.0.0/16 ;AfriNIC
+South Africa (ZA) Flag ;154.16.75.0/24 ;NetStack Ltd ;;154.16.0.0/16 ;AfriNIC
+Hong Kong (HK) Flag ;154.16.110.0/24 ;Rainbow Network Limited ;;154.16.0.0/16 ;AfriNIC
+South Africa (ZA) Flag ;154.16.128.0/22 ;NetStack Ltd ;;154.16.0.0/16 ;AfriNIC
+South Africa (ZA) Flag ;154.16.150.0/23 ;NetStack Ltd ;;154.16.0.0/16 ;AfriNIC
+South Africa (ZA) Flag ;154.16.156.0/23 ;NetStack Ltd ;;154.16.0.0/16 ;AfriNIC
+South Africa (ZA) Flag ;154.16.158.0/24 ;NetStack Ltd ;;154.16.0.0/16 ;AfriNIC
+India (IN) Flag ;154.16.180.0/23 ;5B/17, Najafgarh Road, Block 5B, Tilak Nagar, New Delhi, Delhi 110018 ;;154.16.0.0/16 ;AfriNIC
+United States (US) Flag ;154.16.188.0/22 ;Digital Energy Technologies Limited ;;154.16.0.0/16 ;AfriNIC
+Hong Kong (HK) Flag ;154.16.193.0/24 ;Rainbow Network Limited ;;154.16.0.0/16 ;AfriNIC
+United States (US) Flag ;154.16.222.0/24 ;RapidDedi ;;154.16.0.0/16 ;AfriNIC
+United States (US) Flag ;154.16.230.0/24 ;Digital Energy Technologies Limited ;;154.16.0.0/16 ;AfriNIC
+United States (US) Flag ;154.16.238.0/24 ;RapidDedi ;;154.16.0.0/16 ;AfriNIC
+United States (US) Flag ;154.17.96.0/19 ;Hosted Backbone ;;154.17.0.0/16 ;ARIN
+United States (US) Flag ;154.21.13.0/24 ;PSINet, Inc. ;;154.21.0.0/16 ;ARIN
+United States (US) Flag ;154.30.150.0/24 ;PSINet, Inc. ;;154.30.0.0/16 ;ARIN
+United States (US) Flag ;154.30.151.0/24 ;PSINet, Inc. ;;154.30.0.0/16 ;ARIN
+United States (US) Flag ;154.30.156.0/24 ;PSINet, Inc. ;;154.30.0.0/16 ;ARIN
+United States (US) Flag ;154.30.157.0/24 ;PSINet, Inc. ;;154.30.0.0/16 ;ARIN
+United States (US) Flag ;154.30.158.0/24 ;PSINet, Inc. ;;154.30.0.0/16 ;ARIN
+United States (US) Flag ;154.30.159.0/24 ;PSINet, Inc. ;;154.30.0.0/16 ;ARIN
+United States (US) Flag ;154.36.0.0/17 ;PSINet, Inc. ;;154.36.0.0/16 ;ARIN
+United States (US) Flag ;155.254.144.0/22 ;West Corporation ;;155.254.144.0/20 ;ARIN
+United States (US) Flag ;155.254.148.0/22 ;West Corporation ;;155.254.144.0/20 ;ARIN
+United States (US) Flag ;155.254.156.0/22 ;West Corporation ;;155.254.144.0/20 ;ARIN
+United States (US) Flag ;156.139.0.0/16 ;HEWLETT PACKARD ENTERPRISE COMPANY ;;156.139.0.0/16 ;ARIN
+Germany (DE) Flag ;157.180.228.0/22 ;sdc galactic 20200922 ;;157.180.214.0/20 ;RIPE
+Germany (DE) Flag ;157.180.232.0/22 ;TerraTransit AG ;;157.180.230.0/21 ;RIPE
+Germany (DE) Flag ;157.180.236.0/23 ;TerraTransit AG ;;157.180.230.0/21 ;RIPE
+United States (US) Flag ;157.199.0.0/16 ;Truven Health Analytics, Inc. ;;157.199.0.0/16 ;ARIN
+United States (US) Flag ;157.199.112.0/20 ;Truven Health Analytics, Inc. ;;157.199.0.0/16 ;ARIN
+United States (US) Flag ;157.199.128.0/20 ;Truven Health Analytics, Inc. ;;157.199.0.0/16 ;ARIN
+United States (US) Flag ;157.199.209.0/24 ;Truven Health Analytics, Inc. ;;157.199.0.0/16 ;ARIN
+United States (US) Flag ;157.199.240.0/20 ;Truven Health Analytics, Inc. ;;157.199.0.0/16 ;ARIN
+United States (US) Flag ;159.53.239.0/24 ;JPMorgan Chase & Co. ;;159.53.0.0/16 ;ARIN
+United States (US) Flag ;159.63.163.0/24 ;Level 3 Parent, LLC ;;159.63.0.0/16 ;ARIN
+United States (US) Flag ;159.63.179.0/24 ;IPNetZone ;;159.63.0.0/16 ;ARIN
+United States (US) Flag ;159.63.180.0/24 ;IPNetZone ;;159.63.0.0/16 ;ARIN
+United States (US) Flag ;159.127.32.0/24 ;Epsilon Data Management LLC ;;159.127.32.0/21 ;ARIN
+United States (US) Flag ;159.127.113.0/24 ;Epsilon Data Management LLC ;;159.127.64.0/18 ;ARIN
+United States (US) Flag ;159.172.36.0/24 ;INFOR GLOBAL SOLUTIONS (MICHIGAN), INC. ;;159.172.0.0/16 ;ARIN
+United States (US) Flag ;159.172.40.0/24 ;INFOR GLOBAL SOLUTIONS (MICHIGAN), INC. ;;159.172.0.0/16 ;ARIN
+United States (US) Flag ;159.172.42.0/24 ;INFOR GLOBAL SOLUTIONS, INC. ;;159.172.0.0/16 ;ARIN
+United States (US) Flag ;159.172.50.0/24 ;INFOR GLOBAL SOLUTIONS, INC. ;;159.172.0.0/16 ;ARIN
+United States (US) Flag ;159.246.50.0/24 ;Crowe LLP ;;159.246.0.0/16 ;ARIN
+United Kingdom (GB) Flag ;161.12.16.0/22 ;SSE Telecom low end network ;;161.12.0.0/16 ;RIPE
+United States (US) Flag ;161.181.48.0/24 ;Nordstrom, Inc. ;;161.181.0.0/16 ;ARIN
+United States (US) Flag ;162.18.92.0/24 ;Ball Corporation ;;162.18.0.0/16 ;ARIN
+United States (US) Flag ;162.18.94.0/24 ;Ball Corporation ;;162.18.0.0/16 ;ARIN
+United States (US) Flag ;162.18.95.0/24 ;Ball Corporation ;;162.18.0.0/16 ;ARIN
+United States (US) Flag ;162.97.80.0/22 ;Chaparral CableVision ;;162.97.0.0/16 ;ARIN
+United States (US) Flag ;162.97.152.0/21 ;Level 3 Parent, LLC ;;162.97.0.0/16 ;ARIN
+United States (US) Flag ;162.97.220.0/23 ;Level 3 Parent, LLC ;;162.97.0.0/16 ;ARIN
+United States (US) Flag ;163.123.140.0/24 ;Serverion LLC ;;163.123.140.0/22 ;ARIN
+United States (US) Flag ;163.123.141.0/24 ;Serverion LLC ;;163.123.140.0/22 ;ARIN
+United States (US) Flag ;163.123.142.0/24 ;Serverion LLC ;;163.123.140.0/22 ;ARIN
+United States (US) Flag ;163.123.197.0/24 ;D and B Broadband, LLC ;;163.123.197.0/24 ;ARIN
+United States (US) Flag ;165.158.0.0/16 ;Pan American Health Organization ;;165.158.0.0/16 ;ARIN
+Chile (CL) Flag ;165.183.168.0/21 ;SERVICIOS EQUIFAX CHILE LIMITADA ;;165.183.0.0/16 ;Lacnic
+Chile (CL) Flag ;165.183.168.0/23 ;SERVICIOS EQUIFAX CHILE LIMITADA ;;165.183.0.0/16 ;Lacnic
+Chile (CL) Flag ;165.183.170.0/24 ;SERVICIOS EQUIFAX CHILE LIMITADA ;;165.183.0.0/16 ;Lacnic
+Chile (CL) Flag ;165.183.170.0/23 ;SERVICIOS EQUIFAX CHILE LIMITADA ;;165.183.0.0/16 ;Lacnic
+Chile (CL) Flag ;165.183.171.0/24 ;SERVICIOS EQUIFAX CHILE LIMITADA ;;165.183.0.0/16 ;Lacnic
+Chile (CL) Flag ;165.183.172.0/22 ;SERVICIOS EQUIFAX CHILE LIMITADA ;;165.183.0.0/16 ;Lacnic
+United States (US) Flag ;165.236.0.0/18 ;Level 3 Parent, LLC ;;165.236.0.0/16 ;ARIN
+United States (US) Flag ;165.236.64.0/19 ;Level 3 Parent, LLC ;;165.236.0.0/16 ;ARIN
+United States (US) Flag ;165.236.96.0/21 ;Level 3 Parent, LLC ;;165.236.0.0/16 ;ARIN
+United States (US) Flag ;165.236.128.0/21 ;Level 3 Parent, LLC ;;165.236.0.0/16 ;ARIN
+United States (US) Flag ;165.236.136.0/21 ;Level 3 Parent, LLC ;;165.236.0.0/16 ;ARIN
+United States (US) Flag ;165.236.144.0/20 ;Level 3 Parent, LLC ;;165.236.0.0/16 ;ARIN
+United States (US) Flag ;165.236.160.0/20 ;Level 3 Parent, LLC ;;165.236.0.0/16 ;ARIN
+United States (US) Flag ;165.236.176.0/21 ;Level 3 Parent, LLC ;;165.236.0.0/16 ;ARIN
+United States (US) Flag ;165.236.224.0/20 ;Level 3 Parent, LLC ;;165.236.0.0/16 ;ARIN
+United States (US) Flag ;166.1.0.0/17 ;OOC ISP LLC ;;166.0.0.0/15 ;ARIN
+United States (US) Flag ;166.1.128.0/17 ;Level 3 Parent, LLC ;;166.0.0.0/15 ;ARIN
+Canada (CA) Flag ;166.48.160.0/23 ;Altima Telecom ;;166.48.0.0/16 ;ARIN
+Canada (CA) Flag ;166.48.188.0/22 ;Altima Telecom ;;166.48.0.0/16 ;ARIN
+United States (US) Flag ;166.90.0.0/16 ;Level 3 Parent, LLC ;;166.90.0.0/16 ;ARIN
+United States (US) Flag ;166.108.4.0/24 ;MCCLATCHY MANAGEMENT SERVICES, INC. ;;166.108.0.0/16 ;ARIN
+United States (US) Flag ;166.108.184.0/24 ;MCCLATCHY MANAGEMENT SERVICES, INC. ;;166.108.0.0/16 ;ARIN
+United States (US) Flag ;166.108.197.0/24 ;MCCLATCHY MANAGEMENT SERVICES, INC. ;;166.108.0.0/16 ;ARIN
+United States (US) Flag ;167.8.5.0/24 ;TEGNA Inc. ;;167.8.0.0/16 ;ARIN
+United States (US) Flag ;167.75.0.0/18 ;City of Tallahassee ;;167.75.0.0/16 ;ARIN
+United States (US) Flag ;167.136.238.0/24 ;Cargill, Inc. ;;167.136.0.0/16 ;ARIN
+United States (US) Flag ;167.183.216.0/22 ;Northside Hospital ;;167.183.0.0/16 ;ARIN
+United States (US) Flag ;167.242.233.0/24 ;Blue Cross Blue Shield of Michigan ;;167.242.0.0/16 ;ARIN
+United States (US) Flag ;167.242.234.0/24 ;Blue Cross Blue Shield of Michigan ;;167.242.0.0/16 ;ARIN
+United States (US) Flag ;167.242.235.0/24 ;Blue Cross Blue Shield of Michigan ;;167.242.0.0/16 ;ARIN
+United States (US) Flag ;168.215.65.0/24 ;tw telecom holdings, inc. ;;168.215.0.0/16 ;ARIN
+United States (US) Flag ;169.145.49.0/24 ;SAP America Inc. ;;169.145.0.0/16 ;ARIN
+United States (US) Flag ;169.153.176.0/24 ;TECH DATA CORPORATION ;;169.153.0.0/16 ;ARIN
+United States (US) Flag ;169.153.177.0/24 ;TECH DATA CORPORATION ;;169.153.0.0/16 ;ARIN
+South Africa (ZA) Flag ;169.159.192.0/20 ;Level 3 Communications South Africa ;;169.159.192.0/20 ;AfriNIC
+South Africa (ZA) Flag ;169.159.192.0/21 ;Level 3 Communications South Africa ;;169.159.192.0/20 ;AfriNIC
+South Africa (ZA) Flag ;169.159.200.0/21 ;Level 3 Communications South Africa ;;169.159.192.0/20 ;AfriNIC
+South Africa (ZA) Flag ;169.159.201.0/24 ;Level 3 Communications South Africa ;;169.159.192.0/20 ;AfriNIC
+United States (US) Flag ;170.7.253.0/24 ;Wilsonart International ;;170.7.0.0/16 ;ARIN
+United States (US) Flag ;170.16.112.0/23 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.16.112.0/21 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.16.112.0/24 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.16.114.0/24 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.16.114.0/23 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.16.116.0/24 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.16.116.0/22 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.16.116.0/23 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.16.118.0/23 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.16.118.0/24 ;Instinet ;;170.16.0.0/16 ;ARIN
+United States (US) Flag ;170.65.146.0/24 ;TeleTech Teleservices, Inc. ;;170.65.0.0/16 ;ARIN
+United States (US) Flag ;170.76.144.0/24 ;American National Insurance Company ;;170.76.144.0/22 ;ARIN
+United States (US) Flag ;170.76.145.0/24 ;American National Insurance Company ;;170.76.144.0/22 ;ARIN
+United States (US) Flag ;170.76.148.0/24 ;American National Insurance Company ;;170.76.148.0/23 ;ARIN
+United States (US) Flag ;170.76.149.0/24 ;American National Insurance Company ;;170.76.148.0/23 ;ARIN
+Argentina (AR) Flag ;170.239.171.0/24 ;UNIVERSIDAD ARGENTINA DE LA EMPRESA ;;170.239.168.0/22 ;Lacnic
+United States (US) Flag ;170.251.251.0/24 ;Accenture LLP ;;170.251.192.0/18 ;ARIN
+Australia (AU) Flag ;171.74.0.0/15 ;Asia Pacific Network Information Centre ;;171.74.0.0/16 ;ARIN
+United States (US) Flag ;171.154.2.0/24 ;Bank of America, National Association ;;171.128.0.0/10 ;ARIN
+United States (US) Flag ;171.162.105.0/24 ;Bank of America, National Association ;;171.128.0.0/10 ;ARIN
+United States (US) Flag ;173.195.72.0/24 ;Fastmetrics ;;173.195.64.0/20 ;ARIN
+United States (US) Flag ;173.205.204.0/24 ;Commercial Vehicle Group ;;173.205.204.0/23 ;ARIN
+United States (US) Flag ;173.211.13.0/24 ;OOC ISP LLC ;;173.211.0.0/17 ;ARIN
+United States (US) Flag ;173.211.70.0/24 ;OOC ISP LLC ;;173.211.0.0/17 ;ARIN
+United States (US) Flag ;173.211.93.0/24 ;OOC ISP LLC ;;173.211.0.0/17 ;ARIN
+United States (US) Flag ;173.211.123.0/24 ;OOC ISP LLC ;;173.211.0.0/17 ;ARIN
+United States (US) Flag ;173.227.147.0/24 ;LMG ;;173.226.0.0/15 ;ARIN
+United States (US) Flag ;173.227.216.0/24 ;tw telecom holdings, inc. ;;173.226.0.0/15 ;ARIN
+United States (US) Flag ;173.228.138.0/24 ;NYI ;;173.228.128.0/19 ;ARIN
+United States (US) Flag ;173.228.141.0/24 ;NYI ;;173.228.128.0/19 ;ARIN
+United States (US) Flag ;173.239.202.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.208.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.210.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.212.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.214.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.215.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.216.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.218.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.219.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.226.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.228.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.230.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.236.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.238.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.240.0/24 ;Private Internet Access, Inc ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.244.0/24 ;LogicWeb Inc. ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.253.0/24 ;BGRVPN ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.239.255.0/24 ;Dedicated Servers ;;173.239.192.0/18 ;ARIN
+United States (US) Flag ;173.240.222.0/24 ;SonicWALL, Inc. ;;173.240.208.0/20 ;ARIN
+United States (US) Flag ;173.244.49.0/24 ;LOGICWEB ;;173.244.32.0/19 ;ARIN
+United States (US) Flag ;173.244.52.0/24 ;LOGICWEB ;;173.244.32.0/19 ;ARIN
+United States (US) Flag ;173.244.60.0/24 ;LOGICWEB ;;173.244.32.0/19 ;ARIN
+United States (US) Flag ;173.244.63.0/24 ;Dedicated Server ;;173.244.32.0/19 ;ARIN
+United Kingdom (GB) Flag ;176.116.116.0/23 ;UK STARLEAF CL HA ;;176.116.116.0/22 ;RIPE
+Brazil (BR) Flag ;177.125.103.0/24 ;Angellira Rastreamento Satelital Ltda ;;;
+Chile (CL) Flag ;179.61.238.0/23 ;Digital Energy Technologies Chile SpA ;;179.61.128.0/17 ;Lacnic
+Australia (AU) Flag ;180.189.137.0/24 ;CAMPAIGN MONITOR PTY LTD ;;180.189.136.0/22 ;APNIC
+United States (US) Flag ;181.41.206.0/23 ;DETC SpA Cloud Services ;;181.41.192.0/19 ;Lacnic
+United States (US) Flag ;181.214.76.0/24 ;Digital Energy Technologies Limited ;;181.214.0.0/15 ;Lacnic
+Japan (JP) Flag ;181.214.78.0/23 ;Rainbow Network Limited ;;181.214.0.0/15 ;Lacnic
+Japan (JP) Flag ;181.214.84.0/23 ;Rainbow Network Limited ;;181.214.0.0/15 ;Lacnic
+Brazil (BR) Flag ;181.214.92.0/22 ;HOST1PLUS hosting services. Brazil. ;;181.214.0.0/15 ;Lacnic
+Brazil (BR) Flag ;181.214.197.0/24 ;HOST1PLUS hosting services. Brazil. ;;181.214.0.0/15 ;Lacnic
+Brazil (BR) Flag ;181.214.198.0/24 ;HOST1PLUS hosting services. Brazil. ;;181.214.0.0/15 ;Lacnic
+Japan (JP) Flag ;181.214.219.0/24 ;Rainbow Network Limited ;;181.214.0.0/15 ;Lacnic
+Japan (JP) Flag ;181.214.228.0/23 ;Rainbow Network Limited ;;181.214.0.0/15 ;Lacnic
+Brazil (BR) Flag ;181.215.208.0/23 ;HOST1PLUS hosting services. Brazil. ;;181.214.0.0/15 ;Lacnic
+Japan (JP) Flag ;181.215.236.0/24 ;Rainbow Network Limited ;;181.214.0.0/15 ;Lacnic
+Japan (JP) Flag ;181.215.252.0/23 ;Rainbow Network Limited ;;181.214.0.0/15 ;Lacnic
+United States (US) Flag ;184.174.82.0/24 ;OOC ISP LLC ;;184.174.0.0/17 ;ARIN
+United States (US) Flag ;184.174.121.0/24 ;OOC ISP LLC ;;184.174.0.0/17 ;ARIN
+United States (US) Flag ;184.174.125.0/24 ;OOC ISP LLC ;;184.174.0.0/17 ;ARIN
+France (FR) Flag ;185.6.60.0/24 ;Hub One SA ;;185.6.60.0/22 ;RIPE
+United Kingdom (GB) Flag ;185.6.132.0/23 ;Kijoma Broadband ;;185.6.132.0/22 ;RIPE
+United States (US) Flag ;185.11.124.0/24 ;Incapsula Inc. ;;185.11.124.0/22 ;RIPE
+United Kingdom (GB) Flag ;185.11.140.0/22 ;idear4business international LTD ;;185.11.140.0/22 ;RIPE
+France (FR) Flag ;185.30.128.0/22 ;AKINEA INTERNET SARL ;;185.30.128.0/22 ;RIPE
+United Kingdom (GB) Flag ;185.34.56.0/22 ;Electronic Arts Limited ;;185.34.56.0/22 ;RIPE
+United Kingdom (GB) Flag ;185.81.192.0/22 ;Cityfibre Limited ;;185.81.192.0/22 ;RIPE
+Netherlands (NL) Flag ;185.101.252.0/22 ;Darkness Reigns (Holding) B.V. ;;185.101.252.0/22 ;RIPE
+Spain (ES) Flag ;185.118.104.0/24 ;ES SERCOM 1851181040 255 ;;185.118.104.0/22 ;RIPE
+United States (US) Flag ;185.177.82.0/24 ;GBTCloud.COM ;;185.177.80.0/22 ;RIPE
+United States (US) Flag ;185.177.83.0/24 ;GBTCloud.COM ;;185.177.80.0/22 ;RIPE
+Germany (DE) Flag ;185.187.235.0/24 ;Buechele VPS UG (haftungsbeschraenkt) ;;185.187.232.0/22 ;RIPE
+Germany (DE) Flag ;185.192.96.0/23 ;TerraTransit AG ;;185.192.96.0/22 ;RIPE
+United States (US) Flag ;185.194.228.0/22 ;Colocation America Corporation ;;185.194.228.0/22 ;ARIN
+Germany (DE) Flag ;185.197.194.0/23 ;Dagroup ;;185.197.192.0/22 ;RIPE
+Germany (DE) Flag ;185.197.250.0/23 ;TerraTransit AG ;;185.197.248.0/22 ;RIPE
+Germany (DE) Flag ;185.206.240.0/22 ;TerraTransit AG ;;185.206.240.0/22 ;RIPE
+United States (US) Flag ;185.208.168.0/24 ;GBTCloud.COM ;;185.208.168.0/22 ;RIPE
+Germany (DE) Flag ;185.211.32.0/24 ;heficed 20200808 ;;185.211.32.0/22 ;RIPE
+Netherlands (NL) Flag ;185.226.204.0/22 ;Darkness Reigns (Holding) B.V. ;;185.226.204.0/22 ;RIPE
+Germany (DE) Flag ;185.230.137.0/24 ;heficed20201002 ;;185.230.136.0/22 ;RIPE
+Spain (ES) Flag ;185.242.175.0/24 ;Valor Information Technologies, S.L. ;;185.242.172.0/22 ;RIPE
+countries. () Flag ;189.45.208.0/21 ;;;;
+Brazil (BR) Flag ;189.125.51.0/24 ;COOPERATIVA CENTRAL DE CREDITO URBANO - AILOS ;;189.125.0.0/16 ;Lacnic
+countries. () Flag ;189.125.240.0/23 ;;;;
+Argentina (AR) Flag ;190.221.189.0/24 ;Internet Empresarial ;;190.221.0.0/16 ;Lacnic
+Japan (JP) Flag ;191.96.64.0/23 ;Rainbow Network Limited ;;191.96.0.0/16 ;Lacnic
+United States (US) Flag ;191.96.88.0/22 ;Digital Energy Technologies Limited ;;191.96.0.0/16 ;Lacnic
+Chile (CL) Flag ;191.96.160.0/22 ;Digital Energy Technologies Chile SpA ;;191.96.0.0/16 ;Lacnic
+Chile (CL) Flag ;191.96.168.0/24 ;Digital Energy Technologies Chile SpA ;;191.96.0.0/16 ;Lacnic
+Chile (CL) Flag ;191.96.170.0/24 ;Digital Energy Technologies Chile SpA ;;191.96.0.0/16 ;Lacnic
+United States (US) Flag ;191.96.187.0/24 ;Digital Energy Technologies Limited ;;191.96.0.0/16 ;Lacnic
+Chile (CL) Flag ;191.96.196.0/22 ;Digital Energy Technologies Chile SpA ;;191.96.0.0/16 ;Lacnic
+Chile (CL) Flag ;191.96.206.0/24 ;Digital Energy Technologies Chile SpA ;;191.96.0.0/16 ;Lacnic
+Japan (JP) Flag ;191.101.30.0/23 ;Rainbow Network Limited ;;191.101.0.0/16 ;Lacnic
+Japan (JP) Flag ;191.101.42.0/23 ;Rainbow Network Limited ;;191.101.0.0/16 ;Lacnic
+United States (US) Flag ;191.101.174.0/24 ;Digital Energy Technologies Limited ;;191.101.0.0/16 ;Lacnic
+Japan (JP) Flag ;191.101.187.0/24 ;Rainbow Network Limited ;;191.101.0.0/16 ;Lacnic
+Japan (JP) Flag ;191.101.202.0/23 ;Rainbow Network Limited ;;191.101.0.0/16 ;Lacnic
+Chile (CL) Flag ;191.101.255.0/24 ;Digital Energy Technologies Chile SpA ;;191.101.0.0/16 ;Lacnic
+United States (US) Flag ;192.1.252.0/22 ;BBN Communications ;;192.1.0.0/16 ;ARIN
+United States (US) Flag ;192.2.0.0/16 ;Level 3 Parent, LLC ;;192.2.0.0/16 ;ARIN
+United States (US) Flag ;192.12.52.0/24 ;Sunquest Information Systems, Inc. ;;192.12.52.0/24 ;ARIN
+United States (US) Flag ;192.48.24.0/23 ;The Boeing Company ;;192.48.24.0/22 ;ARIN
+United States (US) Flag ;192.58.253.0/24 ;Kaltura Inc ;;192.58.252.0/23 ;ARIN
+United States (US) Flag ;192.64.241.0/24 ;Munger Tolles & Olson LLP ;;192.64.240.0/20 ;ARIN
+United States (US) Flag ;192.64.246.0/24 ;Munger Tolles & Olson LLP ;;192.64.240.0/20 ;ARIN
+United States (US) Flag ;192.64.247.0/24 ;Munger Tolles & Olson LLP ;;192.64.240.0/20 ;ARIN
+United States (US) Flag ;192.64.249.0/24 ;Munger Tolles & Olson LLP ;;192.64.240.0/20 ;ARIN
+United States (US) Flag ;192.64.250.0/24 ;Munger Tolles & Olson LLP ;;192.64.240.0/20 ;ARIN
+United States (US) Flag ;192.64.251.0/24 ;Munger Tolles & Olson LLP ;;192.64.240.0/20 ;ARIN
+United States (US) Flag ;192.64.252.0/24 ;Munger Tolles & Olson LLP ;;192.64.240.0/20 ;ARIN
+United States (US) Flag ;192.64.253.0/24 ;Munger Tolles & Olson LLP ;;192.64.240.0/20 ;ARIN
+United States (US) Flag ;192.69.226.0/24 ;MARKETAXESS HOLDINGS, INC. ;;192.69.224.0/22 ;ARIN
+United States (US) Flag ;192.69.227.0/24 ;MARKETAXESS HOLDINGS, INC. ;;192.69.224.0/22 ;ARIN
+United States (US) Flag ;192.73.216.0/24 ;LexisNexis ;;192.73.216.0/24 ;ARIN
+United States (US) Flag ;192.77.111.0/24 ;Grand Hyatt SF, L.L.C. ;;192.77.111.0/24 ;ARIN
+United States (US) Flag ;192.80.92.0/22 ;Level 3 Parent, LLC ;;192.80.92.0/22 ;ARIN
+United States (US) Flag ;192.81.75.0/24 ;creehan and company ;;192.81.75.0/24 ;ARIN
+United States (US) Flag ;192.81.96.0/24 ;CARE, Inc. ;;192.81.96.0/24 ;ARIN
+United States (US) Flag ;192.84.65.0/24 ;Compucom Systems ;;192.84.65.0/24 ;ARIN
+United States (US) Flag ;192.84.68.0/24 ;Compucom Systems ;;192.84.68.0/24 ;ARIN
+United States (US) Flag ;192.86.2.0/24 ;Imagination and Information Inc. ;;192.86.2.0/24 ;ARIN
+United States (US) Flag ;192.91.253.0/24 ;University of Dallas ;;192.91.253.0/24 ;ARIN
+United States (US) Flag ;192.92.92.0/24 ;ESCA ;;192.92.92.0/24 ;ARIN
+United States (US) Flag ;192.94.153.0/24 ;Cloud Science, Inc. ;;192.94.153.0/24 ;ARIN
+United States (US) Flag ;192.101.33.0/24 ;Happy State Bank ;;192.101.32.0/23 ;ARIN
+United States (US) Flag ;192.102.232.0/24 ;Dickinson College ;;192.102.232.0/24 ;ARIN
+United States (US) Flag ;192.111.13.0/24 ;Calix, Inc. ;;192.111.8.0/21 ;ARIN
+United States (US) Flag ;192.112.50.0/24 ;Winrock International ;;192.112.50.0/24 ;ARIN
+United States (US) Flag ;192.121.246.0/24 ;Nordic Internet Service AB ;;192.121.0.0/16 ;RIPE
+United States (US) Flag ;192.132.210.0/24 ;Forcepoint, LLC ;;192.132.210.0/24 ;ARIN
+United States (US) Flag ;192.151.5.0/24 ;HEWLETT PACKARD ENTERPRISE COMPANY ;;192.151.5.0/24 ;ARIN
+United States (US) Flag ;192.152.183.0/24 ;Society of Petroleum Engineers ;;192.152.183.0/24 ;ARIN
+United States (US) Flag ;192.153.236.0/24 ;Texas Instruments ;;192.153.236.0/24 ;ARIN
+United States (US) Flag ;192.159.1.0/24 ;John Mayes and Associates ;;192.159.1.0/24 ;ARIN
+United States (US) Flag ;192.177.160.0/19 ;NORTHERN CABLE AND FIBER, LLC ;;192.177.0.0/16 ;ARIN
+United States (US) Flag ;192.177.192.0/19 ;NORTHERN CABLE AND FIBER, LLC ;;192.177.0.0/16 ;ARIN
+United States (US) Flag ;192.177.224.0/19 ;NORTHERN CABLE AND FIBER, LLC ;;192.177.0.0/16 ;ARIN
+United States (US) Flag ;192.188.156.0/24 ;Gordon-Darby, Inc ;;192.188.156.0/24 ;ARIN
+United States (US) Flag ;192.189.207.0/24 ;TROY Group, Inc. ;;192.189.207.0/24 ;ARIN
+United States (US) Flag ;192.200.63.0/24 ;Southwest Power Pool ;;192.200.60.0/22 ;ARIN
+United States (US) Flag ;192.203.130.0/23 ;SUNY Broome Community College ;;192.203.130.0/23 ;ARIN
+Chile (CL) Flag ;192.203.158.0/24 ;Dicom S.A. ;;192.203.158.0/24 ;Lacnic
+United States (US) Flag ;192.206.87.0/24 ;Learjet Inc ;;192.206.87.0/24 ;ARIN
+United States (US) Flag ;192.206.88.0/24 ;Learjet Inc ;;192.206.88.0/24 ;ARIN
+United States (US) Flag ;192.206.89.0/24 ;Learjet Inc ;;192.206.89.0/24 ;ARIN
+Canada (CA) Flag ;192.214.128.0/21 ;Altima Telecom INC ;;192.214.128.0/17 ;ARIN
+Canada (CA) Flag ;192.214.136.0/21 ;Altima Telecom INC ;;192.214.128.0/17 ;ARIN
+Canada (CA) Flag ;192.214.192.0/21 ;Altima Telecom INC ;;192.214.128.0/17 ;ARIN
+United States (US) Flag ;192.216.0.0/16 ;Level 3 Parent, LLC ;;192.216.0.0/16 ;ARIN
+United States (US) Flag ;192.221.0.0/16 ;Level 3 Parent, LLC ;;192.221.0.0/16 ;ARIN
+United States (US) Flag ;192.221.96.0/24 ;Level 3 Parent, LLC ;;192.221.0.0/16 ;ARIN
+United States (US) Flag ;192.230.64.0/24 ;Incapsula Inc ;;192.230.64.0/18 ;ARIN
+United States (US) Flag ;192.230.65.0/24 ;Incapsula Inc ;;192.230.64.0/18 ;ARIN
+United States (US) Flag ;192.230.123.0/24 ;Incapsula Inc ;;192.230.64.0/18 ;ARIN
+United States (US) Flag ;192.233.0.0/16 ;Level 3 Parent, LLC ;;192.233.0.0/16 ;ARIN
+United States (US) Flag ;192.251.95.0/24 ;Learjet, Inc. ;;192.251.95.0/24 ;ARIN
+United States (US) Flag ;192.251.97.0/24 ;Learjet, Inc. ;;192.251.97.0/24 ;ARIN
+United States (US) Flag ;192.251.98.0/24 ;Learjet, Inc. ;;192.251.98.0/24 ;ARIN
+United States (US) Flag ;192.251.99.0/24 ;Learjet, Inc. ;;192.251.99.0/24 ;ARIN
+Germany (DE) Flag ;193.19.92.0/23 ;Ledl.net GmbH ;;193.19.92.0/23 ;RIPE
+United Kingdom (GB) Flag ;193.35.112.0/24 ;Tate & Lyle PLC ;;193.35.112.0/20 ;RIPE
+United Kingdom (GB) Flag ;193.35.118.0/24 ;Tate & Lyle PLC ;;193.35.112.0/20 ;RIPE
+United Kingdom (GB) Flag ;193.35.119.0/24 ;Tate & Lyle PLC ;;193.35.112.0/20 ;RIPE
+United Kingdom (GB) Flag ;193.35.124.0/24 ;Tate & Lyle PLC ;;193.35.112.0/20 ;RIPE
+United Kingdom (GB) Flag ;193.35.126.0/24 ;Tate & Lyle PLC ;;193.35.112.0/20 ;RIPE
+United Kingdom (GB) Flag ;193.35.127.0/24 ;Tate & Lyle PLC ;;193.35.112.0/20 ;RIPE
+Lithuania (LT) Flag ;193.37.239.0/24 ;"MB ""Artrika"" ";;193.37.239.0/24 ;RIPE
+Lithuania (LT) Flag ;193.38.53.0/24 ;"MB ""Artrika"" ";;193.38.53.0/24 ;RIPE
+Lithuania (LT) Flag ;193.39.9.0/24 ;LT MBARTRIKA ;;193.39.9.0/24 ;RIPE
+Lithuania (LT) Flag ;193.39.10.0/24 ;LT MBARTRIKA ;;193.39.10.0/24 ;RIPE
+Germany (DE) Flag ;193.58.132.0/22 ;Stumpner Netservice UG (haftungsbeschraenkt) ;;193.58.132.0/22 ;RIPE
+Turkey (TR) Flag ;193.142.36.0/22 ;Alax LLC ;;193.142.36.0/22 ;RIPE
+United Kingdom (GB) Flag ;193.193.162.0/24 ;STARLEAF ;;193.193.162.0/23 ;RIPE
+United States (US) Flag ;193.234.95.0/24 ;Nordic Internet Service AB ;;193.234.0.0/15 ;RIPE
+United States (US) Flag ;194.5.146.0/23 ;UAB TABAN FOOLAD ;;194.5.146.0/23 ;RIPE
+United States (US) Flag ;194.5.148.0/23 ;UAB TABAN FOOLAD ;;194.5.148.0/23 ;RIPE
+United States (US) Flag ;194.31.194.0/23 ;LT MBIPUMANIJA5 ;;194.31.194.0/23 ;RIPE
+United States (US) Flag ;194.31.196.0/23 ;LT MBIPUMANIJA5 ;;194.31.196.0/23 ;RIPE
+United States (US) Flag ;194.34.229.0/24 ;GBTCloud.COM ;;194.34.228.0/22 ;RIPE
+United Arab Emirates (AE) Flag ;194.50.0.0/23 ;PG Consultus FZE ;;194.50.0.0/23 ;RIPE
+United Kingdom (GB) Flag ;194.88.64.0/19 ;Centurylink Communications UK Limited ;;194.88.64.0/19 ;RIPE
+United Kingdom (GB) Flag ;194.88.89.0/24 ;Customer Block ;;194.88.64.0/19 ;RIPE
+United Kingdom (GB) Flag ;194.169.110.0/24 ;Next Plc ;;194.169.96.0/20 ;RIPE
+Austria (AT) Flag ;194.180.232.0/23 ;Server LLC ;;194.180.232.0/23 ;RIPE
+Austria (AT) Flag ;194.180.236.0/23 ;Server LLC ;;194.180.236.0/23 ;RIPE
+United Arab Emirates (AE) Flag ;194.246.36.0/23 ;Grant Jeffrey King ;;194.246.36.0/23 ;RIPE
+United Kingdom (GB) Flag ;195.16.160.0/19 ;Centurylink Communications UK Limited ;;195.16.160.0/19 ;RIPE
+United Kingdom (GB) Flag ;195.50.64.0/18 ;Centurylink Communications UK Limited ;;195.50.64.0/18 ;RIPE
+United Kingdom (GB) Flag ;195.50.68.0/24 ;BBBK22124 VLAN 479 ;;195.50.64.0/18 ;RIPE
+France (FR) Flag ;195.110.227.0/24 ;FIS Financial Systems (France) S.A.S ;;195.110.224.0/19 ;RIPE
+United Kingdom (GB) Flag ;195.122.128.0/18 ;Centurylink Communications UK Limited ;;195.122.128.0/19 ;RIPE
+Germany (DE) Flag ;195.122.144.0/24 ;Marketing Factory Consulting GmbH ;;195.122.128.0/19 ;RIPE
+Germany (DE) Flag ;195.122.144.0/23 ;Marketing Factory Consulting GmbH ;;195.122.128.0/19 ;RIPE
+Germany (DE) Flag ;195.122.145.0/24 ;Marketing Factory Consulting GmbH ;;195.122.128.0/19 ;RIPE
+United Kingdom (GB) Flag ;195.182.59.0/24 ;HiFX PLC ;;195.182.59.0/24 ;RIPE
+United Kingdom (GB) Flag ;195.246.228.0/23 ;LCH Group Holdings Limited ;;195.246.228.0/23 ;RIPE
+South Africa (ZA) Flag ;196.52.11.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.52.54.0/24 ;AS3356 ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.52.58.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.52.65.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.52.80.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.52.83.0/24 ;AS3356 ;;196.52.0.0/14 ;AfriNIC
+Malaysia (MY) Flag ;196.52.97.0/24 ;AS174 ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.52.103.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.52.145.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.52.176.0/20 ;AS395800 ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.52.250.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.53.21.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.53.25.0/24 ;AS12189 ;;196.52.0.0/14 ;AfriNIC
+Canada (CA) Flag ;196.53.26.0/24 ;AS174 ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.53.31.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.53.66.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.53.68.0/24 ;Private Internet Access ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.53.153.0/24 ;AS32181 ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.54.3.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.54.26.0/24 ;AS3356 ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.54.31.0/24 ;AS3356 ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.54.43.0/24 ;AS3356 ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.54.49.0/24 ;Private Internet Access ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.54.50.0/24 ;AS3356 ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.54.58.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.54.71.0/24 ;Private Internet Access ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.54.176.0/20 ;AS395800 ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.55.1.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.55.6.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.55.16.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.55.27.0/24 ;AS3356 ;;196.52.0.0/14 ;AfriNIC
+Thailand (TH) Flag ;196.55.34.0/24 ;Siamdata Communication Co.,Ltd. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.55.102.0/24 ;AS3223 ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.55.103.0/24 ;AS3223 ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.55.140.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.55.141.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;196.55.169.0/24 ;AS3356 ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.55.171.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+South Africa (ZA) Flag ;196.55.229.0/24 ;LogicWeb Inc. ;;196.52.0.0/14 ;AfriNIC
+United States (US) Flag ;198.1.37.0/24 ;City of Spokane ;;198.1.32.0/20 ;ARIN
+United States (US) Flag ;198.17.220.0/24 ;Penta Technologies, Inc. ;;198.17.220.0/24 ;ARIN
+United States (US) Flag ;198.22.138.0/24 ;RED BULL NORTH AMERICA, INC. ;;198.22.138.0/24 ;ARIN
+United States (US) Flag ;198.22.156.0/24 ;Southwest Power Pool ;;198.22.156.0/24 ;ARIN
+United States (US) Flag ;198.22.157.0/24 ;Southwest Power Pool ;;198.22.157.0/24 ;ARIN
+United States (US) Flag ;198.31.0.0/16 ;Level 3 Parent, LLC ;;198.31.0.0/16 ;ARIN
+United States (US) Flag ;198.47.0.0/22 ;Applied Intelligent Systems, Inc. ;;198.47.0.0/22 ;ARIN
+United States (US) Flag ;198.51.192.0/24 ;DigiBoard Incorporated ;;198.51.192.0/24 ;ARIN
+United States (US) Flag ;198.54.14.0/24 ;AMERICAN ACADEMY OF FAMILY PHYSICIANS ;;198.54.14.0/24 ;ARIN
+United States (US) Flag ;198.57.12.0/24 ;H.B. Fuller Company ;;198.57.8.0/21 ;ARIN
+United States (US) Flag ;198.57.14.0/24 ;H.B. Fuller Company ;;198.57.8.0/21 ;ARIN
+United States (US) Flag ;198.59.147.0/24 ;OOC ISP LLC ;;198.59.146.0/23 ;ARIN
+United States (US) Flag ;198.71.65.0/24 ;NUANCE COMMUNICATIONS, INC ;;198.71.64.0/21 ;ARIN
+Canada (CA) Flag ;198.73.60.0/22 ;Unibase Telecom LTD. ;;198.73.56.0/21 ;ARIN
+Canada (CA) Flag ;198.73.64.0/22 ;Unibase Telecom LTD. ;;198.73.64.0/20 ;ARIN
+Canada (CA) Flag ;198.73.76.0/22 ;Unibase Telecom LTD. ;;198.73.64.0/20 ;ARIN
+United States (US) Flag ;198.76.0.0/14 ;Level 3 Parent, LLC ;;198.76.0.0/14 ;ARIN
+United States (US) Flag ;198.76.96.0/22 ;National Defense University ;;198.76.0.0/14 ;ARIN
+United States (US) Flag ;198.81.200.0/24 ;LexisNexis ;;198.80.0.0/15 ;ARIN
+United States (US) Flag ;198.89.105.0/24 ;Hype Enterprises ;;198.89.96.0/19 ;ARIN
+United States (US) Flag ;198.89.116.0/24 ;OOC ISP LLC ;;198.89.96.0/19 ;ARIN
+United States (US) Flag ;198.89.117.0/24 ;OOC ISP LLC ;;198.89.96.0/19 ;ARIN
+United States (US) Flag ;198.89.164.0/24 ;Allegiance Healthcare ;;198.89.160.0/20 ;ARIN
+United States (US) Flag ;198.92.0.0/14 ;Level 3 Parent, LLC ;;198.92.0.0/14 ;ARIN
+United States (US) Flag ;198.94.221.0/24 ;City of Sunnyvale ;;198.92.0.0/14 ;ARIN
+United States (US) Flag ;198.94.222.0/24 ;City of Sunnyvale ;;198.92.0.0/14 ;ARIN
+United States (US) Flag ;198.94.223.0/24 ;City of Sunnyvale ;;198.92.0.0/14 ;ARIN
+United States (US) Flag ;198.100.18.0/24 ;Toshiba America Medical Systems ;;198.100.16.0/22 ;ARIN
+United States (US) Flag ;198.102.36.0/24 ;Environmental Systems Research Institute ;;198.102.32.0/19 ;ARIN
+United States (US) Flag ;198.102.176.0/21 ;Electro Scientific Industries ;;198.102.176.0/21 ;ARIN
+United States (US) Flag ;198.102.184.0/23 ;Electro Scientific Industries ;;198.102.184.0/23 ;ARIN
+European Union (EU) Flag ;198.105.118.0/23 ;SYN LTD ;;198.105.96.0/19 ;RIPE
+United States (US) Flag ;198.112.0.0/14 ;Level 3 Parent, LLC ;;198.112.0.0/14 ;ARIN
+United States (US) Flag ;198.137.148.0/24 ;LexisNexis ;;198.137.148.0/23 ;ARIN
+United States (US) Flag ;198.137.149.0/24 ;LexisNexis ;;198.137.148.0/23 ;ARIN
+United States (US) Flag ;198.153.202.0/24 ;The Gap, Inc. ;;198.153.202.0/24 ;ARIN
+United States (US) Flag ;198.153.225.0/24 ;National Futures Association ;;198.153.224.0/21 ;ARIN
+United States (US) Flag ;198.175.88.0/23 ;Intel Corporation ;;198.175.64.0/19 ;ARIN
+United States (US) Flag ;198.175.89.0/24 ;Intel Corporation ;;198.175.64.0/19 ;ARIN
+United States (US) Flag ;198.176.64.0/22 ;RELX inc. ;;198.176.64.0/19 ;ARIN
+United States (US) Flag ;198.176.76.0/22 ;RELX inc. ;;198.176.64.0/19 ;ARIN
+United States (US) Flag ;198.178.48.0/22 ;Instinet ;;198.178.48.0/21 ;ARIN
+United States (US) Flag ;198.178.48.0/24 ;Instinet ;;198.178.48.0/21 ;ARIN
+United States (US) Flag ;198.178.48.0/23 ;Instinet ;;198.178.48.0/21 ;ARIN
+United States (US) Flag ;198.178.49.0/24 ;Instinet ;;198.178.48.0/21 ;ARIN
+United States (US) Flag ;198.178.50.0/24 ;Instinet ;;198.178.48.0/21 ;ARIN
+United States (US) Flag ;198.178.51.0/24 ;Instinet ;;198.178.48.0/21 ;ARIN
+United States (US) Flag ;198.182.55.0/24 ;Synopsys Inc. ;;198.182.32.0/19 ;ARIN
+United States (US) Flag ;198.182.229.0/24 ;Cascade Corporation ;;198.182.229.0/24 ;ARIN
+United States (US) Flag ;198.185.18.0/24 ;LexisNexis ;;198.185.16.0/21 ;ARIN
+United States (US) Flag ;198.185.19.0/24 ;LexisNexis ;;198.185.16.0/21 ;ARIN
+United States (US) Flag ;198.185.21.0/24 ;LexisNexis ;;198.185.16.0/21 ;ARIN
+United States (US) Flag ;198.185.23.0/24 ;LexisNexis ;;198.185.16.0/21 ;ARIN
+United States (US) Flag ;198.185.24.0/24 ;LexisNexis ;;198.185.24.0/23 ;ARIN
+United States (US) Flag ;198.185.25.0/24 ;LexisNexis ;;198.185.24.0/23 ;ARIN
+United States (US) Flag ;198.187.129.0/24 ;LexisNexis ;;198.187.129.0/24 ;ARIN
+United States (US) Flag ;198.187.130.0/24 ;LexisNexis ;;198.187.130.0/23 ;ARIN
+United States (US) Flag ;198.187.131.0/24 ;LexisNexis ;;198.187.130.0/23 ;ARIN
+United States (US) Flag ;198.199.180.0/24 ;El Paso Electric ;;198.199.180.0/24 ;ARIN
+United States (US) Flag ;198.199.238.0/24 ;CAPGEMINI AMERICA, INC. ;;198.199.238.0/23 ;ARIN
+United States (US) Flag ;198.202.175.0/24 ;RELX Inc ;;198.202.175.0/24 ;ARIN
+United States (US) Flag ;198.212.214.0/24 ;Phillips-Van Heusen ;;198.212.214.0/23 ;ARIN
+United States (US) Flag ;198.245.192.0/24 ;Crozer-Keystone Health System ;;198.245.192.0/24 ;ARIN
+United States (US) Flag ;199.16.29.0/24 ;Jervis B. Webb Company ;;199.16.28.0/23 ;ARIN
+United States (US) Flag ;199.26.202.0/24 ;SOCIETY OF PETROLEUM ENGINEERS (SPE), INC. ;;199.26.202.0/24 ;ARIN
+United States (US) Flag ;199.33.93.0/24 ;RVM Inc ;;199.33.93.0/24 ;ARIN
+Antigua and Barbuda (AG) Flag ;199.48.206.0/24 ;Sunvale Inc. ;;199.48.204.0/22 ;ARIN
+Antigua and Barbuda (AG) Flag ;199.48.207.0/24 ;Sunvale Inc. ;;199.48.204.0/22 ;ARIN
+United States (US) Flag ;199.75.0.0/16 ;Level 3 Parent, LLC ;;199.75.0.0/16 ;ARIN
+United States (US) Flag ;199.76.0.0/15 ;Level 3 Parent, LLC ;;199.76.0.0/15 ;ARIN
+United States (US) Flag ;199.76.7.0/24 ;Level 3 Parent, LLC ;;199.76.0.0/15 ;ARIN
+United States (US) Flag ;199.76.72.0/24 ;Level 3 Parent, LLC ;;199.76.0.0/15 ;ARIN
+United States (US) Flag ;199.76.75.0/24 ;Level 3 Parent, LLC ;;199.76.0.0/15 ;ARIN
+United States (US) Flag ;199.76.93.0/24 ;Level 3 Parent, LLC ;;199.76.0.0/15 ;ARIN
+United States (US) Flag ;199.78.0.0/16 ;Level 3 Parent, LLC ;;199.78.0.0/16 ;ARIN
+United States (US) Flag ;199.92.0.0/14 ;Level 3 Parent, LLC ;;199.92.0.0/14 ;ARIN
+United States (US) Flag ;199.103.22.0/24 ;Fluent Voice Networks ;;199.103.22.0/23 ;ARIN
+United States (US) Flag ;199.115.175.0/24 ;TOP TEKS ;;199.115.172.0/22 ;ARIN
+United States (US) Flag ;199.115.192.0/24 ;Ace Data Centers, Inc. ;;199.115.192.0/22 ;ARIN
+United States (US) Flag ;199.120.172.0/23 ;CoBank ;;199.120.172.0/23 ;ARIN
+United States (US) Flag ;199.164.21.0/24 ;Cabot ;;199.164.16.0/20 ;ARIN
+United States (US) Flag ;199.164.25.0/24 ;Cabot ;;199.164.16.0/20 ;ARIN
+United States (US) Flag ;199.188.117.0/24 ;OOC ISP LLC ;;199.188.116.0/22 ;ARIN
+United States (US) Flag ;199.188.118.0/24 ;OOC ISP LLC ;;199.188.116.0/22 ;ARIN
+United States (US) Flag ;199.188.119.0/24 ;OOC ISP LLC ;;199.188.116.0/22 ;ARIN
+United States (US) Flag ;199.230.172.0/24 ;Allegiance Healthcare ;;199.230.128.0/17 ;ARIN
+United States (US) Flag ;199.231.192.0/23 ;Kindred Healthcare, Inc. ;;199.231.192.0/22 ;ARIN
+United States (US) Flag ;199.255.210.0/23 ;AnchorFree Inc. ;;199.255.208.0/21 ;ARIN
+United States (US) Flag ;199.255.212.0/22 ;AnchorFree Inc. ;;199.255.208.0/21 ;ARIN
+Argentina (AR) Flag ;200.41.8.0/24 ;Level 3 Argentina S.A. ;;200.41.0.0/19 ;Lacnic
+Argentina (AR) Flag ;201.234.91.0/24 ;Level 3 Argentina S.A. ;;201.234.0.0/17 ;Lacnic
+United States (US) Flag ;204.8.22.0/23 ;PTGi International Carrier Services, Inc. ;;204.8.20.0/22 ;ARIN
+United States (US) Flag ;204.10.211.0/24 ;LHP Hospital Group Inc. ;;204.10.208.0/21 ;ARIN
+United States (US) Flag ;204.28.136.0/24 ;Rite Aid Corporation ;;204.28.128.0/18 ;ARIN
+United States (US) Flag ;204.30.0.0/19 ;Level 3 Parent, LLC ;;204.30.0.0/19 ;ARIN
+United States (US) Flag ;204.30.1.0/24 ;Level 3 Parent, LLC ;;204.30.0.0/19 ;ARIN
+United States (US) Flag ;204.57.81.0/24 ;TeleNetwork ;;204.57.64.0/18 ;ARIN
+United States (US) Flag ;204.62.200.0/24 ;Datanational Corporation ;;204.62.200.0/24 ;ARIN
+United States (US) Flag ;204.89.188.0/24 ;CITY OF ALLENTOWN ;;204.89.188.0/24 ;ARIN
+United States (US) Flag ;204.122.12.0/24 ;Caxton Corporation ;;204.122.8.0/21 ;ARIN
+United States (US) Flag ;204.122.13.0/24 ;Caxton Corporation ;;204.122.8.0/21 ;ARIN
+United States (US) Flag ;204.124.210.0/24 ;Fruit of the Loom, Inc. ;;204.124.208.0/22 ;ARIN
+United States (US) Flag ;204.128.16.0/20 ;PHYSIO-CONTROL, INC. ;;204.128.16.0/20 ;ARIN
+United States (US) Flag ;204.128.28.0/23 ;PHYSIO-CONTROL, INC. ;;204.128.16.0/20 ;ARIN
+United States (US) Flag ;204.128.30.0/23 ;PHYSIO-CONTROL, INC. ;;204.128.16.0/20 ;ARIN
+United States (US) Flag ;204.153.40.0/22 ;Electro Scientific Industries ;;204.153.40.0/22 ;ARIN
+United States (US) Flag ;204.153.154.0/24 ;Blue Cross and Blue Shield of Arizona Inc ;;204.153.152.0/22 ;ARIN
+United States (US) Flag ;204.153.155.0/24 ;Blue Cross and Blue Shield of Arizona Inc ;;204.153.152.0/22 ;ARIN
+United States (US) Flag ;204.155.32.0/20 ;CITY OF VISALIA ;;204.155.32.0/20 ;ARIN
+United States (US) Flag ;204.160.0.0/13 ;American Registry for Internet Numbers ;;204.160.0.0/14 ;ARIN
+United States (US) Flag ;204.163.136.0/21 ;Cornerstone Research Inc. ;;204.160.0.0/14 ;ARIN
+United States (US) Flag ;204.197.192.0/24 ;Regus Business Centre, LLC ;;204.197.192.0/20 ;ARIN
+United States (US) Flag ;204.197.193.0/24 ;Regus Business Centre, LLC ;;204.197.192.0/20 ;ARIN
+United States (US) Flag ;204.197.198.0/24 ;Regus Business Centre, LLC ;;204.197.192.0/20 ;ARIN
+United States (US) Flag ;204.197.203.0/24 ;Regus Business Centre, LLC ;;204.197.192.0/20 ;ARIN
+United States (US) Flag ;204.197.206.0/23 ;Regus Business Centre, LLC ;;204.197.192.0/20 ;ARIN
+United States (US) Flag ;204.198.0.0/15 ;Level 3 Parent, LLC ;;204.198.0.0/15 ;ARIN
+United States (US) Flag ;204.245.58.0/24 ;Level 3 Parent, LLC ;;204.245.0.0/18 ;ARIN
+United States (US) Flag ;204.246.226.0/24 ;Level 3 Parent, LLC ;;204.246.192.0/18 ;ARIN
+United States (US) Flag ;205.128.0.0/14 ;Level 3 Parent, LLC ;;205.128.0.0/14 ;ARIN
+United States (US) Flag ;205.139.60.0/23 ;Vertafore, Inc. ;;205.138.0.0/15 ;ARIN
+United States (US) Flag ;205.166.162.0/24 ;Meridian Technology Group ;;205.166.162.0/24 ;ARIN
+United States (US) Flag ;205.172.144.0/24 ;Dish Network Corporation ;;205.172.144.0/22 ;ARIN
+United States (US) Flag ;205.180.0.0/14 ;Level 3 Parent, LLC ;;205.180.0.0/14 ;ARIN
+United States (US) Flag ;205.201.68.0/23 ;Cebridge Connections ;;205.201.64.0/18 ;ARIN
+United States (US) Flag ;205.210.64.0/22 ;HEWLETT PACKARD ENTERPRISE COMPANY ;;205.210.64.0/22 ;ARIN
+United States (US) Flag ;205.224.0.0/14 ;Level 3 Parent, LLC ;;205.224.0.0/14 ;ARIN
+United States (US) Flag ;205.234.146.0/24 ;Delta Centric LLC ;;205.234.128.0/17 ;ARIN
+United States (US) Flag ;205.234.161.0/24 ;Delta Centric LLC ;;205.234.128.0/17 ;ARIN
+United States (US) Flag ;205.234.171.0/24 ;Delta Centric LLC ;;205.234.128.0/17 ;ARIN
+United States (US) Flag ;205.234.189.0/24 ;Delta Centric LLC ;;205.234.128.0/17 ;ARIN
+United States (US) Flag ;206.15.0.0/19 ;Level 3 Parent, LLC ;;206.15.0.0/19 ;ARIN
+United States (US) Flag ;206.32.0.0/14 ;Level 3 Parent, LLC ;;206.32.0.0/14 ;ARIN
+United States (US) Flag ;206.41.27.0/24 ;Level 3 Parent, LLC ;;206.41.0.0/19 ;ARIN
+United States (US) Flag ;206.57.80.0/24 ;Level 3 Parent, LLC ;;206.57.0.0/17 ;ARIN
+United States (US) Flag ;206.71.80.0/24 ;Flexential Colorado Corp. ;;206.71.64.0/19 ;ARIN
+Canada (CA) Flag ;206.130.25.0/24 ;Computer Bay ;;206.130.25.0/24 ;ARIN
+United States (US) Flag ;206.131.168.0/24 ;Move Sales, Inc. ;;206.131.160.0/19 ;ARIN
+United States (US) Flag ;206.131.169.0/24 ;Move Sales, Inc. ;;206.131.160.0/19 ;ARIN
+United States (US) Flag ;206.131.171.0/24 ;Move Sales, Inc. ;;206.131.160.0/19 ;ARIN
+United States (US) Flag ;206.131.180.0/22 ;Move Sales, Inc. ;;206.131.160.0/19 ;ARIN
+United States (US) Flag ;206.131.184.0/24 ;Move Sales, Inc. ;;206.131.160.0/19 ;ARIN
+United States (US) Flag ;206.131.185.0/24 ;Move Sales, Inc. ;;206.131.160.0/19 ;ARIN
+United States (US) Flag ;206.131.186.0/24 ;Move Sales, Inc. ;;206.131.160.0/19 ;ARIN
+United States (US) Flag ;206.131.187.0/24 ;Move Sales, Inc. ;;206.131.160.0/19 ;ARIN
+United States (US) Flag ;206.132.235.0/24 ;Level 3 Parent, LLC ;;206.132.192.0/18 ;ARIN
+United States (US) Flag ;206.165.220.0/23 ;Level 3 Parent, LLC ;;206.165.0.0/16 ;ARIN
+United States (US) Flag ;206.166.213.0/24 ;SoTel Systems, LLC. ;;206.166.213.0/24 ;ARIN
+United States (US) Flag ;206.169.67.0/24 ;KYOCERA WIRELESS ;;206.169.0.0/16 ;ARIN
+United States (US) Flag ;206.169.88.0/24 ;tw telecom holdings, inc. ;;206.169.0.0/16 ;ARIN
+United States (US) Flag ;206.192.0.0/17 ;Level 3 Parent, LLC ;;206.192.0.0/17 ;ARIN
+United States (US) Flag ;206.192.3.0/24 ;Teledyne Continental Motors, Inc. ;;206.192.0.0/17 ;ARIN
+United States (US) Flag ;206.192.72.0/22 ;CI-GROUP ;;206.192.0.0/17 ;ARIN
+United States (US) Flag ;206.197.50.0/24 ;ReliabilityFirst Corporation ;;206.197.50.0/24 ;ARIN
+United States (US) Flag ;206.201.109.0/24 ;Blue Cross Blue Shield Association ;;206.201.96.0/20 ;ARIN
+United States (US) Flag ;206.206.161.0/24 ;OOC ISP LLC ;;206.206.160.0/19 ;ARIN
+United States (US) Flag ;206.216.16.0/20 ;Level 3 Parent, LLC ;;206.216.16.0/20 ;ARIN
+United States (US) Flag ;206.216.144.0/20 ;Level 3 Parent, LLC ;;206.216.144.0/20 ;ARIN
+United States (US) Flag ;206.216.159.0/24 ;Level 3 Parent, LLC ;;206.216.144.0/20 ;ARIN
+United States (US) Flag ;206.240.0.0/14 ;American Registry for Internet Numbers ;;206.240.0.0/16 ;ARIN
+United States (US) Flag ;206.245.48.0/24 ;Cap Gemini America ;;206.245.0.0/18 ;ARIN
+United States (US) Flag ;206.245.51.0/24 ;Cap Gemini America ;;206.245.0.0/18 ;ARIN
+United States (US) Flag ;207.0.0.0/14 ;American Registry for Internet Numbers ;;207.0.0.0/15 ;ARIN
+United States (US) Flag ;207.7.0.0/18 ;Level 3 Parent, LLC ;;207.7.0.0/18 ;ARIN
+United States (US) Flag ;207.7.192.0/18 ;Level 3 Parent, LLC ;;207.7.192.0/18 ;ARIN
+United States (US) Flag ;207.15.10.0/24 ;Sprint ;;207.12.0.0/14 ;ARIN
+United States (US) Flag ;207.24.42.0/24 ;LexisNexis ;;207.24.0.0/14 ;ARIN
+United States (US) Flag ;207.24.44.0/24 ;LexisNexis ;;207.24.0.0/14 ;ARIN
+United States (US) Flag ;207.24.132.0/24 ;LexisNexis ;;207.24.0.0/14 ;ARIN
+United States (US) Flag ;207.25.177.0/24 ;LexisNexis ;;207.24.0.0/14 ;ARIN
+United States (US) Flag ;207.25.178.0/24 ;LexisNexis ;;207.24.0.0/14 ;ARIN
+United States (US) Flag ;207.25.180.0/24 ;LexisNexis ;;207.24.0.0/14 ;ARIN
+United States (US) Flag ;207.25.181.0/24 ;LexisNexis ;;207.24.0.0/14 ;ARIN
+United States (US) Flag ;207.66.74.0/23 ;OOC ISP LLC ;;207.66.0.0/17 ;ARIN
+United States (US) Flag ;207.66.76.0/23 ;OOC ISP LLC ;;207.66.0.0/17 ;ARIN
+United States (US) Flag ;207.66.98.0/23 ;OOC ISP LLC ;;207.66.0.0/17 ;ARIN
+United States (US) Flag ;207.66.112.0/22 ;OOC ISP LLC ;;207.66.0.0/17 ;ARIN
+United States (US) Flag ;207.83.0.0/16 ;Level 3 Parent, LLC ;;207.83.0.0/16 ;ARIN
+United States (US) Flag ;207.92.192.0/20 ;Level 3 Parent, LLC ;;207.92.192.0/20 ;ARIN
+United States (US) Flag ;207.94.16.0/20 ;Level 3 Parent, LLC ;;207.94.16.0/20 ;ARIN
+United States (US) Flag ;207.112.128.0/17 ;Level 3 Parent, LLC ;;207.112.128.0/17 ;ARIN
+United States (US) Flag ;207.120.0.0/14 ;Level 3 Parent, LLC ;;207.120.0.0/14 ;ARIN
+United States (US) Flag ;207.123.34.0/24 ;Level 3 Parent, LLC ;;207.120.0.0/14 ;ARIN
+United States (US) Flag ;207.138.82.0/24 ;Level 3 Parent, LLC ;;207.138.0.0/16 ;ARIN
+United States (US) Flag ;207.138.132.0/24 ;Level 3 Parent, LLC ;;207.138.0.0/16 ;ARIN
+United States (US) Flag ;207.138.233.0/24 ;Level 3 Parent, LLC ;;207.138.0.0/16 ;ARIN
+United States (US) Flag ;207.138.255.0/24 ;Level 3 Parent, LLC ;;207.138.0.0/16 ;ARIN
+United States (US) Flag ;207.171.198.0/23 ;NRTC ;;207.171.192.0/18 ;ARIN
+United States (US) Flag ;207.188.140.0/22 ;OOC ISP LLC ;;207.188.128.0/18 ;ARIN
+United States (US) Flag ;207.188.155.0/24 ;OOC ISP LLC ;;207.188.128.0/18 ;ARIN
+United States (US) Flag ;207.188.167.0/24 ;OOC ISP LLC ;;207.188.128.0/18 ;ARIN
+United States (US) Flag ;207.188.174.0/24 ;Customer Bloom ;;207.188.128.0/18 ;ARIN
+United States (US) Flag ;207.218.44.0/23 ;Level 3 Parent, LLC ;;207.218.0.0/17 ;ARIN
+United States (US) Flag ;207.218.76.0/24 ;Level 3 Parent, LLC ;;207.218.0.0/17 ;ARIN
+United States (US) Flag ;207.218.182.0/24 ;Level 3 Parent, LLC ;;207.218.128.0/18 ;ARIN
+United States (US) Flag ;207.227.0.0/16 ;Level 3 Parent, LLC ;;207.227.0.0/16 ;ARIN
+United States (US) Flag ;207.250.124.0/24 ;Waterstone Mortgage ;;207.250.0.0/16 ;ARIN
+United States (US) Flag ;208.48.51.0/24 ;Level 3 Parent, LLC ;;208.48.0.0/18 ;ARIN
+United States (US) Flag ;208.48.153.0/24 ;Level 3 Parent, LLC ;;208.48.128.0/18 ;ARIN
+United States (US) Flag ;208.49.76.0/24 ;Level 3 Parent, LLC ;;208.49.0.0/16 ;ARIN
+United States (US) Flag ;208.49.77.0/24 ;Level 3 Parent, LLC ;;208.49.0.0/16 ;ARIN
+United States (US) Flag ;208.49.84.0/24 ;Level 3 Parent, LLC ;;208.49.0.0/16 ;ARIN
+United States (US) Flag ;208.51.77.0/24 ;Level 3 Parent, LLC ;;208.51.0.0/16 ;ARIN
+United States (US) Flag ;208.51.84.0/24 ;MT Technology, Inc. ;;208.51.0.0/16 ;ARIN
+United States (US) Flag ;208.51.136.0/24 ;Level 3 Parent, LLC ;;208.51.0.0/16 ;ARIN
+United States (US) Flag ;208.51.208.0/24 ;Level 3 Parent, LLC ;;208.51.0.0/16 ;ARIN
+United States (US) Flag ;208.51.246.0/24 ;Level 3 Parent, LLC ;;208.51.0.0/16 ;ARIN
+United States (US) Flag ;208.66.87.0/24 ;AKERMAN SENTERFITT ;;208.66.84.0/22 ;ARIN
+United States (US) Flag ;208.68.52.0/24 ;Philips Electronics North America Corporation ;;208.68.52.0/22 ;ARIN
+United States (US) Flag ;208.68.53.0/24 ;Philips Electronics North America Corporation ;;208.68.52.0/22 ;ARIN
+United States (US) Flag ;208.68.230.0/23 ;Acculynk, Inc. ;;208.68.228.0/22 ;ARIN
+United States (US) Flag ;208.70.120.0/22 ;Lower Merion School District ;;208.70.120.0/22 ;ARIN
+United States (US) Flag ;208.74.46.0/24 ;Medfusion ;;208.74.44.0/22 ;ARIN
+United States (US) Flag ;208.76.9.0/24 ;Inuvo Inc. ;;208.76.8.0/22 ;ARIN
+United States (US) Flag ;208.76.10.0/24 ;Inuvo Inc. ;;208.76.8.0/22 ;ARIN
+United States (US) Flag ;208.90.227.0/24 ;Exigo Office, INC ;;208.90.224.0/22 ;ARIN
+United States (US) Flag ;209.0.0.0/16 ;Level 3 Parent, LLC ;;209.0.0.0/16 ;ARIN
+United States (US) Flag ;209.0.144.0/24 ;Level 3 Parent, LLC ;;209.0.0.0/16 ;ARIN
+United States (US) Flag ;209.12.54.0/23 ;Xspedius Communications Co. ;;209.12.0.0/16 ;ARIN
+United States (US) Flag ;209.74.103.0/24 ;Move Sales, Inc. ;;209.74.96.0/21 ;ARIN
+United States (US) Flag ;209.82.232.0/24 ;AAA National ;;209.82.192.0/18 ;ARIN
+United States (US) Flag ;209.84.0.0/16 ;Level 3 Parent, LLC ;;209.84.0.0/16 ;ARIN
+United States (US) Flag ;209.100.0.0/16 ;Level 3 Parent, LLC ;;209.100.0.0/16 ;ARIN
+United States (US) Flag ;209.108.192.0/21 ;Level 3 Parent, LLC ;;209.108.192.0/19 ;ARIN
+United States (US) Flag ;209.108.220.0/22 ;Level 3 Parent, LLC ;;209.108.192.0/19 ;ARIN
+United States (US) Flag ;209.130.192.0/24 ;Level 3 Parent, LLC ;;209.130.192.0/19 ;ARIN
+United States (US) Flag ;209.130.225.0/24 ;Dematic Corp. ;;209.130.224.0/19 ;ARIN
+United States (US) Flag ;209.164.128.0/18 ;Level 3 Parent, LLC ;;209.164.128.0/18 ;ARIN
+United States (US) Flag ;209.241.0.0/16 ;Level 3 Parent, LLC ;;209.241.0.0/16 ;ARIN
+United States (US) Flag ;209.244.0.0/14 ;Level 3 Parent, LLC ;;209.244.0.0/14 ;ARIN
+United States (US) Flag ;209.246.154.0/24 ;Level 3 Parent, LLC ;;209.244.0.0/14 ;ARIN
+United Kingdom (GB) Flag ;212.3.224.0/19 ;Centurylink Communications UK Limited ;;212.3.224.0/19 ;RIPE
+United Kingdom (GB) Flag ;212.72.32.0/19 ;Centurylink Communications UK Limited ;;212.72.32.0/19 ;RIPE
+United Kingdom (GB) Flag ;212.73.192.0/18 ;Centurylink Communications UK Limited ;;212.73.192.0/19 ;RIPE
+France (FR) Flag ;212.73.226.0/24 ;BCCB6184 ;;212.73.224.0/19 ;RIPE
+United Kingdom (GB) Flag ;212.113.0.0/19 ;Centurylink Communications UK Limited ;;212.113.0.0/19 ;RIPE
+United Kingdom (GB) Flag ;212.133.0.0/17 ;Centurylink Communications UK Limited ;;212.133.0.0/17 ;RIPE
+United Kingdom (GB) Flag ;212.162.0.0/18 ;Centurylink Communications UK Limited ;;212.162.0.0/18 ;RIPE
+Poland (PL) Flag ;212.162.22.0/24 ;CUSTOMER-LAN ;;212.162.0.0/18 ;RIPE
+United Kingdom (GB) Flag ;212.187.128.0/17 ;Centurylink Communications UK Limited ;;212.187.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;213.19.128.0/17 ;Centurylink Communications UK Limited ;;213.19.128.0/17 ;RIPE
+France (FR) Flag ;213.174.127.0/24 ;Address pool for ADP ;;213.174.96.0/19 ;RIPE
+United Kingdom (GB) Flag ;213.228.192.0/18 ;GTT ;;213.228.192.0/18 ;RIPE
+United Kingdom (GB) Flag ;213.228.204.0/24 ;GTT ;;213.228.192.0/18 ;RIPE
+United Kingdom (GB) Flag ;213.228.219.0/24 ;GTT ;;213.228.192.0/18 ;RIPE
+United Kingdom (GB) Flag ;213.228.229.0/24 ;Sentia ;;213.228.192.0/18 ;RIPE
+United Kingdom (GB) Flag ;213.228.243.0/24 ;Signify Solutions ;;213.228.192.0/18 ;RIPE
+Ireland (IE) Flag ;213.228.253.0/24 ;EUROKOM ;;213.228.192.0/18 ;RIPE
+United States (US) Flag ;213.232.104.0/24 ;GBTCloud.COM ;;213.232.104.0/22 ;RIPE
+Ireland (IE) Flag ;213.239.29.0/24 ;Coolwave Communications Limited ;;213.239.0.0/18 ;RIPE
+United Kingdom (GB) Flag ;213.242.64.0/18 ;Centurylink Communications UK Limited ;;213.242.64.0/18 ;RIPE
+United Kingdom (GB) Flag ;213.244.128.0/18 ;Centurylink Communications UK Limited ;;213.244.128.0/18 ;RIPE
+United Kingdom (GB) Flag ;213.244.133.0/24 ;Centurylink Communications UK Limited ;;213.244.128.0/18 ;RIPE
+Netherlands (NL) Flag ;213.244.163.0/24 ;Anaplan Level3 LAN ;;213.244.128.0/18 ;RIPE
+Netherlands (NL) Flag ;213.244.182.0/24 ;Customer LAN Network ;;213.244.128.0/18 ;RIPE
+Netherlands (NL) Flag ;213.244.189.0/24 ;BBZW4148 ;;213.244.128.0/18 ;RIPE
+Netherlands (NL) Flag ;213.244.191.0/24 ;Adopte Un Mec LAN ;;213.244.128.0/18 ;RIPE
+United Kingdom (GB) Flag ;213.249.96.0/19 ;Centurylink Communications UK Limited ;;213.249.96.0/19 ;RIPE
+United States (US) Flag ;216.22.64.0/18 ;Level 3 Parent, LLC ;;216.22.64.0/18 ;ARIN
+Argentina (AR) Flag ;216.22.100.0/24 ;Despegar.com, Inc. ;;216.22.64.0/18 ;ARIN
+United States (US) Flag ;216.46.96.0/20 ;Equifax, Inc. ;;216.46.96.0/20 ;ARIN
+United States (US) Flag ;216.46.96.0/24 ;Equifax, Inc. ;;216.46.96.0/20 ;ARIN
+United States (US) Flag ;216.46.96.0/19 ;American Registry for Internet Numbers ;;216.46.96.0/20 ;ARIN
+United States (US) Flag ;216.46.102.0/24 ;Equifax, Inc. ;;216.46.96.0/20 ;ARIN
+United States (US) Flag ;216.46.107.0/24 ;Equifax, Inc. ;;216.46.96.0/20 ;ARIN
+United States (US) Flag ;216.46.109.0/24 ;Equifax, Inc. ;;216.46.96.0/20 ;ARIN
+United States (US) Flag ;216.46.110.0/24 ;Equifax, Inc. ;;216.46.96.0/20 ;ARIN
+United States (US) Flag ;216.46.112.0/20 ;American Registry for Internet Numbers ;;216.46.112.0/21 ;ARIN
+United States (US) Flag ;216.46.126.0/23 ;Equifax, Inc. ;;216.46.126.0/23 ;ARIN
+United States (US) Flag ;216.46.126.0/24 ;Equifax, Inc. ;;216.46.126.0/23 ;ARIN
+United States (US) Flag ;216.46.127.0/24 ;Equifax, Inc. ;;216.46.126.0/23 ;ARIN
+United States (US) Flag ;216.46.168.0/24 ;Flexential Colorado Corp. ;;216.46.160.0/19 ;ARIN
+Canada (CA) Flag ;216.55.96.0/20 ;Smart Servers ;;216.55.96.0/20 ;ARIN
+United States (US) Flag ;216.74.86.0/23 ;OOC ISP LLC ;;216.74.64.0/18 ;ARIN
+United States (US) Flag ;216.106.138.0/24 ;Elauwit Networks, LLC ;;216.106.128.0/19 ;ARIN
+United States (US) Flag ;216.109.240.0/21 ;Vystar Credit Union ;;216.109.240.0/20 ;ARIN
+United States (US) Flag ;216.109.254.0/24 ;Vystar Credit Union ;;216.109.240.0/20 ;ARIN
+United States (US) Flag ;216.127.224.0/19 ;Level 3 Parent, LLC ;;216.127.224.0/19 ;ARIN
+United States (US) Flag ;216.140.0.0/14 ;Level 3 Parent, LLC ;;216.140.0.0/14 ;ARIN
+United States (US) Flag ;216.141.188.0/24 ;Global Tel Link ;;216.140.0.0/14 ;ARIN
+United States (US) Flag ;216.141.251.0/24 ;Application Objects, Inc. ;;216.140.0.0/14 ;ARIN
+United States (US) Flag ;216.142.4.0/24 ;Charter Communications ;;216.140.0.0/14 ;ARIN
+United States (US) Flag ;216.143.68.0/24 ;TKL Interactive, Inc. ;;216.140.0.0/14 ;ARIN
+United States (US) Flag ;216.143.216.0/24 ;BFSaul ;;216.140.0.0/14 ;ARIN
+United States (US) Flag ;216.158.160.0/20 ;Level 3 Parent, LLC ;;216.158.160.0/20 ;ARIN
+United States (US) Flag ;216.173.76.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.173.104.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.173.105.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.173.106.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.173.107.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.173.108.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.173.110.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.173.114.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.173.117.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.173.119.0/24 ;Network Layer Technologies Inc ;;216.173.64.0/18 ;ARIN
+United States (US) Flag ;216.174.0.0/18 ;Level 3 Parent, LLC ;;216.174.0.0/18 ;ARIN
+United States (US) Flag ;216.174.10.0/24 ;Level 3 Parent, LLC ;;216.174.0.0/18 ;ARIN
+United States (US) Flag ;216.174.25.0/24 ;Level 3 Parent, LLC ;;216.174.0.0/18 ;ARIN
+United States (US) Flag ;216.202.0.0/16 ;Level 3 Parent, LLC ;;216.202.0.0/16 ;ARIN
+United States (US) Flag ;216.248.0.0/18 ;Level 3 Parent, LLC ;;216.248.0.0/18 ;ARIN
+United States (US) Flag ;216.248.24.0/24 ;Kindred Healthcare, Inc. ;;216.248.0.0/18 ;ARIN
+United States (US) Flag ;216.248.58.0/24 ;Clear Channel Communications ;;216.248.0.0/18 ;ARIN
+United Kingdom (GB) Flag ;217.156.181.0/24 ;PROVIDER Local Registry ;;217.156.128.0/17 ;RIPE
+United Kingdom (GB) Flag ;217.163.0.0/16 ;Centurylink Communications UK Limited ;;217.163.0.0/16 ;RIPE
+United Kingdom (GB) Flag ;217.163.54.0/24 ;Centurylink Communications UK Limited ;;217.163.0.0/16 ;RIPE
+United Kingdom (GB) Flag ;217.163.65.0/24 ;LAN C BLOCK ;;217.163.0.0/16 ;RIPE
+United Kingdom (GB) Flag ;217.163.90.0/24 ;CUSTOMER LAN ;;217.163.0.0/16 ;RIPE
