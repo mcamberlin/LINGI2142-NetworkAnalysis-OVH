@@ -2,7 +2,7 @@
 from ipmininet.ipnet import IPNet
 from ipmininet.cli import IPCLI
 from ipmininet.iptopo import IPTopo
-from ipmininet.router.config import BGP,OSPF, OSPF6, RouterConfig, AF_INET6, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER
+from ipmininet.router.config import BGP,OSPF, OSPF6, RouterConfig,AF_INET, AF_INET6, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER
 
 class OVHTopology(IPTopo):
 
@@ -17,22 +17,22 @@ class OVHTopology(IPTopo):
 
         family = AF_INET6();
 
-        lan_h1 = '192.168.0.0/24'
+        lan_h1 = '1.1.0.0/24'
         lan_h1_v6 = 'aaaa:aaaa:0000:0000::/64'
 
-        lan_h2 = '192.168.5.0/24'
+        lan_h2 = '1.2.5.0/24'
         lan_h2_v6 = 'aaaa:aaaa:aaaa:0000::/64'
         
-        lan_ggl = '192.168.1.0/24'
+        lan_ggl = '1.3.1.0/24'
         lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'
 
-        lan_cgt = '192.168.2.0/24'
+        lan_cgt = '1.4.2.0/24'
         lan_cgt_v6 = 'c1a4:4ad:c0ff:ee::/64'
 
-        lan_lvl = '192.168.3.0/24'
-        lan_lvl_v6 = 'cafe:d0d0:e5:dead::/64'
+        lan_lvl3 = '1.5.3.0/24'
+        lan_lvl3_v6 = 'cafe:d0d0:e5:dead::/64'
 
-        lan_tel = '192.168.4.0/24'
+        lan_tel = '1.6.4.0/24'
         lan_tel_v6 = 'aaaa:aaaa:aaaa:aaaa::/64'
         
         # --- Routers ---
@@ -138,23 +138,24 @@ class OVHTopology(IPTopo):
         lon_thw.addDaemon(OSPF6);
         lon_drch.addDaemon(OSPF6);
 
+        # --- Create Ases : AS=1 for OVH
+        self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
+
         # --- Stub provider : google (AS2)  ---
         ggl = self.addRouter("ggl", config=RouterConfig);
         
         self.addLink(ggl,ash1,igp_metric=1);
+        self.addLink(ggl,ash5,igp_metric=1);
         
         ggl.addDaemon(OSPF);
         ggl.addDaemon(OSPF6);
-        
-        
-        ggl.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_ggl_v6,),),));
+        ggl.addDaemon(BGP, address_families=(AF_INET(networks=(lan_ggl,)),AF_INET6(networks=(lan_ggl_v6,))));
         
         self.addAS(2,(ggl , ));
         
         ebgp_session(self, ggl, ash1, link_type=SHARE);
         ebgp_session(self, ggl, ash5, link_type=SHARE);
 
-        
         # --- Transit providers: Cogent, Level3 and Telia ---
         
         # Cogent (AS=3) 
@@ -169,8 +170,7 @@ class OVHTopology(IPTopo):
         
         cgt.addDaemon(OSPF);
         cgt.addDaemon(OSPF6);
-        
-        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,),),));
+        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),));
         
         self.addAS(3,(cgt , ));
         
@@ -192,8 +192,7 @@ class OVHTopology(IPTopo):
         
         lvl3.addDaemon(OSPF);
         lvl3.addDaemon(OSPF6);
-        
-        lvl3.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_lvl_v6,),),));
+        lvl3.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_lvl3_v6,)),AF_INET(networks=(lan_lvl3,)),));
 
         self.addAS(4,(lvl3, ));
         
@@ -214,8 +213,7 @@ class OVHTopology(IPTopo):
         
         tel.addDaemon(OSPF);
         tel.addDaemon(OSPF6);
-        
-        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,),),));
+        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,)),AF_INET(networks=(lan_tel,)),));
         
         self.addAS(5,(tel, ));
         
@@ -228,7 +226,7 @@ class OVHTopology(IPTopo):
 
         # --- BGP configuration ---
 
-        sin.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),));
+        sin.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),));
         syd.addDaemon(BGP);
         
         pao.addDaemon(BGP);
@@ -239,34 +237,28 @@ class OVHTopology(IPTopo):
         chi1.addDaemon(BGP);
         chi5.addDaemon(BGP);
         
-        bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),))
-        bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),))
+        bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),))
+        bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),))
         
-        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),));
-        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),));
+        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),));
+        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),));
         
         nwk1.addDaemon(BGP);
         nwk5.addDaemon(BGP);
         
         nyc.addDaemon(BGP);
         
-        lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6),),))
+        lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2,)),));
         lon_drch.addDaemon(BGP)
 
         # --- Configure the router reflectors ---
         set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash5]);       
         set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,bhs1,ash5]);
-        set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,bhs1,bhs2,chi1,ash5,lon_thw,sin]);      # This one is a super RR
         set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,bhs1,bhs2,chi5]);
 
+        set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,bhs1,bhs2,chi1,ash5,lon_thw,sin]);      # This one is a super RR
         set_rr(self, rr = lon_thw, peers=[lon_drch,sin,ash1]);                              # This one is a super RR
         set_rr(self, rr = sin, peers=[syd,ash1,lon_thw]);                                   # This one is a super RR
-
-        # --- Create Ases : AS=1 for OVH
-        #self.addAS(1, (nyc,sjo,pao,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5)) 
-        self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
-
-
 
         # --- Hosts --- (one host for each provider considered)
         h1 = self.addHost("h1");
@@ -291,17 +283,16 @@ class OVHTopology(IPTopo):
         self.addLink(h_cgt,cgt,igp_metric=1);
 
         
-        h_lvl = self.addHost("h_lvl");
-        self.addSubnet((lvl, h_lvl), subnets=(lan_lvl,));
-        self.addSubnet((lvl, h_lvl), subnets=(lan_lvl_v6,));
-        self.addLink(h_lvl,lvl,igp_metric=1);
+        h_lvl3 = self.addHost("h_lvl");
+        self.addSubnet((lvl3, h_lvl3), subnets=(lan_lvl3,));
+        self.addSubnet((lvl3, h_lvl3), subnets=(lan_lvl3_v6,));
+        self.addLink(h_lvl3,lvl3,igp_metric=1);
         
         
         h_tel = self.addHost("h_tel");
         self.addSubnet((tel, h_tel), subnets=(lan_tel,));
         self.addSubnet((tel, h_tel), subnets=(lan_tel_v6,));
         self.addLink(h_tel,tel,igp_metric=1);
-
 
         super().build(*args, **kwargs)
 
