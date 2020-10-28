@@ -78,16 +78,14 @@ class BGPDecisionProcess(IPTopo):
         ebgp_session(self, as1r1, as2r1)
         ebgp_session(self, as3r1, as2r2)
 
-        h1 = self.addHost("h1");
-        h2 = self.addHost("h2");
-        h3 = self.addHost("h3");
-        self.addSubnet((as1r1,h1), subnets=('5.5.5.5'));
-        self.addSubnet((as2r1,h2), subnets=('1.2.3.1',));
-        self.addSubnet((as3r1,h3), subnets=('1.2.3.0',));
+        # h1 = self.addHost("h1");
+        # h2 = self.addHost("h2");
+        # self.addSubnet((as1r1,h1), subnets=('1.1.1.0/24',));
+        # self.addSubnet((as2r1,as3r1,h2), subnets=('1.2.3.0/24',));
 
-        self.addLink(as1r1,h1)
-        self.addLink(as2r1,h2)
-        self.addLink(as2r1,h3)
+        # self.addLink(as1r1,h1)
+        # self.addLink(as2r1,h2)
+        # self.addLink(as3r1,h2)
 
         super().build(*args, **kwargs)
 

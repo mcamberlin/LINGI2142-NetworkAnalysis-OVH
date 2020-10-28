@@ -77,18 +77,6 @@ class BGPDecisionProcess(IPTopo):
         # Add eBGP peering
         ebgp_session(self, as1r1, as2r1)
         ebgp_session(self, as3r1, as2r2)
-
-        h1 = self.addHost("h1");
-        h2 = self.addHost("h2");
-        h3 = self.addHost("h3");
-        self.addSubnet((as1r1,h1), subnets=('5.5.5.5'));
-        self.addSubnet((as2r1,h2), subnets=('1.2.3.1',));
-        self.addSubnet((as3r1,h3), subnets=('1.2.3.0',));
-
-        self.addLink(as1r1,h1)
-        self.addLink(as2r1,h2)
-        self.addLink(as2r1,h3)
-
         super().build(*args, **kwargs)
 
 if __name__ == '__main__':

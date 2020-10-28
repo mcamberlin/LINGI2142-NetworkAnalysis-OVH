@@ -13,15 +13,22 @@ class OVHTopology(IPTopo):
         large = 8
         extra_large = 13
 
+        # IPv4 range 198.27.92.0/24
+        # IPv6 range 2604:2dc0::/32
+            # lan USA : 2604:2dc0::/34
+            # lan EU : 2604:2dc0:8000::/34
+            # lan APAC : 2604:2dc0:4000::/34
         # --- Hosts ---
 
         family = AF_INET6();
 
         lan_h1 = '1.1.0.0/24'
-        lan_h1_v6 = 'aaaa:aaaa:0000:0000::/64'
+        lan_h1_v6 = '2604:2dc0:2000::/35'
+        #"2604:2dc0::3/34
+        #"2604:2dc0::b/34"
 
         lan_h2 = '1.2.5.0/24'
-        lan_h2_v6 = 'aaaa:aaaa:aaaa:0000::/64'
+        lan_h2_v6 = '2604:2dc0::/35'
         
         lan_ggl = '1.3.1.0/24'
         lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'
@@ -36,28 +43,31 @@ class OVHTopology(IPTopo):
         lan_tel_v6 = 'aaaa:aaaa:aaaa:aaaa::/64'
         
         # --- Routers ---
-        sin = self.addRouter("sin", config=RouterConfig);
-        syd = self.addRouter("syd", config=RouterConfig);
+        #OVH = \32
+        #OVH+continent = \35
+        #r1 = self.addRouter('r1', lo_addresses=["2604:2dc0::1/64", "10.1.1.1/24"])
+        sin = self.addRouter("sin", config=RouterConfig,lo_addresses=["2604:2dc0:4000::0/34","198.27.92.0/24"] );
+        syd = self.addRouter("syd", config=RouterConfig,lo_addresses=["2604:2dc0:4000::1/34","198.27.92.1/24"]);
 
-        pao = self.addRouter("pao", config=RouterConfig);
-        sjo = self.addRouter("sjo", config=RouterConfig);
-        lax1 = self.addRouter("lax1", config=RouterConfig);
+        pao = self.addRouter("pao", config=RouterConfig,lo_addresses=["2604:2dc0::0/34","198.27.92.2/24"]);
+        sjo = self.addRouter("sjo", config=RouterConfig,lo_addresses=["2604:2dc0::1/34","198.27.92.3/24"]);
+        lax1 = self.addRouter("lax1", config=RouterConfig,lo_addresses=["2604:2dc0::2/34","198.27.92.4/24"]);
 
-        chi1 = self.addRouter("chi1", config=RouterConfig);
-        chi5 = self.addRouter("chi5", config=RouterConfig);
+        chi1 = self.addRouter("chi1", config=RouterConfig,lo_addresses=["2604:2dc0:2000::3/35","198.27.92.5/24"]);
+        chi5 = self.addRouter("chi5", config=RouterConfig,lo_addresses=["2604:2dc0::4/34","198.27.92.6/24"]);
 
-        bhs1 = self.addRouter("bhs1", config=RouterConfig);
-        bhs2 = self.addRouter("bhs2", config=RouterConfig);
+        bhs1 = self.addRouter("bhs1", config=RouterConfig,lo_addresses=["2604:2dc0::5/34","198.27.92.7/24"]);
+        bhs2 = self.addRouter("bhs2", config=RouterConfig,lo_addresses=["2604:2dc0::6/34","198.27.92.8/24"]);
 
-        ash1 = self.addRouter("ash1", config=RouterConfig);
-        ash5 = self.addRouter("ash5", config=RouterConfig);
+        ash1 = self.addRouter("ash1", config=RouterConfig,lo_addresses=["2604:2dc0::7/34","198.27.92.9/24"]);
+        ash5 = self.addRouter("ash5", config=RouterConfig,lo_addresses=["2604:2dc0::8/34","198.27.92.10/24"]);
 
-        nwk1 = self.addRouter("nwk1", config=RouterConfig);
-        nwk5 = self.addRouter("nwk5", config=RouterConfig);
-        nyc = self.addRouter("nyc", config=RouterConfig);
+        nwk1 = self.addRouter("nwk1", config=RouterConfig,lo_addresses=["2604:2dc0::9/34","198.27.92.11/24"]);
+        nwk5 = self.addRouter("nwk5", config=RouterConfig,lo_addresses=["2604:2dc0::a/34","198.27.92.12/24"]);
+        nyc = self.addRouter("nyc", config=RouterConfig,lo_addresses=["2604:2dc0::b/35","198.27.92.13/24"]);
 
-        lon_thw = self.addRouter("lon_thw", config=RouterConfig);
-        lon_drch = self.addRouter("lon_drch", config=RouterConfig);
+        lon_thw = self.addRouter("lon_thw", config=RouterConfig,lo_addresses=["2604:2dc0:8000::0/34","198.27.92.14/24"]);
+        lon_drch = self.addRouter("lon_drch", config=RouterConfig,lo_addresses=["2604:2dc0:800::1/34","198.27.92.15/24"]);
 
         # --- Physical links between routers ---
         self.addLink(sin, sjo,igp_metric=extra_large);
@@ -149,7 +159,7 @@ class OVHTopology(IPTopo):
         
         ggl.addDaemon(OSPF);
         ggl.addDaemon(OSPF6);
-        ggl.addDaemon(BGP, address_families=(AF_INET(networks=(lan_ggl,)),AF_INET6(networks=(lan_ggl_v6,))));
+        ggl.addDaemon(BGP, address_families=(AF_INET(networks=(lan_ggl,)),AF_INET6(networks=(lan_ggl_v6,))) , routerid="1.1.1.1");
         
         self.addAS(2,(ggl , ));
         
@@ -170,7 +180,7 @@ class OVHTopology(IPTopo):
         
         cgt.addDaemon(OSPF);
         cgt.addDaemon(OSPF6);
-        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),));
+        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),), routerid="1.1.1.2");
         
         self.addAS(3,(cgt , ));
         
@@ -192,7 +202,7 @@ class OVHTopology(IPTopo):
         
         lvl3.addDaemon(OSPF);
         lvl3.addDaemon(OSPF6);
-        lvl3.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_lvl3_v6,)),AF_INET(networks=(lan_lvl3,)),));
+        lvl3.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_lvl3_v6,)),AF_INET(networks=(lan_lvl3,)),), routerid="1.1.1.3");
 
         self.addAS(4,(lvl3, ));
         
@@ -213,7 +223,7 @@ class OVHTopology(IPTopo):
         
         tel.addDaemon(OSPF);
         tel.addDaemon(OSPF6);
-        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,)),AF_INET(networks=(lan_tel,)),));
+        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,)),AF_INET(networks=(lan_tel,)),), routerid="1.1.1.4");
         
         self.addAS(5,(tel, ));
         
@@ -226,7 +236,7 @@ class OVHTopology(IPTopo):
 
         # --- BGP configuration ---
 
-        sin.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),));
+        sin.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.5");
         syd.addDaemon(BGP);
         
         pao.addDaemon(BGP);
@@ -237,18 +247,18 @@ class OVHTopology(IPTopo):
         chi1.addDaemon(BGP);
         chi5.addDaemon(BGP);
         
-        bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),))
-        bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),))
+        bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.6")
+        bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.7")
         
-        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),));
-        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),));
+        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.8");
+        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.9");
         
         nwk1.addDaemon(BGP);
         nwk5.addDaemon(BGP);
         
         nyc.addDaemon(BGP);
         
-        lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2,)),));
+        lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2,)),), routerid="1.1.1.10");
         lon_drch.addDaemon(BGP)
 
         # --- Configure the router reflectors ---
