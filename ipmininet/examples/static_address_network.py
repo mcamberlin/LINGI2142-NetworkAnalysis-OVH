@@ -35,8 +35,8 @@ class StaticAddressNet(IPTopo):
                           (r2, s2), (s2, h3))
 
         # IP addresses can be set with interface parameters
-        lr2s2[r2].addParams(ip=("10.0.3.1/24", "2001:3c::1/64"))
-        ls2h3[h3].addParams(ip=("10.0.3.2/24", "2001:3c::2/64"))
+        # lr2s2[r2].addParams(ip=("10.0.3.1/24", "2001:3c::1/64"))
+        # ls2h3[h3].addParams(ip=("10.0.3.2/24", "2001:3c::2/64"))
 
         # We can also declare the subnets on each LAN
         # We can use nodes and/or links to specify the host and router

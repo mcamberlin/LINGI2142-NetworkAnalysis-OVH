@@ -3,6 +3,7 @@ from ipmininet.ipnet import IPNet
 from ipmininet.cli import IPCLI
 from ipmininet.iptopo import IPTopo
 from ipmininet.router.config import BGP,OSPF, OSPF6, RouterConfig,AF_INET, AF_INET6, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER
+from ipmininet.examples.static_address_network import StaticAddressNet
 
 class OVHTopology(IPTopo):
 
@@ -18,17 +19,16 @@ class OVHTopology(IPTopo):
             # lan USA : 2604:2dc0::/34
             # lan EU : 2604:2dc0:8000::/34
             # lan APAC : 2604:2dc0:4000::/34
+            
         # --- Hosts ---
 
         family = AF_INET6();
 
         lan_h1 = '1.1.0.0/24'
-        lan_h1_v6 = '2604:2dc0:2000::/35'
-        #"2604:2dc0::3/34
-        #"2604:2dc0::b/34"
+        lan_h1_v6 = '2604:2dc0:2000::/36'
 
         lan_h2 = '1.2.5.0/24'
-        lan_h2_v6 = '2604:2dc0::/35'
+        lan_h2_v6 = '2604:2dc0:3000::/36'
         
         lan_ggl = '1.3.1.0/24'
         lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'
@@ -44,30 +44,30 @@ class OVHTopology(IPTopo):
         
         # --- Routers ---
         #OVH = \32
-        #OVH+continent = \35
-        #r1 = self.addRouter('r1', lo_addresses=["2604:2dc0::1/64", "10.1.1.1/24"])
-        sin = self.addRouter("sin", config=RouterConfig,lo_addresses=["2604:2dc0:4000::0/34","198.27.92.0/24"] );
-        syd = self.addRouter("syd", config=RouterConfig,lo_addresses=["2604:2dc0:4000::1/34","198.27.92.1/24"]);
+        #OVH+continent = \34
+        #OVH+continent+type = \36
+        sin = self.addRouter("sin", config=RouterConfig,lo_addresses=["2604:2dc0:4000::0/36","198.27.92.0/24"] );
+        syd = self.addRouter("syd", config=RouterConfig,lo_addresses=["2604:2dc0:4000::1/36","198.27.92.1/24"]);
 
-        pao = self.addRouter("pao", config=RouterConfig,lo_addresses=["2604:2dc0::0/34","198.27.92.2/24"]);
-        sjo = self.addRouter("sjo", config=RouterConfig,lo_addresses=["2604:2dc0::1/34","198.27.92.3/24"]);
-        lax1 = self.addRouter("lax1", config=RouterConfig,lo_addresses=["2604:2dc0::2/34","198.27.92.4/24"]);
+        pao = self.addRouter("pao", config=RouterConfig,lo_addresses=["2604:2dc0::0/36","198.27.92.2/24"]);
+        sjo = self.addRouter("sjo", config=RouterConfig,lo_addresses=["2604:2dc0::1/36","198.27.92.3/24"]);
+        lax1 = self.addRouter("lax1", config=RouterConfig,lo_addresses=["2604:2dc0::2/36","198.27.92.4/24"]);
 
-        chi1 = self.addRouter("chi1", config=RouterConfig,lo_addresses=["2604:2dc0:2000::3/35","198.27.92.5/24"]);
-        chi5 = self.addRouter("chi5", config=RouterConfig,lo_addresses=["2604:2dc0::4/34","198.27.92.6/24"]);
+        chi1 = self.addRouter("chi1", config=RouterConfig,lo_addresses=["2604:2dc0::3/36","198.27.92.5/24"]);
+        chi5 = self.addRouter("chi5", config=RouterConfig,lo_addresses=["2604:2dc0::4/36","198.27.92.6/24"]);
 
-        bhs1 = self.addRouter("bhs1", config=RouterConfig,lo_addresses=["2604:2dc0::5/34","198.27.92.7/24"]);
-        bhs2 = self.addRouter("bhs2", config=RouterConfig,lo_addresses=["2604:2dc0::6/34","198.27.92.8/24"]);
+        bhs1 = self.addRouter("bhs1", config=RouterConfig,lo_addresses=["2604:2dc0::5/36","198.27.92.7/24"]);
+        bhs2 = self.addRouter("bhs2", config=RouterConfig,lo_addresses=["2604:2dc0::6/36","198.27.92.8/24"]);
 
-        ash1 = self.addRouter("ash1", config=RouterConfig,lo_addresses=["2604:2dc0::7/34","198.27.92.9/24"]);
-        ash5 = self.addRouter("ash5", config=RouterConfig,lo_addresses=["2604:2dc0::8/34","198.27.92.10/24"]);
+        ash1 = self.addRouter("ash1", config=RouterConfig,lo_addresses=["2604:2dc0::7/36","198.27.92.9/24"]);
+        ash5 = self.addRouter("ash5", config=RouterConfig,lo_addresses=["2604:2dc0::8/36","198.27.92.10/24"]);
 
-        nwk1 = self.addRouter("nwk1", config=RouterConfig,lo_addresses=["2604:2dc0::9/34","198.27.92.11/24"]);
-        nwk5 = self.addRouter("nwk5", config=RouterConfig,lo_addresses=["2604:2dc0::a/34","198.27.92.12/24"]);
-        nyc = self.addRouter("nyc", config=RouterConfig,lo_addresses=["2604:2dc0::b/35","198.27.92.13/24"]);
+        nwk1 = self.addRouter("nwk1", config=RouterConfig,lo_addresses=["2604:2dc0::9/36","198.27.92.11/24"]);
+        nwk5 = self.addRouter("nwk5", config=RouterConfig,lo_addresses=["2604:2dc0::a/36","198.27.92.12/24"]);
+        nyc = self.addRouter("nyc", config=RouterConfig,lo_addresses=["2604:2dc0::b/36","198.27.92.13/24"]);
 
-        lon_thw = self.addRouter("lon_thw", config=RouterConfig,lo_addresses=["2604:2dc0:8000::0/34","198.27.92.14/24"]);
-        lon_drch = self.addRouter("lon_drch", config=RouterConfig,lo_addresses=["2604:2dc0:800::1/34","198.27.92.15/24"]);
+        lon_thw = self.addRouter("lon_thw", config=RouterConfig,lo_addresses=["2604:2dc0:8000::0/36","198.27.92.14/24"]);
+        lon_drch = self.addRouter("lon_drch", config=RouterConfig,lo_addresses=["2604:2dc0:8000::1/36","198.27.92.15/24"]);
 
         # --- Physical links between routers ---
         self.addLink(sin, sjo,igp_metric=extra_large);
@@ -105,7 +105,7 @@ class OVHTopology(IPTopo):
         self.addLink(ash5,chi5,igp_metric=large);
 
         self.addLink(nwk1,nwk5,igp_metric=small);
-        self.addLink(nwk1,nyc,igp_metric=small);
+        link_42 = self.addLink(nwk1,nyc,igp_metric=small);
         self.addLink(nwk5,nyc,igp_metric=small);
 
         self.addLink(nwk1,lon_thw,igp_metric=extra_large);
@@ -272,36 +272,30 @@ class OVHTopology(IPTopo):
 
         # --- Hosts --- (one host for each provider considered)
         h1 = self.addHost("h1");
-        self.addSubnet((chi1, h1), subnets=(lan_h1,));
-        self.addSubnet((chi1, h1), subnets=(lan_h1_v6,));
+        self.addSubnet(nodes = [chi1, h1], subnets=(lan_h1,lan_h1_v6));
         self.addLink(h1,chi1,igp_metric=1);
 
         h2 = self.addHost("h2");
-        self.addSubnet((nyc, h2), subnets=(lan_h2,));
-        self.addSubnet((nyc, h2), subnets=(lan_h2_v6,));
+        self.addSubnet(nodes = [nyc, h2], subnets=(lan_h2,lan_h2_v6));
         self.addLink(h2,nyc,igp_metric=1);
             
         h_ggl = self.addHost("h_ggl");
-        self.addSubnet((ggl, h_ggl), subnets=(lan_ggl,));
-        self.addSubnet((ggl, h_ggl), subnets=(lan_ggl_v6,));
+        self.addSubnet(nodes = [ggl, h_ggl], subnets=(lan_ggl,lan_ggl_v6));
         self.addLink(h_ggl,ggl,igp_metric=1);
 
         
         h_cgt = self.addHost("h_cgt");
-        self.addSubnet((cgt, h_cgt), subnets=(lan_cgt,));
-        self.addSubnet((cgt, h_cgt), subnets=(lan_cgt_v6,));
+        self.addSubnet(nodes = [cgt, h_cgt], subnets=(lan_cgt,lan_cgt_v6));
         self.addLink(h_cgt,cgt,igp_metric=1);
 
         
         h_lvl3 = self.addHost("h_lvl3");
-        self.addSubnet((lvl3, h_lvl3), subnets=(lan_lvl3,));
-        self.addSubnet((lvl3, h_lvl3), subnets=(lan_lvl3_v6,));
+        self.addSubnet(nodes = [lvl3, h_lvl3], subnets=(lan_lvl3,lan_lvl3_v6));
         self.addLink(h_lvl3,lvl3,igp_metric=1);
         
         
         h_tel = self.addHost("h_tel");
-        self.addSubnet((tel, h_tel), subnets=(lan_tel,));
-        self.addSubnet((tel, h_tel), subnets=(lan_tel_v6,));
+        self.addSubnet(nodes = [tel, h_tel], subnets=(lan_tel,lan_tel_v6));
         self.addLink(h_tel,tel,igp_metric=1);
 
         super().build(*args, **kwargs)
