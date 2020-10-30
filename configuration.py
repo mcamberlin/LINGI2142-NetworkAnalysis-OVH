@@ -22,13 +22,15 @@ class OVHTopology(IPTopo):
 
         family = AF_INET6();
 
+        lan_OVH = '2604:2dc0::/32'
+
         lan_h1 = '1.1.0.0/24'
-        lan_h1_v6 = '2604:2dc0:2000::/35'
+        lan_h1_v6 = '2604:2dc0::/48'
         #"2604:2dc0::3/34
         #"2604:2dc0::b/34"
 
         lan_h2 = '1.2.5.0/24'
-        lan_h2_v6 = '2604:2dc0::/35'
+        lan_h2_v6 = '2604:2dc0:0001::/48'
         
         lan_ggl = '1.3.1.0/24'
         lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'
@@ -44,30 +46,31 @@ class OVHTopology(IPTopo):
         
         # --- Routers ---
         #OVH = \32
-        #OVH+continent = \35
+        #OVH+continent = \34
+        #OVH routers = \48
         #r1 = self.addRouter('r1', lo_addresses=["2604:2dc0::1/64", "10.1.1.1/24"])
-        sin = self.addRouter("sin", config=RouterConfig,lo_addresses=["2604:2dc0:4000::0/34","198.27.92.0/24"] );
-        syd = self.addRouter("syd", config=RouterConfig,lo_addresses=["2604:2dc0:4000::1/34","198.27.92.1/24"]);
+        sin = self.addRouter("sin", config=RouterConfig,lo_addresses=["2604:2dc0:4fff::0/48","198.27.92.0/24"] );
+        syd = self.addRouter("syd", config=RouterConfig,lo_addresses=["2604:2dc0:4fff::1/48","198.27.92.1/24"]);
 
-        pao = self.addRouter("pao", config=RouterConfig,lo_addresses=["2604:2dc0::0/34","198.27.92.2/24"]);
-        sjo = self.addRouter("sjo", config=RouterConfig,lo_addresses=["2604:2dc0::1/34","198.27.92.3/24"]);
-        lax1 = self.addRouter("lax1", config=RouterConfig,lo_addresses=["2604:2dc0::2/34","198.27.92.4/24"]);
+        pao = self.addRouter("pao", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::0/48","198.27.92.2/24"]);
+        sjo = self.addRouter("sjo", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::1/48","198.27.92.3/24"]);
+        lax1 = self.addRouter("lax1", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::2/48","198.27.92.4/24"]);
 
-        chi1 = self.addRouter("chi1", config=RouterConfig,lo_addresses=["2604:2dc0:2000::3/35","198.27.92.5/24"]);
-        chi5 = self.addRouter("chi5", config=RouterConfig,lo_addresses=["2604:2dc0::4/34","198.27.92.6/24"]);
+        chi1 = self.addRouter("chi1", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::3/48","198.27.92.5/24"]);
+        chi5 = self.addRouter("chi5", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::4/48","198.27.92.6/24"]);
 
-        bhs1 = self.addRouter("bhs1", config=RouterConfig,lo_addresses=["2604:2dc0::5/34","198.27.92.7/24"]);
-        bhs2 = self.addRouter("bhs2", config=RouterConfig,lo_addresses=["2604:2dc0::6/34","198.27.92.8/24"]);
+        bhs1 = self.addRouter("bhs1", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::5/48","198.27.92.7/24"]);
+        bhs2 = self.addRouter("bhs2", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::6/48","198.27.92.8/24"]);
 
-        ash1 = self.addRouter("ash1", config=RouterConfig,lo_addresses=["2604:2dc0::7/34","198.27.92.9/24"]);
-        ash5 = self.addRouter("ash5", config=RouterConfig,lo_addresses=["2604:2dc0::8/34","198.27.92.10/24"]);
+        ash1 = self.addRouter("ash1", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::7/48","198.27.92.9/24"]);
+        ash5 = self.addRouter("ash5", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::8/48","198.27.92.10/24"]);
 
-        nwk1 = self.addRouter("nwk1", config=RouterConfig,lo_addresses=["2604:2dc0::9/34","198.27.92.11/24"]);
-        nwk5 = self.addRouter("nwk5", config=RouterConfig,lo_addresses=["2604:2dc0::a/34","198.27.92.12/24"]);
-        nyc = self.addRouter("nyc", config=RouterConfig,lo_addresses=["2604:2dc0::b/35","198.27.92.13/24"]);
+        nwk1 = self.addRouter("nwk1", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::9/48","198.27.92.11/24"]);
+        nwk5 = self.addRouter("nwk5", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::a/48","198.27.92.12/24"]);
+        nyc = self.addRouter("nyc", config=RouterConfig,lo_addresses=["2604:2dc0:0fff::b/48","198.27.92.13/24"]);
 
-        lon_thw = self.addRouter("lon_thw", config=RouterConfig,lo_addresses=["2604:2dc0:8000::0/34","198.27.92.14/24"]);
-        lon_drch = self.addRouter("lon_drch", config=RouterConfig,lo_addresses=["2604:2dc0:800::1/34","198.27.92.15/24"]);
+        lon_thw = self.addRouter("lon_thw", config=RouterConfig,lo_addresses=["2604:2dc0:8fff::0/48","198.27.92.14/24"]);
+        lon_drch = self.addRouter("lon_drch", config=RouterConfig,lo_addresses=["2604:2dc0:8fff::1/48","198.27.92.15/24"]);
 
         # --- Physical links between routers ---
         self.addLink(sin, sjo,igp_metric=extra_large);
@@ -163,8 +166,8 @@ class OVHTopology(IPTopo):
         
         self.addAS(2,(ggl , ));
         
-        ebgp_session(self, ggl, ash1, link_type=SHARE);
-        ebgp_session(self, ggl, ash5, link_type=SHARE);
+        ebgp_session(self, ggl, ash1, link_type=SHARE,region=1000);
+        ebgp_session(self, ggl, ash5, link_type=SHARE,region=1000);
 
         # --- Transit providers: Cogent, Level3 and Telia ---
         
@@ -184,12 +187,12 @@ class OVHTopology(IPTopo):
         
         self.addAS(3,(cgt , ));
         
-        ebgp_session(self, cgt, nwk1, link_type=SHARE);
-        ebgp_session(self, cgt, nwk5, link_type=SHARE);
-        ebgp_session(self, cgt, ash1, link_type=SHARE);
-        ebgp_session(self, cgt, ash5, link_type=SHARE);
-        ebgp_session(self, cgt, chi1, link_type=SHARE);
-        ebgp_session(self, cgt, sjo, link_type=SHARE);
+        ebgp_session(self, cgt, nwk1, link_type=SHARE,region=1000);
+        ebgp_session(self, cgt, nwk5, link_type=SHARE,region=1000);
+        ebgp_session(self, cgt, ash1, link_type=SHARE,region=1000);
+        ebgp_session(self, cgt, ash5, link_type=SHARE,region=1000);
+        ebgp_session(self, cgt, chi1, link_type=SHARE,region=1000);
+        ebgp_session(self, cgt, sjo, link_type=SHARE,region=1000);
         
         #Level 3 (AS=4) 
         lvl3 = self.addRouter("lvl3", config=RouterConfig);
@@ -206,11 +209,11 @@ class OVHTopology(IPTopo):
 
         self.addAS(4,(lvl3, ));
         
-        ebgp_session(self, lvl3, nwk1, link_type=SHARE);
-        ebgp_session(self, lvl3, nwk5, link_type=SHARE);
-        ebgp_session(self, lvl3, chi1, link_type=SHARE);
-        ebgp_session(self, lvl3, chi5, link_type=SHARE);
-        ebgp_session(self, lvl3, sjo, link_type=SHARE);
+        ebgp_session(self, lvl3, nwk1, link_type=SHARE,region=1000);
+        ebgp_session(self, lvl3, nwk5, link_type=SHARE,region=1000);
+        ebgp_session(self, lvl3, chi1, link_type=SHARE,region=1000);
+        ebgp_session(self, lvl3, chi5, link_type=SHARE,region=1000);
+        ebgp_session(self, lvl3, sjo, link_type=SHARE,region=1000);
         
         # Telia (AS=5) 
         tel = self.addRouter("tel", config=RouterConfig);
@@ -227,11 +230,11 @@ class OVHTopology(IPTopo):
         
         self.addAS(5,(tel, ));
         
-        ebgp_session(self, tel, nwk1, link_type=SHARE);
-        ebgp_session(self, tel, nwk5, link_type=SHARE);
-        ebgp_session(self, tel, ash5, link_type=SHARE);
-        ebgp_session(self, tel, chi5, link_type=SHARE);
-        ebgp_session(self, tel, pao, link_type=SHARE);
+        ebgp_session(self, tel, nwk1, link_type=SHARE,region=1000);
+        ebgp_session(self, tel, nwk5, link_type=SHARE,region=1000);
+        ebgp_session(self, tel, ash5, link_type=SHARE,region=1000);
+        ebgp_session(self, tel, chi5, link_type=SHARE,region=1000);
+        ebgp_session(self, tel, pao, link_type=SHARE,region=1000);
         
 
         # --- BGP configuration ---

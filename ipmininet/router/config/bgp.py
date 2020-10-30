@@ -78,7 +78,7 @@ def bgp_peering(topo: 'IPTopo', a: str, b: str):
 
 
 def ebgp_session(topo: 'IPTopo', a: 'RouterDescription', b: 'RouterDescription',
-                 link_type: Optional[str] = None):
+                 link_type: Optional[str] = None, region: Optional[int] = -1):
     """Register an eBGP peering between two nodes, and disable IGP adjacencies
     between them.
 
@@ -89,6 +89,11 @@ def ebgp_session(topo: 'IPTopo', a: 'RouterDescription', b: 'RouterDescription',
                       ebgp_session will create import and export
                       filter and set local pref based on the link type
     """
+    if region != -1:
+        all_al = AccessList('All', ('any',))
+        b.get_config(BGP)\
+            .set_community(region, from_peer=b, matching=(all_al,))
+
     if link_type:
         all_al = AccessList('All', ('any',))
         # Create the community filter for the export policy
