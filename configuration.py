@@ -2,7 +2,8 @@
 from ipmininet.ipnet import IPNet
 from ipmininet.cli import IPCLI
 from ipmininet.iptopo import IPTopo
-from ipmininet.router.config import BGP,OSPF, OSPF6, RouterConfig,AF_INET, AF_INET6, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER
+from ipmininet.router.config import BGP,OSPF, OSPF6, RouterConfig,AF_INET, AF_INET6, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER, bgp_peering
+from ipmininet.router.config.zebra import DENY, PERMIT, CommunityList, AccessList
 
 class OVHTopology(IPTopo):
 
@@ -31,6 +32,12 @@ class OVHTopology(IPTopo):
 
         lan_h2 = '1.2.5.0/24'
         lan_h2_v6 = '2604:2dc0:0001::/48'
+
+        lan_hEU = '1.1.6.0/24'
+        lan_hEU_v6 = '2604:2dc0:8000::/48'
+
+        lan_hAPAC = '1.1.7.0/24'
+        lan_hAPAC_v6 = '2604:2dc0:4000::/48'
         
         lan_ggl = '1.3.1.0/24'
         lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'
@@ -166,8 +173,8 @@ class OVHTopology(IPTopo):
         
         self.addAS(2,(ggl , ));
         
-        ebgp_session(self, ggl, ash1, link_type=SHARE,region=1000);
-        ebgp_session(self, ggl, ash5, link_type=SHARE,region=1000);
+        ebgp_session(self, ggl, ash1, link_type=SHARE,region=162761000);
+        ebgp_session(self, ggl, ash5, link_type=SHARE,region=162761000);
 
         # --- Transit providers: Cogent, Level3 and Telia ---
         
@@ -187,12 +194,12 @@ class OVHTopology(IPTopo):
         
         self.addAS(3,(cgt , ));
         
-        ebgp_session(self, cgt, nwk1, link_type=SHARE,region=1000);
-        ebgp_session(self, cgt, nwk5, link_type=SHARE,region=1000);
-        ebgp_session(self, cgt, ash1, link_type=SHARE,region=1000);
-        ebgp_session(self, cgt, ash5, link_type=SHARE,region=1000);
-        ebgp_session(self, cgt, chi1, link_type=SHARE,region=1000);
-        ebgp_session(self, cgt, sjo, link_type=SHARE,region=1000);
+        ebgp_session(self, cgt, nwk1, link_type=SHARE,region=162761000);
+        ebgp_session(self, cgt, nwk5, link_type=SHARE,region=162761000);
+        ebgp_session(self, cgt, ash1, link_type=SHARE,region=162761000);
+        ebgp_session(self, cgt, ash5, link_type=SHARE,region=162761000);
+        ebgp_session(self, cgt, chi1, link_type=SHARE,region=162761000);
+        ebgp_session(self, cgt, sjo, link_type=SHARE,region=162761000);
         
         #Level 3 (AS=4) 
         lvl3 = self.addRouter("lvl3", config=RouterConfig);
@@ -209,11 +216,11 @@ class OVHTopology(IPTopo):
 
         self.addAS(4,(lvl3, ));
         
-        ebgp_session(self, lvl3, nwk1, link_type=SHARE,region=1000);
-        ebgp_session(self, lvl3, nwk5, link_type=SHARE,region=1000);
-        ebgp_session(self, lvl3, chi1, link_type=SHARE,region=1000);
-        ebgp_session(self, lvl3, chi5, link_type=SHARE,region=1000);
-        ebgp_session(self, lvl3, sjo, link_type=SHARE,region=1000);
+        ebgp_session(self, lvl3, nwk1, link_type=SHARE,region=162761000);
+        ebgp_session(self, lvl3, nwk5, link_type=SHARE,region=162761000);
+        ebgp_session(self, lvl3, chi1, link_type=SHARE,region=162761000);
+        ebgp_session(self, lvl3, chi5, link_type=SHARE,region=162761000);
+        ebgp_session(self, lvl3, sjo, link_type=SHARE,region=162761000);
         
         # Telia (AS=5) 
         tel = self.addRouter("tel", config=RouterConfig);
@@ -228,18 +235,29 @@ class OVHTopology(IPTopo):
         tel.addDaemon(OSPF6);
         tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,)),AF_INET(networks=(lan_tel,)),), routerid="1.1.1.4");
         
-        self.addAS(5,(tel, ));
+        # --- test filter for telnet --- 
+        all_al = AccessList('All', ('any',))
+        tel_EU = self.addRouter("telEU",config=RouterConfig);
+
+        self.addLink(tel_EU,lon_thw,igp_metric=1);
+        tel_EU.addDaemon(OSPF);
+        tel_EU.addDaemon(OSPF6);
+        tel_EU.addDaemon(BGP, address_families=(AF_INET6(networks=("eeee:eeee::/48",)),))
+        #tel_EU.get_config(BGP).set_community(162763100,to_peer=lon_drch,matching=(all_al,));
+        self.addAS(5,(tel,tel_EU ));
         
-        ebgp_session(self, tel, nwk1, link_type=SHARE,region=1000);
-        ebgp_session(self, tel, nwk5, link_type=SHARE,region=1000);
-        ebgp_session(self, tel, ash5, link_type=SHARE,region=1000);
-        ebgp_session(self, tel, chi5, link_type=SHARE,region=1000);
-        ebgp_session(self, tel, pao, link_type=SHARE,region=1000);
+        ebgp_session(self, tel_EU,lon_thw,link_type=SHARE,region=162763000);
+
+        ebgp_session(self, tel, nwk1, link_type=SHARE,region=162761000);
+        ebgp_session(self, tel, nwk5, link_type=SHARE,region=162761000);
+        ebgp_session(self, tel, ash5, link_type=SHARE,region=162761000);
+        ebgp_session(self, tel, chi5, link_type=SHARE,region=162761000);
+        ebgp_session(self, tel, pao, link_type=SHARE,region=162761000);
         
 
         # --- BGP configuration ---
 
-        sin.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.5");
+        sin.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_hAPAC_v6,)),AF_INET(networks=(lan_hAPAC,))), routerid="1.1.1.5");
         syd.addDaemon(BGP);
         
         pao.addDaemon(BGP);
@@ -247,32 +265,70 @@ class OVHTopology(IPTopo):
         
         lax1.addDaemon(BGP);
         
-        chi1.addDaemon(BGP);
+        chi1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,)),AF_INET(networks=(lan_h1,))));
         chi5.addDaemon(BGP);
         
-        bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.6")
-        bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.7")
+        bhs1.addDaemon(BGP, routerid="1.1.1.6")
+        bhs2.addDaemon(BGP, routerid="1.1.1.7")
         
-        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.8");
-        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.9");
+        ash1.addDaemon(BGP,routerid="1.1.1.8");
+        ash5.addDaemon(BGP,routerid="1.1.1.9");
         
         nwk1.addDaemon(BGP);
         nwk5.addDaemon(BGP);
         
-        nyc.addDaemon(BGP);
+        nyc.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h2_v6,)),AF_INET(networks=(lan_h2,))));
         
-        lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2,)),), routerid="1.1.1.10");
+        lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_hEU_v6,)),AF_INET(networks=(lan_hEU,))), routerid="1.1.1.10");
         lon_drch.addDaemon(BGP)
 
         # --- Configure the router reflectors ---
-        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash5]);       
-        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,bhs1,ash5]);
-        set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,bhs1,bhs2,chi5]);
+        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc]);
+        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,bhs1,ash1,ash5]);
+        set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,bhs1,bhs2,ash1,chi5]);
 
-        set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,bhs1,bhs2,chi1,ash5,lon_thw,sin]);      # This one is a super RR
-        set_rr(self, rr = lon_thw, peers=[lon_drch,sin,ash1]);                              # This one is a super RR
-        set_rr(self, rr = sin, peers=[syd,ash1,lon_thw]);                                   # This one is a super RR
+        bgp_peering(self, bhs1, bhs2);
+        bgp_peering(self, bhs1, ash5);
+        bgp_peering(self, bhs2, ash5);
 
+
+        set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,bhs1,bhs2,chi1,ash5]);      # This one is a super RR
+        set_rr(self, rr = lon_thw, peers=[lon_drch]);                              # This one is a super RR
+        set_rr(self, rr = sin, peers=[syd]);                                   # This one is a super RR
+
+        bgp_peering(self, ash1, lon_thw)
+        bgp_peering(self, ash1, sin)
+        bgp_peering(self, sin, lon_thw)
+
+
+        # --- Configure the BGP communities --- 
+        NAonly = CommunityList(name='NAonly',community=162761100,action=PERMIT)
+        EUonly = CommunityList(name='EUonly',community=162763100,action=PERMIT)
+        APAConly = CommunityList(name='APAConly',community=162765100,action=PERMIT)
+
+        sin.get_config(BGP).deny(from_peer = "sjo",matching = (EUonly,NAonly))
+        sin.get_config(BGP).deny(from_peer = "lon_thw",matching = (EUonly,NAonly))
+        sin.get_config(BGP).deny(from_peer = "lon_drch",matching = (EUonly,NAonly))
+
+        syd.get_config(BGP).deny(from_peer = "lax1",matching = (EUonly,NAonly))
+        syd.get_config(BGP).deny(from_peer = "lon_thw",matching = (EUonly,NAonly))
+        syd.get_config(BGP).deny(from_peer = "lon_drch",matching = (EUonly,NAonly))
+
+        sjo.get_config(BGP).deny(from_peer = "sin",matching = (EUonly,APAConly))
+        lax1.get_config(BGP).deny(from_peer = "syd",matching = (EUonly,APAConly))
+
+        lon_drch.get_config(BGP).deny(from_peer = "nwk1",matching = (APAConly,NAonly))
+        lon_drch.get_config(BGP).deny(from_peer = "syd",matching = (APAConly,NAonly))
+        lon_drch.get_config(BGP).deny(from_peer = "sin",matching = (APAConly,NAonly))
+
+        lon_thw.get_config(BGP).deny(from_peer = "nwk5",matching = (APAConly,NAonly))
+        lon_thw.get_config(BGP).deny(from_peer = "syd",matching = (APAConly,NAonly))
+        lon_thw.get_config(BGP).deny(from_peer = "sin",matching = (APAConly,NAonly))
+
+        nwk1.get_config(BGP).deny(from_peer = "lon_drch",matching = (EUonly,APAConly))
+        nwk5.get_config(BGP).deny(from_peer = "lon_thw",matching = (EUonly,APAConly))
+
+    
         # --- Hosts --- (one host for each provider considered)
         h1 = self.addHost("h1");
         self.addSubnet((chi1, h1), subnets=(lan_h1,));
@@ -283,6 +339,16 @@ class OVHTopology(IPTopo):
         self.addSubnet((nyc, h2), subnets=(lan_h2,));
         self.addSubnet((nyc, h2), subnets=(lan_h2_v6,));
         self.addLink(h2,nyc,igp_metric=1);
+
+        hEU = self.addHost("hEU");
+        self.addSubnet((lon_thw, hEU), subnets=(lan_hEU,));
+        self.addSubnet((lon_thw, hEU), subnets=(lan_hEU_v6,));
+        self.addLink(hEU,lon_thw,igp_metric=1);
+
+        hAPAC = self.addHost("hAPAC");
+        self.addSubnet((sin, hAPAC), subnets=(lan_hAPAC,));
+        self.addSubnet((sin, hAPAC), subnets=(lan_hAPAC_v6,));
+        self.addLink(hAPAC,sin,igp_metric=1);
             
         h_ggl = self.addHost("h_ggl");
         self.addSubnet((ggl, h_ggl), subnets=(lan_ggl,));
@@ -306,6 +372,10 @@ class OVHTopology(IPTopo):
         self.addSubnet((tel, h_tel), subnets=(lan_tel,));
         self.addSubnet((tel, h_tel), subnets=(lan_tel_v6,));
         self.addLink(h_tel,tel,igp_metric=1);
+
+        h_telEU = self.addHost("h_telEU");
+        self.addSubnet((tel_EU,h_telEU), subnets=("eeee:eeee::/48",));
+        self.addLink(h_telEU,tel_EU,igp_metric=1);
 
         super().build(*args, **kwargs)
 
