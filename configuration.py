@@ -50,6 +50,8 @@ class OVHTopology(IPTopo):
 
         lan_tel = '1.6.4.0/24'
         lan_tel_v6 = 'aaaa:aaaa:aaaa:aaaa::/64'
+
+        lan_telEU_v6 = 'eeee:eeee:eeee:eeee::/64'
         
         # --- Routers ---
         #OVH = \32
@@ -242,7 +244,7 @@ class OVHTopology(IPTopo):
         self.addLink(tel_EU,lon_thw,igp_metric=1);
         tel_EU.addDaemon(OSPF);
         tel_EU.addDaemon(OSPF6);
-        tel_EU.addDaemon(BGP, address_families=(AF_INET6(networks=("eeee:eeee::/48",)),))
+        tel_EU.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_telEU_v6,)),))
         #tel_EU.get_config(BGP).set_community(162763100,to_peer=lon_drch,matching=(all_al,));
         self.addAS(5,(tel,tel_EU ));
         
@@ -284,17 +286,17 @@ class OVHTopology(IPTopo):
 
         # --- Configure the router reflectors ---
         set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc]);
-        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,bhs1,ash1,ash5]);
-        set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,bhs1,bhs2,ash1,chi5]);
+        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5]);
+        set_rr(self, rr= ash5, peers=[nyc,chi5,nwk5,lax1]);
 
         bgp_peering(self, bhs1, bhs2);
         bgp_peering(self, bhs1, ash5);
         bgp_peering(self, bhs2, ash5);
 
 
-        set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,bhs1,bhs2,chi1,ash5]);      # This one is a super RR
-        set_rr(self, rr = lon_thw, peers=[lon_drch]);                              # This one is a super RR
-        set_rr(self, rr = sin, peers=[syd]);                                   # This one is a super RR
+        set_rr(self, rr= ash1, peers=[bhs1,bhs2,ash5,chi1,sjo,lax1,nwk1]);      # This one is a super RR
+        set_rr(self, rr = lon_thw, peers=[lon_drch]);        # This one is a super RR
+        set_rr(self, rr = sin, peers=[syd]);                 # This one is a super RR
 
         bgp_peering(self, ash1, lon_thw)
         bgp_peering(self, ash1, sin)
@@ -306,27 +308,14 @@ class OVHTopology(IPTopo):
         EUonly = CommunityList(name='EUonly',community=162763100,action=PERMIT)
         APAConly = CommunityList(name='APAConly',community=162765100,action=PERMIT)
 
-        sin.get_config(BGP).deny(from_peer = "sjo",matching = (EUonly,NAonly))
-        sin.get_config(BGP).deny(from_peer = "lon_thw",matching = (EUonly,NAonly))
-        sin.get_config(BGP).deny(from_peer = "lon_drch",matching = (EUonly,NAonly))
+        # sin.get_config(BGP).deny(from_peer = "ash1",matching = (EUonly,NAonly))
+        # sin.get_config(BGP).deny(from_peer = "lon_thw",matching = (EUonly,NAonly))
 
-        syd.get_config(BGP).deny(from_peer = "lax1",matching = (EUonly,NAonly))
-        syd.get_config(BGP).deny(from_peer = "lon_thw",matching = (EUonly,NAonly))
-        syd.get_config(BGP).deny(from_peer = "lon_drch",matching = (EUonly,NAonly))
+        # ash1.get_config(BGP).deny(from_peer = "sin",matching = (EUonly,APAConly))
+        # ash1.get_config(BGP).deny(from_peer = "lon_drch",matching = (EUonly,APAConly))
 
-        sjo.get_config(BGP).deny(from_peer = "sin",matching = (EUonly,APAConly))
-        lax1.get_config(BGP).deny(from_peer = "syd",matching = (EUonly,APAConly))
-
-        lon_drch.get_config(BGP).deny(from_peer = "nwk1",matching = (APAConly,NAonly))
-        lon_drch.get_config(BGP).deny(from_peer = "syd",matching = (APAConly,NAonly))
-        lon_drch.get_config(BGP).deny(from_peer = "sin",matching = (APAConly,NAonly))
-
-        lon_thw.get_config(BGP).deny(from_peer = "nwk5",matching = (APAConly,NAonly))
-        lon_thw.get_config(BGP).deny(from_peer = "syd",matching = (APAConly,NAonly))
-        lon_thw.get_config(BGP).deny(from_peer = "sin",matching = (APAConly,NAonly))
-
-        nwk1.get_config(BGP).deny(from_peer = "lon_drch",matching = (EUonly,APAConly))
-        nwk5.get_config(BGP).deny(from_peer = "lon_thw",matching = (EUonly,APAConly))
+        # lon_thw.get_config(BGP).deny(from_peer = "ash1",matching = (APAConly,NAonly))
+        # lon_thw.get_config(BGP).deny(from_peer = "sin",matching = (APAConly,NAonly))
 
     
         # --- Hosts --- (one host for each provider considered)
@@ -374,7 +363,7 @@ class OVHTopology(IPTopo):
         self.addLink(h_tel,tel,igp_metric=1);
 
         h_telEU = self.addHost("h_telEU");
-        self.addSubnet((tel_EU,h_telEU), subnets=("eeee:eeee::/48",));
+        self.addSubnet((tel_EU,h_telEU), subnets=(lan_telEU_v6,));
         self.addLink(h_telEU,tel_EU,igp_metric=1);
 
         super().build(*args, **kwargs)
