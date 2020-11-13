@@ -210,7 +210,7 @@ class OVHTopology(IPTopo):
         self.addLink(ash5,chi5,igp_metric=large);
 
         self.addLink(nwk1,nwk5,igp_metric=small);
-        self.addLink(nwk1,nyc,igp_metric=small);
+        link_42 = self.addLink(nwk1,nyc,igp_metric=small);
         self.addLink(nwk5,nyc,igp_metric=small);
 
         self.addLink(nwk1,lon_thw,igp_metric=extra_large);
