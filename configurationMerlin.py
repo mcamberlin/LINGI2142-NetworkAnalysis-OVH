@@ -20,6 +20,13 @@ PORT     STATE SERVICE
         show ip bgp
         
 2605/tcp open  bgpd    --> show information related to the configuration of BGP
+<<<<<<< Updated upstream
+=======
+    
+        show bgp (for IPv6)
+        show bgp route (for IPv4)
+        
+>>>>>>> Stashed changes
 2606/tcp open  ospf6d  --> same but for OSPFv3 (OSPF for IPv6)
     
         show ip ospf route 
@@ -139,6 +146,7 @@ class OVHTopology(IPTopo):
         self.addLink(h1,chi1);
 
         h2 = self.addHost("h2");
+<<<<<<< Updated upstream
         self.addLink(h2,nyc);        
 
         hEU = self.addHost("hEU");
@@ -148,11 +156,40 @@ class OVHTopology(IPTopo):
         self.addLink(hAPAC,sin,igp_metric=1);
         
         self.addSubnet(nodes = [sin,hAPAC], subnets = [subnetSin6, subnetSin]); 
+=======
+        self.addLink(h2,"lax1");     
+        
+        # ========= Anycast ==============================================
+        #  => neighbor <A.B.C.D|X:X::X:X|WORD> default-originate
+        # ================================================================
+       
+        # --- Add the different anycast servers          
+        anycast1 = self.addRouter("anycast1",config = RouterConfig, lo_addresses = ["2604:2dc0:ffff:ffff:ffff:ffff:ffff::/128","192.27.92.255/32",] );      
+        self.addLink(anycast1,sin); 
+
+        anycastServers = [anycast1]#, anycast2, anycast3];
+        
+        # --- Add BGP on each anycast server to announce the anycast address and telling that they are reachable        
+        for s in anycastServers:
+            s.addDaemon(BGP, address_families = ( AF_INET6( redistribute=['connected']), AF_INET(redistribute = ['connected'])));  
+                
+
+        # --- Configure the static routes between the anycast servers and the router attached
+        anycast1.addDaemon(STATIC, static_routes = [StaticRoute("::/0","2604:2dc0:4000::0/128"), StaticRoute("0.0.0.0/0", "198.27.92.0/32")]);
+        
+        
+        
+        self.addSubnet(nodes = [anycast1,sin], subnets = [subnetSin6, subnetSin]); 
+>>>>>>> Stashed changes
         self.addSubnet(nodes = [syd], subnets = [subnetSyd6,subnetSyd]); 
         
         self.addSubnet(nodes = [pao], subnets = [subnetPao6,subnetPao]); 
         self.addSubnet(nodes = [sjo], subnets = [subnetSjo6,subnetSjo]);
+<<<<<<< Updated upstream
         self.addSubnet(nodes = [lax1], subnets = [subnetLax16,subnetLax1]);
+=======
+        self.addSubnet(nodes = [lax1,h2], subnets = [subnetLax16,subnetLax1]);
+>>>>>>> Stashed changes
         
         self.addSubnet(nodes = [chi1,h1], subnets = [subnetChi16,subnetChi1]);
         self.addSubnet(nodes = [chi5], subnets = [subnetChi56,subnetChi5]);
@@ -165,9 +202,15 @@ class OVHTopology(IPTopo):
 
         self.addSubnet(nodes = [nwk1], subnets = [subnetNwk16,subnetNwk1]);
         self.addSubnet(nodes = [nwk5], subnets = [subnetNwk56,subnetNwk5]);
+<<<<<<< Updated upstream
         self.addSubnet(nodes = [nyc,h2], subnets = [subnetNyc6,subnetNyc]);
         
         self.addSubnet(nodes = [lon_thw,hEU], subnets = [subnetLon_thw6,subnetLon_thw]);
+=======
+        self.addSubnet(nodes = [nyc], subnets = [subnetNyc6,subnetNyc]);
+        
+        self.addSubnet(nodes = [lon_thw], subnets = [subnetLon_thw6,subnetLon_thw]);
+>>>>>>> Stashed changes
         self.addSubnet(nodes = [lon_drch], subnets = [subnetLon_drch6,subnetLon_drch]);
         
         
@@ -218,8 +261,13 @@ class OVHTopology(IPTopo):
         # ===============================================================
         # --- Add a OSPF daemon on each router of OVH
         for r in OVHRouters:
+<<<<<<< Updated upstream
             r.addDaemon(OSPF);
             r.addDaemon(OSPF6);        
+=======
+            r.addDaemon(OSPF);#,redistribute = redistributedRoute('connected'),))
+            r.addDaemon(OSPF6);#,redistribute=(OSPFRedistributedRoute('connected'),))        
+>>>>>>> Stashed changes
         
         # ========================= BGP configuration ==================
         #   - 3 route reflectors at level 1 (highest in hierarchy)
@@ -229,6 +277,7 @@ class OVHTopology(IPTopo):
         for i in range(len(OVHRouters)):
             OVHRouters[i].addDaemon(BGP,debug = ("neighbor",),address_families=(AF_INET(networks=(OVHSubsnets4[i],)),AF_INET6(networks=(OVHSubsnets6[i],))));
             
+<<<<<<< Updated upstream
         # --- ??? utility ? Merlin
         
         """
@@ -241,6 +290,8 @@ class OVHTopology(IPTopo):
         lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2,)),), routerid="1.1.1.10");
         """
         
+=======
+>>>>>>> Stashed changes
         # --- Configure the router reflectors ---
         #       Lower hierarchy route reflectors
         
@@ -275,7 +326,10 @@ class OVHTopology(IPTopo):
         #       - Level3 (lvl3) 
         #       - Telia (tel) 
         # ==================================================================
+<<<<<<< Updated upstream
         
+=======
+>>>>>>> Stashed changes
         # --- Google (AS=2)  
         ggl = self.addRouter("ggl", config=RouterConfig);
         self.addLinks( (ggl,ash1), (ggl,ash5) );
@@ -289,8 +343,13 @@ class OVHTopology(IPTopo):
         self.addSubnet(nodes = [ggl, h_ggl], subnets=(lan_ggl,lan_ggl_v6));
         self.addLink(h_ggl,ggl,igp_metric=1);
         
+<<<<<<< Updated upstream
         ebgp_session(self, ggl, ash1, link_type=CLIENT_PROVIDER);
         ebgp_session(self, ggl, ash5, link_type=CLIENT_PROVIDER);
+=======
+        ebgp_session(self, ggl, ash1, link_type=SHARE);
+        ebgp_session(self, ggl, ash5, link_type=SHARE);
+>>>>>>> Stashed changes
         
         # --- Cogent (AS=3) 
         cgt = self.addRouter("cgt", config=RouterConfig);
@@ -325,7 +384,11 @@ class OVHTopology(IPTopo):
         self.addSubnet(nodes = [lvl3, h_lvl3], subnets=(lan_lvl3,lan_lvl3_v6));
         self.addLink(h_lvl3,lvl3,igp_metric=1);
         
+<<<<<<< Updated upstream
         ebgp_session(self, lvl3, nwk1, link_type=SHARE);
+=======
+        ebgp_session(self, lvl3, nwk1, link_type=SHARE);# regarde si on change 
+>>>>>>> Stashed changes
         ebgp_session(self, lvl3, nwk5, link_type=SHARE);
         ebgp_session(self, lvl3, chi1, link_type=SHARE);
         ebgp_session(self, lvl3, chi5, link_type=SHARE);
@@ -357,6 +420,7 @@ class OVHTopology(IPTopo):
             eR.addDaemon(OSPF6);
             eR.addDaemon(OSPF);
         
+<<<<<<< Updated upstream
         
             
         # ========================= Anycast ==============================
@@ -386,6 +450,8 @@ class OVHTopology(IPTopo):
         """
 
 
+=======
+>>>>>>> Stashed changes
         super().build(*args, **kwargs)
 
 
