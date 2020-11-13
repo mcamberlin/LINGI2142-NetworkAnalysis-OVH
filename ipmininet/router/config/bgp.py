@@ -76,6 +76,337 @@ def bgp_peering(topo: 'IPTopo', a: str, b: str):
     topo.getNodeInfo(a, 'bgp_peers', list).append(b)
     topo.getNodeInfo(b, 'bgp_peers', list).append(a)
 
+def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
+    access_lists = topo.getNodeInfo(router, 'bgp_access_lists',list)
+    community_list = topo.getNodeInfo(router,'bgp_community_lists', list)
+
+    all_al = AccessList('all',('any',))
+    access_lists.append(all_al)
+
+    from_peer_cl = CommunityList(name='from-peers',community=1,action=PERMIT)
+    from_up_cl = CommunityList(name='from-up',community=2,action=PERMIT)
+    set_no_exportG_cl = CommunityList(name='set_no_exportG',community=95,action=PERMIT)
+    EU_only_cl = CommunityList(name='EU-Only',community=11,action=PERMIT)
+    NA_only_cl = CommunityList(name='NA-Only',community=31,action=PERMIT)
+    APAC_only_cl = CommunityList(name='APAC-Only',community=51,action=PERMIT)
+
+    community_list.append(from_peer_cl)
+    community_list.append(from_up_cl)
+    community_list.append(set_no_exportG_cl)
+    community_list.append(EU_only_cl)
+    community_list.append(APAC_only_cl)
+    community_list.append(NA_only_cl)
+
+    route_maps = topo.getNodeInfo(router, 'bgp_route_maps', list)
+
+    # misc routeMaprs 
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-set_no_export',
+        'set_actions':  [RouteMapSetAction('community','no-export')],
+        'order': 8
+        })  
+
+    # Region filters
+    if region == 'NA' or region == 'APAC':
+        route_maps.append({
+            'match_policy': 'deny',
+            'neighbor': Peer(router,router),
+            'name': 'rm-continent_filters',
+            'match_cond': [RouteMapMatchCond('community', EU_only_cl.name)],
+            'order': 8
+            })       
+
+    if region == 'NA' or region == 'EU':
+        route_maps.append({
+            'match_policy': 'deny',
+            'neighbor': Peer(router,router),
+            'name': 'rm-continent_filters',
+            'match_cond': [RouteMapMatchCond('community', APAC_only_cl.name)],
+            'order': 12
+            })   
+
+    if region == 'APAC' or region == 'EU':
+        route_maps.append({
+            'match_policy': 'deny',
+            'neighbor': Peer(router,router),
+            'name': 'rm-continent_filters',
+            'match_cond': [RouteMapMatchCond('community', NA_only_cl.name)],
+            'order': 14
+            })            
+        
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-continent_filters',
+        'order': 15
+        })    
+
+    # Customer import policy
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-cust-in',
+        'match_cond': [RouteMapMatchCond('community', set_no_exportG_cl.name)],
+        'call_action':'rm-set_no_export-ipv4',
+        'exit_policy':'next',
+        'order': 8
+        })
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-cust-in',
+        'order': 12
+        })
+        
+    # Customer export policy
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-cust-out',
+        'order': 8
+        })   
+
+    # Peer import policy
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-peer-in',
+        'match_cond': [RouteMapMatchCond('community', set_no_exportG_cl.name)],
+        'call_action':'rm-set_no_export-ipv4',
+        'exit_policy':'next',
+        'order': 8
+        })   
+
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-peer-in',
+        'order': 12
+        })   
+
+    # Peer export policy
+    route_maps.append({
+        'match_policy': 'deny',
+        'neighbor': Peer(router,router),
+        'match_cond': [RouteMapMatchCond('community', from_peer_cl.name)],
+        'name': 'rm-peer-out',
+        'order': 8
+        })   
+    route_maps.append({
+        'match_policy': 'deny',
+        'neighbor': Peer(router,router),
+        'match_cond': [RouteMapMatchCond('community', from_up_cl.name)],
+        'name': 'rm-peer-out',
+        'order': 12
+        })           
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-peer-out',
+        'order': 15
+        })  
+
+def ebgp_Client(topo: 'IPTopo',ovhR: 'RouterDescription', clientR: 'RouterDescription', region:str):
+    all_al = AccessList('all',('any',))
+    route_maps = topo.getNodeInfo(ovhR, 'bgp_route_maps', list)
+
+    # route map in
+    route_maps.append({
+        'match_policy': 'permit',
+        'peer': clientR,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'in',
+        'name': 'cust-' + clientR + '-in',
+        'call_action':'rm-cust-in-ipv4',
+        'exit_policy':'next',
+        'order': 10
+        })
+    if region == 'NA':
+        route_maps.append({
+            'match_policy': 'permit',
+            'peer': clientR,
+            'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+            'direction': 'in',
+            'name': 'cust-' + clientR + '-in',
+            'set_actions':  [RouteMapSetAction('community',10),RouteMapSetAction('community',3)],
+            'order': 20
+            })
+    if region == 'EU':
+        route_maps.append({
+            'match_policy': 'permit',
+            'peer': clientR,
+            'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+            'direction': 'in',
+            'name': 'cust-' + clientR + '-in',
+            'set_actions':  [RouteMapSetAction('community',30),RouteMapSetAction('community',3)],
+            'order': 20
+            })
+    if region == 'APAC':
+        route_maps.append({
+            'match_policy': 'permit',
+            'peer': clientR,
+            'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+            'direction': 'in',
+            'name': 'cust-' + clientR + '-in',
+            'set_actions':  [RouteMapSetAction('community',50),RouteMapSetAction('community',3)],
+            'order': 20
+            })
+
+    #route map out
+    route_maps.append({
+        'match_policy': 'permit',
+        'peer': clientR,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'out',
+        'name': 'cust-' + clientR + '-out',
+        'call_action':'rm-cust-out-ipv4',
+        'exit_policy':'next',
+        'order': 10
+        })
+    route_maps.append({
+        'match_policy': 'permit',
+        'peer': clientR,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'out',
+        'name': 'cust-' + clientR + '-out',
+        'order': 20
+        })
+    bgp_peering(topo, ovhR, clientR)
+    topo.linkInfo(ovhR, clientR)['igp_passive'] = True
+
+def ebgp_Peer(topo: 'IPTopo',ovhR: 'RouterDescription', peerR: 'RouterDescription', region:str):
+    all_al = AccessList('all',('any',))
+    route_maps = topo.getNodeInfo(ovhR, 'bgp_route_maps', list)
+
+    # route map in
+    route_maps.append({
+        'match_policy': 'permit',
+        'peer': peerR,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'in',
+        'name': 'peer-' + peerR + '-in',
+        'call_action':'rm-peer-in-ipv4',
+        'exit_policy':'next',
+        'order': 10
+        })
+    if region == 'NA':
+        route_maps.append({
+            'match_policy': 'permit',
+            'peer': peerR,
+            'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+            'direction': 'in',
+            'name': 'peer-' + peerR + '-in',
+            'set_actions':  [RouteMapSetAction('community',10),RouteMapSetAction('community',1)],
+            'order': 20
+            })
+    if region == 'EU':
+        route_maps.append({
+            'match_policy': 'permit',
+            'peer': peerR,
+            'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+            'direction': 'in',
+            'name': 'peer-' + peerR + '-in',
+            'set_actions':  [RouteMapSetAction('community',30),RouteMapSetAction('community',1)],
+            'order': 20
+            })
+    if region == 'APAC':
+        route_maps.append({
+            'match_policy': 'permit',
+            'peer': peerR,
+            'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+            'direction': 'in',
+            'name': 'peer-' + peerR + '-in',
+            'set_actions':  [RouteMapSetAction('community',50),RouteMapSetAction('community',1)],
+            'order': 20
+            })
+
+    #route map out
+    route_maps.append({
+        'match_policy': 'permit',
+        'peer': peerR,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'out',
+        'name': 'peer-' + peerR + '-out',
+        'call_action':'rm-peer-out-ipv4',
+        'exit_policy':'next',
+        'order': 10
+        })
+    route_maps.append({
+        'match_policy': 'permit',
+        'peer': peerR,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'out',
+        'name': 'peer-' + peerR + '-out',
+        'order': 20
+        })
+
+    bgp_peering(topo, ovhR, peerR)
+    topo.linkInfo(ovhR, peerR)['igp_passive'] = True
+
+def ibgp_Inter_Region(topo: 'IPTopo',r1 : 'RouterDescription', r2: 'RouterDescription'):
+    all_al = AccessList('all',('any',))
+    route_maps1 = topo.getNodeInfo(r1, 'bgp_route_maps', list)
+    route_maps2 = topo.getNodeInfo(r2, 'bgp_route_maps', list)
+
+    # route map in
+    route_maps1.append({
+        'match_policy': 'permit',
+        'peer': r2,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'in',
+        'name': 'inter_region-' + r2 + '-in',
+        'call_action':'rm-continent_filters-ipv4',
+        'exit_policy':'next',
+        'order': 10
+        })
+    route_maps1.append({
+        'match_policy': 'permit',
+        'peer': r2,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'in',
+        'name': 'inter_region-' + r2 + '-in',
+        'order': 20
+        })
+
+    route_maps2.append({
+        'match_policy': 'permit',
+        'peer': r1,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'in',
+        'name': 'inter_region-' + r1 + '-in',
+        'call_action':'rm-continent_filters-ipv4',
+        'exit_policy':'next',
+        'order': 10
+        })
+    route_maps2.append({
+        'match_policy': 'permit',
+        'peer': r1,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'in',
+        'name': 'inter_region-' + r1 + '-in',
+        'order': 20
+        })
+
+    #route map out
+    route_maps1.append({
+        'match_policy': 'permit',
+        'peer': r2,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'out',
+        'name': 'inter_region-' + r2 + '-out',
+        'order': 10
+        })
+    route_maps2.append({
+        'match_policy': 'permit',
+        'peer': r1,
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'direction': 'out',
+        'name': 'inter_region-' + r1 + '-out',
+        'order': 10
+        })
+    bgp_peering(topo, r1, r2)
 
 def ebgp_session(topo: 'IPTopo', a: 'RouterDescription', b: 'RouterDescription',
                  link_type: Optional[str] = None, region: Optional[int] = -1):
@@ -89,10 +420,7 @@ def ebgp_session(topo: 'IPTopo', a: 'RouterDescription', b: 'RouterDescription',
                       ebgp_session will create import and export
                       filter and set local pref based on the link type
     """
-    if region != -1:
-        all_al = AccessList('All', ('any',))
-        b.get_config(BGP)\
-            .set_community(region, from_peer=b, matching=(all_al,))
+
 
     if link_type:
         all_al = AccessList('All', ('any',))
@@ -133,6 +461,9 @@ def ebgp_session(topo: 'IPTopo', a: 'RouterDescription', b: 'RouterDescription',
             b.get_config(BGP)\
                 .set_community(2, from_peer=a, matching=(all_al,))\
                 .set_local_pref(200, from_peer=a, matching=(all_al,))
+            if region != -1:
+                b.get_config(BGP)\
+                .set_community(region, from_peer=a, matching=(all_al,))
 
             # Create route maps to filter exported route
             a.get_config(BGP)\
@@ -416,6 +747,10 @@ class BGP(QuaggaDaemon):
         route_maps = []  # type: List[RouteMap]
         if node_route_maps is not None:
             for kwargs in node_route_maps:
+                if('peer' not in kwargs):
+                    rm = RouteMap(**kwargs)
+                    route_maps.append(rm)
+                    continue
                 remote_peer = kwargs.pop('peer')
                 peers = []
                 for neighbor in neighbors:
@@ -493,6 +828,9 @@ class Peer:
     def __init__(self, base: 'Router', node: str, v6=False):
         """:param base: The base router that has this peer
         :param node: The actual peer"""
+        self.family = 'ipv4' if not v6 else 'ipv6'
+        if base == node:
+            return
         self.peer, other = self._find_peer_address(base, node, v6=v6)
         if not self.peer or not other:
             return

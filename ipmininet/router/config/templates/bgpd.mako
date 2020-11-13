@@ -18,6 +18,7 @@ router bgp ${node.bgpd.asn}
     neighbor ${n.peer} remote-as ${n.asn}
     neighbor ${n.peer} port ${n.port}
     neighbor ${n.peer} description ${n.description}
+    neighbor ${n.peer} send-community
     % if n.ebgp_multihop:
     neighbor ${n.peer} ebgp-multihop
     % endif
@@ -52,6 +53,7 @@ router bgp ${node.bgpd.asn}
     % endif
 % endfor
 
+
 % for al in node.bgpd.access_lists:
     % for e in al.entries:
 ip access-list ${al.name} ${e.action} ${e.prefix}
@@ -59,7 +61,7 @@ ip access-list ${al.name} ${e.action} ${e.prefix}
 % endfor
 
 % for cl in node.bgpd.community_lists:
-ip community-list standard ${cl.name} ${cl.action} ${cl.community}
+bgp community-list standard ${cl.name} ${cl.action} ${cl.community}
 % endfor
 
 % for rm in node.bgpd.route_maps:
@@ -75,9 +77,13 @@ route-map ${rm.name}-${rm.neighbor.family} ${rm.match_policy} ${rm.order}
         %endfor
         %for action in rm.set_actions:
             %if action.action_type == 'community' and isinstance(action.value, int):
-    set ${action.action_type} ${node.bgpd.asn}:${action.value}
+    set ${action.action_type} additive ${node.bgpd.asn}:${action.value} 
             %else:
+                %if action.action_type == 'community':
+    set ${action.action_type} additive ${action.value}
+                %else:
     set ${action.action_type} ${action.value}
+                %endif
             %endif
         %endfor
         %if rm.call_action:
