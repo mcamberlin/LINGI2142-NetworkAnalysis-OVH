@@ -8,7 +8,13 @@ from ipmininet.router.config import BGP, bgp_fullmesh, set_rr, ebgp_session, SHA
 from ipmininet.router.config.bgp import rm_setup, ebgp_Client, ebgp_Peer, ibgp_Inter_Region # for BGP communities 
 from ipmininet.router.config import IPTables, IP6Tables, Rule # for firewalls
 from ipmininet.router.config.bgp import bgp_anycast # for anycast configuration
-
+from ipmininet.router.config import STATIC, StaticRoute # for anycast
+from ipmininet.router.config import IPTables, IP6Tables, Rule, InputFilter, OutputFilter, TransitFilter, NOT, Deny, Allow # for firewalls
+"""     To access to the configuration of FRRouting, you have to use telnet to connect to
+FRRouting daemons.
+A different port is used to access to every routing daemon. This small table shows
+the port associated to its default daemon:
+"""
 class OVHTopology(IPTopo):
 
     def build(self, *args, **kwargs):
@@ -28,10 +34,6 @@ class OVHTopology(IPTopo):
         #OVH = \32
         #OVH+continent = \34
         #OVH+continent+type = \36
-
-        # --- Hosts ---
-
-        family = AF_INET6()
 
         # ===================== OVH Router configurations ==================
         # 16 routers identified by a single IPv4, IPv6 address
@@ -211,55 +213,36 @@ class OVHTopology(IPTopo):
 
         # --- Rules for inputTable --- 
 
-        ip_rules = [Rule("-P INPUT ACCEPT"),
-                    Rule("-A INPUT -s 198.27.92.0/2 -j ACCEPT")]
+        ip_rules = [InputFilter(default="DROP", rules=[
+            Allow(iif='lo'),
+            Allow(m='conntrack --ctstate RELATED,ESTABLISHED'),
+            Deny(m='conntrack --ctstate INVALID'),
+            Allow(p='icmp --icmp-type 0', m='conntrack --ctstate NEW'),
+            Allow(p='icmp --icmp-type 3', m='conntrack --ctstate NEW'),
+            Allow(p='icmp --icmp-type 8', m='conntrack --ctstate NEW'),
+            Allow(p='icmp --icmp-type 9', m='conntrack --ctstate NEW'),
+            Allow(p='icmp --icmp-type 10', m='conntrack --ctstate NEW'),
+            Allow(p='icmp --icmp-type 11', m='conntrack --ctstate NEW'),
+            Allow(src='1.3.1.0/24'),
+            Allow(src='1.4.2.0/24'),
+            Allow(src='1.5.3.0/24'),
+            Allow(src='1.6.4.0/24'),
+            Allow(src='198.27.92.0/24'),            
+            ]),
+            OutputFilter(default="ACCEPT", rules=[
+            Deny(m='state --state INVALID'),
+            ]),
+            TransitFilter(default="ACCEPT", rules=[
+            Deny(m='state --state INVALID'),
+            ])]
 
-        #  Rule("-P INPUT ACCEPT")
+        ip6_rules = [
+            Rule('-A INPUT -s f604:2dc0::/1 -j ACCEPT'),
+            Rule('-P INPUT ACCEPT')]
 
-        ip6_rules = [Rule("-A INPUT -j ACCEPT"),
-                    Rule("-A INPUT -s FFFF:2dc0::/1 -j ACCEPT"),
-                    # permit traffic on the loopback device, permit already established connections, drop invalid packets
-                    Rule("-A INPUT -i lo -j ACCEPT"),
-                    Rule("-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT"),
-                    Rule("-A INPUT -m conntrack --ctstate INVALID -j DROP"),
-                    # Chain to prevent SSH brute-force attacks
-                    # Rule("-N SSHBRUTE"),
-                    # Rule("-A SSHBRUTE -m recent --name SSH --set"),
-                    # Rule("-A SSHBRUTE -m recent --name SSH --update --seconds 300 --hitcount 10 -m limit --limit 1/second --limit-burst 100"),
-                    # Rule("-A SSHBRUTE -m recent --name SSH --update --seconds 300 --hitcount 10 -j DROP"),
-                    # Rule("-A SSHBRUTE -j ACCEPT"),
-                    # Chain to prevent ping flooding
-                    # Rule("-N ICMPFLOOD"),
-                    # Rule("-A ICMPFLOOD -m recent --set --name ICMP --rsource"),
-                    # Rule("-A ICMPFLOOD -m recent --update --seconds 1 --hitcount 6 --name ICMP --rsource --rttl -m limit --limit 1/sec --limit-burst 1"),
-                    # Rule("-A ICMPFLOOD -m recent --update --seconds 1 --hitcount 6 --name ICMP --rsource --rttl -j DROP"),
-                    # Rule("-A ICMPFLOOD -j ACCEPT"),
-                    #Rule("-A INPUT -p icmpv6 -m icmpv6 --icmpv6-type neighbour-advertisement -j DROP"),
-                    # Rule('-A INPUT -p icmpv6 -m icmpv6 --icmpv6-type neighbour-solicitation -j ACCEPT'),
-                    # Rule('-A INPUT -p icmpv6 -m icmpv6 --icmpv6-type neighbour-advertisement -j ACCEPT'),
-                    # Accept ssh access + use SSHBRUTE to prevent brute-force attacks
-                    # Rule("-A INPUT -p tcp --dport 22 --syn -m conntrack --ctstate NEW -j SSHBRUTE"),
-                    # Permit echo request (ping) + use ICMPFLOOD to prevent ping flooding
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 128 -j ICMPFLOOD"),
-                    
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 1   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 2   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 3   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 4   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 129   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 130   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 131   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 132   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 133   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 134   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 135   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 136   -j ACCEPT"),
-                    # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 137   -j ACCEPT"),
-                    Rule("-P INPUT ACCEPT")]
-
-        #for r in OVHRouters: 
-        #    r.addDaemon(IPTables, rules=ip_rules)
-        #    r.addDaemon(IP6Tables, rules=ip6_rules) 
+        for r in OVHRouters: 
+            r.addDaemon(IPTables, rules=ip_rules)
+            r.addDaemon(IP6Tables, rules=ip6_rules) 
 
         # ========================= OSPF configuration ==================
         #
@@ -282,9 +265,9 @@ class OVHTopology(IPTopo):
         anycast2.addDaemon(BGP,RouterConfig,address_families = ( AF_INET6( networks=("2604:2dc0::0/128",) ), AF_INET( networks=("192.27.92.255/32",))));  
         anycast3.addDaemon(BGP,RouterConfig,address_families = ( AF_INET6( networks=("2604:2dc0::0/128",) ), AF_INET( networks=("192.27.92.255/32",))));  
 
-        bgp_anycast(self,sin,anycast1);
-        bgp_anycast(self,ash1,anycast2);
-        bgp_anycast(self,lon_thw,anycast3);
+        bgp_anycast(self,sin,anycast1)
+        bgp_anycast(self,ash1,anycast2)
+        bgp_anycast(self,lon_thw,anycast3)
 
 
         # add bgp communities setup
