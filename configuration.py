@@ -52,24 +52,6 @@ class OVHTopology(IPTopo):
 
         family = AF_INET6();
 
-        lan_h1 = '1.1.0.0/24'
-        lan_h1_v6 = '2604:2dc0:2000::/36'
-
-        lan_h2 = '1.2.5.0/24'
-        lan_h2_v6 = '2604:2dc0:3000::/36'
-
-        lan_ggl = '1.3.1.0/24'
-        lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'
-
-        lan_cgt = '1.4.2.0/24'
-        lan_cgt_v6 = 'c1a4:4ad:c0ff:ee::/64'
-
-        lan_lvl3 = '1.5.3.0/24'
-        lan_lvl3_v6 = 'cafe:d0d0:e5:dead::/64'
-
-        lan_tel = '1.6.4.0/24'
-        lan_tel_v6 = 'aaaa:aaaa:aaaa:aaaa::/64'
-        
         # ===================== OVH Router configurations ==================
         # 16 routers identified by a single IPv4, IPv6 address
         # ==================================================================        
@@ -245,7 +227,7 @@ class OVHTopology(IPTopo):
         #  Rule("-P INPUT ACCEPT")
 
         ip6_rules = [Rule("-A INPUT -j ACCEPT"),
-                    Rule("-A INPUT -s 8604:2dc0::/1 -j ACCEPT"),
+                    Rule("-A INPUT -s FFFF:2dc0::/1 -j ACCEPT"),
                     # permit traffic on the loopback device, permit already established connections, drop invalid packets
                     Rule("-A INPUT -i lo -j ACCEPT"),
                     Rule("-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT"),
@@ -355,7 +337,7 @@ class OVHTopology(IPTopo):
         
         lan_ggl = '1.3.1.0/24'
         lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'            
-        ggl.addDaemon(BGP, address_families=(AF_INET(networks=(lan_ggl,)),AF_INET6(networks=(lan_ggl_v6,))), routerid="1.1.1.1", bgppassword="OVHpsswd");
+        ggl.addDaemon(BGP, address_families=(AF_INET(networks=(lan_ggl,)),AF_INET6(networks=(lan_ggl_v6,))), bgppassword="OVHpsswd");
         
         h_ggl = self.addHost("h_ggl");
         self.addSubnet(nodes = [ggl, h_ggl], subnets=(lan_ggl,lan_ggl_v6));
@@ -371,7 +353,7 @@ class OVHTopology(IPTopo):
         
         lan_cgt = '1.4.2.0/24'
         lan_cgt_v6 = 'c1a4:4ad:c0ff:ee::/64'
-        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),), routerid="1.1.1.2", bgppassword="OVHpsswd");
+        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),), bgppassword="OVHpsswd");
         
         h_cgt = self.addHost("h_cgt");
         self.addSubnet(nodes = [cgt, h_cgt], subnets=(lan_cgt,lan_cgt_v6));
@@ -391,7 +373,7 @@ class OVHTopology(IPTopo):
         
         lan_lvl3 = '1.5.3.0/24'
         lan_lvl3_v6 = 'cafe:d0d0:e5:dead::/64'
-        lvl3.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_lvl3_v6,)),AF_INET(networks=(lan_lvl3,)),), routerid="1.1.1.3", bgppassword="OVHpsswd");
+        lvl3.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_lvl3_v6,)),AF_INET(networks=(lan_lvl3,)),), bgppassword="OVHpsswd");
 
         h_lvl3 = self.addHost("h_lvl3");
         self.addSubnet(nodes = [lvl3, h_lvl3], subnets=(lan_lvl3,lan_lvl3_v6));
@@ -411,29 +393,12 @@ class OVHTopology(IPTopo):
         
         lan_tel = '1.6.4.0/24'
         lan_tel_v6 = 'aaaa:aaaa:aaaa:aaaa::/64'        
-        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,)),AF_INET(networks=(lan_tel,)),), routerid="1.1.1.4", bgppassword="OVHpsswd");
+        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,)),AF_INET(networks=(lan_tel,)),), bgppassword="OVHpsswd");
         
         h_tel = self.addHost("h_tel");
         self.addSubnet(nodes = [tel, h_tel], subnets=(lan_tel,lan_tel_v6));
         self.addLink(h_tel,tel,igp_metric=1);
 
-        # --- Configure the router reflectors ---
-        set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash5]);       
-        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5,bhs1,ash5]);
-        set_rr(self, rr= ash5, peers=[nyc,nwk5,lax1,bhs1,bhs2,chi5]);
-
-        set_rr(self, rr= ash1, peers=[nwk1,lax1,sjo,bhs1,bhs2,chi1,ash5,lon_thw,sin]);      # This one is a super RR
-        set_rr(self, rr = lon_thw, peers=[lon_drch,sin,ash1]);                              # This one is a super RR
-        set_rr(self, rr = sin, peers=[syd,ash1,lon_thw]);                                   # This one is a super RR
-
-        # --- Hosts --- (one host for each provider considered)
-        h1 = self.addHost("h1");
-        self.addSubnet(nodes = [chi1, h1], subnets=(lan_h1,lan_h1_v6));
-        self.addLink(h1,chi1,igp_metric=1);
-
-        h2 = self.addHost("h2");
-        self.addSubnet(nodes = [nyc, h2], subnets=(lan_h2,lan_h2_v6));
-        self.addLink(h2,nyc,igp_metric=1);
         ebgp_Peer(self,nwk1, tel,'NA');
         ebgp_Peer(self,nwk5, tel,'NA');
         ebgp_Peer(self,ash5, tel,'NA');
