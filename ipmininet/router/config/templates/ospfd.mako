@@ -1,7 +1,5 @@
 hostname ${node.name}
 password ${node.password}
-# ospfKeyID ${node.ospfd.KEYID}
-# ospfKey ${node.ospfd.KEY}
 
 % if node.ospfd.logfile:
 log file ${node.ospfd.logfile}

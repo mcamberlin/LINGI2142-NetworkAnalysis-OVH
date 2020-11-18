@@ -7,6 +7,7 @@ from ipmininet.router.config import OSPF, OSPF6 # for OSPF configuration
 from ipmininet.router.config import BGP, bgp_fullmesh, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER, bgp_peering # for BGP configuration
 from ipmininet.router.config.bgp import rm_setup, ebgp_Client, ebgp_Peer, ibgp_Inter_Region # for BGP communities 
 from ipmininet.router.config import STATIC, StaticRoute # for anycast
+from ipmininet.router.config import IPTables, IP6Tables, Rule # for firewalls
 """     To access to the configuration of FRRouting, you have to use telnet to connect to
 FRRouting daemons.
 A different port is used to access to every routing daemon. This small table shows
@@ -46,7 +47,28 @@ class OVHTopology(IPTopo):
         #OVH = \32
         #OVH+continent = \34
         #OVH+continent+type = \36
-        
+
+        # --- Hosts ---
+
+        family = AF_INET6();
+
+        lan_h1 = '1.1.0.0/24'
+        lan_h1_v6 = '2604:2dc0:2000::/36'
+
+        lan_h2 = '1.2.5.0/24'
+        lan_h2_v6 = '2604:2dc0:3000::/36'
+
+        lan_ggl = '1.3.1.0/24'
+        lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'
+
+        lan_cgt = '1.4.2.0/24'
+        lan_cgt_v6 = 'c1a4:4ad:c0ff:ee::/64'
+
+        lan_lvl3 = '1.5.3.0/24'
+        lan_lvl3_v6 = 'cafe:d0d0:e5:dead::/64'
+
+        lan_tel = '1.6.4.0/24'
+        lan_tel_v6 = 'aaaa:aaaa:aaaa:aaaa::/64'
         
         # ===================== OVH Router configurations ==================
         # 16 routers identified by a single IPv4, IPv6 address
@@ -218,7 +240,7 @@ class OVHTopology(IPTopo):
 
 
         # --- OSPF and OSPF6 configuration as IGP ---
-
+        '''
         sin.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
         syd.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
         pao.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
@@ -252,7 +274,7 @@ class OVHTopology(IPTopo):
         nyc.addDaemon(OSPF6);
         lon_thw.addDaemon(OSPF6);
         lon_drch.addDaemon(OSPF6);
-
+        '''
 
         # --- Rules for inputTable --- 
 
@@ -261,7 +283,7 @@ class OVHTopology(IPTopo):
 
         #  Rule("-P INPUT ACCEPT")
 
-        ip6_rules = [
+        ip6_rules = [Rule("-A INPUT -j ACCEPT"),
                     Rule("-A INPUT -s 8604:2dc0::/1 -j ACCEPT"),
                     # permit traffic on the loopback device, permit already established connections, drop invalid packets
                     Rule("-A INPUT -i lo -j ACCEPT"),
@@ -302,7 +324,7 @@ class OVHTopology(IPTopo):
                     # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 137   -j ACCEPT"),
 
                     Rule("-P INPUT ACCEPT")]
-
+        '''
         sin.addDaemon(IPTables, rules=ip_rules);
         sin.addDaemon(IP6Tables, rules=ip6_rules);
         syd.addDaemon(IPTables, rules=ip_rules);
@@ -335,27 +357,29 @@ class OVHTopology(IPTopo):
         lon_thw.addDaemon(IP6Tables, rules=ip6_rules);
         lon_drch.addDaemon(IPTables, rules=ip_rules);
         lon_drch.addDaemon(IP6Tables, rules=ip6_rules);
+        '''
+        for r in OVHRouters: 
+            r.addDaemon(IPTables, rules=ip_rules);
+            r.addDaemon(IP6Tables, rules=ip6_rules); 
 
         
         # --- Create Ases : AS=1 for OVH   ---
-        self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
-
+        # self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
+        '''
         # --- Stub provider : google (AS2)  ---
         ggl = self.addRouter("ggl", config=RouterConfig);
         
         self.addLink(ggl,ash1,igp_metric=1);
         self.addLink(ggl,ash5,igp_metric=1);
-        
-        ggl.addDaemon(OSPF);
-        ggl.addDaemon(OSPF6);
+
         ggl.addDaemon(BGP, address_families=(AF_INET(networks=(lan_ggl,)),AF_INET6(networks=(lan_ggl_v6,))) , routerid="1.1.1.1", bgppassword="OVHpsswd");
-        
+        '''
         # ========================= OSPF configuration ==================
         #
         # ===============================================================
         # --- Add a OSPF daemon on each router of OVH
-        for r in OVHRouters:
-            r.addDaemon(OSPF);
+        for r in OVHRouters: 
+            r.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
             r.addDaemon(OSPF6);        
         
         # ========================= BGP configuration ==================
@@ -364,7 +388,7 @@ class OVHTopology(IPTopo):
         # ==============================================================
         # --- Add a BGP daemon on each router ---
         for i in range(len(OVHRouters)):
-            OVHRouters[i].addDaemon(BGP,debug = ("neighbor",),address_families=(AF_INET(networks=(OVHSubsnets4[i],)),AF_INET6(networks=(OVHSubsnets6[i],))));
+            OVHRouters[i].addDaemon(BGP,debug = ("neighbor",),address_families=(AF_INET(networks=(OVHSubsnets4[i],)),AF_INET6(networks=(OVHSubsnets6[i],))), bgppassword="OVHpsswd");
             
         # add bgp communities setup
         for r in NARouters:
@@ -417,7 +441,7 @@ class OVHTopology(IPTopo):
         
         lan_ggl = '1.3.1.0/24'
         lan_ggl_v6 = 'cafe:babe:dead:beaf::/64'            
-        ggl.addDaemon(BGP, address_families=(AF_INET(networks=(lan_ggl,)),AF_INET6(networks=(lan_ggl_v6,))));
+        ggl.addDaemon(BGP, address_families=(AF_INET(networks=(lan_ggl,)),AF_INET6(networks=(lan_ggl_v6,))), routerid="1.1.1.1", bgppassword="OVHpsswd");
         
         h_ggl = self.addHost("h_ggl");
         self.addSubnet(nodes = [ggl, h_ggl], subnets=(lan_ggl,lan_ggl_v6));
@@ -426,29 +450,24 @@ class OVHTopology(IPTopo):
         ebgp_Client(self,ash5,ggl,'NA')
         ebgp_Client(self,ash1,ggl,'NA')
 
-        # ebgp_session(self, ggl, ash1, link_type=CLIENT_PROVIDER);
-        # ebgp_session(self, ggl, ash5, link_type=CLIENT_PROVIDER);
-        
         # --- Cogent (AS=3) 
         cgt = self.addRouter("cgt", config=RouterConfig);
-        
+        '''
         self.addLink(cgt,nwk1,igp_metric=1);
         self.addLink(cgt,nwk5,igp_metric=1);
         self.addLink(cgt,ash1,igp_metric=1);
         self.addLink(cgt,ash5,igp_metric=1);
         self.addLink(cgt,chi1,igp_metric=1);
         self.addLink(cgt,sjo,igp_metric=1);
-        
-        cgt.addDaemon(OSPF);
-        cgt.addDaemon(OSPF6);
-        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),), routerid="1.1.1.2", bgppassword="OVHpsswd");
+        '''
+        # cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),), routerid="1.1.1.2", bgppassword="OVHpsswd");
         
         self.addLinks( (cgt,nwk1), (cgt,nwk5), (cgt,ash1), (cgt,ash5), (cgt,chi1), (cgt,sjo) );
         self.addAS(3,(cgt , ));
         
         lan_cgt = '1.4.2.0/24'
         lan_cgt_v6 = 'c1a4:4ad:c0ff:ee::/64'
-        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),));
+        cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),), routerid="1.1.1.2", bgppassword="OVHpsswd");
         
         h_cgt = self.addHost("h_cgt");
         self.addSubnet(nodes = [cgt, h_cgt], subnets=(lan_cgt,lan_cgt_v6));
@@ -461,21 +480,11 @@ class OVHTopology(IPTopo):
         ebgp_Peer(self,chi1, cgt,'NA');
         ebgp_Peer(self,sjo, cgt,'NA');
 
-
-        # ebgp_session(self, cgt, nwk1, link_type=SHARE);
-        # ebgp_session(self, cgt, nwk5, link_type=SHARE);
-        # ebgp_session(self, cgt, ash1, link_type=SHARE);
-        # ebgp_session(self, cgt, ash5, link_type=SHARE);
-        # ebgp_session(self, cgt, chi1, link_type=SHARE);
-        # ebgp_session(self, cgt, sjo, link_type=SHARE);
-        
         # --- Level 3 (AS=4) 
         lvl3 = self.addRouter("lvl3", config=RouterConfig);
         self.addLinks( (lvl3,nwk1), (lvl3,nwk5), (lvl3,chi1), (lvl3,chi5), (lvl3,sjo) );
         self.addAS(4,(lvl3, ));
         
-        lvl3.addDaemon(OSPF);
-        lvl3.addDaemon(OSPF6);
         lan_lvl3 = '1.5.3.0/24'
         lan_lvl3_v6 = 'cafe:d0d0:e5:dead::/64'
         lvl3.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_lvl3_v6,)),AF_INET(networks=(lan_lvl3,)),), routerid="1.1.1.3", bgppassword="OVHpsswd");
@@ -490,37 +499,21 @@ class OVHTopology(IPTopo):
         ebgp_Peer(self,chi5, lvl3,'NA');
         ebgp_Peer(self,sjo, lvl3,'NA');
         
-        # ebgp_session(self, lvl3, nwk1, link_type=SHARE);
-        # ebgp_session(self, lvl3, nwk5, link_type=SHARE);
-        # ebgp_session(self, lvl3, chi1, link_type=SHARE);
-        # ebgp_session(self, lvl3, chi5, link_type=SHARE);
-        # ebgp_session(self, lvl3, sjo, link_type=SHARE);
-        
         # --- Telia (AS=5) 
         tel = self.addRouter("tel", config=RouterConfig);
-        
-        self.addLink(tel,nwk1,igp_metric=1);
-        self.addLink(tel,nwk5,igp_metric=1);
-        self.addLink(tel,ash5,igp_metric=1);
-        self.addLink(tel,chi5,igp_metric=1);
-        self.addLink(tel,pao,igp_metric=1);
-        
-        tel.addDaemon(OSPF);
-        tel.addDaemon(OSPF6);
-        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,)),AF_INET(networks=(lan_tel,)),), routerid="1.1.1.4", bgppassword="OVHpsswd");
         
         self.addLinks( (tel,nwk1), (tel,nwk5), (tel,ash5), (tel,chi5), (tel,pao) );
         self.addAS(5,(tel, ));
         
         lan_tel = '1.6.4.0/24'
         lan_tel_v6 = 'aaaa:aaaa:aaaa:aaaa::/64'        
-        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,)),AF_INET(networks=(lan_tel,)),));
+        tel.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_tel_v6,)),AF_INET(networks=(lan_tel,)),), routerid="1.1.1.4", bgppassword="OVHpsswd");
         
         h_tel = self.addHost("h_tel");
         self.addSubnet(nodes = [tel, h_tel], subnets=(lan_tel,lan_tel_v6));
         self.addLink(h_tel,tel,igp_metric=1);
 
-
+        '''
         sin.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.5", bgppassword="OVHpsswd");
         syd.addDaemon(BGP, bgppassword="OVHpsswd");
         
@@ -545,6 +538,7 @@ class OVHTopology(IPTopo):
         
         lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2,)),), routerid="1.1.1.10", bgppassword="OVHpsswd");
         lon_drch.addDaemon(BGP, bgppassword="OVHpsswd")
+        '''
 
         # --- Configure the router reflectors ---
         set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash5]);       
