@@ -47,8 +47,10 @@ class OSPF(QuaggaDaemon):
     DEPENDS = (Zebra,)
     KILL_PATTERNS = (NAME,)
 
-    def __init__(self, node, *args, **kwargs):
+    def __init__(self, node, KEYID=None, KEY=None, *args, **kwargs):
         super().__init__(node=node, *args, **kwargs)
+        self.KEYID = KEYID
+        self.KEY = KEY
 
     def build(self):
         cfg = super().build()
@@ -56,6 +58,8 @@ class OSPF(QuaggaDaemon):
         interfaces = self._node.intfList()
         cfg.interfaces = self._build_interfaces(interfaces)
         cfg.networks = self._build_networks(interfaces)
+        cfg.KEYID = self.KEYID
+        cfg.KEY = self.KEY
         return cfg
 
     @staticmethod
