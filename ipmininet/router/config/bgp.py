@@ -354,10 +354,12 @@ class BGP(QuaggaDaemon):
         """We add the port to the standard startup line"""
         return '-p %s' % self.port
 
-    def __init__(self, node, port=BGP_DEFAULT_PORT,
+    def __init__(self, node, port=BGP_DEFAULT_PORT, bgppassword=None, bgpMaxPrefixNumber=100,
                  *args, **kwargs):
         super().__init__(node=node, *args, **kwargs)
         self.port = port
+        self.bgppassword = bgppassword
+        self.bgpMaxPrefixNumber = bgpMaxPrefixNumber
 
     def build(self):
         cfg = super().build()
@@ -369,6 +371,8 @@ class BGP(QuaggaDaemon):
         cfg.community_lists = self.build_community_list()
         cfg.route_maps = self.build_route_map(cfg.neighbors)
         cfg.rr = self._node.get('bgp_rr_info')
+        cfg.bgppassword = self.bgppassword
+        cfg.bgpMaxPrefixNumber = self.bgpMaxPrefixNumber
 
         return cfg
 

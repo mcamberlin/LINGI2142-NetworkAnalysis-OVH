@@ -19,4 +19,4 @@ except ImportError as e:
 # Define global constants
 MIN_IGP_METRIC = 1
 OSPF_DEFAULT_AREA = '0.0.0.0'
-DEBUG_FLAG = False
+DEBUG_FLAG = True
