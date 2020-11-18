@@ -129,11 +129,42 @@ class OVHTopology(IPTopo):
         # ====== Host configuration ========================================
         #  
         # ==================================================================
-        h1 = self.addHost("h1")
-        self.addLink(h1,chi1)
+        hpao = self.addHost("hpao")
+        self.addLink(hpao,pao)
 
-        h2 = self.addHost("h2")
-        self.addLink(h2,nyc) 
+        hsjo = self.addHost("hsjo")
+        self.addLink(hsjo,sjo)  
+
+        hlax1 = self.addHost("hlax1")
+        self.addLink(hlax1,lax1)
+
+        hchi1 = self.addHost("hchi1")
+        self.addLink(hchi1,chi1)
+
+        hchi5 = self.addHost("hchi5")
+        self.addLink(hchi5,chi5)
+
+        hbhs1 = self.addHost("hbhs1")
+        self.addLink(hbhs1,bhs1)  
+
+        hbhs2 = self.addHost("hbhs2")
+        self.addLink(hbhs2,bhs2)  
+
+        hash1 = self.addHost("hash1")
+        self.addLink(hash1,ash1)
+
+        hash5 = self.addHost("hash5")
+        self.addLink(hash5,ash5)  
+
+        hnwk1 = self.addHost("hnwk1")
+        self.addLink(hnwk1,nwk1)
+
+        hnwk5 = self.addHost("hnwk5")
+        self.addLink(hnwk5,nwk5)  
+
+        hnyc = self.addHost("hnyc")
+        self.addLink(hnyc,nyc)
+      
 
         hEU = self.addHost("hEU")
         self.addLink(hEU,lon_thw,igp_metric=1)
@@ -144,22 +175,22 @@ class OVHTopology(IPTopo):
         self.addSubnet(nodes = [sin,hAPAC], subnets = [subnetSin6, subnetSin])
         self.addSubnet(nodes = [syd], subnets = [subnetSyd6,subnetSyd])
     
-        self.addSubnet(nodes = [pao], subnets = [subnetPao6,subnetPao])
-        self.addSubnet(nodes = [sjo], subnets = [subnetSjo6,subnetSjo])
-        self.addSubnet(nodes = [lax1], subnets = [subnetLax16,subnetLax1])
+        self.addSubnet(nodes = [pao,hpao], subnets = [subnetPao6,subnetPao])
+        self.addSubnet(nodes = [sjo,hsjo], subnets = [subnetSjo6,subnetSjo])
+        self.addSubnet(nodes = [lax1,hlax1], subnets = [subnetLax16,subnetLax1])
         
-        self.addSubnet(nodes = [chi1,h1], subnets = [subnetChi16,subnetChi1])
-        self.addSubnet(nodes = [chi5], subnets = [subnetChi56,subnetChi5])
+        self.addSubnet(nodes = [chi1,hchi1], subnets = [subnetChi16,subnetChi1])
+        self.addSubnet(nodes = [chi5,hchi5], subnets = [subnetChi56,subnetChi5])
         
-        self.addSubnet(nodes = [bhs1], subnets = [subnetBhs16,subnetBhs1])
-        self.addSubnet(nodes = [bhs2], subnets = [subnetBhs26,subnetBhs2])
+        self.addSubnet(nodes = [bhs1,hbhs1], subnets = [subnetBhs16,subnetBhs1])
+        self.addSubnet(nodes = [bhs2,hbhs2], subnets = [subnetBhs26,subnetBhs2])
         
-        self.addSubnet(nodes = [ash1], subnets = [subnetAsh16,subnetAsh1])
-        self.addSubnet(nodes = [ash5], subnets = [subnetAsh56,subnetAsh5])
+        self.addSubnet(nodes = [ash1,hash1], subnets = [subnetAsh16,subnetAsh1])
+        self.addSubnet(nodes = [ash5,hash5], subnets = [subnetAsh56,subnetAsh5])
 
-        self.addSubnet(nodes = [nwk1], subnets = [subnetNwk16,subnetNwk1])
-        self.addSubnet(nodes = [nwk5], subnets = [subnetNwk56,subnetNwk5])
-        self.addSubnet(nodes = [nyc,h2], subnets = [subnetNyc6,subnetNyc])
+        self.addSubnet(nodes = [nwk1,hnwk1], subnets = [subnetNwk16,subnetNwk1])
+        self.addSubnet(nodes = [nwk5,hnwk5], subnets = [subnetNwk56,subnetNwk5])
+        self.addSubnet(nodes = [nyc,hnyc], subnets = [subnetNyc6,subnetNyc])
         
         self.addSubnet(nodes = [lon_thw,hEU], subnets = [subnetLon_thw6,subnetLon_thw])
         self.addSubnet(nodes = [lon_drch], subnets = [subnetLon_drch6,subnetLon_drch])
@@ -284,17 +315,17 @@ class OVHTopology(IPTopo):
         
         # --- Configure the router reflectors ---
         set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc])
-        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi5])
-        set_rr(self, rr= ash5, peers=[nyc,chi5,nwk5,lax1])
+        set_rr(self, rr= bhs2, peers=[nwk5,pao,sjo,chi1,chi5,lax1])
+        set_rr(self, rr= ash5, peers=[nyc,chi5,nwk5,lax1,sjo,nwk1])
 
         bgp_peering(self, bhs1, bhs2)
         bgp_peering(self, bhs1, ash5)
         bgp_peering(self, bhs2, ash5)
 
         #       higher hierarchy route reflectors 
-        set_rr(self, rr = sin, peers=[syd,anycast1])                           # This one is a super RR
-        set_rr(self, rr= ash1, peers=[bhs1,bhs2,ash5,chi1,sjo,lax1,nwk1,anycast2])      # This one is a super RR
-        set_rr(self, rr = lon_thw, peers=[lon_drch,anycast3])                           # This one is a super RR
+        set_rr(self, rr= ash1, peers=[bhs1,bhs2,ash5,anycast1])      # This one is a super RR
+        set_rr(self, rr = lon_thw, peers=[lon_drch,anycast2])                           # This one is a super RR
+        set_rr(self, rr = sin, peers=[syd,anycast3])                                    # This one is a super RR
 
         ibgp_Inter_Region(self, ash1, lon_thw)
         ibgp_Inter_Region(self, ash1, sin)

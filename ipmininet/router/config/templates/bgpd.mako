@@ -28,7 +28,7 @@ router bgp ${node.bgpd.asn}
         neighbor ${n.peer} description ${n.description}
         neighbor ${n.peer} password ${node.bgpd.bgppassword}  
         neighbor ${n.peer} maximum-prefix ${node.bgpd.bgpMaxPrefixNumber}
-        neighbor ${n.peer} ttl-security hops 2
+        neighbor ${n.peer} ttl-security hops 5
         neighbor ${n.peer} send-community
         % if n.ebgp_multihop:
         neighbor ${n.peer} ebgp-multihop
@@ -104,7 +104,7 @@ route-map ${rm.name}-${rm.neighbor.family} ${rm.match_policy} ${rm.order}
     %if rm.exit_policy:
     on-match ${rm.exit_policy}
     %endif
-    
+
 % endfor
 <%block name="router"/>
 !
