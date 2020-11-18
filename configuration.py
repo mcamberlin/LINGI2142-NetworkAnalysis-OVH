@@ -6,28 +6,9 @@ from ipmininet.router.config import RouterConfig,AF_INET, AF_INET6 #for router c
 from ipmininet.router.config import OSPF, OSPF6 # for OSPF configuration
 from ipmininet.router.config import BGP, bgp_fullmesh, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER, bgp_peering # for BGP configuration
 from ipmininet.router.config.bgp import rm_setup, ebgp_Client, ebgp_Peer, ibgp_Inter_Region # for BGP communities 
-from ipmininet.router.config import STATIC, StaticRoute # for anycast
 from ipmininet.router.config import IPTables, IP6Tables, Rule # for firewalls
-"""     To access to the configuration of FRRouting, you have to use telnet to connect to
-FRRouting daemons.
-A different port is used to access to every routing daemon. This small table shows
-the port associated to its default daemon:
+from ipmininet.router.config.bgp import bgp_anycast # for anycast configuration
 
-PORT     STATE SERVICE
-2601/tcp open  zebra   --> controls the RIB of each daemon
-        
-        show ip route
-        show ipv6 route
-        show ip bgp
-        
-2605/tcp open  bgpd    --> show information related to the configuration of BGP
-2606/tcp open  ospf6d  --> same but for OSPFv3 (OSPF for IPv6)
-    
-        show ip ospf route 
-
-mininet> router ping -R ipaddress
-mininet> router traceroute -w 10 -z 100 -I ipaddress
-"""   
 class OVHTopology(IPTopo):
 
     def build(self, *args, **kwargs):
@@ -79,7 +60,12 @@ class OVHTopology(IPTopo):
         lon_thw = self.addRouter("lon_thw", config=RouterConfig,lo_addresses=["2604:2dc0:8000::0/36","198.27.92.14/24"])
         lon_drch = self.addRouter("lon_drch", config=RouterConfig,lo_addresses=["2604:2dc0:8000::1/36","198.27.92.15/24"])
         
-        OVHRouters = [sin, syd, pao, sjo, lax1, chi1, chi5, bhs1, bhs2, ash1, ash5, nwk1, nwk5, nyc, lon_thw, lon_drch]
+        anycast1 = self.addRouter("anycast1",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] );   
+        anycast2 = self.addRouter("anycast2",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] );   
+        anycast3 = self.addRouter("anycast3",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] );   
+        anycastServers = [anycast1,anycast2,anycast3];
+
+        OVHRouters = [sin, syd, pao, sjo, lax1, chi1, chi5, bhs1, bhs2, ash1, ash5, nwk1, nwk5, nyc, lon_thw, lon_drch,anycast1,anycast2,anycast3]
         NARouters = [pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc]
         APACRouters = [sin,syd]
         EURouters = [lon_thw,lon_drch]
@@ -219,6 +205,10 @@ class OVHTopology(IPTopo):
         self.addLink(nwk1,lon_thw,igp_metric=extra_large)
         self.addLink(nwk5,lon_drch,igp_metric=extra_large)
 
+        self.addLink(anycast1,sin);     
+        self.addLink(anycast2,ash1);     
+        self.addLink(anycast3,lon_thw);   
+
         # --- Rules for inputTable --- 
 
         ip_rules = [Rule("-P INPUT ACCEPT"),
@@ -276,17 +266,27 @@ class OVHTopology(IPTopo):
         # ===============================================================
         # --- Add a OSPF daemon on each router of OVH
         for r in OVHRouters: 
-            r.addDaemon(OSPF, KEYID=1, KEY="OVHKEY")
-            r.addDaemon(OSPF6)      
+            if(r not in anycastServers):
+                r.addDaemon(OSPF, KEYID=1, KEY="OVHKEY")
+                r.addDaemon(OSPF6)      
         
         # ========================= BGP configuration ==================
         #   - 3 route reflectors at level 1 (highest in hierarchy)
         #   - 3 route reflectors at level 0 
         # ==============================================================
         # --- Add a BGP daemon on each router ---
-        for i in range(len(OVHRouters)):
+        for i in range(len(OVHRouters)-len(anycastServers)):
             OVHRouters[i].addDaemon(BGP,debug = ("neighbor",),address_families=(AF_INET(networks=(OVHSubsnets4[i],)),AF_INET6(networks=(OVHSubsnets6[i],))), bgppassword="OVHpsswd")
-            
+        
+        anycast1.addDaemon(BGP,RouterConfig,address_families = ( AF_INET6( networks=("2604:2dc0::0/128",) ), AF_INET( networks=("192.27.92.255/32",))));  
+        anycast2.addDaemon(BGP,RouterConfig,address_families = ( AF_INET6( networks=("2604:2dc0::0/128",) ), AF_INET( networks=("192.27.92.255/32",))));  
+        anycast3.addDaemon(BGP,RouterConfig,address_families = ( AF_INET6( networks=("2604:2dc0::0/128",) ), AF_INET( networks=("192.27.92.255/32",))));  
+
+        bgp_anycast(self,sin,anycast1);
+        bgp_anycast(self,ash1,anycast2);
+        bgp_anycast(self,lon_thw,anycast3);
+
+
         # add bgp communities setup
         for r in NARouters:
             rm_setup(self,r,'NA')
@@ -307,20 +307,16 @@ class OVHTopology(IPTopo):
         bgp_peering(self, bhs1, bhs2)
         bgp_peering(self, bhs1, ash5)
         bgp_peering(self, bhs2, ash5)
-        #routeReflectorsLevel0 = [bhs1, bhs2, ash5]          # !!! Ajout fait par Merlin - 08-11-20 !!!
-        #bgp_fullmesh(self, routeReflectorsLevel0)           # !!! Ajout fait par Merlin - 08-11-20 !!!
 
         #       higher hierarchy route reflectors 
-        set_rr(self, rr= ash1, peers=[bhs1,bhs2,ash5,chi1,sjo,lax1,nwk1])      # This one is a super RR
-        set_rr(self, rr = lon_thw, peers=[lon_drch])                           # This one is a super RR
-        set_rr(self, rr = sin, peers=[syd])                                    # This one is a super RR
+        set_rr(self, rr = sin, peers=[syd,anycast1])                           # This one is a super RR
+        set_rr(self, rr= ash1, peers=[bhs1,bhs2,ash5,chi1,sjo,lax1,nwk1,anycast2])      # This one is a super RR
+        set_rr(self, rr = lon_thw, peers=[lon_drch,anycast3])                           # This one is a super RR
 
         ibgp_Inter_Region(self, ash1, lon_thw)
         ibgp_Inter_Region(self, ash1, sin)
         ibgp_Inter_Region(self, sin, lon_thw)
-        #routeReflectorsLevel1 = [sin, ash1, lon_thw]                                       # !!! Ajout fait par Merlin - 08-11-20 !!!
-        #bgp_fullmesh(self,routeReflectorsLevel1)                                           # !!! Ajout fait par Merlin - 08-11-20 !!!
-        
+
         
         # ====== Router configurations of transit/stub providers ===========
         # - 1 stub provider : Google (ggl)
@@ -448,31 +444,6 @@ class OVHTopology(IPTopo):
         lvl3.get_config(BGP).set_community(community='blackhole',to_peer=chi5)
         lvl3.get_config(BGP).set_community(community='blackhole',to_peer=sjo)
             
-        # ========================= Anycast ==============================
-        # 3 servers for anycast
-        # define two addresses for each router: 
-        #   - one loopback address : depend on the router connected
-        #   - the anycast address : 192.27.32.255/32 or 2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128
-       
-        # For each anycast server:
-        #  
-        #   - 1. create the router and gives a loopback address and the anycast address for both IPv4 and IPv6 
-        #   - 2. add a static route with the router attached 
-        #   - 3. add the anycast server as a peer for the Route Reflector attached
-        # ================================================================
-        """
-        anycast1 = self.addRouter("anycast1",config = RouterConfig, lo_addresses = ["2604:2dc0:4000::1/128","2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128","198.27.92.16/32","192.27.32.16/32"] ) 
-        self.addLink(anycast1,sin,igp_metric=1) #connected to sin
-        
-        anycast1.addDaemon(STATIC, static_routes = [StaticRoute("::/0","2604:2dc0:4000::0"), StaticRoute("0.0.0.0/0", "198.27.92.176/32")]) 
-        # ip addresses of sin are:  "2604:2dc0:4000::0/36","198.27.92.176/32" 
-        
-        anycast2 = self.addRouter("anycast2",lo_addresses = ["2604:2dc0:0004::1/128","2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128","198.27.92.17/32","192.27.32.255/32"] ) 
-        self.addLink(anycast2,chi5,igp_metric=1) #connected to chi5
-        
-        anycast3 = self.addRouter("anycast3",lo_addresses = ["2604:2dc0:0006::1/128","2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128","198.27.92.18/32","192.27.32.255/32"] ) 
-        self.addLink(anycast3,bhs2,igp_metric=1) #connected to bhs2
-        """
 
 
         super().build(*args, **kwargs)
