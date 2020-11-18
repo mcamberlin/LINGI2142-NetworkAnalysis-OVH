@@ -213,7 +213,7 @@ class OVHTopology(IPTopo):
         self.addLink(ash5,chi5,igp_metric=large)
 
         self.addLink(nwk1,nwk5,igp_metric=small)
-        link_42 = self.addLink(nwk1,nyc,igp_metric=small)
+        self.addLink(nwk1,nyc,igp_metric=small)
         self.addLink(nwk5,nyc,igp_metric=small)
 
         self.addLink(nwk1,lon_thw,igp_metric=extra_large)
@@ -442,11 +442,11 @@ class OVHTopology(IPTopo):
         cgt.get_config(BGP).set_community(community= '16276:95',to_peer= sjo)    
 
         # routes from lvl3 should be blackholed
-        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=nwk1)
-        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=nwk5)
-        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=chi1)
-        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=chi5)
-        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=sjo)
+        lvl3.get_config(BGP).set_community(community='blackhole',to_peer=nwk1)
+        lvl3.get_config(BGP).set_community(community='blackhole',to_peer=nwk5)
+        lvl3.get_config(BGP).set_community(community='blackhole',to_peer=chi1)
+        lvl3.get_config(BGP).set_community(community='blackhole',to_peer=chi5)
+        lvl3.get_config(BGP).set_community(community='blackhole',to_peer=sjo)
             
         # ========================= Anycast ==============================
         # 3 servers for anycast

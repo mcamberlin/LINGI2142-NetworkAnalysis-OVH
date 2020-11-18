@@ -3,72 +3,80 @@ password ${node.password}
 # bgppassword ${node.bgpd.bgppassword}
 
 % if node.bgpd.logfile:
-log file ${node.bgpd.logfile}
+    log file ${node.bgpd.logfile}
 % endif
 
 % for section in node.bgpd.debug:
-debug bgp ${section}
+    debug bgp ${section}
 % endfor
 
 router bgp ${node.bgpd.asn}
     bgp router-id ${node.bgpd.routerid}
     bgp bestpath compare-routerid
     no bgp default ipv4-unicast
-% for n in node.bgpd.neighbors:
-    no auto-summary
-    neighbor ${n.peer} remote-as ${n.asn}
-    neighbor ${n.peer} port ${n.port}
-    neighbor ${n.peer} description ${n.description}
-    neighbor ${n.peer} password ${node.bgpd.bgppassword}  
-    neighbor ${n.peer} maximum-prefix ${node.bgpd.bgpMaxPrefixNumber}
-    neighbor ${n.peer} ttl-security hops 2
-    neighbor ${n.peer} send-community
-    % if n.ebgp_multihop:
-    neighbor ${n.peer} ebgp-multihop
-    % endif
+    
+    %for n in node.bgpd.neighbors:
+        % if node.name == "anycast1" or  node.name == "anycast2" or node.name == "anycast3":
+            neighbor ${n.peer} default-originate
+        %endif
+    %endfor
+
+    % for n in node.bgpd.neighbors:
+        no auto-summary
+        neighbor ${n.peer} remote-as ${n.asn}
+        neighbor ${n.peer} port ${n.port}
+        neighbor ${n.peer} description ${n.description}
+        neighbor ${n.peer} password ${node.bgpd.bgppassword}  
+        neighbor ${n.peer} maximum-prefix ${node.bgpd.bgpMaxPrefixNumber}
+        neighbor ${n.peer} ttl-security hops 2
+        neighbor ${n.peer} send-community
+        % if n.ebgp_multihop:
+        neighbor ${n.peer} ebgp-multihop
+        %endif
     <%block name="neighbor"/>
-% endfor
-% for af in node.bgpd.address_families:
-    address-family ${af.name}
-    % for rm in node.bgpd.route_maps:
-        % if rm.neighbor.family == af.name and rm.order == 10:
-    neighbor ${rm.neighbor.peer} route-map ${rm.name}-${af.name} ${rm.direction}
+    % endfor
+
+    % for af in node.bgpd.address_families:
+        address-family ${af.name}
+        % for rm in node.bgpd.route_maps:
+            % if rm.neighbor.family == af.name and rm.order == 10:
+        neighbor ${rm.neighbor.peer} route-map ${rm.name}-${af.name} ${rm.direction}
+            % endif
+        % endfor
+        % for net in af.networks:
+        network ${net.with_prefixlen}
+        % endfor
+        % for r in af.redistribute:
+        redistribute ${r}
+        % endfor
+        % for n in af.neighbors:
+            % if n.family == af.name:
+        neighbor ${n.peer} activate
+                % if n.nh_self:
+        neighbor ${n.peer} ${n.nh_self}
+                % endif
+                % if node.bgpd.rr and n.asn == node.bgpd.asn:
+        neighbor ${n.peer} route-reflector-client
+                % endif
+            % endif
+        % endfor
+        % if node.bgpd.rr:
+        bgp cluster-id ${node.bgpd.routerid}
         % endif
     % endfor
-    % for net in af.networks:
-    network ${net.with_prefixlen}
-    % endfor
-    % for r in af.redistribute:
-    redistribute ${r}
-    % endfor
-    % for n in af.neighbors:
-        % if n.family == af.name:
-    neighbor ${n.peer} activate
-            % if n.nh_self:
-    neighbor ${n.peer} ${n.nh_self}
-            % endif
-            % if node.bgpd.rr and n.asn == node.bgpd.asn:
-    neighbor ${n.peer} route-reflector-client
-            % endif
-        % endif
-    % endfor
-    % if node.bgpd.rr:
-    bgp cluster-id ${node.bgpd.routerid}
-    % endif
-% endfor
 
 
-% for al in node.bgpd.access_lists:
-    % for e in al.entries:
-ip access-list ${al.name} ${e.action} ${e.prefix}
+    %for al in node.bgpd.access_lists:
+        % for e in al.entries:
+            ip access-list ${al.name} ${e.action} ${e.prefix}
+        % endfor
     % endfor
-% endfor
 
-% for cl in node.bgpd.community_lists:
-bgp community-list standard ${cl.name} ${cl.action} ${cl.community}
-% endfor
+    % for cl in node.bgpd.community_lists:
+        bgp community-list standard ${cl.name} ${cl.action} ${cl.community}
+    % endfor
 
-% for rm in node.bgpd.route_maps:
+%for rm in node.bgpd.route_maps:
 route-map ${rm.name}-${rm.neighbor.family} ${rm.match_policy} ${rm.order}
         %for match in rm.match_cond:
             %if match.cond_type == "access-list":
@@ -87,13 +95,16 @@ route-map ${rm.name}-${rm.neighbor.family} ${rm.match_policy} ${rm.order}
             %elif action.action_type == 'as-path':
     set ${action.action_type} prepend ${action.value}
             %endif
-        %endfor
-        %if rm.call_action:
+    %endfor
+
+    % if rm.call_action:
     call ${rm.call_action}
-        %endif
-        %if rm.exit_policy:
+    %endif
+
+    %if rm.exit_policy:
     on-match ${rm.exit_policy}
-        %endif
+    %endif
+    
 % endfor
 <%block name="router"/>
 !

@@ -76,6 +76,21 @@ def bgp_peering(topo: 'IPTopo', a: str, b: str):
     topo.getNodeInfo(a, 'bgp_peers', list).append(b)
     topo.getNodeInfo(b, 'bgp_peers', list).append(a)
 
+def bgp_anycast(topo: 'IPTopo', RR:'RouterDescription',router:'RouterDescription' ):
+    all_al = AccessList('all',('any',))
+    
+    route_maps = topo.getNodeInfo(RR, 'bgp_route_maps', list)
+
+    route_maps.append({
+        'match_policy': 'deny',
+        'peer': router,
+        'direction': 'out',
+        'name': 'rm-anycast_out',
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'order': 10
+        })
+
+
 def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
     access_lists = topo.getNodeInfo(router, 'bgp_access_lists',list)
     community_list = topo.getNodeInfo(router,'bgp_community_lists', list)
@@ -89,6 +104,7 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
     EU_only_cl = CommunityList(name='EU-Only',community=11,action=PERMIT)
     NA_only_cl = CommunityList(name='NA-Only',community=31,action=PERMIT)
     APAC_only_cl = CommunityList(name='APAC-Only',community=51,action=PERMIT)
+    blackhole_cl = CommunityList(name='blackhole',community='blackhole',action=PERMIT)
 
     community_list.append(from_peer_cl)
     community_list.append(from_up_cl)
@@ -96,6 +112,7 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
     community_list.append(EU_only_cl)
     community_list.append(APAC_only_cl)
     community_list.append(NA_only_cl)
+    community_list.append(blackhole_cl)
 
     route_maps = topo.getNodeInfo(router, 'bgp_route_maps', list)
 
@@ -107,6 +124,14 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
         'set_actions':  [RouteMapSetAction('community','no-export')],
         'order': 8
         })  
+
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-blackhole',
+        'set_actions': [RouteMapSetAction('community','no-export'), RouteMapSetAction('community','no-advertise')],
+        'order': 8
+    })
 
     # Region filters
     if region == 'NA' or region == 'APAC':
@@ -148,16 +173,15 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
         'match_policy': 'permit',
         'neighbor': Peer(router,router),
         'name': 'rm-cust-in',
-        'match_cond': [RouteMapMatchCond('community', set_no_exportG_cl.name)],
-        'call_action':'rm-set_no_export-ipv4',
-        'exit_policy':'next',
+        'match_cond': [RouteMapMatchCond('community', blackhole_cl.name)],
+        'call_action':'rm-blackhole-ipv4',
         'order': 8
         })
     route_maps.append({
         'match_policy': 'permit',
         'neighbor': Peer(router,router),
         'name': 'rm-cust-in',
-        'order': 12
+        'order': 20
         })
         
     # Customer export policy
@@ -165,7 +189,16 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
         'match_policy': 'permit',
         'neighbor': Peer(router,router),
         'name': 'rm-cust-out',
+        'match_cond': [RouteMapMatchCond('community', set_no_exportG_cl.name)],
+        'call_action':'rm-set_no_export-ipv4',
+        'exit_policy':'next',
         'order': 8
+        })
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-cust-out',
+        'order': 12
         })   
 
     # Peer import policy
@@ -173,17 +206,15 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
         'match_policy': 'permit',
         'neighbor': Peer(router,router),
         'name': 'rm-peer-in',
-        'match_cond': [RouteMapMatchCond('community', set_no_exportG_cl.name)],
-        'call_action':'rm-set_no_export-ipv4',
-        'exit_policy':'next',
+        'match_cond': [RouteMapMatchCond('community', blackhole_cl.name)],
+        'call_action':'rm-blackhole-ipv4',
         'order': 8
-        })   
-
+        })
     route_maps.append({
         'match_policy': 'permit',
         'neighbor': Peer(router,router),
         'name': 'rm-peer-in',
-        'order': 12
+        'order': 20
         })   
 
     # Peer export policy
@@ -201,6 +232,15 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
         'name': 'rm-peer-out',
         'order': 12
         })           
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-peer-out',
+        'match_cond': [RouteMapMatchCond('community', set_no_exportG_cl.name)],
+        'call_action':'rm-set_no_export-ipv4',
+        'exit_policy':'next',
+        'order': 14
+        })   
     route_maps.append({
         'match_policy': 'permit',
         'neighbor': Peer(router,router),
