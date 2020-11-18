@@ -6,31 +6,30 @@ from ipmininet.router.config import RouterConfig,AF_INET, AF_INET6 #for router c
 from ipmininet.router.config import OSPF, OSPF6 # for OSPF configuration
 from ipmininet.router.config import BGP, bgp_fullmesh, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER, bgp_peering # for BGP configuration
 
-from ipmininet.router.config import STATIC, StaticRoute # for anycast
-"""     To access to the configuration of FRRouting, you have to use telnet to connect to
-FRRouting daemons.
-A different port is used to access to every routing daemon. This small table shows
-the port associated to its default daemon:
-
+from ipmininet.router.config.bgp import bgp_anycast # for anycast configuration
+"""     
 PORT     STATE SERVICE
 2601/tcp open  zebra   --> controls the RIB of each daemon
-        
         show ip route
         show ipv6 route
         show ip bgp
         
 2605/tcp open  bgpd    --> show information related to the configuration of BGP
-<<<<<<< Updated upstream
-=======
-    
-        show bgp (for IPv6)
-        show bgp route (for IPv4)
-        
->>>>>>> Stashed changes
+        show bgp route (IPv4)
+        show bgp (IPv6)
+
 2606/tcp open  ospf6d  --> same but for OSPFv3 (OSPF for IPv6)
-    
         show ip ospf route 
 
+zebrasrv        2600/tcp             # zebra service
+zebra           2601/tcp              # zebra vty
+ripd            2602/tcp              # RIPd vty
+ripngd          2603/tcp              # RIPngd vty
+ospfd           2604/tcp              # OSPFd vty
+bgpd            2605/tcp             # BGPd vty
+ospf6d          2606/tcp              # OSPF6d vty
+
+INTERESTING COMMANDS
 mininet> router ping -R ipaddress
 mininet> router traceroute -w 10 -z 100 -I ipaddress
 """   
@@ -82,9 +81,13 @@ class OVHTopology(IPTopo):
         lon_thw = self.addRouter("lon_thw", config=RouterConfig,lo_addresses=["2604:2dc0:8000::0/36","198.27.92.14/24"]);
         lon_drch = self.addRouter("lon_drch", config=RouterConfig,lo_addresses=["2604:2dc0:8000::1/36","198.27.92.15/24"]);
         
-        OVHRouters = [sin, syd, pao, sjo, lax1, chi1, chi5, bhs1, bhs2, ash1, ash5, nwk1, nwk5, nyc, lon_thw, lon_drch];
+        anycast1 = self.addRouter("anycast1",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] );   
+        anycast2 = self.addRouter("anycast2",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] );   
+        anycast3 = self.addRouter("anycast3",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] );   
+        anycastServers = [anycast1,anycast2,anycast3];
+
+        OVHRouters = [sin, syd, pao, sjo, lax1, chi1, chi5, bhs1, bhs2, ash1, ash5, nwk1, nwk5, nyc, lon_thw, lon_drch, anycast1,anycast2,anycast3];
         self.addAS(16276, OVHRouters);
-        
         
         # --- Subnets of each router ---
         #       IPv6
@@ -135,6 +138,7 @@ class OVHTopology(IPTopo):
         subnetLon_thw = "198.27.92.240/29";
         subnetLon_drch = "198.27.92.248/29";
 
+
         OVHSubsnets4 = [subnetSin, subnetSyd,subnetPao,subnetSjo,subnetLax1,subnetChi1,subnetChi5,subnetBhs1,subnetBhs2,subnetAsh1,subnetAsh5,subnetNwk1,subnetNwk5,subnetNyc,subnetLon_thw,subnetLon_drch];
         OVHSubsnets6 = [subnetSin6, subnetSyd6,subnetPao6,subnetSjo6,subnetLax16,subnetChi16,subnetChi56,subnetBhs16,subnetBhs26,subnetAsh16,subnetAsh56,subnetNwk16,subnetNwk56,subnetNyc6,subnetLon_thw6,subnetLon_drch6];
 
@@ -146,50 +150,14 @@ class OVHTopology(IPTopo):
         self.addLink(h1,chi1);
 
         h2 = self.addHost("h2");
-<<<<<<< Updated upstream
-        self.addLink(h2,nyc);        
-
-        hEU = self.addHost("hEU");
-        self.addLink(hEU,lon_thw,igp_metric=1);
-
-        hAPAC = self.addHost("hAPAC");
-        self.addLink(hAPAC,sin,igp_metric=1);
-        
-        self.addSubnet(nodes = [sin,hAPAC], subnets = [subnetSin6, subnetSin]); 
-=======
         self.addLink(h2,"lax1");     
         
-        # ========= Anycast ==============================================
-        #  => neighbor <A.B.C.D|X:X::X:X|WORD> default-originate
-        # ================================================================
-       
-        # --- Add the different anycast servers          
-        anycast1 = self.addRouter("anycast1",config = RouterConfig, lo_addresses = ["2604:2dc0:ffff:ffff:ffff:ffff:ffff::/128","192.27.92.255/32",] );      
-        self.addLink(anycast1,sin); 
-
-        anycastServers = [anycast1]#, anycast2, anycast3];
-        
-        # --- Add BGP on each anycast server to announce the anycast address and telling that they are reachable        
-        for s in anycastServers:
-            s.addDaemon(BGP, address_families = ( AF_INET6( redistribute=['connected']), AF_INET(redistribute = ['connected'])));  
-                
-
-        # --- Configure the static routes between the anycast servers and the router attached
-        anycast1.addDaemon(STATIC, static_routes = [StaticRoute("::/0","2604:2dc0:4000::0/128"), StaticRoute("0.0.0.0/0", "198.27.92.0/32")]);
-        
-        
-        
-        self.addSubnet(nodes = [anycast1,sin], subnets = [subnetSin6, subnetSin]); 
->>>>>>> Stashed changes
+        self.addSubnet(nodes = [sin], subnets = [subnetSin6, subnetSin]); 
         self.addSubnet(nodes = [syd], subnets = [subnetSyd6,subnetSyd]); 
         
         self.addSubnet(nodes = [pao], subnets = [subnetPao6,subnetPao]); 
         self.addSubnet(nodes = [sjo], subnets = [subnetSjo6,subnetSjo]);
-<<<<<<< Updated upstream
-        self.addSubnet(nodes = [lax1], subnets = [subnetLax16,subnetLax1]);
-=======
         self.addSubnet(nodes = [lax1,h2], subnets = [subnetLax16,subnetLax1]);
->>>>>>> Stashed changes
         
         self.addSubnet(nodes = [chi1,h1], subnets = [subnetChi16,subnetChi1]);
         self.addSubnet(nodes = [chi5], subnets = [subnetChi56,subnetChi5]);
@@ -202,20 +170,14 @@ class OVHTopology(IPTopo):
 
         self.addSubnet(nodes = [nwk1], subnets = [subnetNwk16,subnetNwk1]);
         self.addSubnet(nodes = [nwk5], subnets = [subnetNwk56,subnetNwk5]);
-<<<<<<< Updated upstream
-        self.addSubnet(nodes = [nyc,h2], subnets = [subnetNyc6,subnetNyc]);
-        
-        self.addSubnet(nodes = [lon_thw,hEU], subnets = [subnetLon_thw6,subnetLon_thw]);
-=======
         self.addSubnet(nodes = [nyc], subnets = [subnetNyc6,subnetNyc]);
         
         self.addSubnet(nodes = [lon_thw], subnets = [subnetLon_thw6,subnetLon_thw]);
->>>>>>> Stashed changes
         self.addSubnet(nodes = [lon_drch], subnets = [subnetLon_drch6,subnetLon_drch]);
         
         
         # --- Physical links between routers ---
-        self.addLink(sin, sjo,igp_metric=extra_large);
+        self.addLink(sin, sjo,igp_metric=extra_large); 
         self.addLink(syd,lax1,igp_metric=extra_large);
 
         self.addLink(syd,sin,igp_metric=large);
@@ -255,43 +217,36 @@ class OVHTopology(IPTopo):
 
         self.addLink(nwk1,lon_thw,igp_metric=extra_large);
         self.addLink(nwk5,lon_drch,igp_metric=extra_large);
+
+        self.addLink(anycast1,sin);     
+        self.addLink(anycast2,ash1);     
+        self.addLink(anycast3,lon_thw);     
         
         # ========================= OSPF configuration ==================
         #
         # ===============================================================
         # --- Add a OSPF daemon on each router of OVH
         for r in OVHRouters:
-<<<<<<< Updated upstream
-            r.addDaemon(OSPF);
-            r.addDaemon(OSPF6);        
-=======
-            r.addDaemon(OSPF);#,redistribute = redistributedRoute('connected'),))
-            r.addDaemon(OSPF6);#,redistribute=(OSPFRedistributedRoute('connected'),))        
->>>>>>> Stashed changes
+            if(r not in anycastServers):
+                r.addDaemon(OSPF)
+                r.addDaemon(OSPF6)
         
         # ========================= BGP configuration ==================
         #   - 3 route reflectors at level 1 (highest in hierarchy)
         #   - 3 route reflectors at level 0 
         # ==============================================================
         # --- Add a BGP daemon on each router ---
-        for i in range(len(OVHRouters)):
+        for i in range(len(OVHRouters)-len(anycastServers)):
             OVHRouters[i].addDaemon(BGP,debug = ("neighbor",),address_families=(AF_INET(networks=(OVHSubsnets4[i],)),AF_INET6(networks=(OVHSubsnets6[i],))));
-            
-<<<<<<< Updated upstream
-        # --- ??? utility ? Merlin
         
-        """
-        sin.addDaemon(BGP, address_families=(AF_INET6(networks=(subnetSin6)),AF_INET(networks=(subnetSin)),), routerid="1.1.1.5");
-        bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(subnet)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.6")
-        bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.7")
-        
-        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.8");
-        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.9");
-        lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2,)),), routerid="1.1.1.10");
-        """
-        
-=======
->>>>>>> Stashed changes
+        anycast1.addDaemon(BGP,RouterConfig,address_families = ( AF_INET6( networks=("2604:2dc0::0/128",) ), AF_INET( networks=("192.27.92.255/32",))));  
+        anycast2.addDaemon(BGP,RouterConfig,address_families = ( AF_INET6( networks=("2604:2dc0::0/128",) ), AF_INET( networks=("192.27.92.255/32",))));  
+        anycast3.addDaemon(BGP,RouterConfig,address_families = ( AF_INET6( networks=("2604:2dc0::0/128",) ), AF_INET( networks=("192.27.92.255/32",))));  
+
+        bgp_anycast(self,sin,anycast1);
+        bgp_anycast(self,ash1,anycast2);
+        bgp_anycast(self,lon_thw,anycast3);
+
         # --- Configure the router reflectors ---
         #       Lower hierarchy route reflectors
         
@@ -303,19 +258,16 @@ class OVHTopology(IPTopo):
         bgp_peering(self, bhs1, bhs2);
         bgp_peering(self, bhs1, ash5);
         bgp_peering(self, bhs2, ash5);
-        #routeReflectorsLevel0 = [bhs1, bhs2, ash5];          # !!! Ajout fait par Merlin - 08-11-20 !!!
-        #bgp_fullmesh(self, routeReflectorsLevel0);           # !!! Ajout fait par Merlin - 08-11-20 !!!
 
         #       higher hierarchy route reflectors 
-        set_rr(self, rr= ash1, peers=[bhs1,bhs2,ash5,chi1,sjo,lax1,nwk1]);      # This one is a super RR
-        set_rr(self, rr = lon_thw, peers=[lon_drch]);                           # This one is a super RR
-        set_rr(self, rr = sin, peers=[syd]);                                    # This one is a super RR
+        set_rr(self, rr = sin, peers=[syd,anycast1]);                                    # This one is a super RR
+        set_rr(self, rr= ash1, peers=[bhs1,bhs2,ash5,chi1,sjo,lax1,nwk1,anycast2]);      # This one is a super RR
+        set_rr(self, rr = lon_thw, peers=[lon_drch,anycast3]);                           # This one is a super RR
+        
 
         bgp_peering(self, ash1, lon_thw)
         bgp_peering(self, ash1, sin)
         bgp_peering(self, sin, lon_thw)
-        #routeReflectorsLevel1 = [sin, ash1, lon_thw];                                       # !!! Ajout fait par Merlin - 08-11-20 !!!
-        #bgp_fullmesh(self,routeReflectorsLevel1);                                           # !!! Ajout fait par Merlin - 08-11-20 !!!
         
 
         
@@ -326,10 +278,6 @@ class OVHTopology(IPTopo):
         #       - Level3 (lvl3) 
         #       - Telia (tel) 
         # ==================================================================
-<<<<<<< Updated upstream
-        
-=======
->>>>>>> Stashed changes
         # --- Google (AS=2)  
         ggl = self.addRouter("ggl", config=RouterConfig);
         self.addLinks( (ggl,ash1), (ggl,ash5) );
@@ -343,13 +291,8 @@ class OVHTopology(IPTopo):
         self.addSubnet(nodes = [ggl, h_ggl], subnets=(lan_ggl,lan_ggl_v6));
         self.addLink(h_ggl,ggl,igp_metric=1);
         
-<<<<<<< Updated upstream
-        ebgp_session(self, ggl, ash1, link_type=CLIENT_PROVIDER);
-        ebgp_session(self, ggl, ash5, link_type=CLIENT_PROVIDER);
-=======
         ebgp_session(self, ggl, ash1, link_type=SHARE);
         ebgp_session(self, ggl, ash5, link_type=SHARE);
->>>>>>> Stashed changes
         
         # --- Cogent (AS=3) 
         cgt = self.addRouter("cgt", config=RouterConfig);
@@ -384,11 +327,7 @@ class OVHTopology(IPTopo):
         self.addSubnet(nodes = [lvl3, h_lvl3], subnets=(lan_lvl3,lan_lvl3_v6));
         self.addLink(h_lvl3,lvl3,igp_metric=1);
         
-<<<<<<< Updated upstream
-        ebgp_session(self, lvl3, nwk1, link_type=SHARE);
-=======
         ebgp_session(self, lvl3, nwk1, link_type=SHARE);# regarde si on change 
->>>>>>> Stashed changes
         ebgp_session(self, lvl3, nwk5, link_type=SHARE);
         ebgp_session(self, lvl3, chi1, link_type=SHARE);
         ebgp_session(self, lvl3, chi5, link_type=SHARE);
@@ -420,45 +359,13 @@ class OVHTopology(IPTopo):
             eR.addDaemon(OSPF6);
             eR.addDaemon(OSPF);
         
-<<<<<<< Updated upstream
-        
-            
-        # ========================= Anycast ==============================
-        # 3 servers for anycast
-        # define two addresses for each router: 
-        #   - one loopback address : depend on the router connected
-        #   - the anycast address : 192.27.32.255/32 or 2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128
-       
-        # For each anycast server:
-        #  
-        #   - 1. create the router and gives a loopback address and the anycast address for both IPv4 and IPv6 
-        #   - 2. add a static route with the router attached 
-        #   - 3. add the anycast server as a peer for the Route Reflector attached
-        # ================================================================
-        """
-        anycast1 = self.addRouter("anycast1",config = RouterConfig, lo_addresses = ["2604:2dc0:4000::1/128","2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128","198.27.92.16/32","192.27.32.16/32"] ); 
-        self.addLink(anycast1,sin,igp_metric=1); #connected to sin
-        
-        anycast1.addDaemon(STATIC, static_routes = [StaticRoute("::/0","2604:2dc0:4000::0"), StaticRoute("0.0.0.0/0", "198.27.92.176/32")]) 
-        # ip addresses of sin are:  "2604:2dc0:4000::0/36","198.27.92.176/32" 
-        
-        anycast2 = self.addRouter("anycast2",lo_addresses = ["2604:2dc0:0004::1/128","2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128","198.27.92.17/32","192.27.32.255/32"] ); 
-        self.addLink(anycast2,chi5,igp_metric=1) #connected to chi5
-        
-        anycast3 = self.addRouter("anycast3",lo_addresses = ["2604:2dc0:0006::1/128","2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128","198.27.92.18/32","192.27.32.255/32"] ); 
-        self.addLink(anycast3,bhs2,igp_metric=1) #connected to bhs2
-        """
-
-
-=======
->>>>>>> Stashed changes
         super().build(*args, **kwargs)
 
 
         
 # Press the green button to run the script.
 if __name__ == '__main__':
-    net = IPNet(topo=OVHTopology())
+    net = IPNet(topo=OVHTopology())#,allocate_IPs=False)
     try:
         net.start()
         IPCLI(net)

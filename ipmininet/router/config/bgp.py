@@ -76,6 +76,21 @@ def bgp_peering(topo: 'IPTopo', a: str, b: str):
     topo.getNodeInfo(a, 'bgp_peers', list).append(b)
     topo.getNodeInfo(b, 'bgp_peers', list).append(a)
 
+def bgp_anycast(topo: 'IPTopo', RR:'RouterDescription',router:'RouterDescription' ):
+    all_al = AccessList('all',('any',))
+    
+    route_maps = topo.getNodeInfo(RR, 'bgp_route_maps', list)
+
+    route_maps.append({
+        'match_policy': 'deny',
+        'peer': router,
+        'direction': 'out',
+        'name': 'rm-anycast_out',
+        'match_cond': [RouteMapMatchCond('access-list', all_al.name)],
+        'order': 10
+        })
+
+
 def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
     access_lists = topo.getNodeInfo(router, 'bgp_access_lists',list)
     community_list = topo.getNodeInfo(router,'bgp_community_lists', list)

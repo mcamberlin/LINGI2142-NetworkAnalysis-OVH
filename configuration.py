@@ -388,35 +388,6 @@ class OVHTopology(IPTopo):
             eR.addDaemon(OSPF6);
             eR.addDaemon(OSPF);
         
-        
-            
-        # ========================= Anycast ==============================
-        # 3 servers for anycast
-        # define two addresses for each router: 
-        #   - one loopback address : depend on the router connected
-        #   - the anycast address : 192.27.32.255/32 or 2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128
-       
-        # For each anycast server:
-        #  
-        #   - 1. create the router and gives a loopback address and the anycast address for both IPv4 and IPv6 
-        #   - 2. add a static route with the router attached 
-        #   - 3. add the anycast server as a peer for the Route Reflector attached
-        # ================================================================
-        """
-        anycast1 = self.addRouter("anycast1",config = RouterConfig, lo_addresses = ["2604:2dc0:4000::1/128","2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128","198.27.92.16/32","192.27.32.16/32"] ); 
-        self.addLink(anycast1,sin,igp_metric=1); #connected to sin
-        
-        anycast1.addDaemon(STATIC, static_routes = [StaticRoute("::/0","2604:2dc0:4000::0"), StaticRoute("0.0.0.0/0", "198.27.92.176/32")]) 
-        # ip addresses of sin are:  "2604:2dc0:4000::0/36","198.27.92.176/32" 
-        
-        anycast2 = self.addRouter("anycast2",lo_addresses = ["2604:2dc0:0004::1/128","2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128","198.27.92.17/32","192.27.32.255/32"] ); 
-        self.addLink(anycast2,chi5,igp_metric=1) #connected to chi5
-        
-        anycast3 = self.addRouter("anycast3",lo_addresses = ["2604:2dc0:0006::1/128","2604:2dc0:ffff:ffff:ffff:ffff:ffff:ffff/128","198.27.92.18/32","192.27.32.255/32"] ); 
-        self.addLink(anycast3,bhs2,igp_metric=1) #connected to bhs2
-        """
-
-
         super().build(*args, **kwargs)
 
 
