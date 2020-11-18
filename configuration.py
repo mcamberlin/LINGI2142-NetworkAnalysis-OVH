@@ -39,10 +39,10 @@ class OVHTopology(IPTopo):
 
         # IPv4 range 198.27.92.0/24
         # IPv6 range 2604:2dc0::/32
-            # lan USA : 2604:2dc0:0000::/34
-            # OTHER : 2604:2dc0:2000::/34
-            # lan APAC : 2604:2dc0:4000::/34
-            # lan EU : 2604:2dc0:8000::/34
+        # lan USA : 2604:2dc0:0000::/34
+        # OTHER : 2604:2dc0:2000::/34
+        # lan APAC : 2604:2dc0:4000::/34
+        # lan EU : 2604:2dc0:8000::/34
             
         #OVH = \32
         #OVH+continent = \34
@@ -74,7 +74,7 @@ class OVHTopology(IPTopo):
         # 16 routers identified by a single IPv4, IPv6 address
         # ==================================================================        
         # --- Routers configuration ---
-        sin = self.addRouter("sin", config=RouterConfig,lo_addresses=["2604:2dc0:4000::0/36","198.27.92.0/24"] );
+        sin = self.addRouter("sin", config=RouterConfig,lo_addresses=["2604:2dc0:4000::0/36","198.27.92.0/24"]);
         syd = self.addRouter("syd", config=RouterConfig,lo_addresses=["2604:2dc0:4000::1/36","198.27.92.1/24"]);
 
         pao = self.addRouter("pao", config=RouterConfig,lo_addresses=["2604:2dc0::0/36","198.27.92.2/24"]);
@@ -155,7 +155,6 @@ class OVHTopology(IPTopo):
 
         OVHSubsnets4 = [subnetSin, subnetSyd,subnetPao,subnetSjo,subnetLax1,subnetChi1,subnetChi5,subnetBhs1,subnetBhs2,subnetAsh1,subnetAsh5,subnetNwk1,subnetNwk5,subnetNyc,subnetLon_thw,subnetLon_drch];
         OVHSubsnets6 = [subnetSin6, subnetSyd6,subnetPao6,subnetSjo6,subnetLax16,subnetChi16,subnetChi56,subnetBhs16,subnetBhs26,subnetAsh16,subnetAsh56,subnetNwk16,subnetNwk56,subnetNyc6,subnetLon_thw6,subnetLon_drch6];
-
 
         # ====== Host configuration ========================================
         #  
@@ -238,44 +237,6 @@ class OVHTopology(IPTopo):
         self.addLink(nwk1,lon_thw,igp_metric=extra_large);
         self.addLink(nwk5,lon_drch,igp_metric=extra_large);
 
-
-        # --- OSPF and OSPF6 configuration as IGP ---
-        '''
-        sin.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        syd.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        pao.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        sjo.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        lax1.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        chi1.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        chi5.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        bhs1.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        bhs2.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        ash1.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        ash5.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        nwk1.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        nwk5.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        nyc.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        lon_thw.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-        lon_drch.addDaemon(OSPF, KEYID=1, KEY="OVHKEY");
-
-        sin.addDaemon(OSPF6);
-        syd.addDaemon(OSPF6);
-        pao.addDaemon(OSPF6);
-        sjo.addDaemon(OSPF6);
-        lax1.addDaemon(OSPF6);
-        chi1.addDaemon(OSPF6);
-        chi5.addDaemon(OSPF6);
-        bhs1.addDaemon(OSPF6);
-        bhs2.addDaemon(OSPF6);
-        ash1.addDaemon(OSPF6);
-        ash5.addDaemon(OSPF6);
-        nwk1.addDaemon(OSPF6);
-        nwk5.addDaemon(OSPF6);
-        nyc.addDaemon(OSPF6);
-        lon_thw.addDaemon(OSPF6);
-        lon_drch.addDaemon(OSPF6);
-        '''
-
         # --- Rules for inputTable --- 
 
         ip_rules = [Rule("-P INPUT ACCEPT"),
@@ -322,58 +283,12 @@ class OVHTopology(IPTopo):
                     # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 135   -j ACCEPT"),
                     # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 136   -j ACCEPT"),
                     # Rule("-A INPUT -p ipv6-icmp --icmpv6-type 137   -j ACCEPT"),
-
                     Rule("-P INPUT ACCEPT")]
-        '''
-        sin.addDaemon(IPTables, rules=ip_rules);
-        sin.addDaemon(IP6Tables, rules=ip6_rules);
-        syd.addDaemon(IPTables, rules=ip_rules);
-        syd.addDaemon(IP6Tables, rules=ip6_rules);
-        pao.addDaemon(IPTables, rules=ip_rules);
-        pao.addDaemon(IP6Tables, rules=ip6_rules);
-        sjo.addDaemon(IPTables, rules=ip_rules);
-        sjo.addDaemon(IP6Tables, rules=ip6_rules);
-        lax1.addDaemon(IPTables, rules=ip_rules);
-        lax1.addDaemon(IP6Tables, rules=ip6_rules);
-        chi1.addDaemon(IPTables, rules=ip_rules);
-        chi1.addDaemon(IP6Tables, rules=ip6_rules);
-        chi5.addDaemon(IPTables, rules=ip_rules);
-        chi5.addDaemon(IP6Tables, rules=ip6_rules);
-        bhs1.addDaemon(IPTables, rules=ip_rules);
-        bhs1.addDaemon(IP6Tables, rules=ip6_rules);
-        bhs2.addDaemon(IPTables, rules=ip_rules);
-        bhs2.addDaemon(IP6Tables, rules=ip6_rules);
-        ash1.addDaemon(IPTables, rules=ip_rules);
-        ash1.addDaemon(IP6Tables, rules=ip6_rules);
-        ash5.addDaemon(IPTables, rules=ip_rules);
-        ash5.addDaemon(IP6Tables, rules=ip6_rules);
-        nwk1.addDaemon(IPTables, rules=ip_rules);
-        nwk1.addDaemon(IP6Tables, rules=ip6_rules);
-        nwk5.addDaemon(IPTables, rules=ip_rules);
-        nwk5.addDaemon(IP6Tables, rules=ip6_rules);
-        nyc.addDaemon(IPTables, rules=ip_rules);
-        nyc.addDaemon(IP6Tables, rules=ip6_rules);
-        lon_thw.addDaemon(IPTables, rules=ip_rules);
-        lon_thw.addDaemon(IP6Tables, rules=ip6_rules);
-        lon_drch.addDaemon(IPTables, rules=ip_rules);
-        lon_drch.addDaemon(IP6Tables, rules=ip6_rules);
-        '''
-        for r in OVHRouters: 
-            r.addDaemon(IPTables, rules=ip_rules);
-            r.addDaemon(IP6Tables, rules=ip6_rules); 
 
-        
-        # --- Create Ases : AS=1 for OVH   ---
-        # self.addAS(1, (sin,syd,pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc,lon_thw,lon_drch))
-        '''
-        # --- Stub provider : google (AS2)  ---
-        ggl = self.addRouter("ggl", config=RouterConfig);
-        
-        self.addLink(ggl,ash1,igp_metric=1);
-        self.addLink(ggl,ash5,igp_metric=1);
+        #for r in OVHRouters: 
+        #    r.addDaemon(IPTables, rules=ip_rules);
+        #    r.addDaemon(IP6Tables, rules=ip6_rules); 
 
-        ggl.addDaemon(BGP, address_families=(AF_INET(networks=(lan_ggl,)),AF_INET6(networks=(lan_ggl_v6,))) , routerid="1.1.1.1", bgppassword="OVHpsswd");
-        '''
         # ========================= OSPF configuration ==================
         #
         # ===============================================================
@@ -424,7 +339,6 @@ class OVHTopology(IPTopo):
         #routeReflectorsLevel1 = [sin, ash1, lon_thw];                                       # !!! Ajout fait par Merlin - 08-11-20 !!!
         #bgp_fullmesh(self,routeReflectorsLevel1);                                           # !!! Ajout fait par Merlin - 08-11-20 !!!
         
-
         
         # ====== Router configurations of transit/stub providers ===========
         # - 1 stub provider : Google (ggl)
@@ -451,17 +365,7 @@ class OVHTopology(IPTopo):
         ebgp_Client(self,ash1,ggl,'NA')
 
         # --- Cogent (AS=3) 
-        cgt = self.addRouter("cgt", config=RouterConfig);
-        '''
-        self.addLink(cgt,nwk1,igp_metric=1);
-        self.addLink(cgt,nwk5,igp_metric=1);
-        self.addLink(cgt,ash1,igp_metric=1);
-        self.addLink(cgt,ash5,igp_metric=1);
-        self.addLink(cgt,chi1,igp_metric=1);
-        self.addLink(cgt,sjo,igp_metric=1);
-        '''
-        # cgt.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_cgt_v6,)),AF_INET(networks=(lan_cgt,)),), routerid="1.1.1.2", bgppassword="OVHpsswd");
-        
+        cgt = self.addRouter("cgt", config=RouterConfig); 
         self.addLinks( (cgt,nwk1), (cgt,nwk5), (cgt,ash1), (cgt,ash5), (cgt,chi1), (cgt,sjo) );
         self.addAS(3,(cgt , ));
         
@@ -512,33 +416,6 @@ class OVHTopology(IPTopo):
         h_tel = self.addHost("h_tel");
         self.addSubnet(nodes = [tel, h_tel], subnets=(lan_tel,lan_tel_v6));
         self.addLink(h_tel,tel,igp_metric=1);
-
-        '''
-        sin.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.5", bgppassword="OVHpsswd");
-        syd.addDaemon(BGP, bgppassword="OVHpsswd");
-        
-        pao.addDaemon(BGP, bgppassword="OVHpsswd");
-        sjo.addDaemon(BGP, bgppassword="OVHpsswd");
-        
-        lax1.addDaemon(BGP, bgppassword="OVHpsswd");
-        
-        chi1.addDaemon(BGP, bgppassword="OVHpsswd");
-        chi5.addDaemon(BGP, bgppassword="OVHpsswd");
-        
-        bhs1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.6", bgppassword="OVHpsswd");
-        bhs2.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.7", bgppassword="OVHpsswd");
-        
-        ash1.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.8", bgppassword="OVHpsswd");
-        ash5.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2)),), routerid="1.1.1.9", bgppassword="OVHpsswd");
-        
-        nwk1.addDaemon(BGP, bgppassword="OVHpsswd");
-        nwk5.addDaemon(BGP, bgppassword="OVHpsswd");
-        
-        nyc.addDaemon(BGP, bgppassword="OVHpsswd");
-        
-        lon_thw.addDaemon(BGP, address_families=(AF_INET6(networks=(lan_h1_v6,lan_h2_v6)),AF_INET(networks=(lan_h1,lan_h2,)),), routerid="1.1.1.10", bgppassword="OVHpsswd");
-        lon_drch.addDaemon(BGP, bgppassword="OVHpsswd")
-        '''
 
         # --- Configure the router reflectors ---
         set_rr(self, rr= bhs1, peers=[chi1,pao,nwk1,nyc,bhs2,ash5]);       
