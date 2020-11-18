@@ -1,5 +1,6 @@
 hostname ${node.name}
 password ${node.password}
+# bgppassword ${node.bgpd.bgppassword}
 
 % if node.bgpd.logfile:
 log file ${node.bgpd.logfile}
@@ -18,6 +19,9 @@ router bgp ${node.bgpd.asn}
     neighbor ${n.peer} remote-as ${n.asn}
     neighbor ${n.peer} port ${n.port}
     neighbor ${n.peer} description ${n.description}
+    neighbor ${n.peer} password ${node.bgpd.bgppassword}  
+    neighbor ${n.peer} maximum-prefix ${node.bgpd.bgpMaxPrefixNumber}
+    neighbor ${n.peer} ttl-security hops 2
     neighbor ${n.peer} send-community
     % if n.ebgp_multihop:
     neighbor ${n.peer} ebgp-multihop

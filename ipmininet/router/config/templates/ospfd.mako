@@ -15,6 +15,11 @@ interface ${intf.name}
   # Highest priority routers will be DR
   ip ospf priority ${intf.priority}
   ip ospf cost ${intf.cost}
+  % if node.ospfd.KEYID != None:
+  # MD5 authentication enabled
+  ip ospf authentication message-digest
+  ip ospf message-digest-key ${node.ospfd.KEYID} md5 ${node.ospfd.KEY}
+  % endif
   % if not intf.passive and intf.active:
   ip ospf dead-interval ${intf.dead_int}
   ip ospf hello-interval ${intf.hello_int}
