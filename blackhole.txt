@@ -1,0 +1,43 @@
+    blackhole_cl = CommunityList(name='blackhole',community='blackhole',action=PERMIT)
+
+    community_list.append(blackhole_cl)
+
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-blackhole',
+        'set_actions': [RouteMapSetAction('community','no-export'), RouteMapSetAction('community','no-advertise')],
+        'order': 8
+    })
+
+    # Customer import policy
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-cust-in',
+        'match_cond': [RouteMapMatchCond('community', blackhole_cl.name)],
+        'call_action':'rm-blackhole-ipv4',
+        'order': 8
+        })
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-cust-in',
+        'order': 20
+        })
+
+    # Peer import policy
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-peer-in',
+        'match_cond': [RouteMapMatchCond('community', blackhole_cl.name)],
+        'call_action':'rm-blackhole-ipv4',
+        'order': 8
+        })
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-peer-in',
+        'order': 20
+        })   

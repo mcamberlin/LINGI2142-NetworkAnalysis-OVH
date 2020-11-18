@@ -78,12 +78,10 @@ route-map ${rm.name}-${rm.neighbor.family} ${rm.match_policy} ${rm.order}
         %for action in rm.set_actions:
             %if action.action_type == 'community' and isinstance(action.value, int):
     set ${action.action_type} additive ${node.bgpd.asn}:${action.value} 
-            %else:
-                %if action.action_type == 'community':
+            %elif action.action_type == 'community':
     set ${action.action_type} additive ${action.value}
-                %else:
-    set ${action.action_type} ${action.value}
-                %endif
+            %elif action.action_type == 'as-path':
+    set ${action.action_type} prepend ${action.value}
             %endif
         %endfor
         %if rm.call_action:

@@ -7,6 +7,8 @@ from ipmininet.router.config import OSPF, OSPF6 # for OSPF configuration
 from ipmininet.router.config import BGP, bgp_fullmesh, set_rr, ebgp_session, SHARE, CLIENT_PROVIDER, bgp_peering # for BGP configuration
 from ipmininet.router.config.bgp import rm_setup, ebgp_Client, ebgp_Peer, ibgp_Inter_Region # for BGP communities 
 from ipmininet.router.config import STATIC, StaticRoute # for anycast
+
+from ipmininet.examples.iptables import IPTablesTopo
 """     To access to the configuration of FRRouting, you have to use telnet to connect to
 FRRouting daemons.
 A different port is used to access to every routing daemon. This small table shows
@@ -230,7 +232,7 @@ class OVHTopology(IPTopo):
         # ==============================================================
         # --- Add a BGP daemon on each router ---
         for i in range(len(OVHRouters)):
-            OVHRouters[i].addDaemon(BGP,debug = ("neighbor",),address_families=(AF_INET(networks=(OVHSubsnets4[i],)),AF_INET6(networks=(OVHSubsnets6[i],))));
+            OVHRouters[i].addDaemon(BGP,address_families=(AF_INET(networks=(OVHSubsnets4[i],)),AF_INET6(networks=(OVHSubsnets6[i],))));
             
         # add bgp communities setup
         for r in NARouters:
@@ -368,12 +370,6 @@ class OVHTopology(IPTopo):
         ebgp_Peer(self,chi5, tel,'NA');
         ebgp_Peer(self,pao, tel,'NA');
 
-        tel.get_config(BGP).set_community(community = '16276:31',to_peer= nwk1)
-        tel.get_config(BGP).set_community(community = '16276:31',to_peer= nwk5)
-        tel.get_config(BGP).set_community(community = '16276:31',to_peer= ash5)
-        tel.get_config(BGP).set_community(community = '16276:31',to_peer= chi5)
-        tel.get_config(BGP).set_community(community = '16276:31',to_peer= pao)
-
         
         # ebgp_session(self, tel, nwk1, link_type=SHARE);
         # ebgp_session(self, tel, nwk5, link_type=SHARE);
@@ -388,7 +384,34 @@ class OVHTopology(IPTopo):
             eR.addDaemon(OSPF6);
             eR.addDaemon(OSPF);
         
+
+        # --- Test for BGP communities ---
         
+        # tel shouldn't be reached by hosts outside NA
+        tel.get_config(BGP).set_community(community = '16276:31',to_peer= nwk1)
+        tel.get_config(BGP).set_community(community = '16276:31',to_peer= nwk5)
+        tel.get_config(BGP).set_community(community = '16276:31',to_peer= ash5)
+        tel.get_config(BGP).set_community(community = '16276:31',to_peer= chi5)
+        tel.get_config(BGP).set_community(community = '16276:31',to_peer= pao)
+
+        # routes from ggl should be sent to other clients/peers with prepending
+        ggl.get_config(BGP).set_community(community = '16276:9',to_peer= ash1)
+        ggl.get_config(BGP).set_community(community = '16276:9',to_peer= ash5)
+
+        # routes from cgt sent to other clients/peers should have the no-export community
+        cgt.get_config(BGP).set_community(community= '16276:95',to_peer= nwk1)
+        cgt.get_config(BGP).set_community(community= '16276:95',to_peer= nwk5)
+        cgt.get_config(BGP).set_community(community= '16276:95',to_peer= ash1)
+        cgt.get_config(BGP).set_community(community= '16276:95',to_peer= ash5)
+        cgt.get_config(BGP).set_community(community= '16276:95',to_peer= chi1)
+        cgt.get_config(BGP).set_community(community= '16276:95',to_peer= sjo)    
+
+        # routes from lvl3 should be blackholed
+        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=nwk1)
+        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=nwk5)
+        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=chi1)
+        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=chi5)
+        # lvl3.get_config(BGP).set_community(community='blackhole',to_peer=sjo)
             
         # ========================= Anycast ==============================
         # 3 servers for anycast
