@@ -268,12 +268,11 @@ class OVHTopology(IPTopo):
             ])]
 
         ip6_rules = [
-            Rule('-A INPUT -s f604:2dc0::/1 -j ACCEPT'),
             Rule('-P INPUT ACCEPT')]
 
-        for r in OVHRouters: 
-            r.addDaemon(IPTables, rules=ip_rules)
-            r.addDaemon(IP6Tables, rules=ip6_rules) 
+        #for r in OVHRouters: 
+        #    r.addDaemon(IPTables, rules=ip_rules)
+        #    r.addDaemon(IP6Tables, rules=ip6_rules) 
 
         # ========================= OSPF configuration ==================
         #
