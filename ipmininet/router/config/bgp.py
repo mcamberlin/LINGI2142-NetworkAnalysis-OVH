@@ -101,6 +101,7 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
     from_peer_cl = CommunityList(name='from-peers',community=1,action=PERMIT)
     from_up_cl = CommunityList(name='from-up',community=2,action=PERMIT)
     set_no_exportG_cl = CommunityList(name='set_no_exportG',community=95,action=PERMIT)
+    AS_prepend_cl = CommunityList(name='AS_prepend',community=9,action=PERMIT)
     EU_only_cl = CommunityList(name='EU-Only',community=11,action=PERMIT)
     NA_only_cl = CommunityList(name='NA-Only',community=31,action=PERMIT)
     APAC_only_cl = CommunityList(name='APAC-Only',community=51,action=PERMIT)
@@ -109,6 +110,7 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
     community_list.append(from_peer_cl)
     community_list.append(from_up_cl)
     community_list.append(set_no_exportG_cl)
+    community_list.append(AS_prepend_cl)
     community_list.append(EU_only_cl)
     community_list.append(APAC_only_cl)
     community_list.append(NA_only_cl)
@@ -132,6 +134,14 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
         'set_actions': [RouteMapSetAction('community','no-export'), RouteMapSetAction('community','no-advertise')],
         'order': 8
     })
+
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-AS_prepend',
+        'set_actions':  [RouteMapSetAction('as-path','16276')],
+        'order': 8
+        })      
 
     # Region filters
     if region == 'NA' or region == 'APAC':
@@ -198,6 +208,15 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
         'match_policy': 'permit',
         'neighbor': Peer(router,router),
         'name': 'rm-cust-out',
+        'match_cond': [RouteMapMatchCond('community', AS_prepend_cl.name)],
+        'call_action':'rm-AS_prepend-ipv4',
+        'exit_policy':'next',
+        'order': 9
+        })
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-cust-out',
         'order': 12
         })   
 
@@ -245,7 +264,16 @@ def rm_setup(topo: 'IPTopo',router:'RouterDescription',region:str):
         'match_policy': 'permit',
         'neighbor': Peer(router,router),
         'name': 'rm-peer-out',
-        'order': 15
+        'match_cond': [RouteMapMatchCond('community', AS_prepend_cl.name)],
+        'call_action':'rm-AS_prepend-ipv4',
+        'exit_policy':'next',
+        'order': 16
+        })
+    route_maps.append({
+        'match_policy': 'permit',
+        'neighbor': Peer(router,router),
+        'name': 'rm-peer-out',
+        'order': 20
         })  
 
 def ebgp_Client(topo: 'IPTopo',ovhR: 'RouterDescription', clientR: 'RouterDescription', region:str):

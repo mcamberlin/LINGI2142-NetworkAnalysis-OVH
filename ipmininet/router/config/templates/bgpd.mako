@@ -68,7 +68,7 @@ router bgp ${node.bgpd.asn}
 
     %for al in node.bgpd.access_lists:
         % for e in al.entries:
-            ip access-list ${al.name} ${e.action} ${e.prefix}
+        ip access-list ${al.name} ${e.action} ${e.prefix}
         % endfor
     % endfor
 
@@ -96,11 +96,9 @@ route-map ${rm.name}-${rm.neighbor.family} ${rm.match_policy} ${rm.order}
     set ${action.action_type} prepend ${action.value}
             %endif
     %endfor
-
     % if rm.call_action:
     call ${rm.call_action}
     %endif
-
     %if rm.exit_policy:
     on-match ${rm.exit_policy}
     %endif
