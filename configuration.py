@@ -62,10 +62,10 @@ class OVHTopology(IPTopo):
         lon_thw = self.addRouter("lon_thw", config=RouterConfig,lo_addresses=["2604:2dc0:8000::0/36","198.27.92.14/24"])
         lon_drch = self.addRouter("lon_drch", config=RouterConfig,lo_addresses=["2604:2dc0:8000::1/36","198.27.92.15/24"])
         
-        anycast1 = self.addRouter("anycast1",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] );   
-        anycast2 = self.addRouter("anycast2",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] );   
-        anycast3 = self.addRouter("anycast3",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] );   
-        anycastServers = [anycast1,anycast2,anycast3];
+        anycast1 = self.addRouter("anycast1",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] )   
+        anycast2 = self.addRouter("anycast2",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] )   
+        anycast3 = self.addRouter("anycast3",config = RouterConfig, lo_addresses = ["2604:2dc1::0/128","192.27.92.255/32",] ) 
+        anycastServers = [anycast1,anycast2,anycast3]
 
         OVHRouters = [sin, syd, pao, sjo, lax1, chi1, chi5, bhs1, bhs2, ash1, ash5, nwk1, nwk5, nyc, lon_thw, lon_drch,anycast1,anycast2,anycast3]
         NARouters = [pao,sjo,lax1,chi1,chi5,bhs1,bhs2,ash1,ash5,nwk1,nwk5,nyc]
@@ -268,11 +268,25 @@ class OVHTopology(IPTopo):
             ])]
 
         ip6_rules = [
+            Rule('-A INPUT -i lo -j ACCEPT'),
+            Rule('-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT'),
+            Rule('-A INPUT -m conntrack --ctstate INVALID -j DROP'),
+            Rule('-A INPUT -p icmpv6 --icmpv6-type 0 -m conntrack --ctstate NEW -j ACCEPT'),
+            Rule('-A INPUT -p icmpv6 --icmpv6-type 3 -m conntrack --ctstate NEW -j ACCEPT'),
+            Rule('-A INPUT -p icmpv6 --icmpv6-type 8 -m conntrack --ctstate NEW -j ACCEPT'),
+            Rule('-A INPUT -p icmpv6 --icmpv6-type 9 -m conntrack --ctstate NEW -j ACCEPT'),
+            Rule('-A INPUT -p icmpv6 --icmpv6-type 10 -m conntrack --ctstate NEW -j ACCEPT'),
+            Rule('-A INPUT -p icmpv6 --icmpv6-type 11 -m conntrack --ctstate NEW -j ACCEPT'),
+            Rule('-A INPUT -s c1a4:4ad:c0ff:ee::/64 -j ACCEPT'),
+            Rule('-A INPUT -s c1a4:4ad:c0ff:ee::/64 -j ACCEPT'),
+            Rule('-A INPUT -s cafe:d0d0:e5:dead::/64 -j ACCEPT'),
+            Rule('-A INPUT -s aaaa:aaaa:aaaa:aaaa::/64 -j ACCEPT'),
+            Rule('-A INPUT -s 2604:2dc0::/32 -j ACCEPT'),
             Rule('-P INPUT ACCEPT')]
 
-        #for r in OVHRouters: 
-        #    r.addDaemon(IPTables, rules=ip_rules)
-        #    r.addDaemon(IP6Tables, rules=ip6_rules) 
+        for r in OVHRouters: 
+            r.addDaemon(IPTables, rules=ip_rules)
+            r.addDaemon(IP6Tables, rules=ip6_rules) 
 
         # ========================= OSPF configuration ==================
         #
