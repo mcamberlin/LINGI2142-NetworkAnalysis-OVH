@@ -10,11 +10,7 @@ from ipmininet.router.config import IPTables, IP6Tables, Rule # for firewalls
 from ipmininet.router.config.bgp import bgp_anycast # for anycast configuration
 from ipmininet.router.config import STATIC, StaticRoute # for anycast
 from ipmininet.router.config import IPTables, IP6Tables, Rule, InputFilter, OutputFilter, TransitFilter, NOT, Deny, Allow # for firewalls
-"""     To access to the configuration of FRRouting, you have to use telnet to connect to
-FRRouting daemons.
-A different port is used to access to every routing daemon. This small table shows
-the port associated to its default daemon:
-"""
+
 class OVHTopology(IPTopo):
 
     def build(self, *args, **kwargs):
@@ -237,10 +233,30 @@ class OVHTopology(IPTopo):
 
         self.addLink(nwk1,lon_thw,igp_metric=extra_large)
         self.addLink(nwk5,lon_drch,igp_metric=extra_large)
-
-        self.addLink(anycast1,sin);     
+        
+        """
+        self.addLink(anycast1,sin)
         self.addLink(anycast2,ash1);     
-        self.addLink(anycast3,lon_thw);   
+        self.addLink(anycast3,lon_thw)   
+
+        """ 
+
+        anycast1_link = self.addLink(anycast1,  sin)
+        anycast1_link[anycast1].addParams(ip = ("fc00:0:27::2/48","192.168.39.2/24"))
+        anycast1_link[sin].addParams(ip = ("fc00:0:27::1/48","192.168.39.1/24"))
+
+
+        anycast2_link = self.addLink(anycast2,  ash1)
+        anycast2_link[anycast2].addParams(ip = ("fc00:0:28::1/48","192.168.40.1/24"))
+        anycast2_link[ash1].addParams(ip = ("fc00:0:28::2/48","192.168.40.2/24"))
+
+
+        anycast3_link = self.addLink(anycast3,  lon_thw)
+        anycast3_link[anycast3].addParams(ip = ("fc00:0:29::1/48","192.168.41.1/24"))
+        anycast3_link[lon_thw].addParams(ip = ("fc00:0:29::2/48","192.168.41.2/24"))
+
+
+
 
         # --- Rules for inputTable --- 
 
@@ -476,12 +492,29 @@ class OVHTopology(IPTopo):
         super().build(*args, **kwargs)
 
 
+def setFRRoutingCommands(net) :
+    # Setup default route on anycast servers 
+
+    net['anycast1'].cmd('route add -A inet6 default gw fc00:0:27::1')
+    net['anycast1'].cmd('route add default gw 192.168.39.1')    
+
+    net['anycast2'].cmd('route add -A inet6 default gw fc00:0:28::2')
+    net['anycast2'].cmd('route add default gw 192.168.40.2')    
+    
+    net['anycast3'].cmd('route add -A inet6 default gw fc00:0:29::2')
+    net['anycast3'].cmd('route add default gw 192.168.41.2')
+
         
 # Press the green button to run the script.
 if __name__ == '__main__':
     net = IPNet(topo=OVHTopology())
     try:
         net.start()
+        setFRRoutingCommands(net)
         IPCLI(net)
     finally:
         net.stop()
+
+
+
+
