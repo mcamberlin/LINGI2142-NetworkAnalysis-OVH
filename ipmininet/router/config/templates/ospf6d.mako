@@ -15,8 +15,6 @@ interface ${intf.name}
   # Highest priority routers will be DR
   ipv6 ospf6 priority ${intf.priority}
   ipv6 ospf6 cost ${intf.cost}
-  
-
 
   % if not intf.passive and intf.active:
   ipv6 ospf6 dead-interval ${intf.dead_int}
