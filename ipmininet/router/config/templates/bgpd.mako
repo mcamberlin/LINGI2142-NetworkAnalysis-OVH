@@ -94,6 +94,8 @@ route-map ${rm.name}-${rm.neighbor.family} ${rm.match_policy} ${rm.order}
     set ${action.action_type} additive ${action.value}
             %elif action.action_type == 'as-path':
     set ${action.action_type} prepend ${action.value}
+            %else:
+    set ${action.action_type} ${action.value}
             %endif
     %endfor
     % if rm.call_action:
